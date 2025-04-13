@@ -1,45 +1,22 @@
-# DA-PAC
 
-This repository contains the Peripheral Access Crates (PACs) for Dialog Semiconductor / Renesas Connectivity Devices.
+# da14682-pac
 
-The crate is automatically generated from the SVD files in [packs](https://www.keil.arm.com/packs) using [svd2pac](https://github.com/Infineon/svd2pac).
+This is the Peripheral Access Crate (PAC) for the DA14682 device series.
 
-It serves as the foundation for the Hardware Abstraction Layer (HAL) in Rust for Renesas Wireless Connectivity Devices.
+The crate is automatically generated from the device SVD file in the [packs](https://www.keil.arm.com/packs) using [sdv2pac](https://github.com/Infineon/svd2pac).
 
-## Supported Devices
+## Overview
 
-- DA14531
-- DA14580
-- DA14581
-- DA14582
-- DA14583
-- DA14585
-- DA14586
-- DA14680
-- DA14681
-- DA14682
-- DA14683
-- DA14691
-- DA14695
-- DA14697
-- DA14699
-- DA1469x
+The `da14682-pac` crate provides low-level access to device registers, enabling developers to interact with the hardware safely and efficiently.
 
-## Target Architectures
+## Usage
 
-Each device corresponds to a specific architecture target:
+Include this crate in your `Cargo.toml`:
 
-- **arm-none-eabi** (Cortex-M0+/Cortex-M0):
-  - DA14531
-  - DA14580 / DA14581 / DA14583
-  - DA14585 / DA14586
-  - DA14680 / DA14681
-  - DA14682 / DA14683
-  - DA14691 / DA14695 / DA14697
-
-- **thumbv8m.main-none-eabi** (Cortex-M33):
-  - DA14699
-  - DA1469x
+```toml
+[dependencies]
+ da14682-pac = "0.1.0"
+```
 
 ## License
 
