@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:13 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:56 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Ir {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "IR control register"]
+
     #[inline(always)]
     pub const fn ir_ctrl_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::Ir {
         }
     }
 
-    #[doc = "Defnes the carrier signal low duration"]
     #[inline(always)]
     pub const fn ir_freq_carrier_off_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::Ir {
         }
     }
 
-    #[doc = "Defines the carrier signal  high duration"]
     #[inline(always)]
     pub const fn ir_freq_carrier_on_reg(
         &self,
@@ -69,7 +67,6 @@ impl super::Ir {
         }
     }
 
-    #[doc = "IR interrupt status register"]
     #[inline(always)]
     pub const fn ir_irq_status_reg(
         &self,
@@ -81,7 +78,6 @@ impl super::Ir {
         }
     }
 
-    #[doc = "Defines the logic one waveform"]
     #[inline(always)]
     pub const fn ir_logic_one_time_reg(
         &self,
@@ -93,7 +89,6 @@ impl super::Ir {
         }
     }
 
-    #[doc = "Defines the logic zero wavefrom"]
     #[inline(always)]
     pub const fn ir_logic_zero_time_reg(
         &self,
@@ -105,7 +100,6 @@ impl super::Ir {
         }
     }
 
-    #[doc = "Main fifo write register"]
     #[inline(always)]
     pub const fn ir_main_fifo_reg(
         &self,
@@ -117,7 +111,6 @@ impl super::Ir {
         }
     }
 
-    #[doc = "Repeat fifo write register"]
     #[inline(always)]
     pub const fn ir_repeat_fifo_reg(
         &self,
@@ -129,7 +122,6 @@ impl super::Ir {
         }
     }
 
-    #[doc = "Defines the repeat time"]
     #[inline(always)]
     pub const fn ir_repeat_time_reg(
         &self,
@@ -141,7 +133,6 @@ impl super::Ir {
         }
     }
 
-    #[doc = "IR status register"]
     #[inline(always)]
     pub const fn ir_status_reg(
         &self,
@@ -159,60 +150,59 @@ pub struct IrCtrlReg_SPEC;
 impl crate::sealed::RegSpec for IrCtrlReg_SPEC {
     type DataType = u16;
 }
-#[doc = "IR control register"]
+
 pub type IrCtrlReg = crate::RegValueT<IrCtrlReg_SPEC>;
 
 impl IrCtrlReg {
-    #[doc = "1 = Enables the interrupt generation upon TX completion\n0 = masks out the interrupt generation upon TX completion"]
     #[inline(always)]
     pub fn ir_irq_en(
         self,
     ) -> crate::common::RegisterFieldBool<8, 1, 0, IrCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<8,1,0,IrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "1 = Logic one starts with a Space followed by a Mark\n0 = Logic one starts with a Mark followed by a Space"]
+
     #[inline(always)]
     pub fn ir_logic_one_format(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, IrCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,IrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "1 = Logic zero starts with a Space followed by a Mark\n0 = Logic zero starts with a Mark followed by a Space"]
+
     #[inline(always)]
     pub fn ir_logic_zero_format(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, IrCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,IrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "1 = IR output is inverted\n0 = IR output is not inverted"]
+
     #[inline(always)]
     pub fn ir_invert_output(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, IrCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,IrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "1 = repeat command is defined at Repeat FIFO\n0 = repeat command is defined at Code FIFO"]
+
     #[inline(always)]
     pub fn ir_repeat_type(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, IrCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,IrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "1 = IR transmits a command\n0 = IR is stopped\nWhile this bit is 1 and SW programs it to 0, the code FIFO will be flushed automatically."]
+
     #[inline(always)]
     pub fn ir_tx_start(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, IrCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<3,1,0,IrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "1 = IR block is enabled\n0 = IR block is disabled and at reset state. This also resets the pointers at the FIFOs"]
+
     #[inline(always)]
     pub fn ir_enable(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, IrCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,IrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "1 = Flush Repeat FIFO (auto clear)"]
+
     #[inline(always)]
     pub fn ir_rep_fifo_reset(
         self,
@@ -221,7 +211,7 @@ impl IrCtrlReg {
             self, 0,
         )
     }
-    #[doc = "1 = Flush Code FIFO (auto clear)"]
+
     #[inline(always)]
     pub fn ir_code_fifo_reset(
         self,
@@ -244,11 +234,10 @@ pub struct IrFreqCarrierOffReg_SPEC;
 impl crate::sealed::RegSpec for IrFreqCarrierOffReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Defnes the carrier signal low duration"]
+
 pub type IrFreqCarrierOffReg = crate::RegValueT<IrFreqCarrierOffReg_SPEC>;
 
 impl IrFreqCarrierOffReg {
-    #[doc = "Defines the carrier signal low duration in IR_clk cycles"]
     #[inline(always)]
     pub fn ir_freq_carrier_off(
         self,
@@ -258,6 +247,7 @@ impl IrFreqCarrierOffReg {
         1,
         0,
         u16,
+        u16,
         IrFreqCarrierOffReg_SPEC,
         crate::common::RW,
     > {
@@ -266,6 +256,7 @@ impl IrFreqCarrierOffReg {
             0x3ff,
             1,
             0,
+            u16,
             u16,
             IrFreqCarrierOffReg_SPEC,
             crate::common::RW,
@@ -285,21 +276,29 @@ pub struct IrFreqCarrierOnReg_SPEC;
 impl crate::sealed::RegSpec for IrFreqCarrierOnReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Defines the carrier signal  high duration"]
+
 pub type IrFreqCarrierOnReg = crate::RegValueT<IrFreqCarrierOnReg_SPEC>;
 
 impl IrFreqCarrierOnReg {
-    #[doc = "Defines the carrier signal high duration in IR_clk cycles. 0x0 is not allowed as a value."]
     #[inline(always)]
     pub fn ir_freq_carrier_on(
         self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, IrFreqCarrierOnReg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        0,
+        0x3ff,
+        1,
+        0,
+        u16,
+        u16,
+        IrFreqCarrierOnReg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             0,
             0x3ff,
             1,
             0,
+            u16,
             u16,
             IrFreqCarrierOnReg_SPEC,
             crate::common::RW,
@@ -319,11 +318,10 @@ pub struct IrIrqStatusReg_SPEC;
 impl crate::sealed::RegSpec for IrIrqStatusReg_SPEC {
     type DataType = u16;
 }
-#[doc = "IR interrupt status register"]
+
 pub type IrIrqStatusReg = crate::RegValueT<IrIrqStatusReg_SPEC>;
 
 impl IrIrqStatusReg {
-    #[doc = "When read Interrupt line is cleared"]
     #[inline(always)]
     pub fn ir_irq_ack(
         self,
@@ -344,25 +342,58 @@ pub struct IrLogicOneTimeReg_SPEC;
 impl crate::sealed::RegSpec for IrLogicOneTimeReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Defines the logic one waveform"]
+
 pub type IrLogicOneTimeReg = crate::RegValueT<IrLogicOneTimeReg_SPEC>;
 
 impl IrLogicOneTimeReg {
-    #[doc = "Defines the mark duration in carrier clock cycles. Must be >0"]
     #[inline(always)]
     pub fn ir_logic_one_mark(
         self,
-    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, IrLogicOneTimeReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<8,0xff,1,0,u8, IrLogicOneTimeReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        8,
+        0xff,
+        1,
+        0,
+        u8,
+        u8,
+        IrLogicOneTimeReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0xff,
+            1,
+            0,
+            u8,
+            u8,
+            IrLogicOneTimeReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = "Defines the space duration in carrier clock cycles. Must be >0"]
+
     #[inline(always)]
     pub fn ir_logic_one_space(
         self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, IrLogicOneTimeReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xff,1,0,u8, IrLogicOneTimeReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xff,
+        1,
+        0,
+        u8,
+        u8,
+        IrLogicOneTimeReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xff,
+            1,
+            0,
+            u8,
+            u8,
+            IrLogicOneTimeReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for IrLogicOneTimeReg {
@@ -378,25 +409,58 @@ pub struct IrLogicZeroTimeReg_SPEC;
 impl crate::sealed::RegSpec for IrLogicZeroTimeReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Defines the logic zero wavefrom"]
+
 pub type IrLogicZeroTimeReg = crate::RegValueT<IrLogicZeroTimeReg_SPEC>;
 
 impl IrLogicZeroTimeReg {
-    #[doc = "Defines the mark duration in carrier clock cycles. Must be >0"]
     #[inline(always)]
     pub fn ir_logic_zero_mark(
         self,
-    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, IrLogicZeroTimeReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<8,0xff,1,0,u8, IrLogicZeroTimeReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        8,
+        0xff,
+        1,
+        0,
+        u8,
+        u8,
+        IrLogicZeroTimeReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0xff,
+            1,
+            0,
+            u8,
+            u8,
+            IrLogicZeroTimeReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = "Defines the space duration in carrier clock cycles. Must be >0"]
+
     #[inline(always)]
     pub fn ir_logic_zero_space(
         self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, IrLogicZeroTimeReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xff,1,0,u8, IrLogicZeroTimeReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xff,
+        1,
+        0,
+        u8,
+        u8,
+        IrLogicZeroTimeReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xff,
+            1,
+            0,
+            u8,
+            u8,
+            IrLogicZeroTimeReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for IrLogicZeroTimeReg {
@@ -412,17 +476,25 @@ pub struct IrMainFifoReg_SPEC;
 impl crate::sealed::RegSpec for IrMainFifoReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Main fifo write register"]
+
 pub type IrMainFifoReg = crate::RegValueT<IrMainFifoReg_SPEC>;
 
 impl IrMainFifoReg {
-    #[doc = "Code FIFO data write port"]
     #[inline(always)]
     pub fn ir_code_fifo_data(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, IrMainFifoReg_SPEC, crate::common::W>
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, IrMainFifoReg_SPEC, crate::common::W>
     {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, IrMainFifoReg_SPEC,crate::common::W>::from_register(self,0)
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            IrMainFifoReg_SPEC,
+            crate::common::W,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for IrMainFifoReg {
@@ -438,17 +510,33 @@ pub struct IrRepeatFifoReg_SPEC;
 impl crate::sealed::RegSpec for IrRepeatFifoReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Repeat fifo write register"]
+
 pub type IrRepeatFifoReg = crate::RegValueT<IrRepeatFifoReg_SPEC>;
 
 impl IrRepeatFifoReg {
-    #[doc = "Repeat FIFO data write port"]
     #[inline(always)]
     pub fn ir_repeat_fifo_data(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, IrRepeatFifoReg_SPEC, crate::common::W>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, IrRepeatFifoReg_SPEC,crate::common::W>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        IrRepeatFifoReg_SPEC,
+        crate::common::W,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            IrRepeatFifoReg_SPEC,
+            crate::common::W,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for IrRepeatFifoReg {
@@ -464,17 +552,33 @@ pub struct IrRepeatTimeReg_SPEC;
 impl crate::sealed::RegSpec for IrRepeatTimeReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Defines the repeat time"]
+
 pub type IrRepeatTimeReg = crate::RegValueT<IrRepeatTimeReg_SPEC>;
 
 impl IrRepeatTimeReg {
-    #[doc = "Defines the repeat time in carrier clock cycles. The repeat timer will start counting from the start of the command and will trigger the output of the same command residing in the Code FIFO or the special command residing in the Repeat FIFO as soon as it expires."]
     #[inline(always)]
     pub fn ir_repeat_time(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, IrRepeatTimeReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, IrRepeatTimeReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        IrRepeatTimeReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            IrRepeatTimeReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for IrRepeatTimeReg {
@@ -490,30 +594,31 @@ pub struct IrStatusReg_SPEC;
 impl crate::sealed::RegSpec for IrStatusReg_SPEC {
     type DataType = u16;
 }
-#[doc = "IR status register"]
+
 pub type IrStatusReg = crate::RegValueT<IrStatusReg_SPEC>;
 
 impl IrStatusReg {
-    #[doc = "1 = IR generator is busy sending a message\n0 = IR generator is idle"]
     #[inline(always)]
     pub fn ir_busy(
         self,
     ) -> crate::common::RegisterFieldBool<10, 1, 0, IrStatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<10,1,0,IrStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "Contains the amount of words in Repeat FIFO (updated only on write)"]
+
     #[inline(always)]
     pub fn ir_rep_fifo_wrds(
         self,
-    ) -> crate::common::RegisterField<6, 0xf, 1, 0, u8, IrStatusReg_SPEC, crate::common::R> {
-        crate::common::RegisterField::<6,0xf,1,0,u8, IrStatusReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<6, 0xf, 1, 0, u8, u8, IrStatusReg_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<6,0xf,1,0,u8,u8,IrStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "Contains the amount of words in Code FIFO (updated only on write)"]
+
     #[inline(always)]
     pub fn ir_code_fifo_wrds(
         self,
-    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, IrStatusReg_SPEC, crate::common::R> {
-        crate::common::RegisterField::<0,0x3f,1,0,u8, IrStatusReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, IrStatusReg_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,IrStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for IrStatusReg {

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:17 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:02 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Timer1 {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "Capture Timer value for event on GPIO1"]
+
     #[inline(always)]
     pub const fn captim_capture_gpio1_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer value for event on GPIO2"]
     #[inline(always)]
     pub const fn captim_capture_gpio2_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer high value for event on GPIO01"]
     #[inline(always)]
     pub const fn captim_capture_high_gpio1_reg(
         &self,
@@ -69,7 +67,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer high value for event on GPIO02"]
     #[inline(always)]
     pub const fn captim_capture_high_gpio2_reg(
         &self,
@@ -81,7 +78,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer control register"]
     #[inline(always)]
     pub const fn captim_ctrl_reg(
         &self,
@@ -93,7 +89,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer gpio1 selection"]
     #[inline(always)]
     pub const fn captim_gpio1_conf_reg(
         &self,
@@ -105,7 +100,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer gpio2 selection"]
     #[inline(always)]
     pub const fn captim_gpio2_conf_reg(
         &self,
@@ -117,7 +111,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer prescaler value"]
     #[inline(always)]
     pub const fn captim_prescaler_reg(
         &self,
@@ -129,7 +122,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer interrupt status register"]
     #[inline(always)]
     pub const fn captim_prescaler_val_reg(
         &self,
@@ -141,7 +133,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer pwm dc register"]
     #[inline(always)]
     pub const fn captim_pwm_dc_reg(
         &self,
@@ -153,7 +144,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer pwm frequency register"]
     #[inline(always)]
     pub const fn captim_pwm_freq_reg(
         &self,
@@ -165,7 +155,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer reload high value and Delay in shot mode"]
     #[inline(always)]
     pub const fn captim_reload_high_reg(
         &self,
@@ -177,7 +166,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer reload value and Delay in shot mode"]
     #[inline(always)]
     pub const fn captim_reload_reg(
         &self,
@@ -189,7 +177,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer Shot high duration in shot mode"]
     #[inline(always)]
     pub const fn captim_shotwidth_high_reg(
         &self,
@@ -201,7 +188,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer Shot duration in shot mode"]
     #[inline(always)]
     pub const fn captim_shotwidth_reg(
         &self,
@@ -213,7 +199,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer status register"]
     #[inline(always)]
     pub const fn captim_status_reg(
         &self,
@@ -225,7 +210,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer counter high value"]
     #[inline(always)]
     pub const fn captim_timer_hval_reg(
         &self,
@@ -237,7 +221,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Capture Timer counter value"]
     #[inline(always)]
     pub const fn captim_timer_val_reg(
         &self,
@@ -255,11 +238,10 @@ pub struct CaptimCaptureGpio1Reg_SPEC;
 impl crate::sealed::RegSpec for CaptimCaptureGpio1Reg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer value for event on GPIO1"]
+
 pub type CaptimCaptureGpio1Reg = crate::RegValueT<CaptimCaptureGpio1Reg_SPEC>;
 
 impl CaptimCaptureGpio1Reg {
-    #[doc = "Gives the Capture time for event on GPIO1"]
     #[inline(always)]
     pub fn captim_capture_gpio1(
         self,
@@ -269,6 +251,7 @@ impl CaptimCaptureGpio1Reg {
         1,
         0,
         u16,
+        u16,
         CaptimCaptureGpio1Reg_SPEC,
         crate::common::R,
     > {
@@ -277,6 +260,7 @@ impl CaptimCaptureGpio1Reg {
             0xffff,
             1,
             0,
+            u16,
             u16,
             CaptimCaptureGpio1Reg_SPEC,
             crate::common::R,
@@ -296,11 +280,10 @@ pub struct CaptimCaptureGpio2Reg_SPEC;
 impl crate::sealed::RegSpec for CaptimCaptureGpio2Reg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer value for event on GPIO2"]
+
 pub type CaptimCaptureGpio2Reg = crate::RegValueT<CaptimCaptureGpio2Reg_SPEC>;
 
 impl CaptimCaptureGpio2Reg {
-    #[doc = "Gives the Capture time for event on GPIO2"]
     #[inline(always)]
     pub fn captim_capture_gpio2(
         self,
@@ -310,6 +293,7 @@ impl CaptimCaptureGpio2Reg {
         1,
         0,
         u16,
+        u16,
         CaptimCaptureGpio2Reg_SPEC,
         crate::common::R,
     > {
@@ -318,6 +302,7 @@ impl CaptimCaptureGpio2Reg {
             0xffff,
             1,
             0,
+            u16,
             u16,
             CaptimCaptureGpio2Reg_SPEC,
             crate::common::R,
@@ -337,11 +322,10 @@ pub struct CaptimCaptureHighGpio1Reg_SPEC;
 impl crate::sealed::RegSpec for CaptimCaptureHighGpio1Reg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer high value for event on GPIO01"]
+
 pub type CaptimCaptureHighGpio1Reg = crate::RegValueT<CaptimCaptureHighGpio1Reg_SPEC>;
 
 impl CaptimCaptureHighGpio1Reg {
-    #[doc = "Gives the Capture high time for event on GPIO1"]
     #[inline(always)]
     pub fn captim_capture_high_gpio1(
         self,
@@ -351,6 +335,7 @@ impl CaptimCaptureHighGpio1Reg {
         1,
         0,
         u16,
+        u16,
         CaptimCaptureHighGpio1Reg_SPEC,
         crate::common::R,
     > {
@@ -359,6 +344,7 @@ impl CaptimCaptureHighGpio1Reg {
             0xffff,
             1,
             0,
+            u16,
             u16,
             CaptimCaptureHighGpio1Reg_SPEC,
             crate::common::R,
@@ -378,11 +364,10 @@ pub struct CaptimCaptureHighGpio2Reg_SPEC;
 impl crate::sealed::RegSpec for CaptimCaptureHighGpio2Reg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer high value for event on GPIO02"]
+
 pub type CaptimCaptureHighGpio2Reg = crate::RegValueT<CaptimCaptureHighGpio2Reg_SPEC>;
 
 impl CaptimCaptureHighGpio2Reg {
-    #[doc = "Gives the Capture high time for event on GPIO2"]
     #[inline(always)]
     pub fn captim_capture_high_gpio2(
         self,
@@ -392,6 +377,7 @@ impl CaptimCaptureHighGpio2Reg {
         1,
         0,
         u16,
+        u16,
         CaptimCaptureHighGpio2Reg_SPEC,
         crate::common::R,
     > {
@@ -400,6 +386,7 @@ impl CaptimCaptureHighGpio2Reg {
             0xffff,
             1,
             0,
+            u16,
             u16,
             CaptimCaptureHighGpio2Reg_SPEC,
             crate::common::R,
@@ -419,60 +406,59 @@ pub struct CaptimCtrlReg_SPEC;
 impl crate::sealed::RegSpec for CaptimCtrlReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer control register"]
+
 pub type CaptimCtrlReg = crate::RegValueT<CaptimCtrlReg_SPEC>;
 
 impl CaptimCtrlReg {
-    #[doc = "\'1\' Capture Timer uses the system clock\n\'0\' Capture Timer uses the 32KHz clock"]
     #[inline(always)]
     pub fn captim_sys_clk_en(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, CaptimCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,CaptimCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Valid when timer counts up, if it is \'1\' timer does not zero when reaches to reload value. it becomes zero only when it reaches the max value."]
+
     #[inline(always)]
     pub fn captim_free_run_mode_en(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, CaptimCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,CaptimCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "\'1\' Capture timer IRQ is unmasked, \'0\' masked"]
+
     #[inline(always)]
     pub fn captim_irq_en(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, CaptimCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,CaptimCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "\'1\' input1 event type is falling edge, \'0\' rising edge"]
+
     #[inline(always)]
     pub fn captim_in2_event_fall_en(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, CaptimCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,CaptimCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "\'1\' input2 event type is falling edge, \'0\' rising edge"]
+
     #[inline(always)]
     pub fn captim_in1_event_fall_en(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, CaptimCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<3,1,0,CaptimCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "\'1\' timer counts down, \'0\' count up"]
+
     #[inline(always)]
     pub fn captim_count_down_en(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, CaptimCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,CaptimCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "\'1\' OneShot mode enabled, \'0\' Capture/Timer mode enabled"]
+
     #[inline(always)]
     pub fn captim_oneshot_mode_en(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, CaptimCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,CaptimCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "\'1\' Capture Timer enabled, else disabled"]
+
     #[inline(always)]
     pub fn captim_en(
         self,
@@ -493,17 +479,33 @@ pub struct CaptimGpio1ConfReg_SPEC;
 impl crate::sealed::RegSpec for CaptimGpio1ConfReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer gpio1 selection"]
+
 pub type CaptimGpio1ConfReg = crate::RegValueT<CaptimGpio1ConfReg_SPEC>;
 
 impl CaptimGpio1ConfReg {
-    #[doc = "Select one of the 37 GPIOs as IN1, Valid value 0-37. 1 for P00 .. 37 for P47. 0 Disable input"]
     #[inline(always)]
     pub fn captim_gpio1_conf(
         self,
-    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, CaptimGpio1ConfReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3f,1,0,u8, CaptimGpio1ConfReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x3f,
+        1,
+        0,
+        u8,
+        u8,
+        CaptimGpio1ConfReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            CaptimGpio1ConfReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for CaptimGpio1ConfReg {
@@ -519,17 +521,33 @@ pub struct CaptimGpio2ConfReg_SPEC;
 impl crate::sealed::RegSpec for CaptimGpio2ConfReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer gpio2 selection"]
+
 pub type CaptimGpio2ConfReg = crate::RegValueT<CaptimGpio2ConfReg_SPEC>;
 
 impl CaptimGpio2ConfReg {
-    #[doc = "Select one of the 37 GPIOs as IN2, Valid value 0-37. 1 for P00 .. 37 for P47. 0 Disable input"]
     #[inline(always)]
     pub fn captim_gpio2_conf(
         self,
-    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, CaptimGpio2ConfReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3f,1,0,u8, CaptimGpio2ConfReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x3f,
+        1,
+        0,
+        u8,
+        u8,
+        CaptimGpio2ConfReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            CaptimGpio2ConfReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for CaptimGpio2ConfReg {
@@ -545,11 +563,10 @@ pub struct CaptimPrescalerReg_SPEC;
 impl crate::sealed::RegSpec for CaptimPrescalerReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer prescaler value"]
+
 pub type CaptimPrescalerReg = crate::RegValueT<CaptimPrescalerReg_SPEC>;
 
 impl CaptimPrescalerReg {
-    #[doc = "Defines the timer count frequncy. CLOCK frequency / (CAPTIM_PRESCARLER+1)"]
     #[inline(always)]
     pub fn captim_prescaler(
         self,
@@ -559,6 +576,7 @@ impl CaptimPrescalerReg {
         1,
         0,
         u16,
+        u16,
         CaptimPrescalerReg_SPEC,
         crate::common::RW,
     > {
@@ -567,6 +585,7 @@ impl CaptimPrescalerReg {
             0xffff,
             1,
             0,
+            u16,
             u16,
             CaptimPrescalerReg_SPEC,
             crate::common::RW,
@@ -586,11 +605,10 @@ pub struct CaptimPrescalerValReg_SPEC;
 impl crate::sealed::RegSpec for CaptimPrescalerValReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer interrupt status register"]
+
 pub type CaptimPrescalerValReg = crate::RegValueT<CaptimPrescalerValReg_SPEC>;
 
 impl CaptimPrescalerValReg {
-    #[doc = "Gives the current prescaler value"]
     #[inline(always)]
     pub fn captim_prescaler_val(
         self,
@@ -600,6 +618,7 @@ impl CaptimPrescalerValReg {
         1,
         0,
         u16,
+        u16,
         CaptimPrescalerValReg_SPEC,
         crate::common::R,
     > {
@@ -608,6 +627,7 @@ impl CaptimPrescalerValReg {
             0xffff,
             1,
             0,
+            u16,
             u16,
             CaptimPrescalerValReg_SPEC,
             crate::common::R,
@@ -627,17 +647,33 @@ pub struct CaptimPwmDcReg_SPEC;
 impl crate::sealed::RegSpec for CaptimPwmDcReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer pwm dc register"]
+
 pub type CaptimPwmDcReg = crate::RegValueT<CaptimPwmDcReg_SPEC>;
 
 impl CaptimPwmDcReg {
-    #[doc = "Defines the PWM duty cycle. CAPTIM_PWM_DC / ( CAPTIM_PWM_FREQ+1)"]
     #[inline(always)]
     pub fn captim_pwm_dc(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, CaptimPwmDcReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, CaptimPwmDcReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        CaptimPwmDcReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            CaptimPwmDcReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for CaptimPwmDcReg {
@@ -653,17 +689,33 @@ pub struct CaptimPwmFreqReg_SPEC;
 impl crate::sealed::RegSpec for CaptimPwmFreqReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer pwm frequency register"]
+
 pub type CaptimPwmFreqReg = crate::RegValueT<CaptimPwmFreqReg_SPEC>;
 
 impl CaptimPwmFreqReg {
-    #[doc = "Defines the PWM frequency. Timer clock frequency / (CAPTIM_PWM_FREQ+1)"]
     #[inline(always)]
     pub fn captim_pwm_freq(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, CaptimPwmFreqReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, CaptimPwmFreqReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        CaptimPwmFreqReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            CaptimPwmFreqReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for CaptimPwmFreqReg {
@@ -679,11 +731,10 @@ pub struct CaptimReloadHighReg_SPEC;
 impl crate::sealed::RegSpec for CaptimReloadHighReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer reload high value and Delay in shot mode"]
+
 pub type CaptimReloadHighReg = crate::RegValueT<CaptimReloadHighReg_SPEC>;
 
 impl CaptimReloadHighReg {
-    #[doc = "Reload high value or max high value in timer mode, Delay phase duration in oneshot mode. Actual delay is the register value plus synchronization time (3 clock cycles)"]
     #[inline(always)]
     pub fn captim_reload_high(
         self,
@@ -693,6 +744,7 @@ impl CaptimReloadHighReg {
         1,
         0,
         u16,
+        u16,
         CaptimReloadHighReg_SPEC,
         crate::common::RW,
     > {
@@ -701,6 +753,7 @@ impl CaptimReloadHighReg {
             0xffff,
             1,
             0,
+            u16,
             u16,
             CaptimReloadHighReg_SPEC,
             crate::common::RW,
@@ -720,17 +773,33 @@ pub struct CaptimReloadReg_SPEC;
 impl crate::sealed::RegSpec for CaptimReloadReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer reload value and Delay in shot mode"]
+
 pub type CaptimReloadReg = crate::RegValueT<CaptimReloadReg_SPEC>;
 
 impl CaptimReloadReg {
-    #[doc = "Reload or max value in timer mode, Delay phase duration in oneshot mode. Actual delay is the register value plus synchronization time (3 clock cycles)"]
     #[inline(always)]
     pub fn captim_reload(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, CaptimReloadReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, CaptimReloadReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        CaptimReloadReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            CaptimReloadReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for CaptimReloadReg {
@@ -746,11 +815,10 @@ pub struct CaptimShotwidthHighReg_SPEC;
 impl crate::sealed::RegSpec for CaptimShotwidthHighReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer Shot high duration in shot mode"]
+
 pub type CaptimShotwidthHighReg = crate::RegValueT<CaptimShotwidthHighReg_SPEC>;
 
 impl CaptimShotwidthHighReg {
-    #[doc = "Shot phase high duration in oneshot mode"]
     #[inline(always)]
     pub fn captim_shotwidth_high(
         self,
@@ -760,6 +828,7 @@ impl CaptimShotwidthHighReg {
         1,
         0,
         u16,
+        u16,
         CaptimShotwidthHighReg_SPEC,
         crate::common::RW,
     > {
@@ -768,6 +837,7 @@ impl CaptimShotwidthHighReg {
             0xffff,
             1,
             0,
+            u16,
             u16,
             CaptimShotwidthHighReg_SPEC,
             crate::common::RW,
@@ -787,11 +857,10 @@ pub struct CaptimShotwidthReg_SPEC;
 impl crate::sealed::RegSpec for CaptimShotwidthReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer Shot duration in shot mode"]
+
 pub type CaptimShotwidthReg = crate::RegValueT<CaptimShotwidthReg_SPEC>;
 
 impl CaptimShotwidthReg {
-    #[doc = "Shot phase duration in oneshot mode"]
     #[inline(always)]
     pub fn captim_shotwidth(
         self,
@@ -801,6 +870,7 @@ impl CaptimShotwidthReg {
         1,
         0,
         u16,
+        u16,
         CaptimShotwidthReg_SPEC,
         crate::common::RW,
     > {
@@ -809,6 +879,7 @@ impl CaptimShotwidthReg {
             0xffff,
             1,
             0,
+            u16,
             u16,
             CaptimShotwidthReg_SPEC,
             crate::common::RW,
@@ -828,26 +899,25 @@ pub struct CaptimStatusReg_SPEC;
 impl crate::sealed::RegSpec for CaptimStatusReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer status register"]
+
 pub type CaptimStatusReg = crate::RegValueT<CaptimStatusReg_SPEC>;
 
 impl CaptimStatusReg {
-    #[doc = "0 : Wait for event, 1 : Delay phase, 2 : Start Shot, 3 : Shot phase"]
     #[inline(always)]
     pub fn captim_oneshot_phase(
         self,
-    ) -> crate::common::RegisterField<2, 0x3, 1, 0, u8, CaptimStatusReg_SPEC, crate::common::R>
+    ) -> crate::common::RegisterField<2, 0x3, 1, 0, u8, u8, CaptimStatusReg_SPEC, crate::common::R>
     {
-        crate::common::RegisterField::<2,0x3,1,0,u8, CaptimStatusReg_SPEC,crate::common::R>::from_register(self,0)
+        crate::common::RegisterField::<2,0x3,1,0,u8,u8,CaptimStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "Gives the logic level of the IN1"]
+
     #[inline(always)]
     pub fn captim_in2_state(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, CaptimStatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<1,1,0,CaptimStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "Gives the logic level of the IN2"]
+
     #[inline(always)]
     pub fn captim_in1_state(
         self,
@@ -868,21 +938,29 @@ pub struct CaptimTimerHvalReg_SPEC;
 impl crate::sealed::RegSpec for CaptimTimerHvalReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer counter high value"]
+
 pub type CaptimTimerHvalReg = crate::RegValueT<CaptimTimerHvalReg_SPEC>;
 
 impl CaptimTimerHvalReg {
-    #[doc = "Gives the current timer high value"]
     #[inline(always)]
     pub fn captim_timer_hvalue(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, CaptimTimerHvalReg_SPEC, crate::common::R>
-    {
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        CaptimTimerHvalReg_SPEC,
+        crate::common::R,
+    > {
         crate::common::RegisterField::<
             0,
             0xffff,
             1,
             0,
+            u16,
             u16,
             CaptimTimerHvalReg_SPEC,
             crate::common::R,
@@ -902,17 +980,33 @@ pub struct CaptimTimerValReg_SPEC;
 impl crate::sealed::RegSpec for CaptimTimerValReg_SPEC {
     type DataType = u16;
 }
-#[doc = "Capture Timer counter value"]
+
 pub type CaptimTimerValReg = crate::RegValueT<CaptimTimerValReg_SPEC>;
 
 impl CaptimTimerValReg {
-    #[doc = "Gives the current timer value"]
     #[inline(always)]
     pub fn captim_timer_value(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, CaptimTimerValReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, CaptimTimerValReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        CaptimTimerValReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            CaptimTimerValReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for CaptimTimerValReg {

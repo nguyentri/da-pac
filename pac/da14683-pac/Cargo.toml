@@ -13,12 +13,12 @@
 # following link:
 # http://www.renesas.com/disclaimer
 #
-# Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:22 +0000
+# Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:08 +0000
 
 [package]
 name = "da14683-pac"
-version = "0.0.1"
-edition = "2021"
+version = "0.1.0"
+edition = "2024"
 description = "Peripheral Access Crate (PAC) for DA14683."
 authors = ["Tri Nguyen <trongtribk06@gmail.com>"]
 keywords = ["da14683", "da", "arm", "cortex-m", "renesas"]
@@ -27,7 +27,7 @@ documentation = "https://docs.rs/crate/da14683-pac/latest"
 categories = ["embedded", "hardware-support", "no-std"]
 include = ["src/*", "Cargo.toml", "README.md", "build.rs", "device.x"]
 readme = "README.md"
-license-file = "LICENSE.TXT"
+license-file = "LICENSE.txt"
 
 [lib]
 test = false
@@ -77,45 +77,7 @@ usb = []
 wakeup = []
 wdog = []
 
-all = [
-    "nvic",
-    "scb",
-    "systick",
-    "aes_hash",
-    "anamisc",
-    "apu",
-    "ble",
-    "cache",
-    "chip_version",
-    "coex",
-    "crg_per",
-    "crg_top",
-    "dcdc",
-    "dem",
-    "dma",
-    "ecc",
-    "ftdf",
-    "gp_timers",
-    "gpadc",
-    "gpio",
-    "gpreg",
-    "i2c",
-    "i2c2",
-    "ir",
-    "kbscan",
-    "otpc",
-    "qspic",
-    "quad",
-    "spi",
-    "spi2",
-    "timer1",
-    "trng",
-    "uart",
-    "uart2",
-    "usb",
-    "wakeup",
-    "wdog",
-]
+all = ["nvic" , "scb" , "systick" , "aes_hash" , "anamisc" , "apu" , "ble" , "cache" , "chip_version" , "coex" , "crg_per" , "crg_top" , "dcdc" , "dem" , "dma" , "ecc" , "ftdf" , "gp_timers" , "gpadc" , "gpio" , "gpreg" , "i2c" , "i2c2" , "ir" , "kbscan" , "otpc" , "qspic" , "quad" , "spi" , "spi2" , "timer1" , "trng" , "uart" , "uart2" , "usb" , "wakeup" , "wdog"]
 
 tracing = ["dep:phf"]
 

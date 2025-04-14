@@ -1,0 +1,315 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build_and_format_check:
+    name: Build Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rustup
+        run: |
+          sudo apt-get update
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable
+          echo "export PATH=\$HOME/.cargo/bin:\$PATH:/usr/bin" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Rust Cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-
+
+      - name: Setup Rust Environment
+        run: |
+          rustup component add rustfmt
+          rustup component add clippy
+          rustup target add thumbv6m-none-eabi
+          rustup target add thumbv8m.main-none-eabi
+        shell: bash
+
+      - name: Build for da14531-pac
+        id: build-da14531
+        run: cd pac/da14531-pac && cargo build --target thumbv6m-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14531-pac
+        if: steps.build-da14531.outcome == 'success'
+        run: cd pac/da14531-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14531-pac
+        if: steps.build-da14531.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14531-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14580-pac
+        id: build-da14580
+        run: cd pac/da14580-pac && cargo build --target thumbv6m-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14580-pac
+        if: steps.build-da14580.outcome == 'success'
+        run: cd pac/da14580-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14580-pac
+        if: steps.build-da14580.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14580-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14581-pac
+        id: build-da14581
+        run: cd pac/da14581-pac && cargo build --target thumbv6m-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14581-pac
+        if: steps.build-da14581.outcome == 'success'
+        run: cd pac/da14581-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14581-pac
+        if: steps.build-da14581.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14581-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14582-pac
+        id: build-da14582
+        run: cd pac/da14582-pac && cargo build --target thumbv6m-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14582-pac
+        if: steps.build-da14582.outcome == 'success'
+        run: cd pac/da14582-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14582-pac
+        if: steps.build-da14582.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14582-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14583-pac
+        id: build-da14583
+        run: cd pac/da14583-pac && cargo build --target thumbv6m-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14583-pac
+        if: steps.build-da14583.outcome == 'success'
+        run: cd pac/da14583-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14583-pac
+        if: steps.build-da14583.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14583-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14585-pac
+        id: build-da14585
+        run: cd pac/da14585-pac && cargo build --target thumbv6m-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14585-pac
+        if: steps.build-da14585.outcome == 'success'
+        run: cd pac/da14585-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14585-pac
+        if: steps.build-da14585.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14585-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14586-pac
+        id: build-da14586
+        run: cd pac/da14586-pac && cargo build --target thumbv6m-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14586-pac
+        if: steps.build-da14586.outcome == 'success'
+        run: cd pac/da14586-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14586-pac
+        if: steps.build-da14586.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14586-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14680-pac
+        id: build-da14680
+        run: cd pac/da14680-pac && cargo build --target thumbv6m-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14680-pac
+        if: steps.build-da14680.outcome == 'success'
+        run: cd pac/da14680-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14680-pac
+        if: steps.build-da14680.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14680-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14681-pac
+        id: build-da14681
+        run: cd pac/da14681-pac && cargo build --target thumbv6m-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14681-pac
+        if: steps.build-da14681.outcome == 'success'
+        run: cd pac/da14681-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14681-pac
+        if: steps.build-da14681.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14681-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14682-pac
+        id: build-da14682
+        run: cd pac/da14682-pac && cargo build --target thumbv6m-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14682-pac
+        if: steps.build-da14682.outcome == 'success'
+        run: cd pac/da14682-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14682-pac
+        if: steps.build-da14682.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14682-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14683-pac
+        id: build-da14683
+        run: cd pac/da14683-pac && cargo build --target thumbv6m-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14683-pac
+        if: steps.build-da14683.outcome == 'success'
+        run: cd pac/da14683-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14683-pac
+        if: steps.build-da14683.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14683-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14691-pac
+        id: build-da14691
+        run: cd pac/da14691-pac && cargo build --target thumbv8m.main-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14691-pac
+        if: steps.build-da14691.outcome == 'success'
+        run: cd pac/da14691-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14691-pac
+        if: steps.build-da14691.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14691-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14695-pac
+        id: build-da14695
+        run: cd pac/da14695-pac && cargo build --target thumbv8m.main-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14695-pac
+        if: steps.build-da14695.outcome == 'success'
+        run: cd pac/da14695-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14695-pac
+        if: steps.build-da14695.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14695-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14697-pac
+        id: build-da14697
+        run: cd pac/da14697-pac && cargo build --target thumbv8m.main-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14697-pac
+        if: steps.build-da14697.outcome == 'success'
+        run: cd pac/da14697-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14697-pac
+        if: steps.build-da14697.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14697-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da14699-pac
+        id: build-da14699
+        run: cd pac/da14699-pac && cargo build --target thumbv8m.main-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da14699-pac
+        if: steps.build-da14699.outcome == 'success'
+        run: cd pac/da14699-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da14699-pac
+        if: steps.build-da14699.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da14699-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true
+
+      - name: Build for da1470x-pac
+        id: build-da1470x
+        run: cd pac/da1470x-pac && cargo build --target thumbv8m.main-none-eabi && cargo fmt --all -- --check
+        continue-on-error: true
+
+      - name: Build docs for da1470x-pac
+        if: steps.build-da1470x.outcome == 'success'
+        run: cd pac/da1470x-pac && cargo doc --no-deps
+        continue-on-error: true
+
+      - name: Publish da1470x-pac
+        if: steps.build-da1470x.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: cd pac/da1470x-pac && cargo publish --allow-dirty
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        continue-on-error: true

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:22 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:08 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Dem {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub const fn rf_ftdf_sigdet_ctrl_reg(
         &self,
@@ -51,35 +51,85 @@ pub struct RfFtdfSigdetCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfFtdfSigdetCtrlReg_SPEC {
     type DataType = u16;
 }
-#[doc = ""]
+
 pub type RfFtdfSigdetCtrlReg = crate::RegValueT<RfFtdfSigdetCtrlReg_SPEC>;
 
 impl RfFtdfSigdetCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn sigdet_delay(
         self,
-    ) -> crate::common::RegisterField<13, 0x3, 1, 0, u8, RfFtdfSigdetCtrlReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<13,0x3,1,0,u8, RfFtdfSigdetCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        13,
+        0x3,
+        1,
+        0,
+        u8,
+        u8,
+        RfFtdfSigdetCtrlReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            13,
+            0x3,
+            1,
+            0,
+            u8,
+            u8,
+            RfFtdfSigdetCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn sigdet_sfactor1(
         self,
-    ) -> crate::common::RegisterField<11, 0x3, 1, 0, u8, RfFtdfSigdetCtrlReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<11,0x3,1,0,u8, RfFtdfSigdetCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        11,
+        0x3,
+        1,
+        0,
+        u8,
+        u8,
+        RfFtdfSigdetCtrlReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            11,
+            0x3,
+            1,
+            0,
+            u8,
+            u8,
+            RfFtdfSigdetCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn sigdet_sfactor2(
         self,
-    ) -> crate::common::RegisterField<9, 0x3, 1, 0, u8, RfFtdfSigdetCtrlReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<9,0x3,1,0,u8, RfFtdfSigdetCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        9,
+        0x3,
+        1,
+        0,
+        u8,
+        u8,
+        RfFtdfSigdetCtrlReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            9,
+            0x3,
+            1,
+            0,
+            u8,
+            u8,
+            RfFtdfSigdetCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn sigdet_diff(
         self,
@@ -87,21 +137,55 @@ impl RfFtdfSigdetCtrlReg {
     {
         crate::common::RegisterFieldBool::<8,1,0,RfFtdfSigdetCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn sigdet_threshold(
         self,
-    ) -> crate::common::RegisterField<2, 0x3f, 1, 0, u8, RfFtdfSigdetCtrlReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<2,0x3f,1,0,u8, RfFtdfSigdetCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        2,
+        0x3f,
+        1,
+        0,
+        u8,
+        u8,
+        RfFtdfSigdetCtrlReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            2,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            RfFtdfSigdetCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn sigdet_mode(
         self,
-    ) -> crate::common::RegisterField<0, 0x3, 1, 0, u8, RfFtdfSigdetCtrlReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3,1,0,u8, RfFtdfSigdetCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x3,
+        1,
+        0,
+        u8,
+        u8,
+        RfFtdfSigdetCtrlReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x3,
+            1,
+            0,
+            u8,
+            u8,
+            RfFtdfSigdetCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for RfFtdfSigdetCtrlReg {

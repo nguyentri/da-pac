@@ -13,12 +13,12 @@
 # following link:
 # http://www.renesas.com/disclaimer
 #
-# Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:04 +0000
+# Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
 
 [package]
 name = "da14531-pac"
-version = "0.0.1"
-edition = "2021"
+version = "0.1.0"
+edition = "2024"
 description = "Peripheral Access Crate (PAC) for DA14531."
 authors = ["Tri Nguyen <trongtribk06@gmail.com>"]
 keywords = ["da14531", "da", "arm", "cortex-m", "renesas"]
@@ -27,7 +27,7 @@ documentation = "https://docs.rs/crate/da14531-pac/latest"
 categories = ["embedded", "hardware-support", "no-std"]
 include = ["src/*", "Cargo.toml", "README.md", "build.rs", "device.x"]
 readme = "README.md"
-license-file = "LICENSE.TXT"
+license-file = "LICENSE.txt"
 
 [lib]
 test = false
@@ -71,39 +71,7 @@ uart = []
 uart2 = []
 wkup = []
 
-all = [
-    "nvic",
-    "scb",
-    "systick",
-    "adplldig",
-    "anamisc",
-    "ble",
-    "chip_version",
-    "crg_aon",
-    "crg_tim",
-    "crg_top",
-    "gpadc",
-    "gpio",
-    "gpreg",
-    "i2c",
-    "kbrd",
-    "mbist_sram12",
-    "mbist_sram3",
-    "otpc",
-    "patch",
-    "quadec",
-    "rfcu",
-    "rfcu_power",
-    "rfmon",
-    "rtc",
-    "spi",
-    "sys_wdog",
-    "timer0",
-    "timer1",
-    "uart",
-    "uart2",
-    "wkup",
-]
+all = ["nvic" , "scb" , "systick" , "adplldig" , "anamisc" , "ble" , "chip_version" , "crg_aon" , "crg_tim" , "crg_top" , "gpadc" , "gpio" , "gpreg" , "i2c" , "kbrd" , "mbist_sram12" , "mbist_sram3" , "otpc" , "patch" , "quadec" , "rfcu" , "rfcu_power" , "rfmon" , "rtc" , "spi" , "sys_wdog" , "timer0" , "timer1" , "uart" , "uart2" , "wkup"]
 
 tracing = ["dep:phf"]
 

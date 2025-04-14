@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:04 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Kbrd {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "debounce counter value for GPIO inputs"]
+
     #[inline(always)]
     pub const fn gpio_debounce_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::Kbrd {
         }
     }
 
-    #[doc = "high or low level select for GPIO interrupts"]
     #[inline(always)]
     pub const fn gpio_int_level_ctrl_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::Kbrd {
         }
     }
 
-    #[doc = "GPIO interrupt selection for GPIO_IRQ0"]
     #[inline(always)]
     pub const fn gpio_irq0_in_sel_reg(
         &self,
@@ -69,7 +67,6 @@ impl super::Kbrd {
         }
     }
 
-    #[doc = "GPIO interrupt selection for GPIO_IRQ1"]
     #[inline(always)]
     pub const fn gpio_irq1_in_sel_reg(
         &self,
@@ -81,7 +78,6 @@ impl super::Kbrd {
         }
     }
 
-    #[doc = "GPIO interrupt selection for GPIO_IRQ2"]
     #[inline(always)]
     pub const fn gpio_irq2_in_sel_reg(
         &self,
@@ -93,7 +89,6 @@ impl super::Kbrd {
         }
     }
 
-    #[doc = "GPIO interrupt selection for GPIO_IRQ3"]
     #[inline(always)]
     pub const fn gpio_irq3_in_sel_reg(
         &self,
@@ -105,7 +100,6 @@ impl super::Kbrd {
         }
     }
 
-    #[doc = "GPIO interrupt selection for GPIO_IRQ4"]
     #[inline(always)]
     pub const fn gpio_irq4_in_sel_reg(
         &self,
@@ -117,7 +111,6 @@ impl super::Kbrd {
         }
     }
 
-    #[doc = "GPIO interrupt reset register"]
     #[inline(always)]
     pub const fn gpio_reset_irq_reg(
         &self,
@@ -129,7 +122,6 @@ impl super::Kbrd {
         }
     }
 
-    #[doc = "GPIO Kbrd control register"]
     #[inline(always)]
     pub const fn kbrd_ctrl_reg(
         &self,
@@ -141,7 +133,6 @@ impl super::Kbrd {
         }
     }
 
-    #[doc = "GPIO interrupt selection for KBRD_IRQ for P0"]
     #[inline(always)]
     pub const fn kbrd_irq_in_sel0_reg(
         &self,
@@ -159,59 +150,58 @@ pub struct GpioDebounceReg_SPEC;
 impl crate::sealed::RegSpec for GpioDebounceReg_SPEC {
     type DataType = u16;
 }
-#[doc = "debounce counter value for GPIO inputs"]
+
 pub type GpioDebounceReg = crate::RegValueT<GpioDebounceReg_SPEC>;
 
 impl GpioDebounceReg {
-    #[doc = "enables the debounce counter for the KBRD interface"]
     #[inline(always)]
     pub fn deb_enable_kbrd(
         self,
     ) -> crate::common::RegisterFieldBool<11, 1, 0, GpioDebounceReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<11,1,0,GpioDebounceReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enables the debounce counter for GPIO IRQ4"]
+
     #[inline(always)]
     pub fn deb_enable4(
         self,
     ) -> crate::common::RegisterFieldBool<10, 1, 0, GpioDebounceReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<10,1,0,GpioDebounceReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enables the debounce counter for GPIO IRQ3"]
+
     #[inline(always)]
     pub fn deb_enable3(
         self,
     ) -> crate::common::RegisterFieldBool<9, 1, 0, GpioDebounceReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<9,1,0,GpioDebounceReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enables the debounce counter for GPIO IRQ2"]
+
     #[inline(always)]
     pub fn deb_enable2(
         self,
     ) -> crate::common::RegisterFieldBool<8, 1, 0, GpioDebounceReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<8,1,0,GpioDebounceReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enables the debounce counter for GPIO IRQ1"]
+
     #[inline(always)]
     pub fn deb_enable1(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, GpioDebounceReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,GpioDebounceReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enables the debounce counter for GPIO IRQ0"]
+
     #[inline(always)]
     pub fn deb_enable0(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, GpioDebounceReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,GpioDebounceReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Keyboard debounce time if enabled. Generate KEYB_INT after specified time.\nDebounce time: N*1 ms. N =0..63"]
+
     #[inline(always)]
     pub fn deb_value(
         self,
-    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, GpioDebounceReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, GpioDebounceReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x3f,1,0,u8, GpioDebounceReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,GpioDebounceReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GpioDebounceReg {
@@ -227,11 +217,10 @@ pub struct GpioIntLevelCtrlReg_SPEC;
 impl crate::sealed::RegSpec for GpioIntLevelCtrlReg_SPEC {
     type DataType = u16;
 }
-#[doc = "high or low level select for GPIO interrupts"]
+
 pub type GpioIntLevelCtrlReg = crate::RegValueT<GpioIntLevelCtrlReg_SPEC>;
 
 impl GpioIntLevelCtrlReg {
-    #[doc = "see EDGE_LEVELn0, but for GPIO IRQ4"]
     #[inline(always)]
     pub fn edge_leveln4(
         self,
@@ -239,7 +228,7 @@ impl GpioIntLevelCtrlReg {
     {
         crate::common::RegisterFieldBool::<9,1,0,GpioIntLevelCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "see EDGE_LEVELn0, but for GPIO IRQ3"]
+
     #[inline(always)]
     pub fn edge_leveln3(
         self,
@@ -247,7 +236,7 @@ impl GpioIntLevelCtrlReg {
     {
         crate::common::RegisterFieldBool::<8,1,0,GpioIntLevelCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "see EDGE_LEVELn0, but for GPIO IRQ2"]
+
     #[inline(always)]
     pub fn edge_leveln2(
         self,
@@ -255,7 +244,7 @@ impl GpioIntLevelCtrlReg {
     {
         crate::common::RegisterFieldBool::<7,1,0,GpioIntLevelCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "see EDGE_LEVELn0, but for GPIO IRQ1"]
+
     #[inline(always)]
     pub fn edge_leveln1(
         self,
@@ -263,7 +252,7 @@ impl GpioIntLevelCtrlReg {
     {
         crate::common::RegisterFieldBool::<6,1,0,GpioIntLevelCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0: do not wait for key release after interrupt was reset for GPIO IRQ0, so a new interrupt can be initiated immediately\n1: wait for key release after interrupt was reset for IRQ0"]
+
     #[inline(always)]
     pub fn edge_leveln0(
         self,
@@ -271,7 +260,7 @@ impl GpioIntLevelCtrlReg {
     {
         crate::common::RegisterFieldBool::<5,1,0,GpioIntLevelCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "see INPUT_LEVEL0, but for GPIO IRQ4"]
+
     #[inline(always)]
     pub fn input_level4(
         self,
@@ -279,7 +268,7 @@ impl GpioIntLevelCtrlReg {
     {
         crate::common::RegisterFieldBool::<4,1,0,GpioIntLevelCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "see INPUT_LEVEL0, but for GPIO IRQ3"]
+
     #[inline(always)]
     pub fn input_level3(
         self,
@@ -287,7 +276,7 @@ impl GpioIntLevelCtrlReg {
     {
         crate::common::RegisterFieldBool::<3,1,0,GpioIntLevelCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "see INPUT_LEVEL0, but for GPIO IRQ2"]
+
     #[inline(always)]
     pub fn input_level2(
         self,
@@ -295,7 +284,7 @@ impl GpioIntLevelCtrlReg {
     {
         crate::common::RegisterFieldBool::<2,1,0,GpioIntLevelCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "see INPUT_LEVEL0, but for GPIO IRQ1"]
+
     #[inline(always)]
     pub fn input_level1(
         self,
@@ -303,7 +292,7 @@ impl GpioIntLevelCtrlReg {
     {
         crate::common::RegisterFieldBool::<1,1,0,GpioIntLevelCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0 = selected input will generate GPIO IRQ0 if that input is high.\n1 = selected input will generate GPIO IRQ0 if that input is low."]
+
     #[inline(always)]
     pub fn input_level0(
         self,
@@ -325,17 +314,16 @@ pub struct GpioIrq0InSelReg_SPEC;
 impl crate::sealed::RegSpec for GpioIrq0InSelReg_SPEC {
     type DataType = u16;
 }
-#[doc = "GPIO interrupt selection for GPIO_IRQ0"]
+
 pub type GpioIrq0InSelReg = crate::RegValueT<GpioIrq0InSelReg_SPEC>;
 
 impl GpioIrq0InSelReg {
-    #[doc = "input selection that can generate a GPIO interrupt\n1: P0\\[0\\] is selected\n2: P0\\[1\\] is selected\n3: P0\\[2\\] is selected\n4: P0\\[3\\] is selected\n5: P0\\[4\\] is selected\n6: P0\\[5\\] is selected\n7: P0\\[6\\] is selected\n8: P0\\[7\\] is selected\n9: P0\\[8\\] is selected\n10: P0\\[9\\] is selected\n11: P0\\[10\\] is selected\n12: P0\\[11\\] is selected\nall others: no input selected"]
     #[inline(always)]
     pub fn kbrd_irq0_sel(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, GpioIrq0InSelReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, GpioIrq0InSelReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xf,1,0,u8, GpioIrq0InSelReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,GpioIrq0InSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GpioIrq0InSelReg {
@@ -351,17 +339,16 @@ pub struct GpioIrq1InSelReg_SPEC;
 impl crate::sealed::RegSpec for GpioIrq1InSelReg_SPEC {
     type DataType = u16;
 }
-#[doc = "GPIO interrupt selection for GPIO_IRQ1"]
+
 pub type GpioIrq1InSelReg = crate::RegValueT<GpioIrq1InSelReg_SPEC>;
 
 impl GpioIrq1InSelReg {
-    #[doc = "see KBRD_IRQ0_SEL"]
     #[inline(always)]
     pub fn kbrd_irq1_sel(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, GpioIrq1InSelReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, GpioIrq1InSelReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xf,1,0,u8, GpioIrq1InSelReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,GpioIrq1InSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GpioIrq1InSelReg {
@@ -377,17 +364,16 @@ pub struct GpioIrq2InSelReg_SPEC;
 impl crate::sealed::RegSpec for GpioIrq2InSelReg_SPEC {
     type DataType = u16;
 }
-#[doc = "GPIO interrupt selection for GPIO_IRQ2"]
+
 pub type GpioIrq2InSelReg = crate::RegValueT<GpioIrq2InSelReg_SPEC>;
 
 impl GpioIrq2InSelReg {
-    #[doc = "see KBRD_IRQ0_SEL"]
     #[inline(always)]
     pub fn kbrd_irq2_sel(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, GpioIrq2InSelReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, GpioIrq2InSelReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xf,1,0,u8, GpioIrq2InSelReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,GpioIrq2InSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GpioIrq2InSelReg {
@@ -403,17 +389,16 @@ pub struct GpioIrq3InSelReg_SPEC;
 impl crate::sealed::RegSpec for GpioIrq3InSelReg_SPEC {
     type DataType = u16;
 }
-#[doc = "GPIO interrupt selection for GPIO_IRQ3"]
+
 pub type GpioIrq3InSelReg = crate::RegValueT<GpioIrq3InSelReg_SPEC>;
 
 impl GpioIrq3InSelReg {
-    #[doc = "see KBRD_IRQ0_SEL"]
     #[inline(always)]
     pub fn kbrd_irq3_sel(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, GpioIrq3InSelReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, GpioIrq3InSelReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xf,1,0,u8, GpioIrq3InSelReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,GpioIrq3InSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GpioIrq3InSelReg {
@@ -429,17 +414,16 @@ pub struct GpioIrq4InSelReg_SPEC;
 impl crate::sealed::RegSpec for GpioIrq4InSelReg_SPEC {
     type DataType = u16;
 }
-#[doc = "GPIO interrupt selection for GPIO_IRQ4"]
+
 pub type GpioIrq4InSelReg = crate::RegValueT<GpioIrq4InSelReg_SPEC>;
 
 impl GpioIrq4InSelReg {
-    #[doc = "see KBRD_IRQ0_SEL"]
     #[inline(always)]
     pub fn kbrd_irq4_sel(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, GpioIrq4InSelReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, GpioIrq4InSelReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xf,1,0,u8, GpioIrq4InSelReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,GpioIrq4InSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for GpioIrq4InSelReg {
@@ -455,46 +439,45 @@ pub struct GpioResetIrqReg_SPEC;
 impl crate::sealed::RegSpec for GpioResetIrqReg_SPEC {
     type DataType = u16;
 }
-#[doc = "GPIO interrupt reset register"]
+
 pub type GpioResetIrqReg = crate::RegValueT<GpioResetIrqReg_SPEC>;
 
 impl GpioResetIrqReg {
-    #[doc = "writing a 1 to this bit will reset the KBRD IRQ.\nReading returns 0."]
     #[inline(always)]
     pub fn reset_kbrd_irq(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, GpioResetIrqReg_SPEC, crate::common::W> {
         crate::common::RegisterFieldBool::<5,1,0,GpioResetIrqReg_SPEC,crate::common::W>::from_register(self,0)
     }
-    #[doc = "writing a 1 to this bit will reset the GPIO4 IRQ.\nReading returns 0."]
+
     #[inline(always)]
     pub fn reset_gpio4_irq(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, GpioResetIrqReg_SPEC, crate::common::W> {
         crate::common::RegisterFieldBool::<4,1,0,GpioResetIrqReg_SPEC,crate::common::W>::from_register(self,0)
     }
-    #[doc = "writing a 1 to this bit will reset the GPIO3 IRQ.\nReading returns 0."]
+
     #[inline(always)]
     pub fn reset_gpio3_irq(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, GpioResetIrqReg_SPEC, crate::common::W> {
         crate::common::RegisterFieldBool::<3,1,0,GpioResetIrqReg_SPEC,crate::common::W>::from_register(self,0)
     }
-    #[doc = "writing a 1 to this bit will reset the GPIO2 IRQ.\nReading returns 0."]
+
     #[inline(always)]
     pub fn reset_gpio2_irq(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, GpioResetIrqReg_SPEC, crate::common::W> {
         crate::common::RegisterFieldBool::<2,1,0,GpioResetIrqReg_SPEC,crate::common::W>::from_register(self,0)
     }
-    #[doc = "writing a 1 to this bit will reset the GPIO1 IRQ.\nReading returns 0."]
+
     #[inline(always)]
     pub fn reset_gpio1_irq(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, GpioResetIrqReg_SPEC, crate::common::W> {
         crate::common::RegisterFieldBool::<1,1,0,GpioResetIrqReg_SPEC,crate::common::W>::from_register(self,0)
     }
-    #[doc = "writing a 1 to this bit will reset the GPIO0 IRQ.\nReading returns 0."]
+
     #[inline(always)]
     pub fn reset_gpio0_irq(
         self,
@@ -515,30 +498,30 @@ pub struct KbrdCtrlReg_SPEC;
 impl crate::sealed::RegSpec for KbrdCtrlReg_SPEC {
     type DataType = u16;
 }
-#[doc = "GPIO Kbrd control register"]
+
 pub type KbrdCtrlReg = crate::RegValueT<KbrdCtrlReg_SPEC>;
 
 impl KbrdCtrlReg {
-    #[doc = "0 = No interrupt on key release\n1 = Interrupt also on key release (also debouncing if enabled)"]
     #[inline(always)]
     pub fn kbrd_rel(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, KbrdCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,KbrdCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0 = enabled input will generate KBRD IRQ if that input is high.\n1 = enabled input will generate KBRD IRQ if that input is low."]
+
     #[inline(always)]
     pub fn kbrd_level(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, KbrdCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,KbrdCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "While key is pressed, automatically generate repeating\nKEYB_INT after specified time unequal to 0.\nRepeat time: N*1 ms. N =1..63, N=0 disables the timer."]
+
     #[inline(always)]
     pub fn key_repeat(
         self,
-    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, KbrdCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x3f,1,0,u8, KbrdCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, KbrdCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,KbrdCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for KbrdCtrlReg {
@@ -554,88 +537,87 @@ pub struct KbrdIrqInSel0Reg_SPEC;
 impl crate::sealed::RegSpec for KbrdIrqInSel0Reg_SPEC {
     type DataType = u16;
 }
-#[doc = "GPIO interrupt selection for KBRD_IRQ for P0"]
+
 pub type KbrdIrqInSel0Reg = crate::RegValueT<KbrdIrqInSel0Reg_SPEC>;
 
 impl KbrdIrqInSel0Reg {
-    #[doc = "enable P0\\[11\\] for the keyboard interrupt"]
     #[inline(always)]
     pub fn kbrd_p11_en(
         self,
     ) -> crate::common::RegisterFieldBool<11, 1, 0, KbrdIrqInSel0Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<11,1,0,KbrdIrqInSel0Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enable P0\\[10\\] for the keyboard interrupt"]
+
     #[inline(always)]
     pub fn kbrd_p10_en(
         self,
     ) -> crate::common::RegisterFieldBool<10, 1, 0, KbrdIrqInSel0Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<10,1,0,KbrdIrqInSel0Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enable P0\\[9\\] for the keyboard interrupt"]
+
     #[inline(always)]
     pub fn kbrd_p09_en(
         self,
     ) -> crate::common::RegisterFieldBool<9, 1, 0, KbrdIrqInSel0Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<9,1,0,KbrdIrqInSel0Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enable P0\\[8\\] for the keyboard interrupt"]
+
     #[inline(always)]
     pub fn kbrd_p08_en(
         self,
     ) -> crate::common::RegisterFieldBool<8, 1, 0, KbrdIrqInSel0Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<8,1,0,KbrdIrqInSel0Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enable P0\\[7\\] for the keyboard interrupt"]
+
     #[inline(always)]
     pub fn kbrd_p07_en(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, KbrdIrqInSel0Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,KbrdIrqInSel0Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enable P0\\[6\\] for the keyboard interrupt"]
+
     #[inline(always)]
     pub fn kbrd_p06_en(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, KbrdIrqInSel0Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,KbrdIrqInSel0Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enable P0\\[5\\] for the keyboard interrupt"]
+
     #[inline(always)]
     pub fn kbrd_p05_en(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, KbrdIrqInSel0Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,KbrdIrqInSel0Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enable P0\\[4\\] for the keyboard interrupt"]
+
     #[inline(always)]
     pub fn kbrd_p04_en(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, KbrdIrqInSel0Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,KbrdIrqInSel0Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enable P0\\[3\\] for the keyboard interrupt"]
+
     #[inline(always)]
     pub fn kbrd_p03_en(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, KbrdIrqInSel0Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<3,1,0,KbrdIrqInSel0Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enable P0\\[2\\] for the keyboard interrupt"]
+
     #[inline(always)]
     pub fn kbrd_p02_en(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, KbrdIrqInSel0Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,KbrdIrqInSel0Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enable P0\\[1\\] for the keyboard interrupt"]
+
     #[inline(always)]
     pub fn kbrd_p01_en(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, KbrdIrqInSel0Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,KbrdIrqInSel0Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "enable P0\\[0\\] for the keyboard interrupt"]
+
     #[inline(always)]
     pub fn kbrd_p00_en(
         self,

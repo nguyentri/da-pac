@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:04 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Rfcu {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub const fn rf_adci_dc_offset_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_adcq_dc_offset_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_adc_ctrl1_reg(
         &self,
@@ -69,7 +67,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_adc_ctrl2_reg(
         &self,
@@ -81,7 +78,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_adc_ctrl3_reg(
         &self,
@@ -93,7 +89,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_adplldig_ctrl_reg(
         &self,
@@ -105,7 +100,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_adplldig_rfmon_ctrl_reg(
         &self,
@@ -117,7 +111,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_agc_ext_lut_reg(
         &self,
@@ -129,7 +122,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_attr_reg(
         &self,
@@ -141,7 +133,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_calstate_reg(
         &self,
@@ -153,7 +144,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_cal_ctrl_reg(
         &self,
@@ -165,7 +155,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_diagirq_ctrl_reg(
         &self,
@@ -177,7 +166,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_diagirq_stat_reg(
         &self,
@@ -189,7 +177,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_iff_ctrl_reg(
         &self,
@@ -201,7 +188,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_io_ctrl_reg(
         &self,
@@ -213,7 +199,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_irq_ctrl_reg(
         &self,
@@ -225,7 +210,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_ldo_ctrl_reg(
         &self,
@@ -237,7 +221,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_ldo_status_reg(
         &self,
@@ -249,7 +232,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_ldo_vref_sel_reg(
         &self,
@@ -261,7 +243,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_lna_ctrl1_reg(
         &self,
@@ -273,7 +254,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_lna_ctrl2_reg(
         &self,
@@ -285,7 +265,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_lna_ctrl3_reg(
         &self,
@@ -297,7 +276,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_mixer_ctrl1_reg(
         &self,
@@ -309,7 +287,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_mixer_ctrl2_reg(
         &self,
@@ -321,7 +298,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_overrule_reg(
         &self,
@@ -333,7 +309,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_pa_ctrl_reg(
         &self,
@@ -345,7 +320,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_radio_init_reg(
         &self,
@@ -357,7 +331,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_rfcu_ctrl_reg(
         &self,
@@ -369,7 +342,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_scan_feedback_reg(
         &self,
@@ -381,7 +353,6 @@ impl super::Rfcu {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rf_spare_reg(
         &self,
@@ -399,25 +370,58 @@ pub struct RfAdciDcOffsetReg_SPEC;
 impl crate::sealed::RegSpec for RfAdciDcOffsetReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfAdciDcOffsetReg = crate::RegValueT<RfAdciDcOffsetReg_SPEC>;
 
 impl RfAdciDcOffsetReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn adc_offn_i_rd(
         self,
-    ) -> crate::common::RegisterField<9, 0x1ff, 1, 0, u16, RfAdciDcOffsetReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<9,0x1ff,1,0,u16, RfAdciDcOffsetReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        9,
+        0x1ff,
+        1,
+        0,
+        u16,
+        u16,
+        RfAdciDcOffsetReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            9,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            RfAdciDcOffsetReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adc_offp_i_rd(
         self,
-    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, RfAdciDcOffsetReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<0,0x1ff,1,0,u16, RfAdciDcOffsetReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x1ff,
+        1,
+        0,
+        u16,
+        u16,
+        RfAdciDcOffsetReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            RfAdciDcOffsetReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for RfAdciDcOffsetReg {
@@ -433,25 +437,58 @@ pub struct RfAdcqDcOffsetReg_SPEC;
 impl crate::sealed::RegSpec for RfAdcqDcOffsetReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfAdcqDcOffsetReg = crate::RegValueT<RfAdcqDcOffsetReg_SPEC>;
 
 impl RfAdcqDcOffsetReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn adc_offn_q_rd(
         self,
-    ) -> crate::common::RegisterField<9, 0x1ff, 1, 0, u16, RfAdcqDcOffsetReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<9,0x1ff,1,0,u16, RfAdcqDcOffsetReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        9,
+        0x1ff,
+        1,
+        0,
+        u16,
+        u16,
+        RfAdcqDcOffsetReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            9,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            RfAdcqDcOffsetReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adc_offp_q_rd(
         self,
-    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, RfAdcqDcOffsetReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<0,0x1ff,1,0,u16, RfAdcqDcOffsetReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x1ff,
+        1,
+        0,
+        u16,
+        u16,
+        RfAdcqDcOffsetReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            RfAdcqDcOffsetReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for RfAdcqDcOffsetReg {
@@ -467,25 +504,24 @@ pub struct RfAdcCtrl1Reg_SPEC;
 impl crate::sealed::RegSpec for RfAdcCtrl1Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfAdcCtrl1Reg = crate::RegValueT<RfAdcCtrl1Reg_SPEC>;
 
 impl RfAdcCtrl1Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn adc_sign(
         self,
     ) -> crate::common::RegisterFieldBool<14, 1, 0, RfAdcCtrl1Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<14,1,0,RfAdcCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adc_mute(
         self,
     ) -> crate::common::RegisterFieldBool<13, 1, 0, RfAdcCtrl1Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<13,1,0,RfAdcCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adc_dc_offset_sel(
         self,
@@ -506,25 +542,42 @@ pub struct RfAdcCtrl2Reg_SPEC;
 impl crate::sealed::RegSpec for RfAdcCtrl2Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfAdcCtrl2Reg = crate::RegValueT<RfAdcCtrl2Reg_SPEC>;
 
 impl RfAdcCtrl2Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn adc_offn_i_wr(
         self,
-    ) -> crate::common::RegisterField<9, 0x1ff, 1, 0, u16, RfAdcCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<9, 0x1ff, 1, 0, u16, u16, RfAdcCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<9,0x1ff,1,0,u16, RfAdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            9,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            RfAdcCtrl2Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adc_offp_i_wr(
         self,
-    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, RfAdcCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, u16, RfAdcCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x1ff,1,0,u16, RfAdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            0,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            RfAdcCtrl2Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for RfAdcCtrl2Reg {
@@ -540,25 +593,42 @@ pub struct RfAdcCtrl3Reg_SPEC;
 impl crate::sealed::RegSpec for RfAdcCtrl3Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfAdcCtrl3Reg = crate::RegValueT<RfAdcCtrl3Reg_SPEC>;
 
 impl RfAdcCtrl3Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn adc_offn_q_wr(
         self,
-    ) -> crate::common::RegisterField<9, 0x1ff, 1, 0, u16, RfAdcCtrl3Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<9, 0x1ff, 1, 0, u16, u16, RfAdcCtrl3Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<9,0x1ff,1,0,u16, RfAdcCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            9,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            RfAdcCtrl3Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adc_offp_q_wr(
         self,
-    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, RfAdcCtrl3Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, u16, RfAdcCtrl3Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x1ff,1,0,u16, RfAdcCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            0,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            RfAdcCtrl3Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for RfAdcCtrl3Reg {
@@ -574,26 +644,34 @@ pub struct RfAdplldigCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfAdplldigCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfAdplldigCtrlReg = crate::RegValueT<RfAdplldigCtrlReg_SPEC>;
 
 impl RfAdplldigCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn pwr_sw_tim_ctrl(
         self,
-    ) -> crate::common::RegisterField<4, 0x7, 1, 0, u8, RfAdplldigCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<4, 0x7, 1, 0, u8, u8, RfAdplldigCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<4,0x7,1,0,u8, RfAdplldigCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            4,
+            0x7,
+            1,
+            0,
+            u8,
+            u8,
+            RfAdplldigCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn openloop_rdy_wr(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, RfAdplldigCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,RfAdplldigCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn openloop_rdy_sel(
         self,
@@ -614,11 +692,10 @@ pub struct RfAdplldigRfmonCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfAdplldigRfmonCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfAdplldigRfmonCtrlReg = crate::RegValueT<RfAdplldigRfmonCtrlReg_SPEC>;
 
 impl RfAdplldigRfmonCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn adplldig_rfmon_spare(
         self,
@@ -627,6 +704,7 @@ impl RfAdplldigRfmonCtrlReg {
         0xf,
         1,
         0,
+        u8,
         u8,
         RfAdplldigRfmonCtrlReg_SPEC,
         crate::common::RW,
@@ -637,11 +715,12 @@ impl RfAdplldigRfmonCtrlReg {
             1,
             0,
             u8,
+            u8,
             RfAdplldigRfmonCtrlReg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adplldig_rfmon_mux_sel(
         self,
@@ -650,6 +729,7 @@ impl RfAdplldigRfmonCtrlReg {
         0x7,
         1,
         0,
+        u8,
         u8,
         RfAdplldigRfmonCtrlReg_SPEC,
         crate::common::RW,
@@ -660,11 +740,12 @@ impl RfAdplldigRfmonCtrlReg {
             1,
             0,
             u8,
+            u8,
             RfAdplldigRfmonCtrlReg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adplldig_sync_clk_inv(
         self,
@@ -686,17 +767,33 @@ pub struct RfAgcExtLutReg_SPEC;
 impl crate::sealed::RegSpec for RfAgcExtLutReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfAgcExtLutReg = crate::RegValueT<RfAgcExtLutReg_SPEC>;
 
 impl RfAgcExtLutReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn agc_ext_lut(
         self,
-    ) -> crate::common::RegisterField<0, 0x3ff, 1, 0, u16, RfAgcExtLutReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3ff,1,0,u16, RfAgcExtLutReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x3ff,
+        1,
+        0,
+        u16,
+        u16,
+        RfAgcExtLutReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x3ff,
+            1,
+            0,
+            u16,
+            u16,
+            RfAgcExtLutReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for RfAgcExtLutReg {
@@ -712,32 +809,32 @@ pub struct RfAttrReg_SPEC;
 impl crate::sealed::RegSpec for RfAttrReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfAttrReg = crate::RegValueT<RfAttrReg_SPEC>;
 
 impl RfAttrReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn pa_power_setting(
         self,
-    ) -> crate::common::RegisterField<24, 0xf, 1, 0, u8, RfAttrReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<24,0xf,1,0,u8, RfAttrReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<24, 0xf, 1, 0, u8, u8, RfAttrReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<24,0xf,1,0,u8,u8,RfAttrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tia_bias(
         self,
     ) -> crate::common::RegisterFieldBool<12, 1, 0, RfAttrReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<12,1,0,RfAttrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rf_bias(
         self,
-    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, RfAttrReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<8,0xf,1,0,u8, RfAttrReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, u8, RfAttrReg_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<8,0xf,1,0,u8,u8,RfAttrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn iff_polarity(
         self,
@@ -758,16 +855,16 @@ pub struct RfCalstateReg_SPEC;
 impl crate::sealed::RegSpec for RfCalstateReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfCalstateReg = crate::RegValueT<RfCalstateReg_SPEC>;
 
 impl RfCalstateReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn calstate(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, RfCalstateReg_SPEC, crate::common::R> {
-        crate::common::RegisterField::<0,0xf,1,0,u8, RfCalstateReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, RfCalstateReg_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,RfCalstateReg_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfCalstateReg {
@@ -783,32 +880,31 @@ pub struct RfCalCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfCalCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfCalCtrlReg = crate::RegValueT<RfCalCtrlReg_SPEC>;
 
 impl RfCalCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn dc_offset_cal_dis(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, RfCalCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,RfCalCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rf_cal_ctrl_spare(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, RfCalCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,RfCalCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn eo_cal(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, RfCalCtrlReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<1,1,0,RfCalCtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn so_cal(
         self,
@@ -829,124 +925,168 @@ pub struct RfDiagirqCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfDiagirqCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfDiagirqCtrlReg = crate::RegValueT<RfDiagirqCtrlReg_SPEC>;
 
 impl RfDiagirqCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn diag_bus3_edge_sel(
         self,
     ) -> crate::common::RegisterFieldBool<30, 1, 0, RfDiagirqCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<30,1,0,RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus3_bit_sel(
         self,
-    ) -> crate::common::RegisterField<27, 0x7, 1, 0, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<27, 0x7, 1, 0, u8, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<27,0x7,1,0,u8, RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            27,
+            0x7,
+            1,
+            0,
+            u8,
+            u8,
+            RfDiagirqCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus3_sel(
         self,
-    ) -> crate::common::RegisterField<25, 0x3, 1, 0, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<25, 0x3, 1, 0, u8, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<25,0x3,1,0,u8, RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            25,
+            0x3,
+            1,
+            0,
+            u8,
+            u8,
+            RfDiagirqCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus3_irq_mask(
         self,
     ) -> crate::common::RegisterFieldBool<24, 1, 0, RfDiagirqCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<24,1,0,RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus2_edge_sel(
         self,
     ) -> crate::common::RegisterFieldBool<22, 1, 0, RfDiagirqCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<22,1,0,RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus2_bit_sel(
         self,
-    ) -> crate::common::RegisterField<19, 0x7, 1, 0, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<19, 0x7, 1, 0, u8, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<19,0x7,1,0,u8, RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            19,
+            0x7,
+            1,
+            0,
+            u8,
+            u8,
+            RfDiagirqCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus2_sel(
         self,
-    ) -> crate::common::RegisterField<17, 0x3, 1, 0, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<17, 0x3, 1, 0, u8, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<17,0x3,1,0,u8, RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            17,
+            0x3,
+            1,
+            0,
+            u8,
+            u8,
+            RfDiagirqCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus2_irq_mask(
         self,
     ) -> crate::common::RegisterFieldBool<16, 1, 0, RfDiagirqCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<16,1,0,RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus1_edge_sel(
         self,
     ) -> crate::common::RegisterFieldBool<14, 1, 0, RfDiagirqCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<14,1,0,RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus1_bit_sel(
         self,
-    ) -> crate::common::RegisterField<11, 0x7, 1, 0, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<11, 0x7, 1, 0, u8, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<11,0x7,1,0,u8, RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            11,
+            0x7,
+            1,
+            0,
+            u8,
+            u8,
+            RfDiagirqCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus1_sel(
         self,
-    ) -> crate::common::RegisterField<9, 0x3, 1, 0, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<9, 0x3, 1, 0, u8, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<9,0x3,1,0,u8, RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<9,0x3,1,0,u8,u8,RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus1_irq_mask(
         self,
     ) -> crate::common::RegisterFieldBool<8, 1, 0, RfDiagirqCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<8,1,0,RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus0_edge_sel(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, RfDiagirqCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus0_bit_sel(
         self,
-    ) -> crate::common::RegisterField<3, 0x7, 1, 0, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<3, 0x7, 1, 0, u8, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<3,0x7,1,0,u8, RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<3,0x7,1,0,u8,u8,RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus0_sel(
         self,
-    ) -> crate::common::RegisterField<1, 0x3, 1, 0, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<1, 0x3, 1, 0, u8, u8, RfDiagirqCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<1,0x3,1,0,u8, RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<1,0x3,1,0,u8,u8,RfDiagirqCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn diag_bus0_irq_mask(
         self,
@@ -967,17 +1107,16 @@ pub struct RfDiagirqStatReg_SPEC;
 impl crate::sealed::RegSpec for RfDiagirqStatReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfDiagirqStatReg = crate::RegValueT<RfDiagirqStatReg_SPEC>;
 
 impl RfDiagirqStatReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn diagirq_stat(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, RfDiagirqStatReg_SPEC, crate::common::R>
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, RfDiagirqStatReg_SPEC, crate::common::R>
     {
-        crate::common::RegisterField::<0,0xf,1,0,u8, RfDiagirqStatReg_SPEC,crate::common::R>::from_register(self,0)
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,RfDiagirqStatReg_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfDiagirqStatReg {
@@ -993,51 +1132,53 @@ pub struct RfIffCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfIffCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfIffCtrlReg = crate::RegValueT<RfIffCtrlReg_SPEC>;
 
 impl RfIffCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn iff_dcoc_dac_refcur_ctrl(
         self,
-    ) -> crate::common::RegisterField<13, 0x3, 1, 0, u8, RfIffCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<13,0x3,1,0,u8, RfIffCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<13, 0x3, 1, 0, u8, u8, RfIffCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<13,0x3,1,0,u8,u8,RfIffCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn iff_complex_dis(
         self,
     ) -> crate::common::RegisterFieldBool<12, 1, 0, RfIffCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<12,1,0,RfIffCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rf_iff_ctrl_spare(
         self,
-    ) -> crate::common::RegisterField<6, 0x3f, 1, 0, u8, RfIffCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<6,0x3f,1,0,u8, RfIffCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<6, 0x3f, 1, 0, u8, u8, RfIffCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<6,0x3f,1,0,u8,u8,RfIffCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn iff_dcoc_dac_dis(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, RfIffCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,RfIffCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn if_mute(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, RfIffCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,RfIffCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn if_cal_trim(
         self,
-    ) -> crate::common::RegisterField<0, 0x3, 1, 0, u8, RfIffCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x3,1,0,u8, RfIffCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x3, 1, 0, u8, u8, RfIffCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x3,1,0,u8,u8,RfIffCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfIffCtrlReg {
@@ -1053,23 +1194,24 @@ pub struct RfIoCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfIoCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfIoCtrlReg = crate::RegValueT<RfIoCtrlReg_SPEC>;
 
 impl RfIoCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rfio_tune_cap_trim_tx(
         self,
-    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, RfIoCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<8,0xf,1,0,u8, RfIoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, u8, RfIoCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<8,0xf,1,0,u8,u8,RfIoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rfio_tune_cap_trim_rx(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, RfIoCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xf,1,0,u8, RfIoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, RfIoCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,RfIoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfIoCtrlReg {
@@ -1085,11 +1227,10 @@ pub struct RfIrqCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfIrqCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfIrqCtrlReg = crate::RegValueT<RfIrqCtrlReg_SPEC>;
 
 impl RfIrqCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn eo_cal_clear(
         self,
@@ -1110,101 +1251,103 @@ pub struct RfLdoCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfLdoCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfLdoCtrlReg = crate::RegValueT<RfLdoCtrlReg_SPEC>;
 
 impl RfLdoCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn ldo_dco_hold_ovr_en(
         self,
     ) -> crate::common::RegisterFieldBool<29, 1, 0, RfLdoCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<29,1,0,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_dco_hold_ovr_val(
         self,
     ) -> crate::common::RegisterFieldBool<28, 1, 0, RfLdoCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<28,1,0,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_dtc_hold_ovr_en(
         self,
     ) -> crate::common::RegisterFieldBool<27, 1, 0, RfLdoCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<27,1,0,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_dtc_hold_ovr_val(
         self,
     ) -> crate::common::RegisterFieldBool<26, 1, 0, RfLdoCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<26,1,0,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_radio_hold_ovr_en(
         self,
     ) -> crate::common::RegisterFieldBool<25, 1, 0, RfLdoCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<25,1,0,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_radio_hold_ovr_val(
         self,
     ) -> crate::common::RegisterFieldBool<24, 1, 0, RfLdoCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<24,1,0,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_vref_smpl_time(
         self,
-    ) -> crate::common::RegisterField<16, 0x1f, 1, 0, u8, RfLdoCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x1f, 1, 0, u8, u8, RfLdoCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x1f,1,0,u8, RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x1f,1,0,u8,u8,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_dco_cont_enable(
         self,
     ) -> crate::common::RegisterFieldBool<11, 1, 0, RfLdoCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<11,1,0,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_dco_level(
         self,
-    ) -> crate::common::RegisterField<8, 0x7, 1, 0, u8, RfLdoCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<8,0x7,1,0,u8, RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<8, 0x7, 1, 0, u8, u8, RfLdoCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<8,0x7,1,0,u8,u8,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_dtc_cont_enable(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, RfLdoCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_dtc_level(
         self,
-    ) -> crate::common::RegisterField<4, 0x7, 1, 0, u8, RfLdoCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<4,0x7,1,0,u8, RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<4, 0x7, 1, 0, u8, u8, RfLdoCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<4,0x7,1,0,u8,u8,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_radio_cont_enable(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, RfLdoCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<3,1,0,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_radio_level(
         self,
-    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, RfLdoCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x7,1,0,u8, RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, u8, RfLdoCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7,1,0,u8,u8,RfLdoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfLdoCtrlReg {
@@ -1220,67 +1363,66 @@ pub struct RfLdoStatusReg_SPEC;
 impl crate::sealed::RegSpec for RfLdoStatusReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfLdoStatusReg = crate::RegValueT<RfLdoStatusReg_SPEC>;
 
 impl RfLdoStatusReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn ldo_dtc_vref_hold_rd(
         self,
     ) -> crate::common::RegisterFieldBool<8, 1, 0, RfLdoStatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<8,1,0,RfLdoStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_dco_vref_hold_rd(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, RfLdoStatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<7,1,0,RfLdoStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_radio_vref_hold_rd(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, RfLdoStatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<6,1,0,RfLdoStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_dtc_en_rd(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, RfLdoStatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<5,1,0,RfLdoStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ldo_dco_en_rd(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, RfLdoStatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<4,1,0,RfLdoStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adplldig_ldo_zero_en_rd(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, RfLdoStatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<3,1,0,RfLdoStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adplldig_ldo_en_rd(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, RfLdoStatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<2,1,0,RfLdoStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn radio_ldo_zero_en_rd(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, RfLdoStatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<1,1,0,RfLdoStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn radio_ldo_en_rd(
         self,
@@ -1301,25 +1443,24 @@ pub struct RfLdoVrefSelReg_SPEC;
 impl crate::sealed::RegSpec for RfLdoVrefSelReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfLdoVrefSelReg = crate::RegValueT<RfLdoVrefSelReg_SPEC>;
 
 impl RfLdoVrefSelReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rf_ldo_dco_vref_sel(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, RfLdoVrefSelReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,RfLdoVrefSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rf_ldo_dtc_vref_sel(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, RfLdoVrefSelReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,RfLdoVrefSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rf_ldo_radio_vref_sel(
         self,
@@ -1340,49 +1481,48 @@ pub struct RfLnaCtrl1Reg_SPEC;
 impl crate::sealed::RegSpec for RfLnaCtrl1Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfLnaCtrl1Reg = crate::RegValueT<RfLnaCtrl1Reg_SPEC>;
 
 impl RfLnaCtrl1Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn lna_trim_gain4_hp(
         self,
-    ) -> crate::common::RegisterField<20, 0x1f, 1, 0, u8, RfLnaCtrl1Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<20, 0x1f, 1, 0, u8, u8, RfLnaCtrl1Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<20,0x1f,1,0,u8, RfLnaCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<20,0x1f,1,0,u8,u8,RfLnaCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_trim_gain3_hp(
         self,
-    ) -> crate::common::RegisterField<15, 0x1f, 1, 0, u8, RfLnaCtrl1Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<15, 0x1f, 1, 0, u8, u8, RfLnaCtrl1Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<15,0x1f,1,0,u8, RfLnaCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<15,0x1f,1,0,u8,u8,RfLnaCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_trim_gain2_hp(
         self,
-    ) -> crate::common::RegisterField<10, 0x1f, 1, 0, u8, RfLnaCtrl1Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<10, 0x1f, 1, 0, u8, u8, RfLnaCtrl1Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<10,0x1f,1,0,u8, RfLnaCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<10,0x1f,1,0,u8,u8,RfLnaCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_trim_gain1_hp(
         self,
-    ) -> crate::common::RegisterField<5, 0x1f, 1, 0, u8, RfLnaCtrl1Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<5, 0x1f, 1, 0, u8, u8, RfLnaCtrl1Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<5,0x1f,1,0,u8, RfLnaCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<5,0x1f,1,0,u8,u8,RfLnaCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_trim_gain0_hp(
         self,
-    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, RfLnaCtrl1Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, u8, RfLnaCtrl1Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x1f,1,0,u8, RfLnaCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x1f,1,0,u8,u8,RfLnaCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfLnaCtrl1Reg {
@@ -1398,49 +1538,48 @@ pub struct RfLnaCtrl2Reg_SPEC;
 impl crate::sealed::RegSpec for RfLnaCtrl2Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfLnaCtrl2Reg = crate::RegValueT<RfLnaCtrl2Reg_SPEC>;
 
 impl RfLnaCtrl2Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn lna_trim_gain4_lp(
         self,
-    ) -> crate::common::RegisterField<20, 0x1f, 1, 0, u8, RfLnaCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<20, 0x1f, 1, 0, u8, u8, RfLnaCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<20,0x1f,1,0,u8, RfLnaCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<20,0x1f,1,0,u8,u8,RfLnaCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_trim_gain3_lp(
         self,
-    ) -> crate::common::RegisterField<15, 0x1f, 1, 0, u8, RfLnaCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<15, 0x1f, 1, 0, u8, u8, RfLnaCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<15,0x1f,1,0,u8, RfLnaCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<15,0x1f,1,0,u8,u8,RfLnaCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_trim_gain2_lp(
         self,
-    ) -> crate::common::RegisterField<10, 0x1f, 1, 0, u8, RfLnaCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<10, 0x1f, 1, 0, u8, u8, RfLnaCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<10,0x1f,1,0,u8, RfLnaCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<10,0x1f,1,0,u8,u8,RfLnaCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_trim_gain1_lp(
         self,
-    ) -> crate::common::RegisterField<5, 0x1f, 1, 0, u8, RfLnaCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<5, 0x1f, 1, 0, u8, u8, RfLnaCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<5,0x1f,1,0,u8, RfLnaCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<5,0x1f,1,0,u8,u8,RfLnaCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_trim_gain0_lp(
         self,
-    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, RfLnaCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, u8, RfLnaCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x1f,1,0,u8, RfLnaCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x1f,1,0,u8,u8,RfLnaCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfLnaCtrl2Reg {
@@ -1456,62 +1595,64 @@ pub struct RfLnaCtrl3Reg_SPEC;
 impl crate::sealed::RegSpec for RfLnaCtrl3Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfLnaCtrl3Reg = crate::RegValueT<RfLnaCtrl3Reg_SPEC>;
 
 impl RfLnaCtrl3Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn lna_spare(
         self,
-    ) -> crate::common::RegisterField<24, 0x3, 1, 0, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<24, 0x3, 1, 0, u8, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<24,0x3,1,0,u8, RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<24,0x3,1,0,u8,u8,RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_mode_gain4_lp(
         self,
-    ) -> crate::common::RegisterField<20, 0x3, 1, 0, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<20, 0x3, 1, 0, u8, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<20,0x3,1,0,u8, RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<20,0x3,1,0,u8,u8,RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_mode_gain3_lp(
         self,
-    ) -> crate::common::RegisterField<16, 0x3, 1, 0, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x3, 1, 0, u8, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x3,1,0,u8, RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x3,1,0,u8,u8,RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_mode_gain2_lp(
         self,
-    ) -> crate::common::RegisterField<12, 0x3, 1, 0, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<12, 0x3, 1, 0, u8, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<12,0x3,1,0,u8, RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<12,0x3,1,0,u8,u8,RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_mode_gain1_lp(
         self,
-    ) -> crate::common::RegisterField<8, 0x3, 1, 0, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<8,0x3,1,0,u8, RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<8, 0x3, 1, 0, u8, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<8,0x3,1,0,u8,u8,RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_mode_gain0_lp(
         self,
-    ) -> crate::common::RegisterField<4, 0x3, 1, 0, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<4,0x3,1,0,u8, RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<4, 0x3, 1, 0, u8, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<4,0x3,1,0,u8,u8,RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn lna_trim_casc(
         self,
-    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x7,1,0,u8, RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, u8, RfLnaCtrl3Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7,1,0,u8,u8,RfLnaCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfLnaCtrl3Reg {
@@ -1527,25 +1668,58 @@ pub struct RfMixerCtrl1Reg_SPEC;
 impl crate::sealed::RegSpec for RfMixerCtrl1Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfMixerCtrl1Reg = crate::RegValueT<RfMixerCtrl1Reg_SPEC>;
 
 impl RfMixerCtrl1Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn mixer_ip2_dac_q_trim(
         self,
-    ) -> crate::common::RegisterField<16, 0x1ff, 1, 0, u16, RfMixerCtrl1Reg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x1ff,1,0,u16, RfMixerCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        16,
+        0x1ff,
+        1,
+        0,
+        u16,
+        u16,
+        RfMixerCtrl1Reg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            RfMixerCtrl1Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn mixer_ip2_dac_i_trim(
         self,
-    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, RfMixerCtrl1Reg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x1ff,1,0,u16, RfMixerCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x1ff,
+        1,
+        0,
+        u16,
+        u16,
+        RfMixerCtrl1Reg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            RfMixerCtrl1Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for RfMixerCtrl1Reg {
@@ -1561,32 +1735,31 @@ pub struct RfMixerCtrl2Reg_SPEC;
 impl crate::sealed::RegSpec for RfMixerCtrl2Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfMixerCtrl2Reg = crate::RegValueT<RfMixerCtrl2Reg_SPEC>;
 
 impl RfMixerCtrl2Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn mix_cal_select(
         self,
     ) -> crate::common::RegisterFieldBool<16, 1, 0, RfMixerCtrl2Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<16,1,0,RfMixerCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn mix_cal_cap_wr_2m(
         self,
-    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, RfMixerCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, u8, RfMixerCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<8,0xf,1,0,u8, RfMixerCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<8,0xf,1,0,u8,u8,RfMixerCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn mix_cal_cap_wr_1m(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, RfMixerCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, RfMixerCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xf,1,0,u8, RfMixerCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,RfMixerCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfMixerCtrl2Reg {
@@ -1602,23 +1775,24 @@ pub struct RfOverruleReg_SPEC;
 impl crate::sealed::RegSpec for RfOverruleReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfOverruleReg = crate::RegValueT<RfOverruleReg_SPEC>;
 
 impl RfOverruleReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rx_en_ovr(
         self,
-    ) -> crate::common::RegisterField<2, 0x3, 1, 0, u8, RfOverruleReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<2,0x3,1,0,u8, RfOverruleReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<2, 0x3, 1, 0, u8, u8, RfOverruleReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<2,0x3,1,0,u8,u8,RfOverruleReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tx_en_ovr(
         self,
-    ) -> crate::common::RegisterField<0, 0x3, 1, 0, u8, RfOverruleReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x3,1,0,u8, RfOverruleReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x3, 1, 0, u8, u8, RfOverruleReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x3,1,0,u8,u8,RfOverruleReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfOverruleReg {
@@ -1634,30 +1808,32 @@ pub struct RfPaCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfPaCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfPaCtrlReg = crate::RegValueT<RfPaCtrlReg_SPEC>;
 
 impl RfPaCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn pa_ramp_step_speed(
         self,
-    ) -> crate::common::RegisterField<8, 0x3, 1, 0, u8, RfPaCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<8,0x3,1,0,u8, RfPaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<8, 0x3, 1, 0, u8, u8, RfPaCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<8,0x3,1,0,u8,u8,RfPaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn trim_duty_neg(
         self,
-    ) -> crate::common::RegisterField<3, 0x7, 1, 0, u8, RfPaCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<3,0x7,1,0,u8, RfPaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<3, 0x7, 1, 0, u8, u8, RfPaCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<3,0x7,1,0,u8,u8,RfPaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn trim_duty_pos(
         self,
-    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, RfPaCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x7,1,0,u8, RfPaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, u8, RfPaCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7,1,0,u8,u8,RfPaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfPaCtrlReg {
@@ -1673,81 +1849,80 @@ pub struct RfRadioInitReg_SPEC;
 impl crate::sealed::RegSpec for RfRadioInitReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfRadioInitReg = crate::RegValueT<RfRadioInitReg_SPEC>;
 
 impl RfRadioInitReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn radio_init_autoclear(
         self,
     ) -> crate::common::RegisterFieldBool<24, 1, 0, RfRadioInitReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<24,1,0,RfRadioInitReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adplldig_hclk_dis(
         self,
     ) -> crate::common::RegisterFieldBool<17, 1, 0, RfRadioInitReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<17,1,0,RfRadioInitReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn radio_regs_rdy(
         self,
     ) -> crate::common::RegisterFieldBool<16, 1, 0, RfRadioInitReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<16,1,0,RfRadioInitReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adplldig_hclk_en(
         self,
     ) -> crate::common::RegisterFieldBool<9, 1, 0, RfRadioInitReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<9,1,0,RfRadioInitReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adplldig_hreset_n(
         self,
     ) -> crate::common::RegisterFieldBool<8, 1, 0, RfRadioInitReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<8,1,0,RfRadioInitReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adplldig_ldo_en_wr(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, RfRadioInitReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,RfRadioInitReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adplldig_ldo_en_sel(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, RfRadioInitReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,RfRadioInitReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn adplldig_pwr_sw1_en(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, RfRadioInitReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<3,1,0,RfRadioInitReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn radio_ldo_en_wr(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, RfRadioInitReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,RfRadioInitReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn radio_ldo_en_sel(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, RfRadioInitReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,RfRadioInitReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn radio_ldo_en(
         self,
@@ -1768,11 +1943,10 @@ pub struct RfRfcuCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfRfcuCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfRfcuCtrlReg = crate::RegValueT<RfRfcuCtrlReg_SPEC>;
 
 impl RfRfcuCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rf_rfcu_clk_div(
         self,
@@ -1793,7 +1967,7 @@ pub struct RfScanFeedbackReg_SPEC;
 impl crate::sealed::RegSpec for RfScanFeedbackReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfScanFeedbackReg = crate::RegValueT<RfScanFeedbackReg_SPEC>;
 
 impl NoBitfieldReg<RfScanFeedbackReg_SPEC> for RfScanFeedbackReg {}
@@ -1810,38 +1984,39 @@ pub struct RfSpareReg_SPEC;
 impl crate::sealed::RegSpec for RfSpareReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type RfSpareReg = crate::RegValueT<RfSpareReg_SPEC>;
 
 impl RfSpareReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rf_spare_in_en(
         self,
     ) -> crate::common::RegisterFieldBool<28, 1, 0, RfSpareReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<28,1,0,RfSpareReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rf_spare_in(
         self,
-    ) -> crate::common::RegisterField<24, 0xf, 1, 0, u8, RfSpareReg_SPEC, crate::common::R> {
-        crate::common::RegisterField::<24,0xf,1,0,u8, RfSpareReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<24, 0xf, 1, 0, u8, u8, RfSpareReg_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<24,0xf,1,0,u8,u8,RfSpareReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rf_spare_bits_hv(
         self,
-    ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, RfSpareReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<16,0xff,1,0,u8, RfSpareReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, u8, RfSpareReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<16,0xff,1,0,u8,u8,RfSpareReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rf_spare_bits(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, RfSpareReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, RfSpareReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, RfSpareReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,RfSpareReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfSpareReg {

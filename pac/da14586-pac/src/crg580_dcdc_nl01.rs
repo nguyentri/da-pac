@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:26:22 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:45 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Crg580DcdcNl01 {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "DCDC first calibration register"]
+
     #[inline(always)]
     pub const fn dcdc_cal1_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::Crg580DcdcNl01 {
         }
     }
 
-    #[doc = "DCDC second calibration register"]
     #[inline(always)]
     pub const fn dcdc_cal2_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::Crg580DcdcNl01 {
         }
     }
 
-    #[doc = "DCDC thirth calibration register"]
     #[inline(always)]
     pub const fn dcdc_cal3_reg(
         &self,
@@ -69,7 +67,6 @@ impl super::Crg580DcdcNl01 {
         }
     }
 
-    #[doc = "DCDC second control register"]
     #[inline(always)]
     pub const fn dcdc_ctrl2_reg(
         &self,
@@ -81,7 +78,6 @@ impl super::Crg580DcdcNl01 {
         }
     }
 
-    #[doc = "DCDC thirth control register"]
     #[inline(always)]
     pub const fn dcdc_ctrl3_reg(
         &self,
@@ -93,7 +89,6 @@ impl super::Crg580DcdcNl01 {
         }
     }
 
-    #[doc = "DCDC control register"]
     #[inline(always)]
     pub const fn dcdc_ctrl_reg(
         &self,
@@ -111,16 +106,16 @@ pub struct DcdcCal1Reg_SPEC;
 impl crate::sealed::RegSpec for DcdcCal1Reg_SPEC {
     type DataType = u16;
 }
-#[doc = "DCDC first calibration register"]
+
 pub type DcdcCal1Reg = crate::RegValueT<DcdcCal1Reg_SPEC>;
 
 impl DcdcCal1Reg {
-    #[doc = "When DCDC_AUTO_CAL\\[0\\] is \'0\', this register is used to change the offset of the current sensing comparators in the DCDC-converter. Preferred values will be provided by Dialog."]
     #[inline(always)]
     pub fn dcdc_cal1(
         self,
-    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, DcdcCal1Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x3f,1,0,u8, DcdcCal1Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, DcdcCal1Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,DcdcCal1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for DcdcCal1Reg {
@@ -136,16 +131,16 @@ pub struct DcdcCal2Reg_SPEC;
 impl crate::sealed::RegSpec for DcdcCal2Reg_SPEC {
     type DataType = u16;
 }
-#[doc = "DCDC second calibration register"]
+
 pub type DcdcCal2Reg = crate::RegValueT<DcdcCal2Reg_SPEC>;
 
 impl DcdcCal2Reg {
-    #[doc = "When DCDC_AUTO_CAL\\[1\\] is \'0\', this register is used to change the offset of the current sensing comparators in the DCDC-converter. Preferred values will be provided by Dialog."]
     #[inline(always)]
     pub fn dcdc_cal2(
         self,
-    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, DcdcCal2Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x3f,1,0,u8, DcdcCal2Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, DcdcCal2Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,DcdcCal2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for DcdcCal2Reg {
@@ -161,16 +156,16 @@ pub struct DcdcCal3Reg_SPEC;
 impl crate::sealed::RegSpec for DcdcCal3Reg_SPEC {
     type DataType = u16;
 }
-#[doc = "DCDC thirth calibration register"]
+
 pub type DcdcCal3Reg = crate::RegValueT<DcdcCal3Reg_SPEC>;
 
 impl DcdcCal3Reg {
-    #[doc = "When DCDC_AUTO_CAL\\[2\\] is \'0\', this register is used to change the offset of the current sensing comparators in the DCDC-converter. Preferred values will be provided by Dialog."]
     #[inline(always)]
     pub fn dcdc_cal3(
         self,
-    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, DcdcCal3Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x3f,1,0,u8, DcdcCal3Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, DcdcCal3Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,DcdcCal3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for DcdcCal3Reg {
@@ -186,44 +181,48 @@ pub struct DcdcCtrl2Reg_SPEC;
 impl crate::sealed::RegSpec for DcdcCtrl2Reg_SPEC {
     type DataType = u16;
 }
-#[doc = "DCDC second control register"]
+
 pub type DcdcCtrl2Reg = crate::RegValueT<DcdcCtrl2Reg_SPEC>;
 
 impl DcdcCtrl2Reg {
-    #[doc = "Nominal output voltage of the DCDC-converter.\nVDCDC = 1.2V + N*25mV"]
     #[inline(always)]
     pub fn dcdc_volt_lev(
         self,
-    ) -> crate::common::RegisterField<12, 0xf, 1, 0, u8, DcdcCtrl2Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<12,0xf,1,0,u8, DcdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<12, 0xf, 1, 0, u8, u8, DcdcCtrl2Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<12,0xf,1,0,u8,u8,DcdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Nominal VBAT3V output voltage of the boost converter.\n000 ... 011 = 1.8V + N*25mV\n100 = 2.4V\n101 = 2.5V\n110 = 2.62V\n111 = 2.76V\n(Note: MSB is automatically on if the OTP LDO is enabled.)"]
+
     #[inline(always)]
     pub fn dcdc_vbat3v_lev(
         self,
-    ) -> crate::common::RegisterField<9, 0x7, 1, 0, u8, DcdcCtrl2Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<9,0x7,1,0,u8, DcdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<9, 0x7, 1, 0, u8, u8, DcdcCtrl2Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<9,0x7,1,0,u8,u8,DcdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "This defines the minimum on-time of the comparators. For buck-mode use 0x2, for boost-mode use 0x1"]
+
     #[inline(always)]
     pub fn dcdc_ton(
         self,
-    ) -> crate::common::RegisterField<7, 0x3, 1, 0, u8, DcdcCtrl2Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<7,0x3,1,0,u8, DcdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<7, 0x3, 1, 0, u8, u8, DcdcCtrl2Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<7,0x3,1,0,u8,u8,DcdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Current limit in the switches of the DCDC-converter (approximate values):\nN x 10mA"]
+
     #[inline(always)]
     pub fn dcdc_cur_lim(
         self,
-    ) -> crate::common::RegisterField<3, 0xf, 1, 0, u8, DcdcCtrl2Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<3,0xf,1,0,u8, DcdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<3, 0xf, 1, 0, u8, u8, DcdcCtrl2Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<3,0xf,1,0,u8,u8,DcdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Control of the automatic calibration of the DCDC-converter. For Buck-mode use 0x1, for Boost-mode use 0x6.\nAutomatic calibration is disabled by setting 0x0"]
+
     #[inline(always)]
     pub fn dcdc_auto_cal(
         self,
-    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, DcdcCtrl2Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x7,1,0,u8, DcdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, u8, DcdcCtrl2Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7,1,0,u8,u8,DcdcCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for DcdcCtrl2Reg {
@@ -239,25 +238,26 @@ pub struct DcdcCtrl3Reg_SPEC;
 impl crate::sealed::RegSpec for DcdcCtrl3Reg_SPEC {
     type DataType = u16;
 }
-#[doc = "DCDC thirth control register"]
+
 pub type DcdcCtrl3Reg = crate::RegValueT<DcdcCtrl3Reg_SPEC>;
 
 impl DcdcCtrl3Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn dcdc_timeout(
         self,
-    ) -> crate::common::RegisterField<3, 0x3, 1, 0, u8, DcdcCtrl3Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<3,0x3,1,0,u8, DcdcCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<3, 0x3, 1, 0, u8, u8, DcdcCtrl3Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<3,0x3,1,0,u8,u8,DcdcCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Clock used as trigger for the idle state to check voltage.\n(Note: when no 16 MHz oscillator is active, the 32 kHz oscillator will be used as trigger independent of the setting below:)\n00 = 16 MHz\n01 = 4 MHz\n10 = 1 MHz\n11 = 250 kHz"]
+
     #[inline(always)]
     pub fn dcdc_idle_clk(
         self,
-    ) -> crate::common::RegisterField<1, 0x3, 1, 0, u8, DcdcCtrl3Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<1,0x3,1,0,u8, DcdcCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<1, 0x3, 1, 0, u8, u8, DcdcCtrl3Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<1,0x3,1,0,u8,u8,DcdcCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the buck converter when the device becomes active and VBAT1V is connected to GND."]
+
     #[inline(always)]
     pub fn buck_enable(
         self,
@@ -278,51 +278,56 @@ pub struct DcdcCtrlReg_SPEC;
 impl crate::sealed::RegSpec for DcdcCtrlReg_SPEC {
     type DataType = u16;
 }
-#[doc = "DCDC control register"]
+
 pub type DcdcCtrlReg = crate::RegValueT<DcdcCtrlReg_SPEC>;
 
 impl DcdcCtrlReg {
-    #[doc = "Tune-bits to compensate for parasitic resistance in the current sense circuit of the DCDC-converter."]
     #[inline(always)]
     pub fn dcdc_tune(
         self,
-    ) -> crate::common::RegisterField<14, 0x3, 1, 0, u8, DcdcCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<14,0x3,1,0,u8, DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<14, 0x3, 1, 0, u8, u8, DcdcCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<14,0x3,1,0,u8,u8,DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Drive level of the switch between SWITCH and VDCDC.\n00 = 100 percent\n01 = 66  percent\n10 = 33  percent\n11 = off"]
+
     #[inline(always)]
     pub fn dcdc_drive_osw(
         self,
-    ) -> crate::common::RegisterField<12, 0x3, 1, 0, u8, DcdcCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<12,0x3,1,0,u8, DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<12, 0x3, 1, 0, u8, u8, DcdcCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<12,0x3,1,0,u8,u8,DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Drive level of the switch between SWITCH and VBAT3V.\n00 = 100 percent\n01 = 66  percent\n10 = 33  percent\n11 = off"]
+
     #[inline(always)]
     pub fn dcdc_drive_psw(
         self,
-    ) -> crate::common::RegisterField<10, 0x3, 1, 0, u8, DcdcCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<10,0x3,1,0,u8, DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<10, 0x3, 1, 0, u8, u8, DcdcCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<10,0x3,1,0,u8,u8,DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Drive level of the switch between SWITCH and GROUND.\n00 = 100 percent\n01 = 66  percent\n10 = 33  percent\n11 = off"]
+
     #[inline(always)]
     pub fn dcdc_drive_nsw(
         self,
-    ) -> crate::common::RegisterField<8, 0x3, 1, 0, u8, DcdcCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<8,0x3,1,0,u8, DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<8, 0x3, 1, 0, u8, u8, DcdcCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<8,0x3,1,0,u8,u8,DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Testmodes, keep 000."]
+
     #[inline(always)]
     pub fn dcdc_mode(
         self,
-    ) -> crate::common::RegisterField<5, 0x7, 1, 0, u8, DcdcCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<5,0x7,1,0,u8, DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<5, 0x7, 1, 0, u8, u8, DcdcCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<5,0x7,1,0,u8,u8,DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "If VBAT1V is below this level, the boost converter will be disabled:\n110 = 0.6V\n101 = 0.8V\n011 = 1.0V\n111 = 0V (always OK)"]
+
     #[inline(always)]
     pub fn dcdc_vbat1v_lev(
         self,
-    ) -> crate::common::RegisterField<1, 0x7, 1, 0, u8, DcdcCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<1,0x7,1,0,u8, DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<1, 0x7, 1, 0, u8, u8, DcdcCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<1,0x7,1,0,u8,u8,DcdcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for DcdcCtrlReg {

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:04 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Rfmon {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub const fn rfmon_addr_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::Rfmon {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rfmon_crv_addr_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::Rfmon {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rfmon_crv_len_reg(
         &self,
@@ -69,7 +67,6 @@ impl super::Rfmon {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rfmon_ctrl_reg(
         &self,
@@ -81,7 +78,6 @@ impl super::Rfmon {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rfmon_len_reg(
         &self,
@@ -93,7 +89,6 @@ impl super::Rfmon {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn rfmon_stat_reg(
         &self,
@@ -111,17 +106,25 @@ pub struct RfmonAddrReg_SPEC;
 impl crate::sealed::RegSpec for RfmonAddrReg_SPEC {
     type DataType = u16;
 }
-#[doc = ""]
+
 pub type RfmonAddrReg = crate::RegValueT<RfmonAddrReg_SPEC>;
 
 impl RfmonAddrReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rfmon_addr(
         self,
-    ) -> crate::common::RegisterField<2, 0x3fff, 1, 0, u16, RfmonAddrReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<2, 0x3fff, 1, 0, u16, u16, RfmonAddrReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<2,0x3fff,1,0,u16, RfmonAddrReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            2,
+            0x3fff,
+            1,
+            0,
+            u16,
+            u16,
+            RfmonAddrReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for RfmonAddrReg {
@@ -137,17 +140,33 @@ pub struct RfmonCrvAddrReg_SPEC;
 impl crate::sealed::RegSpec for RfmonCrvAddrReg_SPEC {
     type DataType = u16;
 }
-#[doc = ""]
+
 pub type RfmonCrvAddrReg = crate::RegValueT<RfmonCrvAddrReg_SPEC>;
 
 impl RfmonCrvAddrReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rfmon_crv_addr(
         self,
-    ) -> crate::common::RegisterField<2, 0x3fff, 1, 0, u16, RfmonCrvAddrReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<2,0x3fff,1,0,u16, RfmonCrvAddrReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        2,
+        0x3fff,
+        1,
+        0,
+        u16,
+        u16,
+        RfmonCrvAddrReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            2,
+            0x3fff,
+            1,
+            0,
+            u16,
+            u16,
+            RfmonCrvAddrReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for RfmonCrvAddrReg {
@@ -163,17 +182,33 @@ pub struct RfmonCrvLenReg_SPEC;
 impl crate::sealed::RegSpec for RfmonCrvLenReg_SPEC {
     type DataType = u16;
 }
-#[doc = ""]
+
 pub type RfmonCrvLenReg = crate::RegValueT<RfmonCrvLenReg_SPEC>;
 
 impl RfmonCrvLenReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rfmon_crv_len(
         self,
-    ) -> crate::common::RegisterField<0, 0x3fff, 1, 0, u16, RfmonCrvLenReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<0,0x3fff,1,0,u16, RfmonCrvLenReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x3fff,
+        1,
+        0,
+        u16,
+        u16,
+        RfmonCrvLenReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x3fff,
+            1,
+            0,
+            u16,
+            u16,
+            RfmonCrvLenReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for RfmonCrvLenReg {
@@ -189,18 +224,17 @@ pub struct RfmonCtrlReg_SPEC;
 impl crate::sealed::RegSpec for RfmonCtrlReg_SPEC {
     type DataType = u16;
 }
-#[doc = ""]
+
 pub type RfmonCtrlReg = crate::RegValueT<RfmonCtrlReg_SPEC>;
 
 impl RfmonCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rfmon_circ_en(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, RfmonCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,RfmonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rfmon_pack_en(
         self,
@@ -221,17 +255,16 @@ pub struct RfmonLenReg_SPEC;
 impl crate::sealed::RegSpec for RfmonLenReg_SPEC {
     type DataType = u16;
 }
-#[doc = ""]
+
 pub type RfmonLenReg = crate::RegValueT<RfmonLenReg_SPEC>;
 
 impl RfmonLenReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rfmon_len(
         self,
-    ) -> crate::common::RegisterField<0, 0x3fff, 1, 0, u16, RfmonLenReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x3fff, 1, 0, u16, u16, RfmonLenReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x3fff,1,0,u16, RfmonLenReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x3fff,1,0,u16,u16,RfmonLenReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for RfmonLenReg {
@@ -247,18 +280,17 @@ pub struct RfmonStatReg_SPEC;
 impl crate::sealed::RegSpec for RfmonStatReg_SPEC {
     type DataType = u16;
 }
-#[doc = ""]
+
 pub type RfmonStatReg = crate::RegValueT<RfmonStatReg_SPEC>;
 
 impl RfmonStatReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rfmon_oflow_stk(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, RfmonStatReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,RfmonStatReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rfmon_active(
         self,

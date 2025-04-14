@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:04 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::MbistSram3 {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub const fn mbist_sram3_addr_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::MbistSram3 {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn mbist_sram3_rd_lsb_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::MbistSram3 {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn mbist_sram3_rd_msb_reg(
         &self,
@@ -69,7 +67,6 @@ impl super::MbistSram3 {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn mbist_sram3_state_reg(
         &self,
@@ -87,11 +84,10 @@ pub struct MbistSram3AddrReg_SPEC;
 impl crate::sealed::RegSpec for MbistSram3AddrReg_SPEC {
     type DataType = u16;
 }
-#[doc = ""]
+
 pub type MbistSram3AddrReg = crate::RegValueT<MbistSram3AddrReg_SPEC>;
 
 impl MbistSram3AddrReg {
-    #[doc = "Returns the current address register in case of a mismatch."]
     #[inline(always)]
     pub fn mbist_addr(
         self,
@@ -112,11 +108,10 @@ pub struct MbistSram3RdLsbReg_SPEC;
 impl crate::sealed::RegSpec for MbistSram3RdLsbReg_SPEC {
     type DataType = u16;
 }
-#[doc = ""]
+
 pub type MbistSram3RdLsbReg = crate::RegValueT<MbistSram3RdLsbReg_SPEC>;
 
 impl MbistSram3RdLsbReg {
-    #[doc = "Returns the actual LSB read data in case of a mismatch."]
     #[inline(always)]
     pub fn mbist_lsb_data(
         self,
@@ -137,11 +132,10 @@ pub struct MbistSram3RdMsbReg_SPEC;
 impl crate::sealed::RegSpec for MbistSram3RdMsbReg_SPEC {
     type DataType = u16;
 }
-#[doc = ""]
+
 pub type MbistSram3RdMsbReg = crate::RegValueT<MbistSram3RdMsbReg_SPEC>;
 
 impl MbistSram3RdMsbReg {
-    #[doc = "Returns the actual MSB read data in case of a mismatch."]
     #[inline(always)]
     pub fn mbist_msb_data(
         self,
@@ -162,11 +156,10 @@ pub struct MbistSram3StateReg_SPEC;
 impl crate::sealed::RegSpec for MbistSram3StateReg_SPEC {
     type DataType = u16;
 }
-#[doc = ""]
+
 pub type MbistSram3StateReg = crate::RegValueT<MbistSram3StateReg_SPEC>;
 
 impl MbistSram3StateReg {
-    #[doc = "Returns the current state in case of a mismatch."]
     #[inline(always)]
     pub fn mbist_state(
         self,

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:04 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
 
 use core::convert::From;
 use core::marker::PhantomData;
@@ -264,7 +264,7 @@ where
 
     /// Returns the address of the register.
     pub fn addr(&self) -> usize {
-        unsafe { (self as *const _) as usize }
+        (self as *const _) as usize
     }
 }
 
@@ -288,10 +288,11 @@ where
     #[inline(always)]
     #[must_use]
     pub unsafe fn read(&self) -> RegValueT<T> {
-        #[cfg(feature = "tracing")]
-        let val = {
-            let mut buf: u64 = 0x0;
-            tracing::READ_FN.with(|rf| {
+        unsafe {
+            #[cfg(feature = "tracing")]
+            let val = {
+                let mut buf: u64 = 0x0;
+                tracing::READ_FN.with(|rf| {
                 if let Some(rf) = rf.get() {
                     buf = rf(self.addr(), std::mem::size_of::<T::DataType>());
                 } else {
@@ -301,11 +302,12 @@ where
                     );
                 }
             });
-            T::DataType::cast_from(buf)
-        };
-        #[cfg(not(feature = "tracing"))]
-        let val = self.ptr().read_volatile();
-        RegValueT::<T>::new(val)
+                T::DataType::cast_from(buf)
+            };
+            #[cfg(not(feature = "tracing"))]
+            let val = self.ptr().read_volatile();
+            RegValueT::<T>::new(val)
+        }
     }
 }
 
@@ -342,21 +344,25 @@ where
     /// See also: [`Reg<T, A>::init`] which provides the default value to a closure
     #[inline(always)]
     pub unsafe fn write(&self, reg_value: RegValueT<T>) {
-        #[cfg(feature = "tracing")]
-        tracing::WRITE_FN.with(|wf| {
-            if let Some(wf) = wf.get() {
-                wf(
-                    self.addr(),
-                    std::mem::size_of::<T::DataType>(),
-                    reg_value.data.into(),
-                )
-            } else {
-                #[cfg(not(feature = "tracing_dummy"))]
-                panic!("Please, provide an handler for read with tracing::set_read_fn(callback);");
-            }
-        });
-        #[cfg(not(feature = "tracing"))]
-        self.ptr().write_volatile(reg_value.data);
+        unsafe {
+            #[cfg(feature = "tracing")]
+            tracing::WRITE_FN.with(|wf| {
+                if let Some(wf) = wf.get() {
+                    wf(
+                        self.addr(),
+                        std::mem::size_of::<T::DataType>(),
+                        reg_value.data.into(),
+                    )
+                } else {
+                    #[cfg(not(feature = "tracing_dummy"))]
+                    panic!(
+                        "Please, provide an handler for read with tracing::set_read_fn(callback);"
+                    );
+                }
+            });
+            #[cfg(not(feature = "tracing"))]
+            self.ptr().write_volatile(reg_value.data);
+        }
     }
 
     /// Write an arbitrary integer to register
@@ -382,21 +388,25 @@ where
     /// See also [`Reg<T, A>::init`] and [`Reg<T, A>::write`] both of which are the safe, preferred functions.
     #[inline(always)]
     pub unsafe fn write_raw(&self, value: T::DataType) {
-        #[cfg(feature = "tracing")]
-        tracing::WRITE_FN.with(|wf| {
-            if let Some(wf) = wf.get() {
-                wf(
-                    self.addr(),
-                    std::mem::size_of::<T::DataType>(),
-                    value.into(),
-                )
-            } else {
-                #[cfg(not(feature = "tracing_dummy"))]
-                panic!("Please, provide an handler for read with tracing::set_read_fn(callback);");
-            }
-        });
-        #[cfg(not(feature = "tracing"))]
-        self.ptr().write_volatile(value);
+        unsafe {
+            #[cfg(feature = "tracing")]
+            tracing::WRITE_FN.with(|wf| {
+                if let Some(wf) = wf.get() {
+                    wf(
+                        self.addr(),
+                        std::mem::size_of::<T::DataType>(),
+                        value.into(),
+                    )
+                } else {
+                    #[cfg(not(feature = "tracing_dummy"))]
+                    panic!(
+                        "Please, provide an handler for read with tracing::set_read_fn(callback);"
+                    );
+                }
+            });
+            #[cfg(not(feature = "tracing"))]
+            self.ptr().write_volatile(value);
+        }
     }
 }
 
@@ -426,9 +436,11 @@ where
     #[inline(always)]
     /// Write value computed by closure that receive as input the reset value of register
     pub unsafe fn init(&self, f: impl FnOnce(RegValueT<T>) -> RegValueT<T>) {
-        let val = RegValueT::<T>::default();
-        let res = f(val);
-        self.write(res);
+        unsafe {
+            let val = RegValueT::<T>::default();
+            let res = f(val);
+            self.write(res);
+        }
     }
 }
 
@@ -457,9 +469,11 @@ where
     /// ```
     #[inline(always)]
     pub unsafe fn modify(&self, f: impl FnOnce(RegValueT<T>) -> RegValueT<T>) {
-        let val = self.read();
-        let res = f(val);
-        self.write(res);
+        unsafe {
+            let val = self.read();
+            let res = f(val);
+            self.write(res);
+        }
     }
 }
 
@@ -500,7 +514,8 @@ pub struct RegisterField<
     const MASK: u64,
     const DIM: u8,
     const DIM_INCREMENT: u8,
-    ValueType,
+    ValueTypeRead,
+    ValueTypeWrite,
     T,
     A,
 > where
@@ -509,18 +524,19 @@ pub struct RegisterField<
 {
     data: RegValueT<T>,
     index: u8,
-    marker: PhantomData<(ValueType, A)>,
+    marker: PhantomData<(ValueTypeRead, ValueTypeWrite, A)>,
 }
 
 impl<
-        const START_OFFSET: usize,
-        const MASK: u64,
-        const DIM: u8,
-        const DIM_INCREMENT: u8,
-        ValueType,
-        T,
-        A,
-    > RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueType, T, A>
+    const START_OFFSET: usize,
+    const MASK: u64,
+    const DIM: u8,
+    const DIM_INCREMENT: u8,
+    ValueTypeRead,
+    ValueTypeWrite,
+    T,
+    A,
+> RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
 where
     T: RegSpec,
     A: Access,
@@ -537,7 +553,7 @@ where
 
     /// Get mask for bitfield, the mask is unshifted and at offset 0
     ///
-    /// Prefer the use of [`RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueType, T, A>::get()`] to
+    /// Prefer the use of [`RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead,ValueTypeWrite, T, A>::get()`] to
     /// extract a bitfield value.
     #[inline(always)]
     #[must_use]
@@ -547,7 +563,7 @@ where
 
     /// Get offset of bitfield in containing register
     ///
-    /// Prefer the use of [`RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueType, T, A>::get()`] to
+    /// Prefer the use of [`RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead,ValueTypeWrite, T, A>::get()`] to
     /// extract a bitfield value.
     #[inline(always)]
     #[must_use]
@@ -557,41 +573,43 @@ where
 }
 
 impl<
-        const START_OFFSET: usize,
-        const MASK: u64,
-        const DIM: u8,
-        const DIM_INCREMENT: u8,
-        ValueType,
-        T,
-        A,
-    > RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueType, T, A>
+    const START_OFFSET: usize,
+    const MASK: u64,
+    const DIM: u8,
+    const DIM_INCREMENT: u8,
+    ValueTypeRead,
+    ValueTypeWrite,
+    T,
+    A,
+> RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
 where
     T: RegSpec,
     A: Read,
-    ValueType: CastFrom<u64>,
+    ValueTypeRead: CastFrom<u64>,
 {
     /// Extract bitfield from read register value
     #[inline(always)]
-    pub fn get(&self) -> ValueType {
+    pub fn get(&self) -> ValueTypeRead {
         let offset = START_OFFSET + (self.index * DIM_INCREMENT) as usize;
         let filtered: T::DataType = (self.data.data >> offset) & T::DataType::cast_from(MASK);
-        ValueType::cast_from(filtered.into())
+        ValueTypeRead::cast_from(filtered.into())
     }
 }
 
 impl<
-        const START_OFFSET: usize,
-        const MASK: u64,
-        const DIM: u8,
-        const DIM_INCREMENT: u8,
-        ValueType,
-        T,
-        A,
-    > RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueType, T, A>
+    const START_OFFSET: usize,
+    const MASK: u64,
+    const DIM: u8,
+    const DIM_INCREMENT: u8,
+    ValueTypeRead,
+    ValueTypeWrite,
+    T,
+    A,
+> RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
 where
     T: RegSpec,
     A: Write,
-    u64: From<ValueType>,
+    u64: From<ValueTypeWrite>,
 {
     /// Prepare bitfield value that could be written to register
     ///
@@ -622,7 +640,7 @@ where
     /// ```
     #[inline(always)]
     #[must_use]
-    pub fn set(mut self, value: ValueType) -> RegValueT<T> {
+    pub fn set(mut self, value: ValueTypeWrite) -> RegValueT<T> {
         let mask = T::DataType::cast_from(MASK);
         let value: T::DataType = T::DataType::cast_from(Into::<u64>::into(value)) & mask;
         let offset = START_OFFSET + (self.index * DIM_INCREMENT) as usize;
@@ -787,12 +805,12 @@ impl<T: Sized, const DIM: usize, const DIM_INCREMENT: usize>
     /// `index` must be less than `DIM`.
     #[inline(always)]
     pub const unsafe fn get_unchecked(&self, index: usize) -> &T {
-        &*(self.as_ptr().add(index * DIM_INCREMENT) as *const _)
+        unsafe { &*(self.as_ptr().add(index * DIM_INCREMENT) as *const _) }
     }
 
     #[inline(always)]
     pub(crate) const unsafe fn from_ptr(ptr: *mut u8) -> &'static Self {
-        &*(ptr as *const Self)
+        unsafe { &*(ptr as *const Self) }
     }
 
     #[inline(always)]

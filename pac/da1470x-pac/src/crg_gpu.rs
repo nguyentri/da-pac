@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:28 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::CrgGpu {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "Control register for clocks in PD_GPU"]
+
     #[inline(always)]
     pub const fn clk_gpu_reg(
         &self,
@@ -51,32 +51,31 @@ pub struct ClkGpuReg_SPEC;
 impl crate::sealed::RegSpec for ClkGpuReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Control register for clocks in PD_GPU"]
+
 pub type ClkGpuReg = crate::RegValueT<ClkGpuReg_SPEC>;
 
 impl ClkGpuReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn mipi_d_phy_en(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, ClkGpuReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<3,1,0,ClkGpuReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn mipi_phy_en(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, ClkGpuReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,ClkGpuReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn mipi_dsi_en(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, ClkGpuReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,ClkGpuReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn gpu_enable(
         self,

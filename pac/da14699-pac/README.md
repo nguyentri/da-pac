@@ -15,7 +15,7 @@ Include this crate in your `Cargo.toml`:
 
 ```toml
 [dependencies]
- da14699-pac = "0.0.1"
+ da14699-pac = "0.1.0"
 ```
 
 ## License

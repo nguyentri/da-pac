@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:04 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Scb {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "CPUID base register"]
+
     #[inline(always)]
     pub const fn cpuid(&self) -> &'static crate::common::Reg<self::Cpuid_SPEC, crate::common::RW> {
         unsafe {
@@ -43,7 +43,6 @@ impl super::Scb {
         }
     }
 
-    #[doc = "Interrupt control and state register"]
     #[inline(always)]
     pub const fn icsr(&self) -> &'static crate::common::Reg<self::Icsr_SPEC, crate::common::RW> {
         unsafe {
@@ -53,7 +52,6 @@ impl super::Scb {
         }
     }
 
-    #[doc = "Application interrupt and reset control register"]
     #[inline(always)]
     pub const fn aircr(&self) -> &'static crate::common::Reg<self::Aircr_SPEC, crate::common::R> {
         unsafe {
@@ -63,7 +61,6 @@ impl super::Scb {
         }
     }
 
-    #[doc = "System control register"]
     #[inline(always)]
     pub const fn scr(&self) -> &'static crate::common::Reg<self::Scr_SPEC, crate::common::RW> {
         unsafe {
@@ -73,7 +70,6 @@ impl super::Scb {
         }
     }
 
-    #[doc = "Configuration and control register"]
     #[inline(always)]
     pub const fn ccr(&self) -> &'static crate::common::Reg<self::Ccr_SPEC, crate::common::RW> {
         unsafe {
@@ -83,7 +79,6 @@ impl super::Scb {
         }
     }
 
-    #[doc = "System handler priority register 2"]
     #[inline(always)]
     pub const fn shpr2(&self) -> &'static crate::common::Reg<self::Shpr2_SPEC, crate::common::RW> {
         unsafe {
@@ -93,7 +88,6 @@ impl super::Scb {
         }
     }
 
-    #[doc = "System handler priority register 3"]
     #[inline(always)]
     pub const fn shpr3(&self) -> &'static crate::common::Reg<self::Shpr3_SPEC, crate::common::RW> {
         unsafe {
@@ -109,44 +103,43 @@ pub struct Cpuid_SPEC;
 impl crate::sealed::RegSpec for Cpuid_SPEC {
     type DataType = u32;
 }
-#[doc = "CPUID base register"]
+
 pub type Cpuid = crate::RegValueT<Cpuid_SPEC>;
 
 impl Cpuid {
-    #[doc = "REVISION\\[3:0\\] bits (Revision number)"]
     #[inline(always)]
     pub fn revision(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, Cpuid_SPEC, crate::common::R> {
-        crate::common::RegisterField::<0,0xf,1,0,u8, Cpuid_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, Cpuid_SPEC, crate::common::R> {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,Cpuid_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "PARTNO\\[11:0\\] bits (Part number of the processor core)"]
+
     #[inline(always)]
     pub fn partno(
         self,
-    ) -> crate::common::RegisterField<4, 0xfff, 1, 0, u16, Cpuid_SPEC, crate::common::R> {
-        crate::common::RegisterField::<4,0xfff,1,0,u16, Cpuid_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<4, 0xfff, 1, 0, u16, u16, Cpuid_SPEC, crate::common::R> {
+        crate::common::RegisterField::<4,0xfff,1,0,u16,u16,Cpuid_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "CONSTANT\\[3:0\\] bits (Reads as 0xF)"]
+
     #[inline(always)]
     pub fn constant(
         self,
-    ) -> crate::common::RegisterField<16, 0xf, 1, 0, u8, Cpuid_SPEC, crate::common::R> {
-        crate::common::RegisterField::<16,0xf,1,0,u8, Cpuid_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<16, 0xf, 1, 0, u8, u8, Cpuid_SPEC, crate::common::R> {
+        crate::common::RegisterField::<16,0xf,1,0,u8,u8,Cpuid_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "VARIANT\\[3:0\\] bits (Variant number)"]
+
     #[inline(always)]
     pub fn variant(
         self,
-    ) -> crate::common::RegisterField<20, 0xf, 1, 0, u8, Cpuid_SPEC, crate::common::R> {
-        crate::common::RegisterField::<20,0xf,1,0,u8, Cpuid_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<20, 0xf, 1, 0, u8, u8, Cpuid_SPEC, crate::common::R> {
+        crate::common::RegisterField::<20,0xf,1,0,u8,u8,Cpuid_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "IMPLEMENTER\\[7:0\\] bits (Implementer code)"]
+
     #[inline(always)]
     pub fn implementer(
         self,
-    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, Cpuid_SPEC, crate::common::R> {
-        crate::common::RegisterField::<24,0xff,1,0,u8, Cpuid_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Cpuid_SPEC, crate::common::R> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Cpuid_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Cpuid {
@@ -162,25 +155,24 @@ pub struct Icsr_SPEC;
 impl crate::sealed::RegSpec for Icsr_SPEC {
     type DataType = u32;
 }
-#[doc = "Interrupt control and state register"]
+
 pub type Icsr = crate::RegValueT<Icsr_SPEC>;
 
 impl Icsr {
-    #[doc = "VECTACTIVE\\[5:0\\] bits (Active vector)"]
     #[inline(always)]
     pub fn vectactive(
         self,
-    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, Icsr_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x3f,1,0,u8, Icsr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, Icsr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,Icsr_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "VECTPENDING\\[5:0\\] bits (Pending vector)"]
+
     #[inline(always)]
     pub fn vectpending(
         self,
-    ) -> crate::common::RegisterField<12, 0x3f, 1, 0, u8, Icsr_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<12,0x3f,1,0,u8, Icsr_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<12, 0x3f, 1, 0, u8, u8, Icsr_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<12,0x3f,1,0,u8,u8,Icsr_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Interrupt pending flag, excluding NMI and Faults"]
+
     #[inline(always)]
     pub fn isrpending(
         self,
@@ -189,7 +181,7 @@ impl Icsr {
             self, 0,
         )
     }
-    #[doc = "SysTick exception clear-pending bit"]
+
     #[inline(always)]
     pub fn pendstclr(
         self,
@@ -198,7 +190,7 @@ impl Icsr {
             self, 0,
         )
     }
-    #[doc = "SysTick exception set-pending bit"]
+
     #[inline(always)]
     pub fn pendstset(
         self,
@@ -207,7 +199,7 @@ impl Icsr {
             self, 0,
         )
     }
-    #[doc = "PendSV clear-pending bit"]
+
     #[inline(always)]
     pub fn pendsvclr(
         self,
@@ -216,7 +208,7 @@ impl Icsr {
             self, 0,
         )
     }
-    #[doc = "PendSV set-pending bit"]
+
     #[inline(always)]
     pub fn pendsvset(
         self,
@@ -225,7 +217,7 @@ impl Icsr {
             self, 0,
         )
     }
-    #[doc = "NMI set-pending bit"]
+
     #[inline(always)]
     pub fn nmipendset(
         self,
@@ -248,11 +240,10 @@ pub struct Aircr_SPEC;
 impl crate::sealed::RegSpec for Aircr_SPEC {
     type DataType = u32;
 }
-#[doc = "Application interrupt and reset control register"]
+
 pub type Aircr = crate::RegValueT<Aircr_SPEC>;
 
 impl Aircr {
-    #[doc = "Reserved for Debug use"]
     #[inline(always)]
     pub fn vectreset(
         self,
@@ -261,7 +252,7 @@ impl Aircr {
             self, 0,
         )
     }
-    #[doc = "Reserved for Debug use"]
+
     #[inline(always)]
     pub fn vectclractive(
         self,
@@ -270,7 +261,7 @@ impl Aircr {
             self, 0,
         )
     }
-    #[doc = "System reset request"]
+
     #[inline(always)]
     pub fn sysresetreq(
         self,
@@ -279,7 +270,7 @@ impl Aircr {
             self, 0,
         )
     }
-    #[doc = "Data endianness bit"]
+
     #[inline(always)]
     pub fn endianess(
         self,
@@ -288,12 +279,13 @@ impl Aircr {
             self, 0,
         )
     }
-    #[doc = "VECTKEY\\[15:0\\] bits (Register key)"]
+
     #[inline(always)]
     pub fn vectkey(
         self,
-    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, Aircr_SPEC, crate::common::R> {
-        crate::common::RegisterField::<16,0xffff,1,0,u16, Aircr_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<16, 0xffff, 1, 0, u16, u16, Aircr_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<16,0xffff,1,0,u16,u16,Aircr_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Aircr {
@@ -309,11 +301,10 @@ pub struct Scr_SPEC;
 impl crate::sealed::RegSpec for Scr_SPEC {
     type DataType = u32;
 }
-#[doc = "System control register"]
+
 pub type Scr = crate::RegValueT<Scr_SPEC>;
 
 impl Scr {
-    #[doc = "Configures sleep-on-exit when returning from Handler mode to Thread mode"]
     #[inline(always)]
     pub fn sleeponexit(
         self,
@@ -322,7 +313,7 @@ impl Scr {
             self, 0,
         )
     }
-    #[doc = "Controls whether the processor uses sleep or deep sleep"]
+
     #[inline(always)]
     pub fn sleepdeep(
         self,
@@ -331,7 +322,7 @@ impl Scr {
             self, 0,
         )
     }
-    #[doc = "Send event on pending bit"]
+
     #[inline(always)]
     pub fn seveonpend(
         self,
@@ -354,11 +345,10 @@ pub struct Ccr_SPEC;
 impl crate::sealed::RegSpec for Ccr_SPEC {
     type DataType = u32;
 }
-#[doc = "Configuration and control register"]
+
 pub type Ccr = crate::RegValueT<Ccr_SPEC>;
 
 impl Ccr {
-    #[doc = "Enables unaligned access traps"]
     #[inline(always)]
     pub fn unalign_trp(
         self,
@@ -367,7 +357,7 @@ impl Ccr {
             self, 0,
         )
     }
-    #[doc = "Configures stack alignment on exception entry"]
+
     #[inline(always)]
     pub fn stkalign(
         self,
@@ -390,16 +380,15 @@ pub struct Shpr2_SPEC;
 impl crate::sealed::RegSpec for Shpr2_SPEC {
     type DataType = u32;
 }
-#[doc = "System handler priority register 2"]
+
 pub type Shpr2 = crate::RegValueT<Shpr2_SPEC>;
 
 impl Shpr2 {
-    #[doc = "PRI_11\\[7:0\\] bits (Priority of system handler 11, SVCall)"]
     #[inline(always)]
     pub fn pri_11(
         self,
-    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, Shpr2_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<24,0xff,1,0,u8, Shpr2_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Shpr2_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Shpr2_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Shpr2 {
@@ -415,23 +404,22 @@ pub struct Shpr3_SPEC;
 impl crate::sealed::RegSpec for Shpr3_SPEC {
     type DataType = u32;
 }
-#[doc = "System handler priority register 3"]
+
 pub type Shpr3 = crate::RegValueT<Shpr3_SPEC>;
 
 impl Shpr3 {
-    #[doc = "PRI_14\\[7:0\\] bits (Priority of system handler 14, PendSV)"]
     #[inline(always)]
     pub fn pri_14(
         self,
-    ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, Shpr3_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<16,0xff,1,0,u8, Shpr3_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, u8, Shpr3_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<16,0xff,1,0,u8,u8,Shpr3_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "PRI_15\\[7:0\\] bits (Priority of system handler 15, SysTick exception)"]
+
     #[inline(always)]
     pub fn pri_15(
         self,
-    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, Shpr3_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<24,0xff,1,0,u8, Shpr3_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, Shpr3_SPEC, crate::common::RW> {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,Shpr3_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Shpr3 {

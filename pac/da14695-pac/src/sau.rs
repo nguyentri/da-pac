@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:53:57 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:21 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Sau {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "Control Register"]
+
     #[inline(always)]
     pub const fn ctrl(&self) -> &'static crate::common::Reg<self::Ctrl_SPEC, crate::common::RW> {
         unsafe {
@@ -43,7 +43,6 @@ impl super::Sau {
         }
     }
 
-    #[doc = "Type Register"]
     #[inline(always)]
     pub const fn r#type(&self) -> &'static crate::common::Reg<self::Type_SPEC, crate::common::R> {
         unsafe {
@@ -53,7 +52,6 @@ impl super::Sau {
         }
     }
 
-    #[doc = "Region Number Register"]
     #[inline(always)]
     pub const fn rnr(&self) -> &'static crate::common::Reg<self::Rnr_SPEC, crate::common::RW> {
         unsafe {
@@ -63,7 +61,6 @@ impl super::Sau {
         }
     }
 
-    #[doc = "Region Base Address Register"]
     #[inline(always)]
     pub const fn rbar(&self) -> &'static crate::common::Reg<self::Rbar_SPEC, crate::common::RW> {
         unsafe {
@@ -73,7 +70,6 @@ impl super::Sau {
         }
     }
 
-    #[doc = "Region Limit Address Register"]
     #[inline(always)]
     pub const fn rlar(&self) -> &'static crate::common::Reg<self::Rlar_SPEC, crate::common::RW> {
         unsafe {
@@ -89,7 +85,7 @@ pub struct Ctrl_SPEC;
 impl crate::sealed::RegSpec for Ctrl_SPEC {
     type DataType = u32;
 }
-#[doc = "Control Register"]
+
 pub type Ctrl = crate::RegValueT<Ctrl_SPEC>;
 
 impl NoBitfieldReg<Ctrl_SPEC> for Ctrl {}
@@ -106,7 +102,7 @@ pub struct Type_SPEC;
 impl crate::sealed::RegSpec for Type_SPEC {
     type DataType = u32;
 }
-#[doc = "Type Register"]
+
 pub type Type = crate::RegValueT<Type_SPEC>;
 
 impl NoBitfieldReg<Type_SPEC> for Type {}
@@ -123,7 +119,7 @@ pub struct Rnr_SPEC;
 impl crate::sealed::RegSpec for Rnr_SPEC {
     type DataType = u32;
 }
-#[doc = "Region Number Register"]
+
 pub type Rnr = crate::RegValueT<Rnr_SPEC>;
 
 impl NoBitfieldReg<Rnr_SPEC> for Rnr {}
@@ -140,7 +136,7 @@ pub struct Rbar_SPEC;
 impl crate::sealed::RegSpec for Rbar_SPEC {
     type DataType = u32;
 }
-#[doc = "Region Base Address Register"]
+
 pub type Rbar = crate::RegValueT<Rbar_SPEC>;
 
 impl NoBitfieldReg<Rbar_SPEC> for Rbar {}
@@ -157,7 +153,7 @@ pub struct Rlar_SPEC;
 impl crate::sealed::RegSpec for Rlar_SPEC {
     type DataType = u32;
 }
-#[doc = "Region Limit Address Register"]
+
 pub type Rlar = crate::RegValueT<Rlar_SPEC>;
 
 impl NoBitfieldReg<Rlar_SPEC> for Rlar {}

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:04 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Timer1 {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "Timer1 value for event on GPIO1"]
+
     #[inline(always)]
     pub const fn timer1_capcnt1_value_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Timer1 value for event on GPIO2"]
     #[inline(always)]
     pub const fn timer1_capcnt2_value_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Timer1 Capture control register"]
     #[inline(always)]
     pub const fn timer1_capture_reg(
         &self,
@@ -69,7 +67,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Clear event register"]
     #[inline(always)]
     pub const fn timer1_clr_event_reg(
         &self,
@@ -81,7 +78,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Timer1 control register"]
     #[inline(always)]
     pub const fn timer1_ctrl_reg(
         &self,
@@ -93,7 +89,6 @@ impl super::Timer1 {
         }
     }
 
-    #[doc = "Timer1 counter value"]
     #[inline(always)]
     pub const fn timer1_status_reg(
         &self,
@@ -111,11 +106,10 @@ pub struct Timer1Capcnt1ValueReg_SPEC;
 impl crate::sealed::RegSpec for Timer1Capcnt1ValueReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Timer1 value for event on GPIO1"]
+
 pub type Timer1Capcnt1ValueReg = crate::RegValueT<Timer1Capcnt1ValueReg_SPEC>;
 
 impl Timer1Capcnt1ValueReg {
-    #[doc = "In Counter mode : Not used\nIn Capture mode: Gives the RTC time stamp (high part) when an IN1 event was occurred"]
     #[inline(always)]
     pub fn timer1_capcnt1_rtc_high(
         self,
@@ -124,6 +118,7 @@ impl Timer1Capcnt1ValueReg {
         0x7ff,
         1,
         0,
+        u16,
         u16,
         Timer1Capcnt1ValueReg_SPEC,
         crate::common::R,
@@ -134,11 +129,12 @@ impl Timer1Capcnt1ValueReg {
             1,
             0,
             u16,
+            u16,
             Timer1Capcnt1ValueReg_SPEC,
             crate::common::R,
         >::from_register(self, 0)
     }
-    #[doc = "In Counter mode : Gives the number of timer clock cycles minus 1 which was measured during TIMER1_IN1_PERIOD_MAX periods of IN1\nIn Capture mode (TIMER1_IN1_STAMP_TYPE=0) : Gives the Counter value when an IN1 event was occurred\nIn Capture mode (TIMER1_IN1_STAMP_TYPE=1) : Gives the RTC time stamp (low part) when an IN1 event was occurred"]
+
     #[inline(always)]
     pub fn timer1_capcnt1_value(
         self,
@@ -148,6 +144,7 @@ impl Timer1Capcnt1ValueReg {
         1,
         0,
         u16,
+        u16,
         Timer1Capcnt1ValueReg_SPEC,
         crate::common::R,
     > {
@@ -156,6 +153,7 @@ impl Timer1Capcnt1ValueReg {
             0x7ff,
             1,
             0,
+            u16,
             u16,
             Timer1Capcnt1ValueReg_SPEC,
             crate::common::R,
@@ -175,11 +173,10 @@ pub struct Timer1Capcnt2ValueReg_SPEC;
 impl crate::sealed::RegSpec for Timer1Capcnt2ValueReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Timer1 value for event on GPIO2"]
+
 pub type Timer1Capcnt2ValueReg = crate::RegValueT<Timer1Capcnt2ValueReg_SPEC>;
 
 impl Timer1Capcnt2ValueReg {
-    #[doc = "In Counter mode : Not used\nIn Capture mode: Gives the RTC time stamp (high part) when an IN2 event was occurred"]
     #[inline(always)]
     pub fn timer1_capcnt2_rtc_high(
         self,
@@ -188,6 +185,7 @@ impl Timer1Capcnt2ValueReg {
         0x7ff,
         1,
         0,
+        u16,
         u16,
         Timer1Capcnt2ValueReg_SPEC,
         crate::common::R,
@@ -198,11 +196,12 @@ impl Timer1Capcnt2ValueReg {
             1,
             0,
             u16,
+            u16,
             Timer1Capcnt2ValueReg_SPEC,
             crate::common::R,
         >::from_register(self, 0)
     }
-    #[doc = "In Counter mode : Gives the number of timer clock cycles minus 1 which was measured during TIMER1_IN2_PERIOD_MAX periods of IN2\nIn Capture mode (TIMER1_IN2_STAMP_TYPE=0) : Gives the Counter value when an IN2 event was occurred\nIn Capture mode (TIMER1_IN2_STAMP_TYPE=1) : Gives the RTC time stamp (low part) when an IN2 event was occurred"]
+
     #[inline(always)]
     pub fn timer1_capcnt2_value(
         self,
@@ -212,6 +211,7 @@ impl Timer1Capcnt2ValueReg {
         1,
         0,
         u16,
+        u16,
         Timer1Capcnt2ValueReg_SPEC,
         crate::common::R,
     > {
@@ -220,6 +220,7 @@ impl Timer1Capcnt2ValueReg {
             0x7ff,
             1,
             0,
+            u16,
             u16,
             Timer1Capcnt2ValueReg_SPEC,
             crate::common::R,
@@ -239,97 +240,131 @@ pub struct Timer1CaptureReg_SPEC;
 impl crate::sealed::RegSpec for Timer1CaptureReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Timer1 Capture control register"]
+
 pub type Timer1CaptureReg = crate::RegValueT<Timer1CaptureReg_SPEC>;
 
 impl Timer1CaptureReg {
-    #[doc = "0 = On each event store the counter value\n1 = On each event store the RTC time stamp"]
     #[inline(always)]
     pub fn timer1_in2_stamp_type(
         self,
     ) -> crate::common::RegisterFieldBool<27, 1, 0, Timer1CaptureReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<27,1,0,Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Gives the number of periods +1 of IN2, in which module counts"]
+
     #[inline(always)]
     pub fn timer1_in2_period_max(
         self,
-    ) -> crate::common::RegisterField<21, 0x3f, 1, 0, u8, Timer1CaptureReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<21,0x3f,1,0,u8, Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        21,
+        0x3f,
+        1,
+        0,
+        u8,
+        u8,
+        Timer1CaptureReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            21,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            Timer1CaptureReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = "1 = Interrupt is generated when capture is occurred or was counted TIMER1_IN2_PERIOD_MAX\n0 = Interrupt is masked"]
+
     #[inline(always)]
     pub fn timer1_in2_irq_en(
         self,
     ) -> crate::common::RegisterFieldBool<20, 1, 0, Timer1CaptureReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<20,1,0,Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0 = Capture mode\n1 = Count mode"]
+
     #[inline(always)]
     pub fn timer1_in2_count_en(
         self,
     ) -> crate::common::RegisterFieldBool<19, 1, 0, Timer1CaptureReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<19,1,0,Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0 = Rising edge event\n1 = Falling edge event\nit should be written when TIMER1_GPIO2_CONF=0 to prevent false events"]
+
     #[inline(always)]
     pub fn timer1_in2_event_fall_en(
         self,
     ) -> crate::common::RegisterFieldBool<18, 1, 0, Timer1CaptureReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<18,1,0,Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0,13,14,15 = IN2 is not used\n1..12 = Defines the P0 pin (0..11) module will use as IN2"]
+
     #[inline(always)]
     pub fn timer1_gpio2_conf(
         self,
-    ) -> crate::common::RegisterField<14, 0xf, 1, 0, u8, Timer1CaptureReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<14, 0xf, 1, 0, u8, u8, Timer1CaptureReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<14,0xf,1,0,u8, Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            14,
+            0xf,
+            1,
+            0,
+            u8,
+            u8,
+            Timer1CaptureReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = "0 = On each event store the counter value\n1 = On each event store the RTC time stamp"]
+
     #[inline(always)]
     pub fn timer1_in1_stamp_type(
         self,
     ) -> crate::common::RegisterFieldBool<13, 1, 0, Timer1CaptureReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<13,1,0,Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Gives the number of periods +1 of IN1, in which module counts"]
+
     #[inline(always)]
     pub fn timer1_in1_period_max(
         self,
-    ) -> crate::common::RegisterField<7, 0x3f, 1, 0, u8, Timer1CaptureReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<7, 0x3f, 1, 0, u8, u8, Timer1CaptureReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<7,0x3f,1,0,u8, Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            7,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            Timer1CaptureReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = "1 = Interrupt is generated when capture is occurred or was counted TIMER1_IN1_PERIOD_MAX\n0 = Interrupt is masked"]
+
     #[inline(always)]
     pub fn timer1_in1_irq_en(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, Timer1CaptureReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0 = Capture mode\n1 = Count mode"]
+
     #[inline(always)]
     pub fn timer1_in1_count_en(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, Timer1CaptureReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0 = Rising edge event\n1 = Falling edge event\nit should be written when TIMER1_GPIO1_CONF=0 to prevent false events"]
+
     #[inline(always)]
     pub fn timer1_in1_event_fall_en(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, Timer1CaptureReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0,13,14,15 = IN1 is not used\n1..12 = Defines the P0 pin (0..11) module will use as IN1"]
+
     #[inline(always)]
     pub fn timer1_gpio1_conf(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, Timer1CaptureReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, Timer1CaptureReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xf,1,0,u8, Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,Timer1CaptureReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for Timer1CaptureReg {
@@ -345,25 +380,24 @@ pub struct Timer1ClrEventReg_SPEC;
 impl crate::sealed::RegSpec for Timer1ClrEventReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Clear event register"]
+
 pub type Timer1ClrEventReg = crate::RegValueT<Timer1ClrEventReg_SPEC>;
 
 impl Timer1ClrEventReg {
-    #[doc = "Write 1 to clear the TIMER1_IN2_EVENT and TIMER1_IN2_OVRFLW"]
     #[inline(always)]
     pub fn timer1_clr_in2_event(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, Timer1ClrEventReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,Timer1ClrEventReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Write 1 to clear the TIMER1_IN1_EVENT and TIMER1_IN1_OVRFLW"]
+
     #[inline(always)]
     pub fn timer1_clr_in1_event(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, Timer1ClrEventReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,Timer1ClrEventReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Write 1 to clear the TIMER1_TIMER_EVENT"]
+
     #[inline(always)]
     pub fn timer1_clr_timer_event(
         self,
@@ -384,59 +418,67 @@ pub struct Timer1CtrlReg_SPEC;
 impl crate::sealed::RegSpec for Timer1CtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Timer1 control register"]
+
 pub type Timer1CtrlReg = crate::RegValueT<Timer1CtrlReg_SPEC>;
 
 impl Timer1CtrlReg {
-    #[doc = "0 = timer1 clock is disabled\n1 = timer1 clock is enabled"]
     #[inline(always)]
     pub fn timer1_clk_en(
         self,
     ) -> crate::common::RegisterFieldBool<16, 1, 0, Timer1CtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<16,1,0,Timer1CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0 = Timer1 use the clock LP clock\n1 = Timer1 use the system clock"]
+
     #[inline(always)]
     pub fn timer1_use_sys_clk(
         self,
     ) -> crate::common::RegisterFieldBool<15, 1, 0, Timer1CtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<15,1,0,Timer1CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Applicable when timer counts up\n1 = timer1 goes to zero when it reaches the max value.\n0 = timer1 goes to zero when it reaches the reload value."]
+
     #[inline(always)]
     pub fn timer1_free_run_mode_en(
         self,
     ) -> crate::common::RegisterFieldBool<14, 1, 0, Timer1CtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<14,1,0,Timer1CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0 = timer1 IRQ masked\n1 = timer1 IRQ unmasked"]
+
     #[inline(always)]
     pub fn timer1_irq_en(
         self,
     ) -> crate::common::RegisterFieldBool<13, 1, 0, Timer1CtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<13,1,0,Timer1CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0 = timer1 counts up\n1 = timer1 counts down"]
+
     #[inline(always)]
     pub fn timer1_count_down_en(
         self,
     ) -> crate::common::RegisterFieldBool<12, 1, 0, Timer1CtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<12,1,0,Timer1CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0 = Timer1 disabled\n1 = Timer1 enabled"]
+
     #[inline(always)]
     pub fn timer1_enable(
         self,
     ) -> crate::common::RegisterFieldBool<11, 1, 0, Timer1CtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<11,1,0,Timer1CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Reload or max value in timer mode. Actual delay is the register value plus synchronization time (3 clock cycles)"]
+
     #[inline(always)]
     pub fn timer1_reload(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, Timer1CtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, u16, Timer1CtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16, Timer1CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            0,
+            0x7ff,
+            1,
+            0,
+            u16,
+            u16,
+            Timer1CtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for Timer1CtrlReg {
@@ -452,52 +494,68 @@ pub struct Timer1StatusReg_SPEC;
 impl crate::sealed::RegSpec for Timer1StatusReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Timer1 counter value"]
+
 pub type Timer1StatusReg = crate::RegValueT<Timer1StatusReg_SPEC>;
 
 impl Timer1StatusReg {
-    #[doc = "1 = New IN2 event occurred while Interrupt was pending.\nTIMER1_CAPCNT2_VALUE_REG gives the time stamp of the first event."]
     #[inline(always)]
     pub fn timer1_in2_ovrflw(
         self,
     ) -> crate::common::RegisterFieldBool<15, 1, 0, Timer1StatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<15,1,0,Timer1StatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "1 = New IN1 event occurred while Interrupt was pending.\nTIMER1_CAPCNT1_VALUE_REG gives the time stamp of the first event."]
+
     #[inline(always)]
     pub fn timer1_in1_ovrflw(
         self,
     ) -> crate::common::RegisterFieldBool<14, 1, 0, Timer1StatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<14,1,0,Timer1StatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "1 = Pending Capture 2 interrupt. It has be clear writing 1 to TIMER1_CLR_IN2_EVENT"]
+
     #[inline(always)]
     pub fn timer1_in2_event(
         self,
     ) -> crate::common::RegisterFieldBool<13, 1, 0, Timer1StatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<13,1,0,Timer1StatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "1 = Pending Capture 1 interrupt. It has be clear writing 1 to TIMER1_CLR_IN1_EVENT"]
+
     #[inline(always)]
     pub fn timer1_in1_event(
         self,
     ) -> crate::common::RegisterFieldBool<12, 1, 0, Timer1StatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<12,1,0,Timer1StatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "1 = Pending Timer interrupt. it has be clear writing 1\' to TIMER1_CLR_TIMER_EVENT"]
+
     #[inline(always)]
     pub fn timer1_timer_event(
         self,
     ) -> crate::common::RegisterFieldBool<11, 1, 0, Timer1StatusReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<11,1,0,Timer1StatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "Gives the current timer value"]
+
     #[inline(always)]
     pub fn timer1_timer_value(
         self,
-    ) -> crate::common::RegisterField<0, 0x7ff, 1, 0, u16, Timer1StatusReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<0,0x7ff,1,0,u16, Timer1StatusReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x7ff,
+        1,
+        0,
+        u16,
+        u16,
+        Timer1StatusReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x7ff,
+            1,
+            0,
+            u16,
+            u16,
+            Timer1StatusReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for Timer1StatusReg {

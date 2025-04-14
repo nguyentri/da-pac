@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:54:18 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:34 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Dw {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "USB Master clock tokens (AHB DMA layer only)"]
+
     #[inline(always)]
     pub const fn ahb_dma_cclm1_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::Dw {
         }
     }
 
-    #[doc = "GenDMA Master clock tokens (AHB DMA layer only)"]
     #[inline(always)]
     pub const fn ahb_dma_cclm2_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::Dw {
         }
     }
 
-    #[doc = "CRYPTO Master clock tokens (AHB DMA layer only)"]
     #[inline(always)]
     pub const fn ahb_dma_cclm3_reg(
         &self,
@@ -69,7 +67,6 @@ impl super::Dw {
         }
     }
 
-    #[doc = "CRYPTO Master clock tokens (AHB DMA layer only)"]
     #[inline(always)]
     pub const fn ahb_dma_cclm4_reg(
         &self,
@@ -81,7 +78,6 @@ impl super::Dw {
         }
     }
 
-    #[doc = "Default master ID number (AHB DMA layer only)"]
     #[inline(always)]
     pub const fn ahb_dma_dflt_master_reg(
         &self,
@@ -93,7 +89,6 @@ impl super::Dw {
         }
     }
 
-    #[doc = "AHB-DMA layer priority level for RFTP (AHB DMA layer only)"]
     #[inline(always)]
     pub const fn ahb_dma_pl1_reg(
         &self,
@@ -105,7 +100,6 @@ impl super::Dw {
         }
     }
 
-    #[doc = "AHB-DMA layer priority level for LCD (AHB DMA layer only)"]
     #[inline(always)]
     pub const fn ahb_dma_pl2_reg(
         &self,
@@ -117,7 +111,6 @@ impl super::Dw {
         }
     }
 
-    #[doc = "AHB-DMA layer Priority level for GEN-DMA (AHB DMA layer only)"]
     #[inline(always)]
     pub const fn ahb_dma_pl3_reg(
         &self,
@@ -129,7 +122,6 @@ impl super::Dw {
         }
     }
 
-    #[doc = "AHB-DMA layer Priority level for CRYPTO-DMA (AHB DMA layer only)"]
     #[inline(always)]
     pub const fn ahb_dma_pl4_reg(
         &self,
@@ -141,7 +133,6 @@ impl super::Dw {
         }
     }
 
-    #[doc = "Master clock refresh period (AHB DMA layer only)"]
     #[inline(always)]
     pub const fn ahb_dma_tcl_reg(
         &self,
@@ -153,7 +144,6 @@ impl super::Dw {
         }
     }
 
-    #[doc = "Version ID (AHB DMA layer only)"]
     #[inline(always)]
     pub const fn ahb_dma_version_reg(
         &self,
@@ -165,7 +155,6 @@ impl super::Dw {
         }
     }
 
-    #[doc = "Weighted-Token Arbitration Scheme Enable (AHB DMA layer only)"]
     #[inline(always)]
     pub const fn ahb_dma_wten_reg(
         &self,
@@ -183,17 +172,33 @@ pub struct AhbDmaCclm1Reg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaCclm1Reg_SPEC {
     type DataType = u32;
 }
-#[doc = "USB Master clock tokens (AHB DMA layer only)"]
+
 pub type AhbDmaCclm1Reg = crate::RegValueT<AhbDmaCclm1Reg_SPEC>;
 
 impl AhbDmaCclm1Reg {
-    #[doc = "Number of tokens (counted in AHB clock cycles) that a master can use on the bus before it has to arbitrate on a bus master with low priority and having tokens. Masters with tokens remaining have priority over masters that have used all of their tokens. User should configure all the token values ensuring that the sum does not exceeds the total allocated number of tokens. If a value of zero is configured, then the bus is deemed to have infinite tokens and will always operate in the upper-tier of arbitration."]
     #[inline(always)]
     pub fn ahb_dma_cclm(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, AhbDmaCclm1Reg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, AhbDmaCclm1Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        AhbDmaCclm1Reg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            AhbDmaCclm1Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AhbDmaCclm1Reg {
@@ -209,17 +214,33 @@ pub struct AhbDmaCclm2Reg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaCclm2Reg_SPEC {
     type DataType = u32;
 }
-#[doc = "GenDMA Master clock tokens (AHB DMA layer only)"]
+
 pub type AhbDmaCclm2Reg = crate::RegValueT<AhbDmaCclm2Reg_SPEC>;
 
 impl AhbDmaCclm2Reg {
-    #[doc = "Refer to AHB_DMA_CCLM1_REG"]
     #[inline(always)]
     pub fn ahb_dma_cclm(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, AhbDmaCclm2Reg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, AhbDmaCclm2Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        AhbDmaCclm2Reg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            AhbDmaCclm2Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AhbDmaCclm2Reg {
@@ -235,17 +256,33 @@ pub struct AhbDmaCclm3Reg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaCclm3Reg_SPEC {
     type DataType = u32;
 }
-#[doc = "CRYPTO Master clock tokens (AHB DMA layer only)"]
+
 pub type AhbDmaCclm3Reg = crate::RegValueT<AhbDmaCclm3Reg_SPEC>;
 
 impl AhbDmaCclm3Reg {
-    #[doc = "AHB_DMA_CCLM1_REG"]
     #[inline(always)]
     pub fn ahb_dma_cclm(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, AhbDmaCclm3Reg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, AhbDmaCclm3Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        AhbDmaCclm3Reg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            AhbDmaCclm3Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AhbDmaCclm3Reg {
@@ -261,17 +298,33 @@ pub struct AhbDmaCclm4Reg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaCclm4Reg_SPEC {
     type DataType = u32;
 }
-#[doc = "CRYPTO Master clock tokens (AHB DMA layer only)"]
+
 pub type AhbDmaCclm4Reg = crate::RegValueT<AhbDmaCclm4Reg_SPEC>;
 
 impl AhbDmaCclm4Reg {
-    #[doc = "AHB_DMA_CCLM1_REG"]
     #[inline(always)]
     pub fn ahb_dma_cclm(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, AhbDmaCclm4Reg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, AhbDmaCclm4Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        AhbDmaCclm4Reg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            AhbDmaCclm4Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AhbDmaCclm4Reg {
@@ -287,17 +340,33 @@ pub struct AhbDmaDfltMasterReg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaDfltMasterReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Default master ID number (AHB DMA layer only)"]
+
 pub type AhbDmaDfltMasterReg = crate::RegValueT<AhbDmaDfltMasterReg_SPEC>;
 
 impl AhbDmaDfltMasterReg {
-    #[doc = "Default master ID number register. The default master is the master that is granted by the bus when no master has requested ownership.\n0: Dummy master\n1: RFPT\n2: LCD\n3: GEN-DMA\n3: CRYPTO-DMA"]
     #[inline(always)]
     pub fn ahb_dma_dflt_master(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, AhbDmaDfltMasterReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0xf,1,0,u8, AhbDmaDfltMasterReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xf,
+        1,
+        0,
+        u8,
+        u8,
+        AhbDmaDfltMasterReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xf,
+            1,
+            0,
+            u8,
+            u8,
+            AhbDmaDfltMasterReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AhbDmaDfltMasterReg {
@@ -313,16 +382,16 @@ pub struct AhbDmaPl1Reg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaPl1Reg_SPEC {
     type DataType = u32;
 }
-#[doc = "AHB-DMA layer priority level for RFTP (AHB DMA layer only)"]
+
 pub type AhbDmaPl1Reg = crate::RegValueT<AhbDmaPl1Reg_SPEC>;
 
 impl AhbDmaPl1Reg {
-    #[doc = "Arbitration priority for master RFPT. 0: lowest, 15: highest."]
     #[inline(always)]
     pub fn ahb_dma_pl1(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, AhbDmaPl1Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xf,1,0,u8, AhbDmaPl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, AhbDmaPl1Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,AhbDmaPl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AhbDmaPl1Reg {
@@ -338,16 +407,16 @@ pub struct AhbDmaPl2Reg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaPl2Reg_SPEC {
     type DataType = u32;
 }
-#[doc = "AHB-DMA layer priority level for LCD (AHB DMA layer only)"]
+
 pub type AhbDmaPl2Reg = crate::RegValueT<AhbDmaPl2Reg_SPEC>;
 
 impl AhbDmaPl2Reg {
-    #[doc = "Arbitration priority for master LCD. 0: lowest, 15: highest."]
     #[inline(always)]
     pub fn ahb_dma_pl2(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, AhbDmaPl2Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xf,1,0,u8, AhbDmaPl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, AhbDmaPl2Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,AhbDmaPl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AhbDmaPl2Reg {
@@ -363,16 +432,16 @@ pub struct AhbDmaPl3Reg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaPl3Reg_SPEC {
     type DataType = u32;
 }
-#[doc = "AHB-DMA layer Priority level for GEN-DMA (AHB DMA layer only)"]
+
 pub type AhbDmaPl3Reg = crate::RegValueT<AhbDmaPl3Reg_SPEC>;
 
 impl AhbDmaPl3Reg {
-    #[doc = "Arbitration priority for master GEN-DMA. 0: lowest, 15: highest."]
     #[inline(always)]
     pub fn ahb_dma_pl3(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, AhbDmaPl3Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xf,1,0,u8, AhbDmaPl3Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, AhbDmaPl3Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,AhbDmaPl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AhbDmaPl3Reg {
@@ -388,16 +457,16 @@ pub struct AhbDmaPl4Reg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaPl4Reg_SPEC {
     type DataType = u32;
 }
-#[doc = "AHB-DMA layer Priority level for CRYPTO-DMA (AHB DMA layer only)"]
+
 pub type AhbDmaPl4Reg = crate::RegValueT<AhbDmaPl4Reg_SPEC>;
 
 impl AhbDmaPl4Reg {
-    #[doc = "Arbitration priority for master CRYPTO-DMA. 0: lowest, 15: highest."]
     #[inline(always)]
     pub fn ahb_dma_pl4(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, AhbDmaPl4Reg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0xf,1,0,u8, AhbDmaPl4Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, AhbDmaPl4Reg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,AhbDmaPl4Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AhbDmaPl4Reg {
@@ -413,17 +482,25 @@ pub struct AhbDmaTclReg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaTclReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Master clock refresh period (AHB DMA layer only)"]
+
 pub type AhbDmaTclReg = crate::RegValueT<AhbDmaTclReg_SPEC>;
 
 impl AhbDmaTclReg {
-    #[doc = "Master clock refresh period, counting clock cycles. An arbitration period is defined over this number of tokens. When a new arbitration period starts, the master counters are reloaded. Recommended value is the sum of the AHB_DMA_CCLMx_REG valuesplus 2 tokens for each master, i.e. plus 6."]
     #[inline(always)]
     pub fn ahb_dma_tcl(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, AhbDmaTclReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, AhbDmaTclReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, AhbDmaTclReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            AhbDmaTclReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AhbDmaTclReg {
@@ -439,11 +516,10 @@ pub struct AhbDmaVersionReg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaVersionReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Version ID (AHB DMA layer only)"]
+
 pub type AhbDmaVersionReg = crate::RegValueT<AhbDmaVersionReg_SPEC>;
 
 impl AhbDmaVersionReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn ahb_dma_version(
         self,
@@ -453,6 +529,7 @@ impl AhbDmaVersionReg {
         1,
         0,
         u32,
+        u32,
         AhbDmaVersionReg_SPEC,
         crate::common::R,
     > {
@@ -461,6 +538,7 @@ impl AhbDmaVersionReg {
             0xffffffff,
             1,
             0,
+            u32,
             u32,
             AhbDmaVersionReg_SPEC,
             crate::common::R,
@@ -480,11 +558,10 @@ pub struct AhbDmaWtenReg_SPEC;
 impl crate::sealed::RegSpec for AhbDmaWtenReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Weighted-Token Arbitration Scheme Enable (AHB DMA layer only)"]
+
 pub type AhbDmaWtenReg = crate::RegValueT<AhbDmaWtenReg_SPEC>;
 
 impl AhbDmaWtenReg {
-    #[doc = "Weighted-token arbitration scheme enable."]
     #[inline(always)]
     pub fn ahb_dma_wten(
         self,

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:13 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:56 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Trng {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "TRNG control register"]
+
     #[inline(always)]
     pub const fn trng_ctrl_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::Trng {
         }
     }
 
-    #[doc = "TRNG FIFO level register"]
     #[inline(always)]
     pub const fn trng_fifolvl_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::Trng {
         }
     }
 
-    #[doc = "TRNG Version register"]
     #[inline(always)]
     pub const fn trng_ver_reg(
         &self,
@@ -75,18 +73,17 @@ pub struct TrngCtrlReg_SPEC;
 impl crate::sealed::RegSpec for TrngCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = "TRNG control register"]
+
 pub type TrngCtrlReg = crate::RegValueT<TrngCtrlReg_SPEC>;
 
 impl TrngCtrlReg {
-    #[doc = "0: select the TRNG with asynchronous free running oscillators (default)\n1: select the pseudo-random generator with synchronous oscillators (for simulation purpose only)"]
     #[inline(always)]
     pub fn trng_mode(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, TrngCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,TrngCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0: Disable the TRNG\n1: Enable the TRNG this signal is ignored when the FIFO is full"]
+
     #[inline(always)]
     pub fn trng_enable(
         self,
@@ -107,24 +104,23 @@ pub struct TrngFifolvlReg_SPEC;
 impl crate::sealed::RegSpec for TrngFifolvlReg_SPEC {
     type DataType = u32;
 }
-#[doc = "TRNG FIFO level register"]
+
 pub type TrngFifolvlReg = crate::RegValueT<TrngFifolvlReg_SPEC>;
 
 impl TrngFifolvlReg {
-    #[doc = "1:FIFO full indication. This bit is cleared if the FIFO is read."]
     #[inline(always)]
     pub fn trng_fifofull(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, TrngFifolvlReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<5,1,0,TrngFifolvlReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "Number of 32 bit words of random data in the FIFO (max 31) until the FIFO is full. When it is 0 and TRNG_FIFOFULL is 1, it means the FIFO is full."]
+
     #[inline(always)]
     pub fn trng_fifolvl(
         self,
-    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, TrngFifolvlReg_SPEC, crate::common::R>
+    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, u8, TrngFifolvlReg_SPEC, crate::common::R>
     {
-        crate::common::RegisterField::<0,0x1f,1,0,u8, TrngFifolvlReg_SPEC,crate::common::R>::from_register(self,0)
+        crate::common::RegisterField::<0,0x1f,1,0,u8,u8,TrngFifolvlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for TrngFifolvlReg {
@@ -140,30 +136,32 @@ pub struct TrngVerReg_SPEC;
 impl crate::sealed::RegSpec for TrngVerReg_SPEC {
     type DataType = u32;
 }
-#[doc = "TRNG Version register"]
+
 pub type TrngVerReg = crate::RegValueT<TrngVerReg_SPEC>;
 
 impl TrngVerReg {
-    #[doc = "Major version number"]
     #[inline(always)]
     pub fn trng_maj(
         self,
-    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, TrngVerReg_SPEC, crate::common::R> {
-        crate::common::RegisterField::<24,0xff,1,0,u8, TrngVerReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<24, 0xff, 1, 0, u8, u8, TrngVerReg_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<24,0xff,1,0,u8,u8,TrngVerReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "Minor version number"]
+
     #[inline(always)]
     pub fn trng_min(
         self,
-    ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, TrngVerReg_SPEC, crate::common::R> {
-        crate::common::RegisterField::<16,0xff,1,0,u8, TrngVerReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<16, 0xff, 1, 0, u8, u8, TrngVerReg_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<16,0xff,1,0,u8,u8,TrngVerReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "SVN revision number"]
+
     #[inline(always)]
     pub fn trng_svn(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, TrngVerReg_SPEC, crate::common::R> {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, TrngVerReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, TrngVerReg_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0xffff,1,0,u16,u16,TrngVerReg_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for TrngVerReg {

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:04 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::Adplldig {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub const fn adpll_acc_ctrl_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_anatst_ctrl_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_anatst_rd_reg(
         &self,
@@ -69,7 +67,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_ana_ctrl_reg(
         &self,
@@ -81,7 +78,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_attr_ctrl_reg(
         &self,
@@ -93,7 +89,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_cn_ctrl_reg(
         &self,
@@ -105,7 +100,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_dcoamp_cal_ctrl_reg(
         &self,
@@ -117,7 +111,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_dco_rd_reg(
         &self,
@@ -129,7 +122,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_div_ctrl_reg(
         &self,
@@ -141,7 +133,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_fif_ctrl1_reg(
         &self,
@@ -153,7 +144,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_fif_ctrl2_reg(
         &self,
@@ -165,7 +155,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_freqmeas_rd_reg(
         &self,
@@ -177,7 +166,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_fsm_ctrl_reg(
         &self,
@@ -189,7 +177,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_init_ctrl_reg(
         &self,
@@ -201,7 +188,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_kdco_cal_ctrl1_reg(
         &self,
@@ -213,7 +199,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_kdco_cal_ctrl2_reg(
         &self,
@@ -225,7 +210,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_kdco_rd_reg(
         &self,
@@ -237,7 +221,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_kdtctdc_cal_ctrl1_reg(
         &self,
@@ -249,7 +232,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_kdtctdc_cal_ctrl2_reg(
         &self,
@@ -261,7 +243,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_kdtc_rd_reg(
         &self,
@@ -273,7 +254,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_lf_ctrl1_reg(
         &self,
@@ -285,7 +265,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_lf_ctrl2_reg(
         &self,
@@ -297,7 +276,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_misc_ctrl_reg(
         &self,
@@ -309,7 +287,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_mon_ctrl_reg(
         &self,
@@ -321,7 +298,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_overrule_ctrl1_reg(
         &self,
@@ -333,7 +309,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_overrule_ctrl2_reg(
         &self,
@@ -345,7 +320,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_overrule_ctrl3_reg(
         &self,
@@ -357,7 +331,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_pllfcwdt_rd_reg(
         &self,
@@ -369,7 +342,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_rfpt_ctrl_reg(
         &self,
@@ -381,7 +353,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_sdmod_ctrl_reg(
         &self,
@@ -393,7 +364,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_tunestate_rd_reg(
         &self,
@@ -405,7 +375,6 @@ impl super::Adplldig {
         }
     }
 
-    #[doc = ""]
     #[inline(always)]
     pub const fn adpll_txmod_ctrl_reg(
         &self,
@@ -423,32 +392,65 @@ pub struct AdpllAccCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllAccCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllAccCtrlReg = crate::RegValueT<AdpllAccCtrlReg_SPEC>;
 
 impl AdpllAccCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn en_cmf_avg(
         self,
     ) -> crate::common::RegisterFieldBool<31, 1, 0, AdpllAccCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<31,1,0,AdpllAccCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn clip_mod_tune_0_tx(
         self,
-    ) -> crate::common::RegisterField<16, 0x1fff, 1, 0, u16, AdpllAccCtrlReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x1fff,1,0,u16, AdpllAccCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        16,
+        0x1fff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllAccCtrlReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0x1fff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllAccCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn clip_mod_tune_0_rx(
         self,
-    ) -> crate::common::RegisterField<0, 0x1fff, 1, 0, u16, AdpllAccCtrlReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x1fff,1,0,u16, AdpllAccCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x1fff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllAccCtrlReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x1fff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllAccCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AdpllAccCtrlReg {
@@ -464,11 +466,10 @@ pub struct AdpllAnatstCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllAnatstCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllAnatstCtrlReg = crate::RegValueT<AdpllAnatstCtrlReg_SPEC>;
 
 impl AdpllAnatstCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn anatstspare(
         self,
@@ -477,6 +478,7 @@ impl AdpllAnatstCtrlReg {
         0xffff,
         1,
         0,
+        u16,
         u16,
         AdpllAnatstCtrlReg_SPEC,
         crate::common::RW,
@@ -487,11 +489,12 @@ impl AdpllAnatstCtrlReg {
             1,
             0,
             u16,
+            u16,
             AdpllAnatstCtrlReg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn anatsten(
         self,
@@ -501,6 +504,7 @@ impl AdpllAnatstCtrlReg {
         1,
         0,
         u16,
+        u16,
         AdpllAnatstCtrlReg_SPEC,
         crate::common::RW,
     > {
@@ -509,6 +513,7 @@ impl AdpllAnatstCtrlReg {
             0xffff,
             1,
             0,
+            u16,
             u16,
             AdpllAnatstCtrlReg_SPEC,
             crate::common::RW,
@@ -528,17 +533,33 @@ pub struct AdpllAnatstRdReg_SPEC;
 impl crate::sealed::RegSpec for AdpllAnatstRdReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllAnatstRdReg = crate::RegValueT<AdpllAnatstRdReg_SPEC>;
 
 impl AdpllAnatstRdReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn anatstspare_in(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, AdpllAnatstRdReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, AdpllAnatstRdReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllAnatstRdReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllAnatstRdReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AdpllAnatstRdReg {
@@ -554,99 +575,107 @@ pub struct AdpllAnaCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllAnaCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllAnaCtrlReg = crate::RegValueT<AdpllAnaCtrlReg_SPEC>;
 
 impl AdpllAnaCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn dtc_ldo_dmy(
         self,
-    ) -> crate::common::RegisterField<27, 0x3, 1, 0, u8, AdpllAnaCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<27, 0x3, 1, 0, u8, u8, AdpllAnaCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<27,0x3,1,0,u8, AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<27,0x3,1,0,u8,u8,AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn vpasettle(
         self,
-    ) -> crate::common::RegisterField<24, 0x3, 1, 0, u8, AdpllAnaCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<24, 0x3, 1, 0, u8, u8, AdpllAnaCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<24,0x3,1,0,u8, AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<24,0x3,1,0,u8,u8,AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tdc_offset(
         self,
-    ) -> crate::common::RegisterField<16, 0x3f, 1, 0, u8, AdpllAnaCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x3f, 1, 0, u8, u8, AdpllAnaCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x3f,1,0,u8, AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            16,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllAnaCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dtc_en(
         self,
     ) -> crate::common::RegisterFieldBool<15, 1, 0, AdpllAnaCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<15,1,0,AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dtcoffset(
         self,
-    ) -> crate::common::RegisterField<8, 0x7f, 1, 0, u8, AdpllAnaCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<8, 0x7f, 1, 0, u8, u8, AdpllAnaCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<8,0x7f,1,0,u8, AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<8,0x7f,1,0,u8,u8,AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tgldeten(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, AdpllAnaCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn en_ckdcomod(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, AdpllAnaCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn inv_ckdcomod(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, AdpllAnaCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn inv_ckphv(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, AdpllAnaCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn inv_cktdc(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, AdpllAnaCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<3,1,0,AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tdc_inv(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, AdpllAnaCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tdc_ckvin_en(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, AdpllAnaCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,AdpllAnaCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tdc_dtcin_en(
         self,
@@ -667,18 +696,17 @@ pub struct AdpllAttrCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllAttrCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllAttrCtrlReg = crate::RegValueT<AdpllAttrCtrlReg_SPEC>;
 
 impl AdpllAttrCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn pwr_mode_tx(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, AdpllAttrCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,AdpllAttrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn pwr_mode_rx(
         self,
@@ -699,39 +727,55 @@ pub struct AdpllCnCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllCnCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllCnCtrlReg = crate::RegValueT<AdpllCnCtrlReg_SPEC>;
 
 impl AdpllCnCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn ch0(
         self,
-    ) -> crate::common::RegisterField<16, 0x1fff, 1, 0, u16, AdpllCnCtrlReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<16,0x1fff,1,0,u16, AdpllCnCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        16,
+        0x1fff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllCnCtrlReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0x1fff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllCnCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn sgn(
         self,
     ) -> crate::common::RegisterFieldBool<15, 1, 0, AdpllCnCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<15,1,0,AdpllCnCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn cs(
         self,
     ) -> crate::common::RegisterFieldBool<8, 1, 0, AdpllCnCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<8,1,0,AdpllCnCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn cn(
         self,
-    ) -> crate::common::RegisterField<0, 0x7f, 1, 0, u8, AdpllCnCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7f, 1, 0, u8, u8, AdpllCnCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7f,1,0,u8, AdpllCnCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x7f,1,0,u8,u8,AdpllCnCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AdpllCnCtrlReg {
@@ -747,11 +791,10 @@ pub struct AdpllDcoampCalCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllDcoampCalCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllDcoampCalCtrlReg = crate::RegValueT<AdpllDcoampCalCtrlReg_SPEC>;
 
 impl AdpllDcoampCalCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn dcoampic_lp_tx(
         self,
@@ -760,6 +803,7 @@ impl AdpllDcoampCalCtrlReg {
         0xf,
         1,
         0,
+        u8,
         u8,
         AdpllDcoampCalCtrlReg_SPEC,
         crate::common::RW,
@@ -770,11 +814,12 @@ impl AdpllDcoampCalCtrlReg {
             1,
             0,
             u8,
+            u8,
             AdpllDcoampCalCtrlReg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dcoampic_lp_rx(
         self,
@@ -783,6 +828,7 @@ impl AdpllDcoampCalCtrlReg {
         0xf,
         1,
         0,
+        u8,
         u8,
         AdpllDcoampCalCtrlReg_SPEC,
         crate::common::RW,
@@ -793,11 +839,12 @@ impl AdpllDcoampCalCtrlReg {
             1,
             0,
             u8,
+            u8,
             AdpllDcoampCalCtrlReg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dcoampic_hp_tx(
         self,
@@ -806,6 +853,7 @@ impl AdpllDcoampCalCtrlReg {
         0xf,
         1,
         0,
+        u8,
         u8,
         AdpllDcoampCalCtrlReg_SPEC,
         crate::common::RW,
@@ -816,11 +864,12 @@ impl AdpllDcoampCalCtrlReg {
             1,
             0,
             u8,
+            u8,
             AdpllDcoampCalCtrlReg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dcoampic_hp_rx(
         self,
@@ -829,6 +878,7 @@ impl AdpllDcoampCalCtrlReg {
         0xf,
         1,
         0,
+        u8,
         u8,
         AdpllDcoampCalCtrlReg_SPEC,
         crate::common::RW,
@@ -839,11 +889,12 @@ impl AdpllDcoampCalCtrlReg {
             1,
             0,
             u8,
+            u8,
             AdpllDcoampCalCtrlReg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dcoamptm(
         self,
@@ -851,7 +902,7 @@ impl AdpllDcoampCalCtrlReg {
     {
         crate::common::RegisterFieldBool::<7,1,0,AdpllDcoampCalCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ampcalen(
         self,
@@ -859,33 +910,51 @@ impl AdpllDcoampCalCtrlReg {
     {
         crate::common::RegisterFieldBool::<6,1,0,AdpllDcoampCalCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kmedium(
         self,
-    ) -> crate::common::RegisterField<3, 0x7, 1, 0, u8, AdpllDcoampCalCtrlReg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        3,
+        0x7,
+        1,
+        0,
+        u8,
+        u8,
+        AdpllDcoampCalCtrlReg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             3,
             0x7,
             1,
             0,
             u8,
+            u8,
             AdpllDcoampCalCtrlReg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kcoarse(
         self,
-    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, AdpllDcoampCalCtrlReg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        0,
+        0x7,
+        1,
+        0,
+        u8,
+        u8,
+        AdpllDcoampCalCtrlReg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             0,
             0x7,
             1,
             0,
+            u8,
             u8,
             AdpllDcoampCalCtrlReg_SPEC,
             crate::common::RW,
@@ -905,45 +974,65 @@ pub struct AdpllDcoRdReg_SPEC;
 impl crate::sealed::RegSpec for AdpllDcoRdReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllDcoRdReg = crate::RegValueT<AdpllDcoRdReg_SPEC>;
 
 impl AdpllDcoRdReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn dcoamp(
         self,
-    ) -> crate::common::RegisterField<26, 0xf, 1, 0, u8, AdpllDcoRdReg_SPEC, crate::common::R> {
-        crate::common::RegisterField::<26,0xf,1,0,u8, AdpllDcoRdReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<26, 0xf, 1, 0, u8, u8, AdpllDcoRdReg_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<26,0xf,1,0,u8,u8,AdpllDcoRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dcomod(
         self,
-    ) -> crate::common::RegisterField<13, 0x1fff, 1, 0, u16, AdpllDcoRdReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<13,0x1fff,1,0,u16, AdpllDcoRdReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        13,
+        0x1fff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllDcoRdReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            13,
+            0x1fff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllDcoRdReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dcofine(
         self,
-    ) -> crate::common::RegisterField<7, 0x3f, 1, 0, u8, AdpllDcoRdReg_SPEC, crate::common::R> {
-        crate::common::RegisterField::<7,0x3f,1,0,u8, AdpllDcoRdReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<7, 0x3f, 1, 0, u8, u8, AdpllDcoRdReg_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<7,0x3f,1,0,u8,u8,AdpllDcoRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dcomedium(
         self,
-    ) -> crate::common::RegisterField<4, 0x7, 1, 0, u8, AdpllDcoRdReg_SPEC, crate::common::R> {
-        crate::common::RegisterField::<4,0x7,1,0,u8, AdpllDcoRdReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<4, 0x7, 1, 0, u8, u8, AdpllDcoRdReg_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<4,0x7,1,0,u8,u8,AdpllDcoRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dcocoarse(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, AdpllDcoRdReg_SPEC, crate::common::R> {
-        crate::common::RegisterField::<0,0xf,1,0,u8, AdpllDcoRdReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, AdpllDcoRdReg_SPEC, crate::common::R>
+    {
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,AdpllDcoRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AdpllDcoRdReg {
@@ -959,41 +1048,74 @@ pub struct AdpllDivCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllDivCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllDivCtrlReg = crate::RegValueT<AdpllDivCtrlReg_SPEC>;
 
 impl AdpllDivCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn txdiv_trim(
         self,
-    ) -> crate::common::RegisterField<17, 0x1ff, 1, 0, u16, AdpllDivCtrlReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<17,0x1ff,1,0,u16, AdpllDivCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        17,
+        0x1ff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllDivCtrlReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            17,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllDivCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rxdiv_trim(
         self,
-    ) -> crate::common::RegisterField<8, 0x1ff, 1, 0, u16, AdpllDivCtrlReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<8,0x1ff,1,0,u16, AdpllDivCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        8,
+        0x1ff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllDivCtrlReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllDivCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rxdiv_fb_en_tx(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, AdpllDivCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,AdpllDivCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rxdiv_fb_en_rx(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, AdpllDivCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,AdpllDivCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn fbdiv_en(
         self,
@@ -1014,17 +1136,33 @@ pub struct AdpllFifCtrl1Reg_SPEC;
 impl crate::sealed::RegSpec for AdpllFifCtrl1Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllFifCtrl1Reg = crate::RegValueT<AdpllFifCtrl1Reg_SPEC>;
 
 impl AdpllFifCtrl1Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn fifrx_1m(
         self,
-    ) -> crate::common::RegisterField<0, 0x3fff, 1, 0, u16, AdpllFifCtrl1Reg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3fff,1,0,u16, AdpllFifCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x3fff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllFifCtrl1Reg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x3fff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllFifCtrl1Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AdpllFifCtrl1Reg {
@@ -1040,33 +1178,58 @@ pub struct AdpllFifCtrl2Reg_SPEC;
 impl crate::sealed::RegSpec for AdpllFifCtrl2Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllFifCtrl2Reg = crate::RegValueT<AdpllFifCtrl2Reg_SPEC>;
 
 impl AdpllFifCtrl2Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn fiftx(
         self,
-    ) -> crate::common::RegisterField<16, 0x3fff, 1, 0, u16, AdpllFifCtrl2Reg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        16,
+        0x3fff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllFifCtrl2Reg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             16,
             0x3fff,
             1,
             0,
             u16,
+            u16,
             AdpllFifCtrl2Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn fifrx_offset(
         self,
-    ) -> crate::common::RegisterField<0, 0x3fff, 1, 0, u16, AdpllFifCtrl2Reg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<0,0x3fff,1,0,u16, AdpllFifCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0x3fff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllFifCtrl2Reg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0x3fff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllFifCtrl2Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AdpllFifCtrl2Reg {
@@ -1082,46 +1245,45 @@ pub struct AdpllFreqmeasRdReg_SPEC;
 impl crate::sealed::RegSpec for AdpllFreqmeasRdReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllFreqmeasRdReg = crate::RegValueT<AdpllFreqmeasRdReg_SPEC>;
 
 impl AdpllFreqmeasRdReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn measdone_out(
         self,
     ) -> crate::common::RegisterFieldBool<29, 1, 0, AdpllFreqmeasRdReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<29,1,0,AdpllFreqmeasRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn qualmondet(
         self,
     ) -> crate::common::RegisterFieldBool<26, 1, 0, AdpllFreqmeasRdReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<26,1,0,AdpllFreqmeasRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tdcbub(
         self,
     ) -> crate::common::RegisterFieldBool<25, 1, 0, AdpllFreqmeasRdReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<25,1,0,AdpllFreqmeasRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn phvsa0(
         self,
     ) -> crate::common::RegisterFieldBool<24, 1, 0, AdpllFreqmeasRdReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<24,1,0,AdpllFreqmeasRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn phvsa1(
         self,
     ) -> crate::common::RegisterFieldBool<23, 1, 0, AdpllFreqmeasRdReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<23,1,0,AdpllFreqmeasRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn freqdiff(
         self,
@@ -1131,6 +1293,7 @@ impl AdpllFreqmeasRdReg {
         1,
         0,
         u32,
+        u32,
         AdpllFreqmeasRdReg_SPEC,
         crate::common::R,
     > {
@@ -1139,6 +1302,7 @@ impl AdpllFreqmeasRdReg {
             0x7fffff,
             1,
             0,
+            u32,
             u32,
             AdpllFreqmeasRdReg_SPEC,
             crate::common::R,
@@ -1158,65 +1322,73 @@ pub struct AdpllFsmCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllFsmCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllFsmCtrlReg = crate::RegValueT<AdpllFsmCtrlReg_SPEC>;
 
 impl AdpllFsmCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn tvpasettle(
         self,
-    ) -> crate::common::RegisterField<24, 0x3f, 1, 0, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<24, 0x3f, 1, 0, u8, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<24,0x3f,1,0,u8, AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            24,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllFsmCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tsettle(
         self,
-    ) -> crate::common::RegisterField<20, 0xf, 1, 0, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<20, 0xf, 1, 0, u8, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<20,0xf,1,0,u8, AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<20,0xf,1,0,u8,u8,AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tpasettle(
         self,
-    ) -> crate::common::RegisterField<16, 0xf, 1, 0, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0xf, 1, 0, u8, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0xf,1,0,u8, AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0xf,1,0,u8,u8,AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tmod(
         self,
-    ) -> crate::common::RegisterField<12, 0xf, 1, 0, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<12, 0xf, 1, 0, u8, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<12,0xf,1,0,u8, AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<12,0xf,1,0,u8,u8,AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tfine(
         self,
-    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<8,0xf,1,0,u8, AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<8,0xf,1,0,u8,u8,AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tmedium(
         self,
-    ) -> crate::common::RegisterField<4, 0xf, 1, 0, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<4, 0xf, 1, 0, u8, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<4,0xf,1,0,u8, AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<4,0xf,1,0,u8,u8,AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tcoarse(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, AdpllFsmCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xf,1,0,u8, AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,AdpllFsmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AdpllFsmCtrlReg {
@@ -1232,49 +1404,66 @@ pub struct AdpllInitCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllInitCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllInitCtrlReg = crate::RegValueT<AdpllInitCtrlReg_SPEC>;
 
 impl AdpllInitCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn dcomodic(
         self,
-    ) -> crate::common::RegisterField<16, 0x1fff, 1, 0, u16, AdpllInitCtrlReg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        16,
+        0x1fff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllInitCtrlReg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             16,
             0x1fff,
             1,
             0,
             u16,
+            u16,
             AdpllInitCtrlReg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dcofineic(
         self,
-    ) -> crate::common::RegisterField<8, 0x3f, 1, 0, u8, AdpllInitCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<8, 0x3f, 1, 0, u8, u8, AdpllInitCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<8,0x3f,1,0,u8, AdpllInitCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            8,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllInitCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dcomediumic(
         self,
-    ) -> crate::common::RegisterField<4, 0x7, 1, 0, u8, AdpllInitCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<4, 0x7, 1, 0, u8, u8, AdpllInitCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<4,0x7,1,0,u8, AdpllInitCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<4,0x7,1,0,u8,u8,AdpllInitCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dcocoarseic(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, AdpllInitCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, AdpllInitCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xf,1,0,u8, AdpllInitCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,AdpllInitCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AdpllInitCtrlReg {
@@ -1290,37 +1479,54 @@ pub struct AdpllKdcoCalCtrl1Reg_SPEC;
 impl crate::sealed::RegSpec for AdpllKdcoCalCtrl1Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllKdcoCalCtrl1Reg = crate::RegValueT<AdpllKdcoCalCtrl1Reg_SPEC>;
 
 impl AdpllKdcoCalCtrl1Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn kdcolf_in_1m(
         self,
-    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, AdpllKdcoCalCtrl1Reg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        8,
+        0xff,
+        1,
+        0,
+        u8,
+        u8,
+        AdpllKdcoCalCtrl1Reg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             8,
             0xff,
             1,
             0,
             u8,
+            u8,
             AdpllKdcoCalCtrl1Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdcohfic_1m(
         self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, AdpllKdcoCalCtrl1Reg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        0,
+        0xff,
+        1,
+        0,
+        u8,
+        u8,
+        AdpllKdcoCalCtrl1Reg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             0,
             0xff,
             1,
             0,
+            u8,
             u8,
             AdpllKdcoCalCtrl1Reg_SPEC,
             crate::common::RW,
@@ -1340,27 +1546,35 @@ pub struct AdpllKdcoCalCtrl2Reg_SPEC;
 impl crate::sealed::RegSpec for AdpllKdcoCalCtrl2Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllKdcoCalCtrl2Reg = crate::RegValueT<AdpllKdcoCalCtrl2Reg_SPEC>;
 
 impl AdpllKdcoCalCtrl2Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn kdcoestdev(
         self,
-    ) -> crate::common::RegisterField<30, 0x3, 1, 0, u8, AdpllKdcoCalCtrl2Reg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        30,
+        0x3,
+        1,
+        0,
+        u8,
+        u8,
+        AdpllKdcoCalCtrl2Reg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             30,
             0x3,
             1,
             0,
             u8,
+            u8,
             AdpllKdcoCalCtrl2Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdcocaltx(
         self,
@@ -1368,7 +1582,7 @@ impl AdpllKdcoCalCtrl2Reg {
     {
         crate::common::RegisterFieldBool::<29,1,0,AdpllKdcoCalCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdcocalrx(
         self,
@@ -1376,7 +1590,7 @@ impl AdpllKdcoCalCtrl2Reg {
     {
         crate::common::RegisterFieldBool::<28,1,0,AdpllKdcoCalCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdcolfcalen(
         self,
@@ -1384,23 +1598,32 @@ impl AdpllKdcoCalCtrl2Reg {
     {
         crate::common::RegisterFieldBool::<27,1,0,AdpllKdcoCalCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tkdcocal(
         self,
-    ) -> crate::common::RegisterField<24, 0x7, 1, 0, u8, AdpllKdcoCalCtrl2Reg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        24,
+        0x7,
+        1,
+        0,
+        u8,
+        u8,
+        AdpllKdcoCalCtrl2Reg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             24,
             0x7,
             1,
             0,
             u8,
+            u8,
             AdpllKdcoCalCtrl2Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdcocn_ic(
         self,
@@ -1409,6 +1632,7 @@ impl AdpllKdcoCalCtrl2Reg {
         0x7f,
         1,
         0,
+        u8,
         u8,
         AdpllKdcoCalCtrl2Reg_SPEC,
         crate::common::RW,
@@ -1419,21 +1643,31 @@ impl AdpllKdcoCalCtrl2Reg {
             1,
             0,
             u8,
+            u8,
             AdpllKdcoCalCtrl2Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kmod_alpha_1m(
         self,
-    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, AdpllKdcoCalCtrl2Reg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        0,
+        0x1f,
+        1,
+        0,
+        u8,
+        u8,
+        AdpllKdcoCalCtrl2Reg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             0,
             0x1f,
             1,
             0,
+            u8,
             u8,
             AdpllKdcoCalCtrl2Reg_SPEC,
             crate::common::RW,
@@ -1453,40 +1687,39 @@ pub struct AdpllKdcoRdReg_SPEC;
 impl crate::sealed::RegSpec for AdpllKdcoRdReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllKdcoRdReg = crate::RegValueT<AdpllKdcoRdReg_SPEC>;
 
 impl AdpllKdcoRdReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn cal_kdcocal(
         self,
     ) -> crate::common::RegisterFieldBool<23, 1, 0, AdpllKdcoRdReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<23,1,0,AdpllKdcoRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdcocn(
         self,
-    ) -> crate::common::RegisterField<16, 0x7f, 1, 0, u8, AdpllKdcoRdReg_SPEC, crate::common::R>
+    ) -> crate::common::RegisterField<16, 0x7f, 1, 0, u8, u8, AdpllKdcoRdReg_SPEC, crate::common::R>
     {
-        crate::common::RegisterField::<16,0x7f,1,0,u8, AdpllKdcoRdReg_SPEC,crate::common::R>::from_register(self,0)
+        crate::common::RegisterField::<16,0x7f,1,0,u8,u8,AdpllKdcoRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdco_hf_out(
         self,
-    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, AdpllKdcoRdReg_SPEC, crate::common::R>
+    ) -> crate::common::RegisterField<8, 0xff, 1, 0, u8, u8, AdpllKdcoRdReg_SPEC, crate::common::R>
     {
-        crate::common::RegisterField::<8,0xff,1,0,u8, AdpllKdcoRdReg_SPEC,crate::common::R>::from_register(self,0)
+        crate::common::RegisterField::<8,0xff,1,0,u8,u8,AdpllKdcoRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdco_hf_int(
         self,
-    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, AdpllKdcoRdReg_SPEC, crate::common::R>
+    ) -> crate::common::RegisterField<0, 0xff, 1, 0, u8, u8, AdpllKdcoRdReg_SPEC, crate::common::R>
     {
-        crate::common::RegisterField::<0,0xff,1,0,u8, AdpllKdcoRdReg_SPEC,crate::common::R>::from_register(self,0)
+        crate::common::RegisterField::<0,0xff,1,0,u8,u8,AdpllKdcoRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AdpllKdcoRdReg {
@@ -1502,11 +1735,10 @@ pub struct AdpllKdtctdcCalCtrl1Reg_SPEC;
 impl crate::sealed::RegSpec for AdpllKdtctdcCalCtrl1Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllKdtctdcCalCtrl1Reg = crate::RegValueT<AdpllKdtctdcCalCtrl1Reg_SPEC>;
 
 impl AdpllKdtctdcCalCtrl1Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn kdtcic(
         self,
@@ -1515,6 +1747,7 @@ impl AdpllKdtctdcCalCtrl1Reg {
         0x1ff,
         1,
         0,
+        u16,
         u16,
         AdpllKdtctdcCalCtrl1Reg_SPEC,
         crate::common::RW,
@@ -1525,11 +1758,12 @@ impl AdpllKdtctdcCalCtrl1Reg {
             1,
             0,
             u16,
+            u16,
             AdpllKdtctdcCalCtrl1Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdtccn_ic(
         self,
@@ -1538,6 +1772,7 @@ impl AdpllKdtctdcCalCtrl1Reg {
         0x7f,
         1,
         0,
+        u8,
         u8,
         AdpllKdtctdcCalCtrl1Reg_SPEC,
         crate::common::RW,
@@ -1548,11 +1783,12 @@ impl AdpllKdtctdcCalCtrl1Reg {
             1,
             0,
             u8,
+            u8,
             AdpllKdtctdcCalCtrl1Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdtc_pipeline_bypass(
         self,
@@ -1560,7 +1796,7 @@ impl AdpllKdtctdcCalCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<15,1,0,AdpllKdtctdcCalCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ktdc_in(
         self,
@@ -1569,6 +1805,7 @@ impl AdpllKdtctdcCalCtrl1Reg {
         0x1ff,
         1,
         0,
+        u16,
         u16,
         AdpllKdtctdcCalCtrl1Reg_SPEC,
         crate::common::RW,
@@ -1579,11 +1816,12 @@ impl AdpllKdtctdcCalCtrl1Reg {
             1,
             0,
             u16,
+            u16,
             AdpllKdtctdcCalCtrl1Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdtc_alpha(
         self,
@@ -1593,6 +1831,7 @@ impl AdpllKdtctdcCalCtrl1Reg {
         1,
         0,
         u8,
+        u8,
         AdpllKdtctdcCalCtrl1Reg_SPEC,
         crate::common::RW,
     > {
@@ -1601,6 +1840,7 @@ impl AdpllKdtctdcCalCtrl1Reg {
             0x3f,
             1,
             0,
+            u8,
             u8,
             AdpllKdtctdcCalCtrl1Reg_SPEC,
             crate::common::RW,
@@ -1620,11 +1860,10 @@ pub struct AdpllKdtctdcCalCtrl2Reg_SPEC;
 impl crate::sealed::RegSpec for AdpllKdtctdcCalCtrl2Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllKdtctdcCalCtrl2Reg = crate::RegValueT<AdpllKdtctdcCalCtrl2Reg_SPEC>;
 
 impl AdpllKdtctdcCalCtrl2Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn phrdly_extra(
         self,
@@ -1632,7 +1871,7 @@ impl AdpllKdtctdcCalCtrl2Reg {
     {
         crate::common::RegisterFieldBool::<15,1,0,AdpllKdtctdcCalCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tkdtccal(
         self,
@@ -1641,6 +1880,7 @@ impl AdpllKdtctdcCalCtrl2Reg {
         0xf,
         1,
         0,
+        u8,
         u8,
         AdpllKdtctdcCalCtrl2Reg_SPEC,
         crate::common::RW,
@@ -1651,11 +1891,12 @@ impl AdpllKdtctdcCalCtrl2Reg {
             1,
             0,
             u8,
+            u8,
             AdpllKdtctdcCalCtrl2Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn phrdly(
         self,
@@ -1664,6 +1905,7 @@ impl AdpllKdtctdcCalCtrl2Reg {
         0x3,
         1,
         0,
+        u8,
         u8,
         AdpllKdtctdcCalCtrl2Reg_SPEC,
         crate::common::RW,
@@ -1674,11 +1916,12 @@ impl AdpllKdtctdcCalCtrl2Reg {
             1,
             0,
             u8,
+            u8,
             AdpllKdtctdcCalCtrl2Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ktdccalen(
         self,
@@ -1686,7 +1929,7 @@ impl AdpllKdtctdcCalCtrl2Reg {
     {
         crate::common::RegisterFieldBool::<8,1,0,AdpllKdtctdcCalCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdtccallg(
         self,
@@ -1695,6 +1938,7 @@ impl AdpllKdtctdcCalCtrl2Reg {
         0x7,
         1,
         0,
+        u8,
         u8,
         AdpllKdtctdcCalCtrl2Reg_SPEC,
         crate::common::RW,
@@ -1705,11 +1949,12 @@ impl AdpllKdtctdcCalCtrl2Reg {
             1,
             0,
             u8,
+            u8,
             AdpllKdtctdcCalCtrl2Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdtccal_inv(
         self,
@@ -1717,7 +1962,7 @@ impl AdpllKdtctdcCalCtrl2Reg {
     {
         crate::common::RegisterFieldBool::<3,1,0,AdpllKdtctdcCalCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdtccalmod1p(
         self,
@@ -1725,7 +1970,7 @@ impl AdpllKdtctdcCalCtrl2Reg {
     {
         crate::common::RegisterFieldBool::<2,1,0,AdpllKdtctdcCalCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdtccalmod(
         self,
@@ -1733,7 +1978,7 @@ impl AdpllKdtctdcCalCtrl2Reg {
     {
         crate::common::RegisterFieldBool::<1,1,0,AdpllKdtctdcCalCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdtccalen(
         self,
@@ -1755,40 +2000,65 @@ pub struct AdpllKdtcRdReg_SPEC;
 impl crate::sealed::RegSpec for AdpllKdtcRdReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllKdtcRdReg = crate::RegValueT<AdpllKdtcRdReg_SPEC>;
 
 impl AdpllKdtcRdReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn cal_kdtccal(
         self,
     ) -> crate::common::RegisterFieldBool<25, 1, 0, AdpllKdtcRdReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<25,1,0,AdpllKdtcRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdtc_alpha_comp(
         self,
-    ) -> crate::common::RegisterField<16, 0x1ff, 1, 0, u16, AdpllKdtcRdReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<16,0x1ff,1,0,u16, AdpllKdtcRdReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        16,
+        0x1ff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllKdtcRdReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            16,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllKdtcRdReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdtccn(
         self,
-    ) -> crate::common::RegisterField<9, 0x7f, 1, 0, u8, AdpllKdtcRdReg_SPEC, crate::common::R>
+    ) -> crate::common::RegisterField<9, 0x7f, 1, 0, u8, u8, AdpllKdtcRdReg_SPEC, crate::common::R>
     {
-        crate::common::RegisterField::<9,0x7f,1,0,u8, AdpllKdtcRdReg_SPEC,crate::common::R>::from_register(self,0)
+        crate::common::RegisterField::<9,0x7f,1,0,u8,u8,AdpllKdtcRdReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn kdtc_out(
         self,
-    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, AdpllKdtcRdReg_SPEC, crate::common::R>
+    ) -> crate::common::RegisterField<0, 0x1ff, 1, 0, u16, u16, AdpllKdtcRdReg_SPEC, crate::common::R>
     {
-        crate::common::RegisterField::<0,0x1ff,1,0,u16, AdpllKdtcRdReg_SPEC,crate::common::R>::from_register(self,0)
+        crate::common::RegisterField::<
+            0,
+            0x1ff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllKdtcRdReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AdpllKdtcRdReg {
@@ -1804,33 +2074,41 @@ pub struct AdpllLfCtrl1Reg_SPEC;
 impl crate::sealed::RegSpec for AdpllLfCtrl1Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllLfCtrl1Reg = crate::RegValueT<AdpllLfCtrl1Reg_SPEC>;
 
 impl AdpllLfCtrl1Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn finekz(
         self,
-    ) -> crate::common::RegisterField<10, 0x3f, 1, 0, u8, AdpllLfCtrl1Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<10, 0x3f, 1, 0, u8, u8, AdpllLfCtrl1Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<10,0x3f,1,0,u8, AdpllLfCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            10,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllLfCtrl1Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn finek(
         self,
-    ) -> crate::common::RegisterField<5, 0x1f, 1, 0, u8, AdpllLfCtrl1Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<5, 0x1f, 1, 0, u8, u8, AdpllLfCtrl1Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<5,0x1f,1,0,u8, AdpllLfCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<5,0x1f,1,0,u8,u8,AdpllLfCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn finetau(
         self,
-    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, AdpllLfCtrl1Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, u8, AdpllLfCtrl1Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x1f,1,0,u8, AdpllLfCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x1f,1,0,u8,u8,AdpllLfCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AdpllLfCtrl1Reg {
@@ -1846,56 +2124,82 @@ pub struct AdpllLfCtrl2Reg_SPEC;
 impl crate::sealed::RegSpec for AdpllLfCtrl2Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllLfCtrl2Reg = crate::RegValueT<AdpllLfCtrl2Reg_SPEC>;
 
 impl AdpllLfCtrl2Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rst_tau_en(
         self,
     ) -> crate::common::RegisterFieldBool<30, 1, 0, AdpllLfCtrl2Reg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<30,1,0,AdpllLfCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn modkz(
         self,
-    ) -> crate::common::RegisterField<24, 0x3f, 1, 0, u8, AdpllLfCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<24, 0x3f, 1, 0, u8, u8, AdpllLfCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<24,0x3f,1,0,u8, AdpllLfCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            24,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllLfCtrl2Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn modk(
         self,
-    ) -> crate::common::RegisterField<18, 0x3f, 1, 0, u8, AdpllLfCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<18, 0x3f, 1, 0, u8, u8, AdpllLfCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<18,0x3f,1,0,u8, AdpllLfCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            18,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllLfCtrl2Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn modtau(
         self,
-    ) -> crate::common::RegisterField<12, 0x3f, 1, 0, u8, AdpllLfCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<12, 0x3f, 1, 0, u8, u8, AdpllLfCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<12,0x3f,1,0,u8, AdpllLfCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            12,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllLfCtrl2Reg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn modk_tune(
         self,
-    ) -> crate::common::RegisterField<6, 0x3f, 1, 0, u8, AdpllLfCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<6, 0x3f, 1, 0, u8, u8, AdpllLfCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<6,0x3f,1,0,u8, AdpllLfCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<6,0x3f,1,0,u8,u8,AdpllLfCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn modtau_tune(
         self,
-    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, AdpllLfCtrl2Reg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x3f, 1, 0, u8, u8, AdpllLfCtrl2Reg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x3f,1,0,u8, AdpllLfCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x3f,1,0,u8,u8,AdpllLfCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AdpllLfCtrl2Reg {
@@ -1911,55 +2215,71 @@ pub struct AdpllMiscCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllMiscCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllMiscCtrlReg = crate::RegValueT<AdpllMiscCtrlReg_SPEC>;
 
 impl AdpllMiscCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn phr_frac_preset_val(
         self,
-    ) -> crate::common::RegisterField<8, 0xffff, 1, 0, u16, AdpllMiscCtrlReg_SPEC, crate::common::RW>
-    {
-        crate::common::RegisterField::<8,0xffff,1,0,u16, AdpllMiscCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        8,
+        0xffff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllMiscCtrlReg_SPEC,
+        crate::common::RW,
+    > {
+        crate::common::RegisterField::<
+            8,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            AdpllMiscCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn enfcwmod(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, AdpllMiscCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,AdpllMiscCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn enresidue(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, AdpllMiscCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,AdpllMiscCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn moddly(
         self,
-    ) -> crate::common::RegisterField<4, 0x3, 1, 0, u8, AdpllMiscCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<4, 0x3, 1, 0, u8, u8, AdpllMiscCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<4,0x3,1,0,u8, AdpllMiscCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<4,0x3,1,0,u8,u8,AdpllMiscCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn resdly(
         self,
-    ) -> crate::common::RegisterField<2, 0x3, 1, 0, u8, AdpllMiscCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<2, 0x3, 1, 0, u8, u8, AdpllMiscCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<2,0x3,1,0,u8, AdpllMiscCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<2,0x3,1,0,u8,u8,AdpllMiscCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn dlyfcwdt(
         self,
-    ) -> crate::common::RegisterField<0, 0x3, 1, 0, u8, AdpllMiscCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x3, 1, 0, u8, u8, AdpllMiscCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x3,1,0,u8, AdpllMiscCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x3,1,0,u8,u8,AdpllMiscCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AdpllMiscCtrlReg {
@@ -1975,77 +2295,94 @@ pub struct AdpllMonCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllMonCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllMonCtrlReg = crate::RegValueT<AdpllMonCtrlReg_SPEC>;
 
 impl AdpllMonCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn qualmonfrcen(
         self,
     ) -> crate::common::RegisterFieldBool<30, 1, 0, AdpllMonCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<30,1,0,AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn qualmontrhld(
         self,
-    ) -> crate::common::RegisterField<24, 0x3f, 1, 0, u8, AdpllMonCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<24, 0x3f, 1, 0, u8, u8, AdpllMonCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<24,0x3f,1,0,u8, AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            24,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllMonCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn qualmonwnd(
         self,
-    ) -> crate::common::RegisterField<18, 0x3f, 1, 0, u8, AdpllMonCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<18, 0x3f, 1, 0, u8, u8, AdpllMonCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<18,0x3f,1,0,u8, AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            18,
+            0x3f,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllMonCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn qualmonmod(
         self,
-    ) -> crate::common::RegisterField<16, 0x3, 1, 0, u8, AdpllMonCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<16, 0x3, 1, 0, u8, u8, AdpllMonCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<16,0x3,1,0,u8, AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<16,0x3,1,0,u8,u8,AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn hold_state(
         self,
-    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, AdpllMonCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<8, 0xf, 1, 0, u8, u8, AdpllMonCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<8,0xf,1,0,u8, AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<8,0xf,1,0,u8,u8,AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rfmeas_mode(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, AdpllMonCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn enrfmeas(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, AdpllMonCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tmren(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, AdpllMonCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tfreqmeas(
         self,
-    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, AdpllMonCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x1f, 1, 0, u8, u8, AdpllMonCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x1f,1,0,u8, AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0x1f,1,0,u8,u8,AdpllMonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AdpllMonCtrlReg {
@@ -2061,11 +2398,10 @@ pub struct AdpllOverruleCtrl1Reg_SPEC;
 impl crate::sealed::RegSpec for AdpllOverruleCtrl1Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllOverruleCtrl1Reg = crate::RegValueT<AdpllOverruleCtrl1Reg_SPEC>;
 
 impl AdpllOverruleCtrl1Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn ovr_dtc_oh_wr(
         self,
@@ -2074,6 +2410,7 @@ impl AdpllOverruleCtrl1Reg {
         0x7f,
         1,
         0,
+        u8,
         u8,
         AdpllOverruleCtrl1Reg_SPEC,
         crate::common::RW,
@@ -2084,11 +2421,12 @@ impl AdpllOverruleCtrl1Reg {
             1,
             0,
             u8,
+            u8,
             AdpllOverruleCtrl1Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dtc_oh_sel(
         self,
@@ -2096,7 +2434,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<24,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dcoamp_wr(
         self,
@@ -2105,6 +2443,7 @@ impl AdpllOverruleCtrl1Reg {
         0xf,
         1,
         0,
+        u8,
         u8,
         AdpllOverruleCtrl1Reg_SPEC,
         crate::common::RW,
@@ -2115,11 +2454,12 @@ impl AdpllOverruleCtrl1Reg {
             1,
             0,
             u8,
+            u8,
             AdpllOverruleCtrl1Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dcoamp_sel(
         self,
@@ -2127,7 +2467,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<16,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dcoamphold_wr(
         self,
@@ -2135,7 +2475,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<13,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dcoamphold_sel(
         self,
@@ -2143,7 +2483,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<12,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_rdyfordiv_wr(
         self,
@@ -2151,7 +2491,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<11,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_rdyfordiv_sel(
         self,
@@ -2159,7 +2499,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<10,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_vpaen_wr(
         self,
@@ -2167,7 +2507,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<9,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_vpaen_sel(
         self,
@@ -2175,7 +2515,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<8,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_sresetn_wr(
         self,
@@ -2183,7 +2523,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<7,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_sresetn_sel(
         self,
@@ -2191,7 +2531,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<6,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_enpain_wr(
         self,
@@ -2199,7 +2539,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<5,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_enpain_sel(
         self,
@@ -2207,7 +2547,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<4,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_rxbit_wr(
         self,
@@ -2215,7 +2555,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<3,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_rxbit_sel(
         self,
@@ -2223,7 +2563,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<2,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_active_wr(
         self,
@@ -2231,7 +2571,7 @@ impl AdpllOverruleCtrl1Reg {
     {
         crate::common::RegisterFieldBool::<1,1,0,AdpllOverruleCtrl1Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_active_sel(
         self,
@@ -2253,11 +2593,10 @@ pub struct AdpllOverruleCtrl2Reg_SPEC;
 impl crate::sealed::RegSpec for AdpllOverruleCtrl2Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllOverruleCtrl2Reg = crate::RegValueT<AdpllOverruleCtrl2Reg_SPEC>;
 
 impl AdpllOverruleCtrl2Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn ovr_dcomod_wr(
         self,
@@ -2266,6 +2605,7 @@ impl AdpllOverruleCtrl2Reg {
         0xff,
         1,
         0,
+        u8,
         u8,
         AdpllOverruleCtrl2Reg_SPEC,
         crate::common::RW,
@@ -2276,11 +2616,12 @@ impl AdpllOverruleCtrl2Reg {
             1,
             0,
             u8,
+            u8,
             AdpllOverruleCtrl2Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dcomod_sel(
         self,
@@ -2288,7 +2629,7 @@ impl AdpllOverruleCtrl2Reg {
     {
         crate::common::RegisterFieldBool::<23,1,0,AdpllOverruleCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dcofine_wr(
         self,
@@ -2297,6 +2638,7 @@ impl AdpllOverruleCtrl2Reg {
         0x3f,
         1,
         0,
+        u8,
         u8,
         AdpllOverruleCtrl2Reg_SPEC,
         crate::common::RW,
@@ -2307,11 +2649,12 @@ impl AdpllOverruleCtrl2Reg {
             1,
             0,
             u8,
+            u8,
             AdpllOverruleCtrl2Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dcofine_sel(
         self,
@@ -2319,23 +2662,32 @@ impl AdpllOverruleCtrl2Reg {
     {
         crate::common::RegisterFieldBool::<16,1,0,AdpllOverruleCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dcomedium_wr(
         self,
-    ) -> crate::common::RegisterField<9, 0x7, 1, 0, u8, AdpllOverruleCtrl2Reg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        9,
+        0x7,
+        1,
+        0,
+        u8,
+        u8,
+        AdpllOverruleCtrl2Reg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             9,
             0x7,
             1,
             0,
             u8,
+            u8,
             AdpllOverruleCtrl2Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dcomedium_sel(
         self,
@@ -2343,23 +2695,32 @@ impl AdpllOverruleCtrl2Reg {
     {
         crate::common::RegisterFieldBool::<8,1,0,AdpllOverruleCtrl2Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dcocoarse_wr(
         self,
-    ) -> crate::common::RegisterField<1, 0xf, 1, 0, u8, AdpllOverruleCtrl2Reg_SPEC, crate::common::RW>
-    {
+    ) -> crate::common::RegisterField<
+        1,
+        0xf,
+        1,
+        0,
+        u8,
+        u8,
+        AdpllOverruleCtrl2Reg_SPEC,
+        crate::common::RW,
+    > {
         crate::common::RegisterField::<
             1,
             0xf,
             1,
             0,
             u8,
+            u8,
             AdpllOverruleCtrl2Reg_SPEC,
             crate::common::RW,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_dcocoarse_sel(
         self,
@@ -2381,11 +2742,10 @@ pub struct AdpllOverruleCtrl3Reg_SPEC;
 impl crate::sealed::RegSpec for AdpllOverruleCtrl3Reg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllOverruleCtrl3Reg = crate::RegValueT<AdpllOverruleCtrl3Reg_SPEC>;
 
 impl AdpllOverruleCtrl3Reg {
-    #[doc = ""]
     #[inline(always)]
     pub fn ovr_rxdiv_fb_en_wr(
         self,
@@ -2393,7 +2753,7 @@ impl AdpllOverruleCtrl3Reg {
     {
         crate::common::RegisterFieldBool::<7,1,0,AdpllOverruleCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_rxdiv_fb_en_sel(
         self,
@@ -2401,7 +2761,7 @@ impl AdpllOverruleCtrl3Reg {
     {
         crate::common::RegisterFieldBool::<6,1,0,AdpllOverruleCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_fbdiv_en_wr(
         self,
@@ -2409,7 +2769,7 @@ impl AdpllOverruleCtrl3Reg {
     {
         crate::common::RegisterFieldBool::<5,1,0,AdpllOverruleCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_fbdiv_en_sel(
         self,
@@ -2417,7 +2777,7 @@ impl AdpllOverruleCtrl3Reg {
     {
         crate::common::RegisterFieldBool::<4,1,0,AdpllOverruleCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_txdiv_en_wr(
         self,
@@ -2425,7 +2785,7 @@ impl AdpllOverruleCtrl3Reg {
     {
         crate::common::RegisterFieldBool::<3,1,0,AdpllOverruleCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_txdiv_en_sel(
         self,
@@ -2433,7 +2793,7 @@ impl AdpllOverruleCtrl3Reg {
     {
         crate::common::RegisterFieldBool::<2,1,0,AdpllOverruleCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_rxdiv_en_wr(
         self,
@@ -2441,7 +2801,7 @@ impl AdpllOverruleCtrl3Reg {
     {
         crate::common::RegisterFieldBool::<1,1,0,AdpllOverruleCtrl3Reg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn ovr_rxdiv_en_sel(
         self,
@@ -2463,11 +2823,10 @@ pub struct AdpllPllfcwdtRdReg_SPEC;
 impl crate::sealed::RegSpec for AdpllPllfcwdtRdReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllPllfcwdtRdReg = crate::RegValueT<AdpllPllfcwdtRdReg_SPEC>;
 
 impl AdpllPllfcwdtRdReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn pllfcwdt(
         self,
@@ -2477,6 +2836,7 @@ impl AdpllPllfcwdtRdReg {
         1,
         0,
         u32,
+        u32,
         AdpllPllfcwdtRdReg_SPEC,
         crate::common::R,
     > {
@@ -2485,6 +2845,7 @@ impl AdpllPllfcwdtRdReg {
             0x7fffff,
             1,
             0,
+            u32,
             u32,
             AdpllPllfcwdtRdReg_SPEC,
             crate::common::R,
@@ -2504,31 +2865,30 @@ pub struct AdpllRfptCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllRfptCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllRfptCtrlReg = crate::RegValueT<AdpllRfptCtrlReg_SPEC>;
 
 impl AdpllRfptCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn rfpt_rate(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, AdpllRfptCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,AdpllRfptCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn inv_ckrfpt(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, AdpllRfptCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,AdpllRfptCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn rfpt_mux(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, AdpllRfptCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, u8, AdpllRfptCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xf,1,0,u8, AdpllRfptCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<0,0xf,1,0,u8,u8,AdpllRfptCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for AdpllRfptCtrlReg {
@@ -2544,25 +2904,42 @@ pub struct AdpllSdmodCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllSdmodCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllSdmodCtrlReg = crate::RegValueT<AdpllSdmodCtrlReg_SPEC>;
 
 impl AdpllSdmodCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn sdmmodetx(
         self,
-    ) -> crate::common::RegisterField<3, 0x7, 1, 0, u8, AdpllSdmodCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<3, 0x7, 1, 0, u8, u8, AdpllSdmodCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<3,0x7,1,0,u8, AdpllSdmodCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            3,
+            0x7,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllSdmodCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn sdmmoderx(
         self,
-    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, AdpllSdmodCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, u8, AdpllSdmodCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0x7,1,0,u8, AdpllSdmodCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            0,
+            0x7,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllSdmodCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AdpllSdmodCtrlReg {
@@ -2578,33 +2955,58 @@ pub struct AdpllTunestateRdReg_SPEC;
 impl crate::sealed::RegSpec for AdpllTunestateRdReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllTunestateRdReg = crate::RegValueT<AdpllTunestateRdReg_SPEC>;
 
 impl AdpllTunestateRdReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn tmrval(
         self,
-    ) -> crate::common::RegisterField<4, 0x3ff, 1, 0, u16, AdpllTunestateRdReg_SPEC, crate::common::R>
-    {
+    ) -> crate::common::RegisterField<
+        4,
+        0x3ff,
+        1,
+        0,
+        u16,
+        u16,
+        AdpllTunestateRdReg_SPEC,
+        crate::common::R,
+    > {
         crate::common::RegisterField::<
             4,
             0x3ff,
             1,
             0,
             u16,
+            u16,
             AdpllTunestateRdReg_SPEC,
             crate::common::R,
         >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tune_state(
         self,
-    ) -> crate::common::RegisterField<0, 0xf, 1, 0, u8, AdpllTunestateRdReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<0,0xf,1,0,u8, AdpllTunestateRdReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xf,
+        1,
+        0,
+        u8,
+        u8,
+        AdpllTunestateRdReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xf,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllTunestateRdReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for AdpllTunestateRdReg {
@@ -2620,48 +3022,65 @@ pub struct AdpllTxmodCtrlReg_SPEC;
 impl crate::sealed::RegSpec for AdpllTxmodCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type AdpllTxmodCtrlReg = crate::RegValueT<AdpllTxmodCtrlReg_SPEC>;
 
 impl AdpllTxmodCtrlReg {
-    #[doc = ""]
     #[inline(always)]
     pub fn inv_ckmodext(
         self,
     ) -> crate::common::RegisterFieldBool<8, 1, 0, AdpllTxmodCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<8,1,0,AdpllTxmodCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tx_mode(
         self,
-    ) -> crate::common::RegisterField<6, 0x3, 1, 0, u8, AdpllTxmodCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<6, 0x3, 1, 0, u8, u8, AdpllTxmodCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<6,0x3,1,0,u8, AdpllTxmodCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            6,
+            0x3,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllTxmodCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn eo_packet_dis(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, AdpllTxmodCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,AdpllTxmodCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn mod_index(
         self,
-    ) -> crate::common::RegisterField<2, 0x3, 1, 0, u8, AdpllTxmodCtrlReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<2, 0x3, 1, 0, u8, u8, AdpllTxmodCtrlReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<2,0x3,1,0,u8, AdpllTxmodCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            2,
+            0x3,
+            1,
+            0,
+            u8,
+            u8,
+            AdpllTxmodCtrlReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn tx_data_inv(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, AdpllTxmodCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,AdpllTxmodCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub fn bt_sel(
         self,

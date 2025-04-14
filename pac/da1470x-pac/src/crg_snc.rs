@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:28 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::CrgSnc {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "Peripheral divider register"]
+
     #[inline(always)]
     pub const fn clk_snc_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::CrgSnc {
         }
     }
 
-    #[doc = "Peripheral divider register RESET register. Reads back 0x0000"]
     #[inline(always)]
     pub const fn reset_clk_snc_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::CrgSnc {
         }
     }
 
-    #[doc = "Peripheral divider register SET register. Reads back 0x0000"]
     #[inline(always)]
     pub const fn set_clk_snc_reg(
         &self,
@@ -75,130 +73,129 @@ pub struct ClkSncReg_SPEC;
 impl crate::sealed::RegSpec for ClkSncReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Peripheral divider register"]
+
 pub type ClkSncReg = crate::RegValueT<ClkSncReg_SPEC>;
 
 impl ClkSncReg {
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
     #[inline(always)]
     pub fn i3c_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<17, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<17,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i3c_enable(
         self,
     ) -> crate::common::RegisterFieldBool<16, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<16,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn i2c3_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<15, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<15,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i2c3_enable(
         self,
     ) -> crate::common::RegisterFieldBool<14, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<14,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn i2c2_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<13, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<13,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i2c2_enable(
         self,
     ) -> crate::common::RegisterFieldBool<12, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<12,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn i2c_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<11, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<11,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i2c_enable(
         self,
     ) -> crate::common::RegisterFieldBool<10, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<10,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn spi2_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<9, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<9,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn spi2_enable(
         self,
     ) -> crate::common::RegisterFieldBool<8, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<8,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn spi_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn spi_enable(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn uart3_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn uart3_enable(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn uart2_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<3,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn uart2_enable(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn uart_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, ClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,ClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn uart_enable(
         self,
@@ -219,130 +216,129 @@ pub struct ResetClkSncReg_SPEC;
 impl crate::sealed::RegSpec for ResetClkSncReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Peripheral divider register RESET register. Reads back 0x0000"]
+
 pub type ResetClkSncReg = crate::RegValueT<ResetClkSncReg_SPEC>;
 
 impl ResetClkSncReg {
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
     #[inline(always)]
     pub fn i3c_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<17, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<17,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i3c_enable(
         self,
     ) -> crate::common::RegisterFieldBool<16, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<16,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn i2c3_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<15, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<15,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i2c3_enable(
         self,
     ) -> crate::common::RegisterFieldBool<14, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<14,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn i2c2_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<13, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<13,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i2c2_enable(
         self,
     ) -> crate::common::RegisterFieldBool<12, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<12,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn i2c_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<11, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<11,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i2c_enable(
         self,
     ) -> crate::common::RegisterFieldBool<10, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<10,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn spi2_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<9, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<9,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn spi2_enable(
         self,
     ) -> crate::common::RegisterFieldBool<8, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<8,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn spi_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn spi_enable(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn uart3_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn uart3_enable(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn uart2_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<3,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn uart2_enable(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn uart_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, ResetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,ResetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn uart_enable(
         self,
@@ -363,130 +359,129 @@ pub struct SetClkSncReg_SPEC;
 impl crate::sealed::RegSpec for SetClkSncReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Peripheral divider register SET register. Reads back 0x0000"]
+
 pub type SetClkSncReg = crate::RegValueT<SetClkSncReg_SPEC>;
 
 impl SetClkSncReg {
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
     #[inline(always)]
     pub fn i3c_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<17, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<17,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i3c_enable(
         self,
     ) -> crate::common::RegisterFieldBool<16, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<16,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn i2c3_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<15, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<15,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i2c3_enable(
         self,
     ) -> crate::common::RegisterFieldBool<14, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<14,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn i2c2_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<13, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<13,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i2c2_enable(
         self,
     ) -> crate::common::RegisterFieldBool<12, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<12,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn i2c_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<11, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<11,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn i2c_enable(
         self,
     ) -> crate::common::RegisterFieldBool<10, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<10,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn spi2_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<9, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<9,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn spi2_enable(
         self,
     ) -> crate::common::RegisterFieldBool<8, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<8,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn spi_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<7, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<7,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn spi_enable(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn uart3_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<5, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<5,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn uart3_enable(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn uart2_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<3,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn uart2_enable(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
+
     #[inline(always)]
     pub fn uart_clk_sel(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, SetClkSncReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,SetClkSncReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Enables the clock"]
+
     #[inline(always)]
     pub fn uart_enable(
         self,

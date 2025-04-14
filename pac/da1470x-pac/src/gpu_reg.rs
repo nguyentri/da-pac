@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:28 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::GpuReg {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = ""]
+
     #[inline(always)]
     pub const fn gpu_ctrl_reg(
         &self,
@@ -51,32 +51,32 @@ pub struct GpuCtrlReg_SPEC;
 impl crate::sealed::RegSpec for GpuCtrlReg_SPEC {
     type DataType = u32;
 }
-#[doc = ""]
+
 pub type GpuCtrlReg = crate::RegValueT<GpuCtrlReg_SPEC>;
 
 impl GpuCtrlReg {
-    #[doc = "Power save mode read port memories\n0: Disabled\n1: Enabled"]
     #[inline(always)]
     pub fn pwrs_b(
         self,
     ) -> crate::common::RegisterFieldBool<6, 1, 0, GpuCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<6,1,0,GpuCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Margin setting for GPU memories"]
+
     #[inline(always)]
     pub fn gpu_ram_ms(
         self,
-    ) -> crate::common::RegisterField<2, 0xf, 1, 0, u8, GpuCtrlReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<2,0xf,1,0,u8, GpuCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<2, 0xf, 1, 0, u8, u8, GpuCtrlReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<2,0xf,1,0,u8,u8,GpuCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Margin enable for GPU memories"]
+
     #[inline(always)]
     pub fn gpu_ram_mse(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, GpuCtrlReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<1,1,0,GpuCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "GPU enable\n0:Enable\n1:Disable"]
+
     #[inline(always)]
     pub fn gpu_en(
         self,

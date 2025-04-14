@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.4.0 on Sat, 12 Apr 2025 22:14:28 +0000
+// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -33,7 +33,7 @@ impl super::AnamiscBif {
     pub(crate) const fn _svd2pac_as_ptr(&self) -> *mut u8 {
         self.ptr
     }
-    #[doc = "Select clock for oscillator calibration"]
+
     #[inline(always)]
     pub const fn clk_cal_irq_reg(
         &self,
@@ -45,7 +45,6 @@ impl super::AnamiscBif {
         }
     }
 
-    #[doc = "Count value for oscillator calibration"]
     #[inline(always)]
     pub const fn clk_ref_cnt_reg(
         &self,
@@ -57,7 +56,6 @@ impl super::AnamiscBif {
         }
     }
 
-    #[doc = "Select clock for oscillator calibration"]
     #[inline(always)]
     pub const fn clk_ref_sel_reg(
         &self,
@@ -69,7 +67,6 @@ impl super::AnamiscBif {
         }
     }
 
-    #[doc = "DIVN reference cycles, lower 16 bits"]
     #[inline(always)]
     pub const fn clk_ref_val_reg(
         &self,
@@ -87,25 +84,24 @@ pub struct ClkCalIrqReg_SPEC;
 impl crate::sealed::RegSpec for ClkCalIrqReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Select clock for oscillator calibration"]
+
 pub type ClkCalIrqReg = crate::RegValueT<ClkCalIrqReg_SPEC>;
 
 impl ClkCalIrqReg {
-    #[doc = "Clear the IRQ.\n1: Clear the IRQ\n0: No effect.\nRead out 0 always."]
     #[inline(always)]
     pub fn clk_cal_irq_clr(
         self,
     ) -> crate::common::RegisterFieldBool<2, 1, 0, ClkCalIrqReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<2,1,0,ClkCalIrqReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Shows the IRQ bit status."]
+
     #[inline(always)]
     pub fn clk_cal_irq_status(
         self,
     ) -> crate::common::RegisterFieldBool<1, 1, 0, ClkCalIrqReg_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<1,1,0,ClkCalIrqReg_SPEC,crate::common::R>::from_register(self,0)
     }
-    #[doc = "Enable clk calibration IRQ.\n0: Disabled.\n1*: Enabled.\n\n*Note: If IRQ feature is enabled, every calibration should be started by setting CLK_REF_SEL_REG\\[REF_CAL_START\\] to 1."]
+
     #[inline(always)]
     pub fn clk_cal_irq_en(
         self,
@@ -126,17 +122,25 @@ pub struct ClkRefCntReg_SPEC;
 impl crate::sealed::RegSpec for ClkRefCntReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Count value for oscillator calibration"]
+
 pub type ClkRefCntReg = crate::RegValueT<ClkRefCntReg_SPEC>;
 
 impl ClkRefCntReg {
-    #[doc = "Indicates the calibration time, with a decrement counter to 1."]
     #[inline(always)]
     pub fn ref_cnt_val(
         self,
-    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, ClkRefCntReg_SPEC, crate::common::RW>
+    ) -> crate::common::RegisterField<0, 0xffff, 1, 0, u16, u16, ClkRefCntReg_SPEC, crate::common::RW>
     {
-        crate::common::RegisterField::<0,0xffff,1,0,u16, ClkRefCntReg_SPEC,crate::common::RW>::from_register(self,0)
+        crate::common::RegisterField::<
+            0,
+            0xffff,
+            1,
+            0,
+            u16,
+            u16,
+            ClkRefCntReg_SPEC,
+            crate::common::RW,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for ClkRefCntReg {
@@ -152,37 +156,38 @@ pub struct ClkRefSelReg_SPEC;
 impl crate::sealed::RegSpec for ClkRefSelReg_SPEC {
     type DataType = u32;
 }
-#[doc = "Select clock for oscillator calibration"]
+
 pub type ClkRefSelReg = crate::RegValueT<ClkRefSelReg_SPEC>;
 
 impl ClkRefSelReg {
-    #[doc = "Select calibration clock input to be used in calibration:\n0x0 : DIVN clock\n0x1 : RCLP\n0x2 : RCHS\n0x3 : XTAL32K\n0x4 : RCOSC\n0x5, 0x6 and 0x7: Reserved"]
     #[inline(always)]
     pub fn cal_clk_sel(
         self,
-    ) -> crate::common::RegisterField<5, 0x7, 1, 0, u8, ClkRefSelReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<5,0x7,1,0,u8, ClkRefSelReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<5, 0x7, 1, 0, u8, u8, ClkRefSelReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<5,0x7,1,0,u8,u8,ClkRefSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "0 : Enable XTAL_CNT counter by the REF_CLK selected by REF_CLK_SEL.\n1 : Enable XTAL_CNT counter from an external input."]
+
     #[inline(always)]
     pub fn ext_cnt_en_sel(
         self,
     ) -> crate::common::RegisterFieldBool<4, 1, 0, ClkRefSelReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<4,1,0,ClkRefSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Writing a \'1\' starts a calibration. This bit is cleared when calibration is finished, and CLK_REF_VAL is ready."]
+
     #[inline(always)]
     pub fn ref_cal_start(
         self,
     ) -> crate::common::RegisterFieldBool<3, 1, 0, ClkRefSelReg_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<3,1,0,ClkRefSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
-    #[doc = "Select reference clock input for calibration:\n0x0 : RCLP\n0x1 : RCHS\n0x2 : XTAL32K\n0x3 : RCX\n0x4 : RCOSC\n0x5 : DIVN clock"]
+
     #[inline(always)]
     pub fn ref_clk_sel(
         self,
-    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, ClkRefSelReg_SPEC, crate::common::RW> {
-        crate::common::RegisterField::<0,0x7,1,0,u8, ClkRefSelReg_SPEC,crate::common::RW>::from_register(self,0)
+    ) -> crate::common::RegisterField<0, 0x7, 1, 0, u8, u8, ClkRefSelReg_SPEC, crate::common::RW>
+    {
+        crate::common::RegisterField::<0,0x7,1,0,u8,u8,ClkRefSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 }
 impl ::core::default::Default for ClkRefSelReg {
@@ -198,17 +203,33 @@ pub struct ClkRefValReg_SPEC;
 impl crate::sealed::RegSpec for ClkRefValReg_SPEC {
     type DataType = u32;
 }
-#[doc = "DIVN reference cycles, lower 16 bits"]
+
 pub type ClkRefValReg = crate::RegValueT<ClkRefValReg_SPEC>;
 
 impl ClkRefValReg {
-    #[doc = "Returns the number of DIVN clock cycles counted during the calibration time, defined with REF_CNT_VAL"]
     #[inline(always)]
     pub fn xtal_cnt_val(
         self,
-    ) -> crate::common::RegisterField<0, 0xffffffff, 1, 0, u32, ClkRefValReg_SPEC, crate::common::R>
-    {
-        crate::common::RegisterField::<0,0xffffffff,1,0,u32, ClkRefValReg_SPEC,crate::common::R>::from_register(self,0)
+    ) -> crate::common::RegisterField<
+        0,
+        0xffffffff,
+        1,
+        0,
+        u32,
+        u32,
+        ClkRefValReg_SPEC,
+        crate::common::R,
+    > {
+        crate::common::RegisterField::<
+            0,
+            0xffffffff,
+            1,
+            0,
+            u32,
+            u32,
+            ClkRefValReg_SPEC,
+            crate::common::R,
+        >::from_register(self, 0)
     }
 }
 impl ::core::default::Default for ClkRefValReg {
