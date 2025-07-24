@@ -2,7 +2,7 @@
 
 This repository contains the Peripheral Access Crates (PACs) for Dialog Semiconductor / Renesas Connectivity Devices.
 
-The crate is automatically generated from the SVD files in [packs](https://www.keil.arm.com/packs) using [svd2pac](https://github.com/Infineon/svd2pac).
+The crate is generated from the SVD files in [packs](https://www.keil.arm.com/packs) using [svd2pac](https://github.com/Infineon/svd2pac).
 
 It serves as the foundation for the Hardware Abstraction Layer (HAL) in Rust for Renesas Wireless Connectivity Devices.
 
