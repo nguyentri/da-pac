@@ -530,15 +530,15 @@ pub struct RegisterField<
 }
 
 impl<
-        const START_OFFSET: usize,
-        const MASK: u64,
-        const DIM: u8,
-        const DIM_INCREMENT: u8,
-        ValueTypeRead,
-        ValueTypeWrite,
-        T,
-        A,
-    > RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
+    const START_OFFSET: usize,
+    const MASK: u64,
+    const DIM: u8,
+    const DIM_INCREMENT: u8,
+    ValueTypeRead,
+    ValueTypeWrite,
+    T,
+    A,
+> RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
 where
     T: RegSpec,
     A: Access,
@@ -575,15 +575,15 @@ where
 }
 
 impl<
-        const START_OFFSET: usize,
-        const MASK: u64,
-        const DIM: u8,
-        const DIM_INCREMENT: u8,
-        ValueTypeRead,
-        ValueTypeWrite,
-        T,
-        A,
-    > RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
+    const START_OFFSET: usize,
+    const MASK: u64,
+    const DIM: u8,
+    const DIM_INCREMENT: u8,
+    ValueTypeRead,
+    ValueTypeWrite,
+    T,
+    A,
+> RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
 where
     T: RegSpec,
     A: Read,
@@ -599,15 +599,15 @@ where
 }
 
 impl<
-        const START_OFFSET: usize,
-        const MASK: u64,
-        const DIM: u8,
-        const DIM_INCREMENT: u8,
-        ValueTypeRead,
-        ValueTypeWrite,
-        T,
-        A,
-    > RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
+    const START_OFFSET: usize,
+    const MASK: u64,
+    const DIM: u8,
+    const DIM_INCREMENT: u8,
+    ValueTypeRead,
+    ValueTypeWrite,
+    T,
+    A,
+> RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
 where
     T: RegSpec,
     A: Write,
