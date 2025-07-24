@@ -295,15 +295,15 @@ where
             let val = {
                 let mut buf: u64 = 0x0;
                 tracing::READ_FN.with(|rf| {
-                if let Some(rf) = rf.get() {
-                    buf = rf(self.addr(), std::mem::size_of::<T::DataType>());
-                } else {
-                    #[cfg(not(feature = "tracing_dummy"))]
-                    panic!(
+                    if let Some(rf) = rf.get() {
+                        buf = rf(self.addr(), std::mem::size_of::<T::DataType>());
+                    } else {
+                        #[cfg(not(feature = "tracing_dummy"))]
+                        panic!(
                         "Please, provide an handler for read with tracing::set_read_fn(callback);"
                     );
-                }
-            });
+                    }
+                });
                 T::DataType::cast_from(buf)
             };
             #[cfg(not(feature = "tracing"))]
@@ -530,15 +530,15 @@ pub struct RegisterField<
 }
 
 impl<
-    const START_OFFSET: usize,
-    const MASK: u64,
-    const DIM: u8,
-    const DIM_INCREMENT: u8,
-    ValueTypeRead,
-    ValueTypeWrite,
-    T,
-    A,
-> RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
+        const START_OFFSET: usize,
+        const MASK: u64,
+        const DIM: u8,
+        const DIM_INCREMENT: u8,
+        ValueTypeRead,
+        ValueTypeWrite,
+        T,
+        A,
+    > RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
 where
     T: RegSpec,
     A: Access,
@@ -575,15 +575,15 @@ where
 }
 
 impl<
-    const START_OFFSET: usize,
-    const MASK: u64,
-    const DIM: u8,
-    const DIM_INCREMENT: u8,
-    ValueTypeRead,
-    ValueTypeWrite,
-    T,
-    A,
-> RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
+        const START_OFFSET: usize,
+        const MASK: u64,
+        const DIM: u8,
+        const DIM_INCREMENT: u8,
+        ValueTypeRead,
+        ValueTypeWrite,
+        T,
+        A,
+    > RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
 where
     T: RegSpec,
     A: Read,
@@ -599,15 +599,15 @@ where
 }
 
 impl<
-    const START_OFFSET: usize,
-    const MASK: u64,
-    const DIM: u8,
-    const DIM_INCREMENT: u8,
-    ValueTypeRead,
-    ValueTypeWrite,
-    T,
-    A,
-> RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
+        const START_OFFSET: usize,
+        const MASK: u64,
+        const DIM: u8,
+        const DIM_INCREMENT: u8,
+        ValueTypeRead,
+        ValueTypeWrite,
+        T,
+        A,
+    > RegisterField<START_OFFSET, MASK, DIM, DIM_INCREMENT, ValueTypeRead, ValueTypeWrite, T, A>
 where
     T: RegSpec,
     A: Write,
@@ -812,8 +812,7 @@ impl<T: Sized, const DIM: usize, const DIM_INCREMENT: usize>
 
     #[allow(dead_code)]
     #[inline(always)]
-    #[allow(dead_code)]
-      pub(crate) const unsafe fn from_ptr(ptr: *mut u8) -> &'static Self {
+    pub(crate) const unsafe fn from_ptr(ptr: *mut u8) -> &'static Self {
         unsafe { &*(ptr as *const Self) }
     }
 
