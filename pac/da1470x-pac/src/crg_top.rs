@@ -1715,7 +1715,7 @@ impl ClkRtcdivReg {
         >::from_register(self, 0)
     }
 
-    #[doc = "Fractional divisor part for RTC 100Hz generation.\nif RTC_DIV_DENOM=1, <RTC_DIV_FRAC> out of 1024 cycles will divide by <RTC_DIV_INT+1>, the rest is <RTC_DIV_INT>\nIf RTC_DIV_DENOM=0, <RTC_DIV_FRAC> out of 1000 cycles will divide by <RTC_DIV_INT+1>, the rest is <RTC_DIV_INT>"]
+    #[doc = "Fractional divisor part for RTC 100Hz generation.\nif RTC_DIV_DENOM=1, &lt;RTC_DIV_FRAC&gt; out of 1024 cycles will divide by <RTC_DIV_INT+1>, the rest is <RTC_DIV_INT>\nIf RTC_DIV_DENOM=0, <RTC_DIV_FRAC> out of 1000 cycles will divide by <RTC_DIV_INT+1>, the rest is <RTC_DIV_INT>"]
     #[inline(always)]
     pub fn rtc_div_frac(
         self,

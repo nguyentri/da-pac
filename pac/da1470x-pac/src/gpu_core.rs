@@ -883,7 +883,7 @@ impl D2Control {
         crate::common::RegisterFieldBool::<17,1,0,D2Control_SPEC,crate::common::W>::from_register(self,0)
     }
 
-    #[doc = "enable band postprocess for limiter 2 (see <D2_L2BAND>)"]
+    #[doc = "enable band postprocess for limiter 2 (see &lt;D2_L2BAND&gt;)"]
     #[inline(always)]
     pub fn d2c_band2enable(
         self,
@@ -891,7 +891,7 @@ impl D2Control {
         crate::common::RegisterFieldBool::<16,1,0,D2Control_SPEC,crate::common::W>::from_register(self,0)
     }
 
-    #[doc = "enable band postprocess for limiter 1 (see <D2_L1BAND>)"]
+    #[doc = "enable band postprocess for limiter 1 (see &lt;D2_L1BAND&gt;)"]
     #[inline(always)]
     pub fn d2c_band1enable(
         self,
@@ -1097,7 +1097,7 @@ impl D2Control2 {
         crate::common::RegisterFieldBool::<27,1,0,D2Control2_SPEC,crate::common::W>::from_register(self,0)
     }
 
-    #[doc = "enable color keying (see also <D2_COLKEY> and feature bits of <D2_HWREVISION>)"]
+    #[doc = "enable color keying (see also &lt;D2_COLKEY&gt; and feature bits of <D2_HWREVISION>)"]
     #[inline(always)]
     pub fn d2c_colkey_enable(
         self,
@@ -1105,7 +1105,7 @@ impl D2Control2 {
         crate::common::RegisterFieldBool::<26,1,0,D2Control2_SPEC,crate::common::W>::from_register(self,0)
     }
 
-    #[doc = "enable the use of the CLUT (see also feature bits of <D2_HWREVISION>); if disabled the texture indices are written to FB"]
+    #[doc = "enable the use of the CLUT (see also feature bits of &lt;D2_HWREVISION&gt;); if disabled the texture indices are written to FB"]
     #[inline(always)]
     pub fn d2c_clut_enable(
         self,
@@ -1113,7 +1113,7 @@ impl D2Control2 {
         crate::common::RegisterFieldBool::<25,1,0,D2Control2_SPEC,crate::common::W>::from_register(self,0)
     }
 
-    #[doc = "enable RLE decoder (see also feature bits of <D2_HWREVISION>)"]
+    #[doc = "enable RLE decoder (see also feature bits of &lt;D2_HWREVISION&gt;)"]
     #[inline(always)]
     pub fn d2c_rle_enable(
         self,
@@ -1201,7 +1201,7 @@ impl D2Control2 {
         crate::common::RegisterFieldBool::<14,1,0,D2Control2_SPEC,crate::common::W>::from_register(self,0)
     }
 
-    #[doc = "blending for color channels is done with <D2_COLOR2> instead of the real dst value"]
+    #[doc = "blending for color channels is done with &lt;D2_COLOR2&gt; instead of the real dst value"]
     #[inline(always)]
     pub fn d2c_bc2(
         self,
@@ -1297,7 +1297,7 @@ impl D2Control2 {
         crate::common::RegisterFieldBool::<2,1,0,D2Control2_SPEC,crate::common::W>::from_register(self,0)
     }
 
-    #[doc = "Pixel source is read from texture and used as an alpha to blend between <D2_COLOR1> and <D2_COLOR2>"]
+    #[doc = "Pixel source is read from texture and used as an alpha to blend between &lt;D2_COLOR1&gt; and <D2_COLOR2>"]
     #[inline(always)]
     pub fn d2c_textureenable(
         self,
@@ -1305,7 +1305,7 @@ impl D2Control2 {
         crate::common::RegisterFieldBool::<1,1,0,D2Control2_SPEC,crate::common::W>::from_register(self,0)
     }
 
-    #[doc = "Pixel source is a pattern color (blend of <D2_COLOR1> and <D2_COLOR2> depending on <D2_PATTERN> and pattern index)"]
+    #[doc = "Pixel source is a pattern color (blend of &lt;D2_COLOR1&gt; and <D2_COLOR2> depending on <D2_PATTERN> and pattern index)"]
     #[inline(always)]
     pub fn d2c_patternenable(
         self,
@@ -2454,7 +2454,7 @@ impl crate::sealed::RegSpec for D2Lvyxaddf_SPEC {
 pub type D2Lvyxaddf = crate::RegValueT<D2Lvyxaddf_SPEC>;
 
 impl D2Lvyxaddf {
-    #[doc = "Y increment fractional part for <D2_LVYADDI>."]
+    #[doc = "Y increment fractional part for &lt;D2_LVYADDI&gt;."]
     #[inline(always)]
     pub fn d2_lvyaddi_frac(
         self,
@@ -2463,7 +2463,7 @@ impl D2Lvyxaddf {
         crate::common::RegisterField::<16,0xffff,1,0,u16,u16,D2Lvyxaddf_SPEC,crate::common::W>::from_register(self,0)
     }
 
-    #[doc = "X increment fractional part for <D2_LVXADDI>."]
+    #[doc = "X increment fractional part for &lt;D2_LVXADDI&gt;."]
     #[inline(always)]
     pub fn d2_lvxaddi_frac(
         self,

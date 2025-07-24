@@ -633,7 +633,7 @@ impl crate::sealed::RegSpec for PllSysTestReg_SPEC {
 pub type PllSysTestReg = crate::RegValueT<PllSysTestReg_SPEC>;
 
 impl PllSysTestReg {
-    #[doc = "Lock measurement time in <tbd> clock cycle of xx usec. After this period PLL_LOCK_FINE is calculated based on the difference of the M and N counted pulses in that period. If PLL_LOCK_FINE is still 0, the lock state machine restarts until PLL_LOCK_FINE gets 1\n0: <tbd> usec\n7: <tbd> usec"]
+    #[doc = "Lock measurement time in &lt;tbd&gt; clock cycle of xx usec. After this period PLL_LOCK_FINE is calculated based on the difference of the M and N counted pulses in that period. If PLL_LOCK_FINE is still 0, the lock state machine restarts until PLL_LOCK_FINE gets 1\n0: <tbd> usec\n7: <tbd> usec"]
     #[inline(always)]
     pub fn pll_lock_det_res_cnt(
         self,
@@ -642,7 +642,7 @@ impl PllSysTestReg {
         crate::common::RegisterField::<13,0x7,1,0,u8,u8,PllSysTestReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Select test mode for output divider R\nMaps PLL_R_DIV input on pins <tbd> and divider output on pin <tbd>"]
+    #[doc = "Select test mode for output divider R\nMaps PLL_R_DIV input on pins &lt;tbd&gt; and divider output on pin <tbd>"]
     #[inline(always)]
     pub fn pll_sel_r_div_test(
         self,
@@ -650,7 +650,7 @@ impl PllSysTestReg {
         crate::common::RegisterFieldBool::<11,1,0,PllSysTestReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "Select test mode for loop divider N.\nMaps PLL_N_DIV input on pins <tbd> and divider output on pin <tbd>"]
+    #[doc = "Select test mode for loop divider N.\nMaps PLL_N_DIV input on pins &lt;tbd&gt; and divider output on pin <tbd>"]
     #[inline(always)]
     pub fn pll_sel_n_div_test(
         self,
@@ -674,7 +674,7 @@ impl PllSysTestReg {
         crate::common::RegisterFieldBool::<8,1,0,PllSysTestReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
-    #[doc = "1: map loopfilter voltage on external pin <tbd>"]
+    #[doc = "1: map loopfilter voltage on external pin &lt;tbd&gt;"]
     #[inline(always)]
     pub fn pll_test_vctr(
         self,
