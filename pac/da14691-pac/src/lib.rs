@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:15 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:24 +0000
 #![cfg_attr(not(feature = "tracing"), no_std)]
 #![allow(non_camel_case_types)]
 #![doc = "690"]
@@ -560,107 +560,175 @@ pub use self::Interrupt as interrupt;
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
 #[cfg(feature = "rt")]
-extern "C" {
-    fn SNC();
-    fn DMA();
-    fn CHARGER_STATE();
-    fn CHARGER_ERROR();
-    fn CMAC2SYS();
-    fn UART();
-    fn UART2();
-    fn UART3();
-    fn I2C();
-    fn I2C2();
-    fn SPI();
-    fn SPI2();
-    fn PCM();
-    fn SRC_IN();
-    fn SRC_OUT();
-    fn USB();
-    fn TIMER();
-    fn TIMER2();
-    fn RTC();
-    fn KEY_WKUP_GPIO();
-    fn PDC();
-    fn VBUS();
-    fn MRM();
-    fn MOTOR_CONTROLLER();
-    fn TRNG();
-    fn DCDC();
-    fn XTAL32M_RDY();
-    fn GPADC();
-    fn SDADC();
-    fn CRYPTO();
-    fn CAPTIMER();
-    fn RFDIAG();
-    fn LCD_CONTROLLER();
-    fn PLL_LOCK();
-    fn TIMER3();
-    fn TIMER4();
-    fn LRA();
-    fn RTC_EVENT();
-    fn GPIO_P0();
-    fn GPIO_P1();
+pub mod interrupt_handlers {
+    unsafe extern "C" {
+        pub fn SNC();
+        pub fn DMA();
+        pub fn CHARGER_STATE();
+        pub fn CHARGER_ERROR();
+        pub fn CMAC2SYS();
+        pub fn UART();
+        pub fn UART2();
+        pub fn UART3();
+        pub fn I2C();
+        pub fn I2C2();
+        pub fn SPI();
+        pub fn SPI2();
+        pub fn PCM();
+        pub fn SRC_IN();
+        pub fn SRC_OUT();
+        pub fn USB();
+        pub fn TIMER();
+        pub fn TIMER2();
+        pub fn RTC();
+        pub fn KEY_WKUP_GPIO();
+        pub fn PDC();
+        pub fn VBUS();
+        pub fn MRM();
+        pub fn MOTOR_CONTROLLER();
+        pub fn TRNG();
+        pub fn DCDC();
+        pub fn XTAL32M_RDY();
+        pub fn GPADC();
+        pub fn SDADC();
+        pub fn CRYPTO();
+        pub fn CAPTIMER();
+        pub fn RFDIAG();
+        pub fn LCD_CONTROLLER();
+        pub fn PLL_LOCK();
+        pub fn TIMER3();
+        pub fn TIMER4();
+        pub fn LRA();
+        pub fn RTC_EVENT();
+        pub fn GPIO_P0();
+        pub fn GPIO_P1();
+    }
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-#[link_section = ".vector_table.interrupts"]
-#[no_mangle]
+#[unsafe(link_section = ".vector_table.interrupts")]
+#[unsafe(no_mangle)]
 pub static __INTERRUPTS: [Vector; 40] = [
-    Vector { _handler: SNC },
-    Vector { _handler: DMA },
     Vector {
-        _handler: CHARGER_STATE,
+        _handler: interrupt_handlers::SNC,
     },
     Vector {
-        _handler: CHARGER_ERROR,
+        _handler: interrupt_handlers::DMA,
     },
-    Vector { _handler: CMAC2SYS },
-    Vector { _handler: UART },
-    Vector { _handler: UART2 },
-    Vector { _handler: UART3 },
-    Vector { _handler: I2C },
-    Vector { _handler: I2C2 },
-    Vector { _handler: SPI },
-    Vector { _handler: SPI2 },
-    Vector { _handler: PCM },
-    Vector { _handler: SRC_IN },
-    Vector { _handler: SRC_OUT },
-    Vector { _handler: USB },
-    Vector { _handler: TIMER },
-    Vector { _handler: TIMER2 },
-    Vector { _handler: RTC },
     Vector {
-        _handler: KEY_WKUP_GPIO,
+        _handler: interrupt_handlers::CHARGER_STATE,
     },
-    Vector { _handler: PDC },
-    Vector { _handler: VBUS },
-    Vector { _handler: MRM },
     Vector {
-        _handler: MOTOR_CONTROLLER,
+        _handler: interrupt_handlers::CHARGER_ERROR,
     },
-    Vector { _handler: TRNG },
-    Vector { _handler: DCDC },
     Vector {
-        _handler: XTAL32M_RDY,
+        _handler: interrupt_handlers::CMAC2SYS,
     },
-    Vector { _handler: GPADC },
-    Vector { _handler: SDADC },
-    Vector { _handler: CRYPTO },
-    Vector { _handler: CAPTIMER },
-    Vector { _handler: RFDIAG },
     Vector {
-        _handler: LCD_CONTROLLER,
+        _handler: interrupt_handlers::UART,
     },
-    Vector { _handler: PLL_LOCK },
-    Vector { _handler: TIMER3 },
-    Vector { _handler: TIMER4 },
-    Vector { _handler: LRA },
     Vector {
-        _handler: RTC_EVENT,
+        _handler: interrupt_handlers::UART2,
     },
-    Vector { _handler: GPIO_P0 },
-    Vector { _handler: GPIO_P1 },
+    Vector {
+        _handler: interrupt_handlers::UART3,
+    },
+    Vector {
+        _handler: interrupt_handlers::I2C,
+    },
+    Vector {
+        _handler: interrupt_handlers::I2C2,
+    },
+    Vector {
+        _handler: interrupt_handlers::SPI,
+    },
+    Vector {
+        _handler: interrupt_handlers::SPI2,
+    },
+    Vector {
+        _handler: interrupt_handlers::PCM,
+    },
+    Vector {
+        _handler: interrupt_handlers::SRC_IN,
+    },
+    Vector {
+        _handler: interrupt_handlers::SRC_OUT,
+    },
+    Vector {
+        _handler: interrupt_handlers::USB,
+    },
+    Vector {
+        _handler: interrupt_handlers::TIMER,
+    },
+    Vector {
+        _handler: interrupt_handlers::TIMER2,
+    },
+    Vector {
+        _handler: interrupt_handlers::RTC,
+    },
+    Vector {
+        _handler: interrupt_handlers::KEY_WKUP_GPIO,
+    },
+    Vector {
+        _handler: interrupt_handlers::PDC,
+    },
+    Vector {
+        _handler: interrupt_handlers::VBUS,
+    },
+    Vector {
+        _handler: interrupt_handlers::MRM,
+    },
+    Vector {
+        _handler: interrupt_handlers::MOTOR_CONTROLLER,
+    },
+    Vector {
+        _handler: interrupt_handlers::TRNG,
+    },
+    Vector {
+        _handler: interrupt_handlers::DCDC,
+    },
+    Vector {
+        _handler: interrupt_handlers::XTAL32M_RDY,
+    },
+    Vector {
+        _handler: interrupt_handlers::GPADC,
+    },
+    Vector {
+        _handler: interrupt_handlers::SDADC,
+    },
+    Vector {
+        _handler: interrupt_handlers::CRYPTO,
+    },
+    Vector {
+        _handler: interrupt_handlers::CAPTIMER,
+    },
+    Vector {
+        _handler: interrupt_handlers::RFDIAG,
+    },
+    Vector {
+        _handler: interrupt_handlers::LCD_CONTROLLER,
+    },
+    Vector {
+        _handler: interrupt_handlers::PLL_LOCK,
+    },
+    Vector {
+        _handler: interrupt_handlers::TIMER3,
+    },
+    Vector {
+        _handler: interrupt_handlers::TIMER4,
+    },
+    Vector {
+        _handler: interrupt_handlers::LRA,
+    },
+    Vector {
+        _handler: interrupt_handlers::RTC_EVENT,
+    },
+    Vector {
+        _handler: interrupt_handlers::GPIO_P0,
+    },
+    Vector {
+        _handler: interrupt_handlers::GPIO_P1,
+    },
 ];
 #[doc = "Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
@@ -668,82 +736,121 @@ pub static __INTERRUPTS: [Vector; 40] = [
 pub enum Interrupt {
     #[doc = "Sensor Node Controller interrupt request."]
     SNC = 0,
+
     #[doc = "General Purpose DMA interrupt request."]
     DMA = 1,
+
     #[doc = "Charger State interrupt request."]
     CHARGER_STATE = 2,
+
     #[doc = "Charger Error interrupt request."]
     CHARGER_ERROR = 3,
+
     #[doc = "CMAC and mailbox interrupt request."]
     CMAC2SYS = 4,
+
     #[doc = "UART interrupt request."]
     UART = 5,
+
     #[doc = "UART2 interrupt request."]
     UART2 = 6,
+
     #[doc = "UART3 interrupt request."]
     UART3 = 7,
+
     #[doc = "I2C interrupt request."]
     I2C = 8,
+
     #[doc = "I2C2 interrupt request."]
     I2C2 = 9,
+
     #[doc = "SPI interrupt request."]
     SPI = 10,
+
     #[doc = "SPI2 interrupt request."]
     SPI2 = 11,
+
     #[doc = "PCM interrupt request."]
     PCM = 12,
+
     #[doc = "SRC input interrupt request."]
     SRC_IN = 13,
+
     #[doc = "SRC output interrupt request."]
     SRC_OUT = 14,
+
     #[doc = "USB interrupt request."]
     USB = 15,
+
     #[doc = "TIMER interrupt request."]
     TIMER = 16,
+
     #[doc = "TIMER2 interrupt request."]
     TIMER2 = 17,
+
     #[doc = "RTC interrupt request."]
     RTC = 18,
+
     #[doc = "Debounced button press interrupt request."]
     KEY_WKUP_GPIO = 19,
+
     #[doc = "Wakeup IRQ from PDC to CM33"]
     PDC = 20,
+
     #[doc = "VBUS presence interrupt request."]
     VBUS = 21,
+
     #[doc = "Cache Miss Rate Monitor interrupt request."]
     MRM = 22,
+
     #[doc = "MOTOR and mailbox interrupt request."]
     MOTOR_CONTROLLER = 23,
+
     #[doc = "True Random Number Generation interrupt request."]
     TRNG = 24,
+
     #[doc = "DCDC interrupt request."]
     DCDC = 25,
+
     #[doc = "XTAL32M trimmed and ready interrupt request."]
     XTAL32M_RDY = 26,
+
     #[doc = "General Purpose Analog-Digital Converter interrupt request."]
     GPADC = 27,
+
     #[doc = "Sigma Delta Analog-Digital Converter interrupt request."]
     SDADC = 28,
+
     #[doc = "Crypto interrupt request."]
     CRYPTO = 29,
+
     #[doc = "GPIO triggered Timer Capture interrupt request."]
     CAPTIMER = 30,
+
     #[doc = "Baseband or Radio Diagnostics interrupt request."]
     RFDIAG = 31,
+
     #[doc = "Parallel LCD Controller interrupt request."]
     LCD_CONTROLLER = 32,
+
     #[doc = "Pll lock interrupt request."]
     PLL_LOCK = 33,
+
     #[doc = "TIMER3 interrupt request."]
     TIMER3 = 34,
+
     #[doc = "TIMER4 interrupt request."]
     TIMER4 = 35,
+
     #[doc = "LRA/ERM interrupt request."]
     LRA = 36,
+
     #[doc = "RTC event interrupt request."]
     RTC_EVENT = 37,
+
     #[doc = "GPIO port 0 toggle interrupt request."]
     GPIO_P0 = 38,
+
     #[doc = "GPIO port 1 toggle interrupt request."]
     GPIO_P1 = 39,
 }

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:15 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:24 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Spi2 {
         self.ptr
     }
 
+    #[doc = "SPI clear interrupt register"]
     #[inline(always)]
     pub const fn spi2_clear_int_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::Spi2 {
         }
     }
 
+    #[doc = "SPI control register 0"]
     #[inline(always)]
     pub const fn spi2_ctrl_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::Spi2 {
         }
     }
 
+    #[doc = "SPI RX/TX register0"]
     #[inline(always)]
     pub const fn spi2_rx_tx_reg(
         &self,
@@ -74,9 +77,11 @@ impl crate::sealed::RegSpec for Spi2ClearIntReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SPI clear interrupt register"]
 pub type Spi2ClearIntReg = crate::RegValueT<Spi2ClearIntReg_SPEC>;
 
 impl Spi2ClearIntReg {
+    #[doc = "Writing any value to this register will clear the SPI_CTRL_REG\\[SPI_INT_BIT\\]\nReading returns 0."]
     #[inline(always)]
     pub fn spi_clear_int(
         self,
@@ -116,9 +121,11 @@ impl crate::sealed::RegSpec for Spi2CtrlReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SPI control register 0"]
 pub type Spi2CtrlReg = crate::RegValueT<Spi2CtrlReg_SPEC>;
 
 impl Spi2CtrlReg {
+    #[doc = "When 1, SPI Interrupt is generated when TX fifo is not full"]
     #[inline(always)]
     pub fn spi_tx_fifo_notfull_mask(
         self,
@@ -126,6 +133,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<25,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "In case SPI_FIFO_MODE=3\n0 = DMA TX request is generated when transaction is finished\n1 = DMA TX request is generated when tx buffer is free"]
     #[inline(always)]
     pub fn spi_dma_txreq_mode(
         self,
@@ -133,6 +141,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<24,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0 = Trasmit fifo is not empty\n1 = Trasmit fifo is empty"]
     #[inline(always)]
     pub fn spi_tx_fifo_empty(
         self,
@@ -140,6 +149,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<23,1,0,Spi2CtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "0 = Receive fifo is not full\n1 = Receive fifo is full"]
     #[inline(always)]
     pub fn spi_rx_fifo_full(
         self,
@@ -147,6 +157,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<22,1,0,Spi2CtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "0 = Receive fifo is not empty\n1 = Receive fifo is empty"]
     #[inline(always)]
     pub fn spi_rx_fifo_empty(
         self,
@@ -154,6 +165,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<21,1,0,Spi2CtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Determines the value of the first bit in 9 bits SPI mode."]
     #[inline(always)]
     pub fn spi_9bit_val(
         self,
@@ -161,6 +173,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<20,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0 = The SPI is not busy with a transfer. This means that either no TX-data is available or that the transfers have been suspended due to a full RX-FIFO. The SPI_CTRL_REG\\[SPI_INT_BIT\\] can be used to distinguish between these situations.\n1 = The SPI is busy with a transfer."]
     #[inline(always)]
     pub fn spi_busy(
         self,
@@ -168,6 +181,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<19,1,0,Spi2CtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "0 = The SPI has low priority, the DMA request signals are reset after the corresponding acknowledge.\n1 = The SPI has high priority, DMA request signals remain\nactive until the FIFOS are filled/emptied, so the DMA holds the AHB bus."]
     #[inline(always)]
     pub fn spi_priority(
         self,
@@ -175,6 +189,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<18,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0 = TX-FIFO and RX-FIFO used (Bidirectional mode).\n1 = RX-FIFO used (Read Only Mode) TX-FIFO single depth, no flow control\n2 = TX-FIFO used (Write Only Mode), RX-FIFO single depth, no flow control\n3 = No FIFOs used (backwards compatible mode)"]
     #[inline(always)]
     pub fn spi_fifo_mode(
         self,
@@ -183,6 +198,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterField::<16,0x3,1,0,u8,u8,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0 = SPI_EN pin disabled in slave mode. Pin SPI_EN is don\'t care.\n1 = SPI_EN pin enabled in slave mode."]
     #[inline(always)]
     pub fn spi_en_ctrl(
         self,
@@ -190,6 +206,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<15,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0 = Disable SPI_INT_BIT to ICU\n1 = Enable SPI_INT_BIT to ICU."]
     #[inline(always)]
     pub fn spi_mint(
         self,
@@ -197,6 +214,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<14,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0 = RX Register or FIFO is empty.\n1 = SPI interrupt. Data has been transmitted and receivedMust be reset by SW by writing to SPI_CLEAR_INT_REG."]
     #[inline(always)]
     pub fn spi_int_bit(
         self,
@@ -204,6 +222,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<13,1,0,Spi2CtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Returns the actual value of pin SPI_DIN (delayed with two internal SPI clock cycles)"]
     #[inline(always)]
     pub fn spi_di(
         self,
@@ -211,6 +230,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<12,1,0,Spi2CtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "0 = TX-FIFO is not full, data can be written.\n1 = TX-FIFO is full, data can not be written."]
     #[inline(always)]
     pub fn spi_txh(
         self,
@@ -218,6 +238,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<11,1,0,Spi2CtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "0 = normal operation\n1 = Force SPIDO output level to value of SPI_DO."]
     #[inline(always)]
     pub fn spi_force_do(
         self,
@@ -225,6 +246,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<10,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "00 = 8 bits mode\n01 = 16 bit mode\n10 = 32 bits mode\n11 = 9 bits mode. Only valid in master mode."]
     #[inline(always)]
     pub fn spi_word(
         self,
@@ -233,6 +255,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0 = normal operation\n1 = Reset SPI. Same function as SPI_ON except that internal clock remain active."]
     #[inline(always)]
     pub fn spi_rst(
         self,
@@ -240,6 +263,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<7,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Master/slave mode\n0 = Master\n1 = Slave"]
     #[inline(always)]
     pub fn spi_smn(
         self,
@@ -247,6 +271,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<6,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Pin SPI_DO output level when SPI is idle or when SPI_FORCE_DO=1"]
     #[inline(always)]
     pub fn spi_do(
         self,
@@ -254,6 +279,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<5,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Select SPI_CLK clock output frequency in master mode:\n00 = SPI_CLK / 8\n01 = SPI_CLK / 4\n10 = SPI_CLK / 2\n11 = SPI_CLK / 14"]
     #[inline(always)]
     pub fn spi_clk(
         self,
@@ -262,6 +288,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterField::<3,0x3,1,0,u8,u8,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Select SPI_CLK polarity.\n0 = SPI_CLK is initially low.\n1 = SPI_CLK is initially high."]
     #[inline(always)]
     pub fn spi_pol(
         self,
@@ -269,6 +296,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<2,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Select SPI_CLK phase. See functional timing diagrams in SPI chapter"]
     #[inline(always)]
     pub fn spi_pha(
         self,
@@ -276,6 +304,7 @@ impl Spi2CtrlReg {
         crate::common::RegisterFieldBool::<1,1,0,Spi2CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0 = SPI Module switched off (power saving). Everything is reset except SPI_CTRL_REG. When this bit is cleared the SPI will remain active in master mode until the shift register and holding register are both empty.\n1 = SPI Module switched on. Should only be set after all control bits have their desired values. So two writes are needed!"]
     #[inline(always)]
     pub fn spi_on(
         self,
@@ -297,9 +326,11 @@ impl crate::sealed::RegSpec for Spi2RxTxReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SPI RX/TX register0"]
 pub type Spi2RxTxReg = crate::RegValueT<Spi2RxTxReg_SPEC>;
 
 impl Spi2RxTxReg {
+    #[doc = "Write: SPI_TX_REG output register 0 (TX-FIFO)\nRead: SPI_RX_REG input register 0 (RX-FIFO)\nIn 8 or 9 bits mode bits 31 to 8 are not used, they contain old data.\nIn 16 bits mode bits 31 to 16 are not used, they contain old data."]
     #[inline(always)]
     pub fn spi_data(
         self,

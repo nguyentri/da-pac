@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:36 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:35 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Nvic {
         self.ptr
     }
 
+    #[doc = "Interrupt set-enable register"]
     #[inline(always)]
     pub const fn iser(&self) -> &'static crate::common::Reg<self::Iser_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::Nvic {
         }
     }
 
+    #[doc = "Interrupt clear-enable register"]
     #[inline(always)]
     pub const fn icer(&self) -> &'static crate::common::Reg<self::Icer_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::Nvic {
         }
     }
 
+    #[doc = "Interrupt set-pending register"]
     #[inline(always)]
     pub const fn ispr(&self) -> &'static crate::common::Reg<self::Ispr_SPEC, crate::common::RW> {
         unsafe {
@@ -61,6 +64,7 @@ impl super::Nvic {
         }
     }
 
+    #[doc = "Interrupt clear-pending register"]
     #[inline(always)]
     pub const fn icpr(&self) -> &'static crate::common::Reg<self::Icpr_SPEC, crate::common::RW> {
         unsafe {
@@ -70,6 +74,7 @@ impl super::Nvic {
         }
     }
 
+    #[doc = "Interrupt priority register 0"]
     #[inline(always)]
     pub const fn ipr0(&self) -> &'static crate::common::Reg<self::Ipr0_SPEC, crate::common::RW> {
         unsafe {
@@ -79,6 +84,7 @@ impl super::Nvic {
         }
     }
 
+    #[doc = "Interrupt priority register 1"]
     #[inline(always)]
     pub const fn ipr1(&self) -> &'static crate::common::Reg<self::Ipr1_SPEC, crate::common::RW> {
         unsafe {
@@ -88,6 +94,7 @@ impl super::Nvic {
         }
     }
 
+    #[doc = "Interrupt priority register 2"]
     #[inline(always)]
     pub const fn ipr2(&self) -> &'static crate::common::Reg<self::Ipr2_SPEC, crate::common::RW> {
         unsafe {
@@ -97,6 +104,7 @@ impl super::Nvic {
         }
     }
 
+    #[doc = "Interrupt priority register 3"]
     #[inline(always)]
     pub const fn ipr3(&self) -> &'static crate::common::Reg<self::Ipr3_SPEC, crate::common::RW> {
         unsafe {
@@ -106,6 +114,7 @@ impl super::Nvic {
         }
     }
 
+    #[doc = "Interrupt priority register 4"]
     #[inline(always)]
     pub const fn ipr4(&self) -> &'static crate::common::Reg<self::Ipr4_SPEC, crate::common::RW> {
         unsafe {
@@ -115,6 +124,7 @@ impl super::Nvic {
         }
     }
 
+    #[doc = "Interrupt priority register 5"]
     #[inline(always)]
     pub const fn ipr5(&self) -> &'static crate::common::Reg<self::Ipr5_SPEC, crate::common::RW> {
         unsafe {
@@ -124,6 +134,7 @@ impl super::Nvic {
         }
     }
 
+    #[doc = "Interrupt priority register 6"]
     #[inline(always)]
     pub const fn ipr6(&self) -> &'static crate::common::Reg<self::Ipr6_SPEC, crate::common::RW> {
         unsafe {
@@ -140,9 +151,11 @@ impl crate::sealed::RegSpec for Iser_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt set-enable register"]
 pub type Iser = crate::RegValueT<Iser_SPEC>;
 
 impl Iser {
+    #[doc = "BLE_WAKEUP_LP_IRQn (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn ble_wakeup_lp_irqn(
         self,
@@ -152,6 +165,7 @@ impl Iser {
         )
     }
 
+    #[doc = "BLE_GEN_IRQn (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn ble_gen_irqn(
         self,
@@ -161,6 +175,7 @@ impl Iser {
         )
     }
 
+    #[doc = "UART_IRQn (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn uart_irqn(
         self,
@@ -170,6 +185,7 @@ impl Iser {
         )
     }
 
+    #[doc = "UART2_IRQn (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn uart2_irqn(
         self,
@@ -179,6 +195,7 @@ impl Iser {
         )
     }
 
+    #[doc = "I2C_IRQn (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn i2c_irqn(
         self,
@@ -188,6 +205,7 @@ impl Iser {
         )
     }
 
+    #[doc = "SPI_IRQn (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn spi_irqn(
         self,
@@ -197,6 +215,7 @@ impl Iser {
         )
     }
 
+    #[doc = "ADC_IRQn (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn adc_irqn(
         self,
@@ -206,6 +225,7 @@ impl Iser {
         )
     }
 
+    #[doc = "KEYBRD_IRQn (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn keybrd_irqn(
         self,
@@ -215,6 +235,7 @@ impl Iser {
         )
     }
 
+    #[doc = "BLE baseband or Radio diagnostic (Interrupt set-enable bit))"]
     #[inline(always)]
     pub fn ble_rf_diag_irqn(
         self,
@@ -224,6 +245,7 @@ impl Iser {
         )
     }
 
+    #[doc = "RFCAL_IRQn (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn rfcal_irqn(
         self,
@@ -233,6 +255,7 @@ impl Iser {
         )
     }
 
+    #[doc = "GPIO0 interrupt through debounce (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn gpio0_irqn(
         self,
@@ -242,6 +265,7 @@ impl Iser {
         )
     }
 
+    #[doc = "GPIO1 interrupt through debounce (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn gpio1_irqn(
         self,
@@ -251,6 +275,7 @@ impl Iser {
         )
     }
 
+    #[doc = "GPIO2 interrupt through debounce (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn gpio2_irqn(
         self,
@@ -260,6 +285,7 @@ impl Iser {
         )
     }
 
+    #[doc = "IGPIO3 interrupt through debounce (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn gpio3_irqn(
         self,
@@ -269,6 +295,7 @@ impl Iser {
         )
     }
 
+    #[doc = "GPIO4 interrupt through debounce (Interrupt set-enable bit)"]
     #[inline(always)]
     pub fn gpio4_irqn(
         self,
@@ -278,6 +305,7 @@ impl Iser {
         )
     }
 
+    #[doc = "Software timer Interrupt (set-enable bit)"]
     #[inline(always)]
     pub fn swtim_irqn(
         self,
@@ -287,6 +315,7 @@ impl Iser {
         )
     }
 
+    #[doc = "Combined Wake up Capture Timer, GPIO and QuadDecoder interrupt (set-enable bit)"]
     #[inline(always)]
     pub fn wkup_quadec_irqn(
         self,
@@ -296,6 +325,7 @@ impl Iser {
         )
     }
 
+    #[doc = "PCM Interrupt (set-enable bit)"]
     #[inline(always)]
     pub fn pcm_irqn(
         self,
@@ -305,6 +335,7 @@ impl Iser {
         )
     }
 
+    #[doc = "Sample rate converter input Interrupt (set-enable bit)"]
     #[inline(always)]
     pub fn src_in_irqn(
         self,
@@ -314,6 +345,7 @@ impl Iser {
         )
     }
 
+    #[doc = "Sample rate converter output Interrupt (set-enable bit)"]
     #[inline(always)]
     pub fn src_out_irqn(
         self,
@@ -323,6 +355,7 @@ impl Iser {
         )
     }
 
+    #[doc = "DMA Interrupt (set-enable bit)"]
     #[inline(always)]
     pub fn dma_irqn(
         self,
@@ -346,9 +379,11 @@ impl crate::sealed::RegSpec for Icer_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt clear-enable register"]
 pub type Icer = crate::RegValueT<Icer_SPEC>;
 
 impl Icer {
+    #[doc = "BLE_WAKEUP_LP_IRQn (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn ble_wakeup_lp_irqn(
         self,
@@ -358,6 +393,7 @@ impl Icer {
         )
     }
 
+    #[doc = "BLE_GEN_IRQn (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn ble_gen_irqn(
         self,
@@ -367,6 +403,7 @@ impl Icer {
         )
     }
 
+    #[doc = "UART_IRQn (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn uart_irqn(
         self,
@@ -376,6 +413,7 @@ impl Icer {
         )
     }
 
+    #[doc = "UART2_IRQn (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn uart2_irqn(
         self,
@@ -385,6 +423,7 @@ impl Icer {
         )
     }
 
+    #[doc = "I2C_IRQn (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn i2c_irqn(
         self,
@@ -394,6 +433,7 @@ impl Icer {
         )
     }
 
+    #[doc = "SPI_IRQn (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn spi_irqn(
         self,
@@ -403,6 +443,7 @@ impl Icer {
         )
     }
 
+    #[doc = "ADC_IRQn (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn adc_irqn(
         self,
@@ -412,6 +453,7 @@ impl Icer {
         )
     }
 
+    #[doc = "KEYBRD_IRQn (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn keybrd_irqn(
         self,
@@ -421,6 +463,7 @@ impl Icer {
         )
     }
 
+    #[doc = "BLE baseband or Radio diagnostic (Interrupt clear-enable bit))"]
     #[inline(always)]
     pub fn ble_rf_diag_irqn(
         self,
@@ -430,6 +473,7 @@ impl Icer {
         )
     }
 
+    #[doc = "RFCAL_IRQn (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn rfcal_irqn(
         self,
@@ -439,6 +483,7 @@ impl Icer {
         )
     }
 
+    #[doc = "GPIO0 interrupt through debounce (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn gpio0_irqn(
         self,
@@ -448,6 +493,7 @@ impl Icer {
         )
     }
 
+    #[doc = "GPIO1 interrupt through debounce (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn gpio1_irqn(
         self,
@@ -457,6 +503,7 @@ impl Icer {
         )
     }
 
+    #[doc = "GPIO2 interrupt through debounce (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn gpio2_irqn(
         self,
@@ -466,6 +513,7 @@ impl Icer {
         )
     }
 
+    #[doc = "IGPIO3 interrupt through debounce (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn gpio3_irqn(
         self,
@@ -475,6 +523,7 @@ impl Icer {
         )
     }
 
+    #[doc = "GPIO4 interrupt through debounce (Interrupt clear-enable bit)"]
     #[inline(always)]
     pub fn gpio4_irqn(
         self,
@@ -484,6 +533,7 @@ impl Icer {
         )
     }
 
+    #[doc = "Software timer Interrupt (clear-enable bit)"]
     #[inline(always)]
     pub fn swtim_irqn(
         self,
@@ -493,6 +543,7 @@ impl Icer {
         )
     }
 
+    #[doc = "Combined Wake up Capture Timer, GPIO and QuadDecoder interrupt (clear-enable bit)"]
     #[inline(always)]
     pub fn wkup_quadec_irqn(
         self,
@@ -502,6 +553,7 @@ impl Icer {
         )
     }
 
+    #[doc = "PCM Interrupt (clear-enable bit)"]
     #[inline(always)]
     pub fn pcm_irqn(
         self,
@@ -511,6 +563,7 @@ impl Icer {
         )
     }
 
+    #[doc = "Sample rate converter input Interrupt (clear-enable bit)"]
     #[inline(always)]
     pub fn src_in_irqn(
         self,
@@ -520,6 +573,7 @@ impl Icer {
         )
     }
 
+    #[doc = "Sample rate converter output Interrupt (clear-enable bit)"]
     #[inline(always)]
     pub fn src_out_irqn(
         self,
@@ -529,6 +583,7 @@ impl Icer {
         )
     }
 
+    #[doc = "DMA Interrupt (clear-enable bit)"]
     #[inline(always)]
     pub fn dma_irqn(
         self,
@@ -552,9 +607,11 @@ impl crate::sealed::RegSpec for Ispr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt set-pending register"]
 pub type Ispr = crate::RegValueT<Ispr_SPEC>;
 
 impl Ispr {
+    #[doc = "BLE_WAKEUP_LP_IRQn (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn ble_wakeup_lp_irqn(
         self,
@@ -564,6 +621,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "BLE_GEN_IRQn (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn ble_gen_irqn(
         self,
@@ -573,6 +631,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "UART_IRQn (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn uart_irqn(
         self,
@@ -582,6 +641,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "UART2_IRQn (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn uart2_irqn(
         self,
@@ -591,6 +651,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "I2C_IRQn (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn i2c_irqn(
         self,
@@ -600,6 +661,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "SPI_IRQn (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn spi_irqn(
         self,
@@ -609,6 +671,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "ADC_IRQn (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn adc_irqn(
         self,
@@ -618,6 +681,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "KEYBRD_IRQn (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn keybrd_irqn(
         self,
@@ -627,6 +691,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "BLE baseband or Radio diagnostic (Interrupt set-pending bit))"]
     #[inline(always)]
     pub fn ble_rf_diag_irqn(
         self,
@@ -636,6 +701,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "RFCAL_IRQn (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn rfcal_irqn(
         self,
@@ -645,6 +711,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "GPIO0 interrupt through debounce (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn gpio0_irqn(
         self,
@@ -654,6 +721,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "GPIO1 interrupt through debounce (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn gpio1_irqn(
         self,
@@ -663,6 +731,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "GPIO2 interrupt through debounce (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn gpio2_irqn(
         self,
@@ -672,6 +741,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "IGPIO3 interrupt through debounce (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn gpio3_irqn(
         self,
@@ -681,6 +751,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "GPIO4 interrupt through debounce (Interrupt set-pending bit)"]
     #[inline(always)]
     pub fn gpio4_irqn(
         self,
@@ -690,6 +761,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "Software timer Interrupt (set-pending bit)"]
     #[inline(always)]
     pub fn swtim_irqn(
         self,
@@ -699,6 +771,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "Combined Wake up Capture Timer, GPIO and QuadDecoder interrupt (set-pending bit)"]
     #[inline(always)]
     pub fn wkup_quadec_irqn(
         self,
@@ -708,6 +781,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "PCM Interrupt (set-pending bit)"]
     #[inline(always)]
     pub fn pcm_irqn(
         self,
@@ -717,6 +791,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "Sample rate converter input Interrupt (set-pending bit)"]
     #[inline(always)]
     pub fn src_in_irqn(
         self,
@@ -726,6 +801,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "Sample rate converter output Interrupt (set-pending bit)"]
     #[inline(always)]
     pub fn src_out_irqn(
         self,
@@ -735,6 +811,7 @@ impl Ispr {
         )
     }
 
+    #[doc = "DMA Interrupt (set-pending bit)"]
     #[inline(always)]
     pub fn dma_irqn(
         self,
@@ -758,9 +835,11 @@ impl crate::sealed::RegSpec for Icpr_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt clear-pending register"]
 pub type Icpr = crate::RegValueT<Icpr_SPEC>;
 
 impl Icpr {
+    #[doc = "BLE_WAKEUP_LP_IRQn (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn ble_wakeup_lp_irqn(
         self,
@@ -770,6 +849,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "BLE_GEN_IRQn (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn ble_gen_irqn(
         self,
@@ -779,6 +859,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "UART_IRQn (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn uart_irqn(
         self,
@@ -788,6 +869,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "UART2_IRQn (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn uart2_irqn(
         self,
@@ -797,6 +879,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "I2C_IRQn (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn i2c_irqn(
         self,
@@ -806,6 +889,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "SPI_IRQn (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn spi_irqn(
         self,
@@ -815,6 +899,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "ADC_IRQn (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn adc_irqn(
         self,
@@ -824,6 +909,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "KEYBRD_IRQn (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn keybrd_irqn(
         self,
@@ -833,6 +919,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "BLE baseband or Radio diagnostic (Interrupt clear-pending bit))"]
     #[inline(always)]
     pub fn ble_rf_diag_irqn(
         self,
@@ -842,6 +929,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "RFCAL_IRQn (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn rfcal_irqn(
         self,
@@ -851,6 +939,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "GPIO0 interrupt through debounce (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn gpio0_irqn(
         self,
@@ -860,6 +949,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "GPIO1 interrupt through debounce (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn gpio1_irqn(
         self,
@@ -869,6 +959,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "GPIO2 interrupt through debounce (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn gpio2_irqn(
         self,
@@ -878,6 +969,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "IGPIO3 interrupt through debounce (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn gpio3_irqn(
         self,
@@ -887,6 +979,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "GPIO4 interrupt through debounce (Interrupt clear-pending bit)"]
     #[inline(always)]
     pub fn gpio4_irqn(
         self,
@@ -896,6 +989,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "Software timer Interrupt (clear-pending bit)"]
     #[inline(always)]
     pub fn swtim_irqn(
         self,
@@ -905,6 +999,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "Combined Wake up Capture Timer, GPIO and QuadDecoder interrupt (clear-pending bit)"]
     #[inline(always)]
     pub fn wkup_quadec_irqn(
         self,
@@ -914,6 +1009,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "PCM Interrupt (clear-pending bit)"]
     #[inline(always)]
     pub fn pcm_irqn(
         self,
@@ -923,6 +1019,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "Sample rate converter input Interrupt (clear-pending bit)"]
     #[inline(always)]
     pub fn src_in_irqn(
         self,
@@ -932,6 +1029,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "Sample rate converter output Interrupt (clear-pending bit)"]
     #[inline(always)]
     pub fn src_out_irqn(
         self,
@@ -941,6 +1039,7 @@ impl Icpr {
         )
     }
 
+    #[doc = "DMA Interrupt (clear-pending bit)"]
     #[inline(always)]
     pub fn dma_irqn(
         self,
@@ -964,9 +1063,11 @@ impl crate::sealed::RegSpec for Ipr0_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt priority register 0"]
 pub type Ipr0 = crate::RegValueT<Ipr0_SPEC>;
 
 impl Ipr0 {
+    #[doc = "BLE_WAKEUP_LP_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn ble_wakeup_lp_irqn_prio(
         self,
@@ -974,6 +1075,7 @@ impl Ipr0 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ipr0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "BLE_GEN_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn ble_gen_irqn_prio(
         self,
@@ -981,6 +1083,7 @@ impl Ipr0 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Ipr0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "UART_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn uart_irqn_prio(
         self,
@@ -988,6 +1091,7 @@ impl Ipr0 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Ipr0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "UART2_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn uart2_irqn_prio(
         self,
@@ -1009,9 +1113,11 @@ impl crate::sealed::RegSpec for Ipr1_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt priority register 1"]
 pub type Ipr1 = crate::RegValueT<Ipr1_SPEC>;
 
 impl Ipr1 {
+    #[doc = "I2C_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn i2c_irqn_prio(
         self,
@@ -1019,6 +1125,7 @@ impl Ipr1 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ipr1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SPI_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn spi_irqn_prio(
         self,
@@ -1026,6 +1133,7 @@ impl Ipr1 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Ipr1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "ADC_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn adc_irqn_prio(
         self,
@@ -1033,6 +1141,7 @@ impl Ipr1 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Ipr1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "KEYBRD_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn keybrd_irqn_prio(
         self,
@@ -1054,9 +1163,11 @@ impl crate::sealed::RegSpec for Ipr2_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt priority register 2"]
 pub type Ipr2 = crate::RegValueT<Ipr2_SPEC>;
 
 impl Ipr2 {
+    #[doc = "BLE_RF_DIAG_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn ble_rf_diag_irqn_prio(
         self,
@@ -1064,6 +1175,7 @@ impl Ipr2 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ipr2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "RF_CAL_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn rf_cal_irqn_prio(
         self,
@@ -1071,6 +1183,7 @@ impl Ipr2 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Ipr2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "GPIO0_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn gpio0_irqn_prio(
         self,
@@ -1078,6 +1191,7 @@ impl Ipr2 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Ipr2_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "GPIO1_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn gpio1_irqn_prio(
         self,
@@ -1099,9 +1213,11 @@ impl crate::sealed::RegSpec for Ipr3_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt priority register 3"]
 pub type Ipr3 = crate::RegValueT<Ipr3_SPEC>;
 
 impl Ipr3 {
+    #[doc = "SPI_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn spi_irqn_prio(
         self,
@@ -1109,6 +1225,7 @@ impl Ipr3 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ipr3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SPI2_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn spi2_irqn_prio(
         self,
@@ -1116,6 +1233,7 @@ impl Ipr3 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Ipr3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "ADC_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn adc_irqn_prio(
         self,
@@ -1123,6 +1241,7 @@ impl Ipr3 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Ipr3_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "KEYBRD_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn keybrd_irqn_prio(
         self,
@@ -1144,9 +1263,11 @@ impl crate::sealed::RegSpec for Ipr4_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt priority register 4"]
 pub type Ipr4 = crate::RegValueT<Ipr4_SPEC>;
 
 impl Ipr4 {
+    #[doc = "GPIO2_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn gpio2_irqn_prio(
         self,
@@ -1154,6 +1275,7 @@ impl Ipr4 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ipr4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "GPIO3_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn gpio3_irqn_prio(
         self,
@@ -1161,6 +1283,7 @@ impl Ipr4 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Ipr4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "GPIO4_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn gpio4_irqn_prio(
         self,
@@ -1168,6 +1291,7 @@ impl Ipr4 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Ipr4_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SWTIM_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn swtim_irqn_prio(
         self,
@@ -1189,9 +1313,11 @@ impl crate::sealed::RegSpec for Ipr5_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt priority register 5"]
 pub type Ipr5 = crate::RegValueT<Ipr5_SPEC>;
 
 impl Ipr5 {
+    #[doc = "WKUP_QUADEC_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn wkup_quadec_irqn_prio(
         self,
@@ -1199,6 +1325,7 @@ impl Ipr5 {
         crate::common::RegisterField::<0,0xff,1,0,u8,u8,Ipr5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "PCM_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn pcm_irqn_prio(
         self,
@@ -1206,6 +1333,7 @@ impl Ipr5 {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,Ipr5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SRC_IN_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn src_in_irqn_prio(
         self,
@@ -1213,6 +1341,7 @@ impl Ipr5 {
         crate::common::RegisterField::<16,0xff,1,0,u8,u8,Ipr5_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SRC_OUT_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn src_out_irqn_prio(
         self,
@@ -1234,9 +1363,11 @@ impl crate::sealed::RegSpec for Ipr6_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Interrupt priority register 6"]
 pub type Ipr6 = crate::RegValueT<Ipr6_SPEC>;
 
 impl Ipr6 {
+    #[doc = "DMA_IRQn\\[7:0\\] bits (Interrupt priority)"]
     #[inline(always)]
     pub fn dma_irqn_prio(
         self,

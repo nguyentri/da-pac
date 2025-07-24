@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:52 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -55,6 +55,7 @@ impl crate::sealed::RegSpec for GpuCtrlReg_SPEC {
 pub type GpuCtrlReg = crate::RegValueT<GpuCtrlReg_SPEC>;
 
 impl GpuCtrlReg {
+    #[doc = "Power save mode read port memories\n0: Disabled\n1: Enabled"]
     #[inline(always)]
     pub fn pwrs_b(
         self,
@@ -62,6 +63,7 @@ impl GpuCtrlReg {
         crate::common::RegisterFieldBool::<6,1,0,GpuCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Margin setting for GPU memories"]
     #[inline(always)]
     pub fn gpu_ram_ms(
         self,
@@ -70,6 +72,7 @@ impl GpuCtrlReg {
         crate::common::RegisterField::<2,0xf,1,0,u8,u8,GpuCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Margin enable for GPU memories"]
     #[inline(always)]
     pub fn gpu_ram_mse(
         self,
@@ -77,6 +80,7 @@ impl GpuCtrlReg {
         crate::common::RegisterFieldBool::<1,1,0,GpuCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "GPU enable\n0:Enable\n1:Disable"]
     #[inline(always)]
     pub fn gpu_en(
         self,

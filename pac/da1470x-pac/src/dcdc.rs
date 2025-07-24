@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:52 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -55,6 +55,7 @@ impl crate::sealed::RegSpec for BuckCtrlReg_SPEC {
 pub type BuckCtrlReg = crate::RegValueT<BuckCtrlReg_SPEC>;
 
 impl BuckCtrlReg {
+    #[doc = "Sets maximum switch on-time.\n0x0: Disabled\n0x1: 0.5 ms\n0x2: 1.0 ms (Default)\n0x3: 1.5 ms"]
     #[inline(always)]
     pub fn cfg_timeout(
         self,
@@ -63,6 +64,7 @@ impl BuckCtrlReg {
         crate::common::RegisterField::<14,0x3,1,0,u8,u8,BuckCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables freewheel switch when converter is idle."]
     #[inline(always)]
     pub fn en_freewheel(
         self,
@@ -70,6 +72,7 @@ impl BuckCtrlReg {
         crate::common::RegisterFieldBool::<13,1,0,BuckCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Bias current trim.\n0x0: -21 %\n0x1: -14 %\n0x2: -7 %\n0x3: +0 % (Default)\n0x4: +7 %\n0x5: +14 %\n0x6: +21 %\n0x7: +28 %"]
     #[inline(always)]
     pub fn trim_bias(
         self,
@@ -78,6 +81,7 @@ impl BuckCtrlReg {
         crate::common::RegisterField::<10,0x7,1,0,u8,u8,BuckCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Sets upper value of inductor peak current limit control.\n0x0: 260 mA\n0x1: 400 mA\n0x2: 530 mA\n0x3: 660 mA\n0x4: 790 mA\n0x5: 920 mA\n0x6: 1060 mA (Default)\n0x7: 1190 mA"]
     #[inline(always)]
     pub fn cfg_imax_upper(
         self,
@@ -86,6 +90,7 @@ impl BuckCtrlReg {
         crate::common::RegisterField::<5,0x7,1,0,u8,u8,BuckCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Sets lower value of inductor peak current limit control.\n0x0: 260 mA (Default)\n0x1: 400 mA\n0x2: 530 mA\n0x3: 660 mA\n0x4: 790 mA\n0x5: 920 mA\n0x6: 1060 mA\n0x7: 1190 mA"]
     #[inline(always)]
     pub fn cfg_imax_lower(
         self,
@@ -94,6 +99,7 @@ impl BuckCtrlReg {
         crate::common::RegisterField::<2,0x7,1,0,u8,u8,BuckCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Controls hysteresis on output comparator. Values listed are typical.\n0x0: 6 mV (Default)\n0x1: 9 mV\n0x2: 12 mV\n0x3: 15 mV"]
     #[inline(always)]
     pub fn cfg_hyst(
         self,

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:24 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Tmr580Nl01 {
         self.ptr
     }
 
+    #[doc = "Duty Cycle for PWM2"]
     #[inline(always)]
     pub const fn pwm2_duty_cycle(
         &self,
@@ -45,6 +46,7 @@ impl super::Tmr580Nl01 {
         }
     }
 
+    #[doc = "Duty Cycle for PWM3"]
     #[inline(always)]
     pub const fn pwm3_duty_cycle(
         &self,
@@ -56,6 +58,7 @@ impl super::Tmr580Nl01 {
         }
     }
 
+    #[doc = "Duty Cycle for PWM4"]
     #[inline(always)]
     pub const fn pwm4_duty_cycle(
         &self,
@@ -67,6 +70,7 @@ impl super::Tmr580Nl01 {
         }
     }
 
+    #[doc = "Timer0 control register"]
     #[inline(always)]
     pub const fn timer0_ctrl_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::Tmr580Nl01 {
         }
     }
 
+    #[doc = "Timer0 on control register"]
     #[inline(always)]
     pub const fn timer0_on_reg(
         &self,
@@ -89,6 +94,7 @@ impl super::Tmr580Nl01 {
         }
     }
 
+    #[doc = "16 bits reload value for Timer0"]
     #[inline(always)]
     pub const fn timer0_reload_m_reg(
         &self,
@@ -100,6 +106,7 @@ impl super::Tmr580Nl01 {
         }
     }
 
+    #[doc = "16 bits reload value for Timer0"]
     #[inline(always)]
     pub const fn timer0_reload_n_reg(
         &self,
@@ -111,6 +118,7 @@ impl super::Tmr580Nl01 {
         }
     }
 
+    #[doc = "PWM 2 3 4 Control"]
     #[inline(always)]
     pub const fn triple_pwm_ctrl_reg(
         &self,
@@ -122,6 +130,7 @@ impl super::Tmr580Nl01 {
         }
     }
 
+    #[doc = "Frequency for PWM 2,3 and 4"]
     #[inline(always)]
     pub const fn triple_pwm_frequency(
         &self,
@@ -140,9 +149,11 @@ impl crate::sealed::RegSpec for Pwm2DutyCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Duty Cycle for PWM2"]
 pub type Pwm2DutyCycle = crate::RegValueT<Pwm2DutyCycle_SPEC>;
 
 impl Pwm2DutyCycle {
+    #[doc = "duty cycle for PWM"]
     #[inline(always)]
     pub fn duty_cycle(
         self,
@@ -182,9 +193,11 @@ impl crate::sealed::RegSpec for Pwm3DutyCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Duty Cycle for PWM3"]
 pub type Pwm3DutyCycle = crate::RegValueT<Pwm3DutyCycle_SPEC>;
 
 impl Pwm3DutyCycle {
+    #[doc = "duty cycle for PWM"]
     #[inline(always)]
     pub fn duty_cycle(
         self,
@@ -224,9 +237,11 @@ impl crate::sealed::RegSpec for Pwm4DutyCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Duty Cycle for PWM4"]
 pub type Pwm4DutyCycle = crate::RegValueT<Pwm4DutyCycle_SPEC>;
 
 impl Pwm4DutyCycle {
+    #[doc = "duty cycle for PWM"]
     #[inline(always)]
     pub fn duty_cycle(
         self,
@@ -266,9 +281,11 @@ impl crate::sealed::RegSpec for Timer0CtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer0 control register"]
 pub type Timer0CtrlReg = crate::RegValueT<Timer0CtrlReg_SPEC>;
 
 impl Timer0CtrlReg {
+    #[doc = "0 = PWM signals are \'1\' during high time.\n1 = PWM signals send out the (fast) clock divided by 2 during high time. So it will be in the range of 1 to 8 MHz."]
     #[inline(always)]
     pub fn pwm_mode(
         self,
@@ -276,6 +293,7 @@ impl Timer0CtrlReg {
         crate::common::RegisterFieldBool::<3,1,0,Timer0CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1 = Timer0 uses selected clock frequency as is.\n0 = Timer0 uses selected clock frequency divided by 10.\nNote that this applies only to the ON-counter."]
     #[inline(always)]
     pub fn tim0_clk_div(
         self,
@@ -283,6 +301,7 @@ impl Timer0CtrlReg {
         crate::common::RegisterFieldBool::<2,1,0,Timer0CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1 = Timer0 uses 16, 8, 4 or 2 MHz (fast) clock frequency.\n0 = Timer0 uses 32 kHz (slow) clock frequency."]
     #[inline(always)]
     pub fn tim0_clk_sel(
         self,
@@ -290,6 +309,7 @@ impl Timer0CtrlReg {
         crate::common::RegisterFieldBool::<1,1,0,Timer0CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0 = Timer0 is off and in reset state.\n1 = Timer0 is running."]
     #[inline(always)]
     pub fn tim0_ctrl(
         self,
@@ -311,9 +331,11 @@ impl crate::sealed::RegSpec for Timer0OnReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer0 on control register"]
 pub type Timer0OnReg = crate::RegValueT<Timer0OnReg_SPEC>;
 
 impl Timer0OnReg {
+    #[doc = "Timer0 On reload value:\nIf read the actual counter value ON_CNTer is returned"]
     #[inline(always)]
     pub fn tim0_on(
         self,
@@ -336,9 +358,11 @@ impl crate::sealed::RegSpec for Timer0ReloadMReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "16 bits reload value for Timer0"]
 pub type Timer0ReloadMReg = crate::RegValueT<Timer0ReloadMReg_SPEC>;
 
 impl Timer0ReloadMReg {
+    #[doc = "Timer0 \'high\' reload valueIf read the actual counter value T0_CNTer is returned"]
     #[inline(always)]
     pub fn tim0_m(
         self,
@@ -378,9 +402,11 @@ impl crate::sealed::RegSpec for Timer0ReloadNReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "16 bits reload value for Timer0"]
 pub type Timer0ReloadNReg = crate::RegValueT<Timer0ReloadNReg_SPEC>;
 
 impl Timer0ReloadNReg {
+    #[doc = "Timer0 \'low\' reload value:\nIf read the actual counter value T0_CNTer is returned"]
     #[inline(always)]
     pub fn tim0_n(
         self,
@@ -420,9 +446,11 @@ impl crate::sealed::RegSpec for TriplePwmCtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PWM 2 3 4 Control"]
 pub type TriplePwmCtrlReg = crate::RegValueT<TriplePwmCtrlReg_SPEC>;
 
 impl TriplePwmCtrlReg {
+    #[doc = "\'1\' = HW can pause PWM 2,3,4"]
     #[inline(always)]
     pub fn hw_pause_en(
         self,
@@ -430,6 +458,7 @@ impl TriplePwmCtrlReg {
         crate::common::RegisterFieldBool::<2,1,0,TriplePwmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' = PWM 2 3 4 is paused"]
     #[inline(always)]
     pub fn sw_pause_en(
         self,
@@ -437,6 +466,7 @@ impl TriplePwmCtrlReg {
         crate::common::RegisterFieldBool::<1,1,0,TriplePwmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' = PWM 2 3 4 is enabled"]
     #[inline(always)]
     pub fn triple_pwm_enable(
         self,
@@ -458,9 +488,11 @@ impl crate::sealed::RegSpec for TriplePwmFrequency_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Frequency for PWM 2,3 and 4"]
 pub type TriplePwmFrequency = crate::RegValueT<TriplePwmFrequency_SPEC>;
 
 impl TriplePwmFrequency {
+    #[doc = "Freq for PWM 2 3 4"]
     #[inline(always)]
     pub fn freq(
         self,

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:28 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:24 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Anamisc580Nl01 {
         self.ptr
     }
 
+    #[doc = "Count value for oscillator calibration"]
     #[inline(always)]
     pub const fn clk_ref_cnt_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::Anamisc580Nl01 {
         }
     }
 
+    #[doc = "Select clock for oscillator calibration"]
     #[inline(always)]
     pub const fn clk_ref_sel_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::Anamisc580Nl01 {
         }
     }
 
+    #[doc = "XTAL16M reference cycles, upper 16 bits"]
     #[inline(always)]
     pub const fn clk_ref_val_h_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::Anamisc580Nl01 {
         }
     }
 
+    #[doc = "XTAL16M reference cycles, lower 16 bits"]
     #[inline(always)]
     pub const fn clk_ref_val_l_reg(
         &self,
@@ -85,9 +89,11 @@ impl crate::sealed::RegSpec for ClkRefCntReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Count value for oscillator calibration"]
 pub type ClkRefCntReg = crate::RegValueT<ClkRefCntReg_SPEC>;
 
 impl ClkRefCntReg {
+    #[doc = "Indicates the calibration time, with a decrement counter to 1."]
     #[inline(always)]
     pub fn ref_cnt_val(
         self,
@@ -119,9 +125,11 @@ impl crate::sealed::RegSpec for ClkRefSelReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Select clock for oscillator calibration"]
 pub type ClkRefSelReg = crate::RegValueT<ClkRefSelReg_SPEC>;
 
 impl ClkRefSelReg {
+    #[doc = "Writing a \'1\' starts a calibration. This bit is cleared when calibration is finished, and CLK_REF_VAL is ready."]
     #[inline(always)]
     pub fn ref_cal_start(
         self,
@@ -129,6 +137,7 @@ impl ClkRefSelReg {
         crate::common::RegisterFieldBool::<2,1,0,ClkRefSelReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Select clock input for calibration:\n0x0 : RC32K oscillator\n0x1 : RC16M oscillator\n0x2 : XTAL32K oscillator\n0x3 : RCX oscillator"]
     #[inline(always)]
     pub fn ref_clk_sel(
         self,
@@ -151,9 +160,11 @@ impl crate::sealed::RegSpec for ClkRefValHReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "XTAL16M reference cycles, upper 16 bits"]
 pub type ClkRefValHReg = crate::RegValueT<ClkRefValHReg_SPEC>;
 
 impl ClkRefValHReg {
+    #[doc = "Returns the upper 16 bits of XTAL16 clock cycles during the calibration time, defined with REF_CNT_VAL"]
     #[inline(always)]
     pub fn xtal_cnt_val(
         self,
@@ -185,9 +196,11 @@ impl crate::sealed::RegSpec for ClkRefValLReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "XTAL16M reference cycles, lower 16 bits"]
 pub type ClkRefValLReg = crate::RegValueT<ClkRefValLReg_SPEC>;
 
 impl ClkRefValLReg {
+    #[doc = "Returns the lower 16 bits of XTAL16 clock cycles during the calibration time, defined with REF_CNT_VAL"]
     #[inline(always)]
     pub fn xtal_cnt_val(
         self,

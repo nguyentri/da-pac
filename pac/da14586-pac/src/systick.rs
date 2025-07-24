@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:45 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:49 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::SysTick {
         self.ptr
     }
 
+    #[doc = "SysTick Control and Status register"]
     #[inline(always)]
     pub const fn ctrl(&self) -> &'static crate::common::Reg<self::Ctrl_SPEC, crate::common::RW> {
         unsafe {
@@ -43,6 +44,7 @@ impl super::SysTick {
         }
     }
 
+    #[doc = "SysTick Reload value register"]
     #[inline(always)]
     pub const fn load(&self) -> &'static crate::common::Reg<self::Load_SPEC, crate::common::RW> {
         unsafe {
@@ -52,6 +54,7 @@ impl super::SysTick {
         }
     }
 
+    #[doc = "SysTick Current value register"]
     #[inline(always)]
     pub const fn val(&self) -> &'static crate::common::Reg<self::Val_SPEC, crate::common::RW> {
         unsafe {
@@ -61,6 +64,7 @@ impl super::SysTick {
         }
     }
 
+    #[doc = "SysTick Calibration value register"]
     #[inline(always)]
     pub const fn calib(&self) -> &'static crate::common::Reg<self::Calib_SPEC, crate::common::R> {
         unsafe {
@@ -77,9 +81,11 @@ impl crate::sealed::RegSpec for Ctrl_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SysTick Control and Status register"]
 pub type Ctrl = crate::RegValueT<Ctrl_SPEC>;
 
 impl Ctrl {
+    #[doc = "SysTick Counter enable"]
     #[inline(always)]
     pub fn enable(self) -> crate::common::RegisterFieldBool<0, 1, 0, Ctrl_SPEC, crate::common::RW> {
         crate::common::RegisterFieldBool::<0, 1, 0, Ctrl_SPEC, crate::common::RW>::from_register(
@@ -87,6 +93,7 @@ impl Ctrl {
         )
     }
 
+    #[doc = "SysTick exception request enable"]
     #[inline(always)]
     pub fn tickint(
         self,
@@ -96,6 +103,7 @@ impl Ctrl {
         )
     }
 
+    #[doc = "Clock source selection"]
     #[inline(always)]
     pub fn clksource(
         self,
@@ -105,6 +113,7 @@ impl Ctrl {
         )
     }
 
+    #[doc = "Timer counted to 0 since last time this was read"]
     #[inline(always)]
     pub fn countflag(
         self,
@@ -128,9 +137,11 @@ impl crate::sealed::RegSpec for Load_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SysTick Reload value register"]
 pub type Load = crate::RegValueT<Load_SPEC>;
 
 impl Load {
+    #[doc = "RELOAD\\[23:0\\] bits (Reload value)"]
     #[inline(always)]
     pub fn reload(
         self,
@@ -153,9 +164,11 @@ impl crate::sealed::RegSpec for Val_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SysTick Current value register"]
 pub type Val = crate::RegValueT<Val_SPEC>;
 
 impl Val {
+    #[doc = "CURRENT\\[23:0\\] bits (Current counter value)"]
     #[inline(always)]
     pub fn current(
         self,
@@ -178,9 +191,11 @@ impl crate::sealed::RegSpec for Calib_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SysTick Calibration value register"]
 pub type Calib = crate::RegValueT<Calib_SPEC>;
 
 impl Calib {
+    #[doc = "TENMS\\[23:0\\] bits (Calibration value)"]
     #[inline(always)]
     pub fn tenms(
         self,
@@ -189,6 +204,7 @@ impl Calib {
         crate::common::RegisterField::<0,0xffffff,1,0,u32,u32,Calib_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Indicates whether the TENMS value is exact"]
     #[inline(always)]
     pub fn skew(self) -> crate::common::RegisterFieldBool<30, 1, 0, Calib_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<30, 1, 0, Calib_SPEC, crate::common::R>::from_register(
@@ -196,6 +212,7 @@ impl Calib {
         )
     }
 
+    #[doc = "Indicates that a separate reference clock is provided"]
     #[inline(always)]
     pub fn noref(self) -> crate::common::RegisterFieldBool<31, 1, 0, Calib_SPEC, crate::common::R> {
         crate::common::RegisterFieldBool::<31, 1, 0, Calib_SPEC, crate::common::R>::from_register(

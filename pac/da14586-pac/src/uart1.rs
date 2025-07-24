@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:45 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:49 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Uart1 {
         self.ptr
     }
 
+    #[doc = "Component Parameter Register"]
     #[inline(always)]
     pub const fn uart_cpr_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Component Type Register"]
     #[inline(always)]
     pub const fn uart_ctr_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Halt TX"]
     #[inline(always)]
     pub const fn uart_htx_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Interrupt Enable Register"]
     #[inline(always)]
     pub const fn uart_ier_dlh_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Interrupt Identification Register/FIFO Control Register"]
     #[inline(always)]
     pub const fn uart_iir_fcr_reg(
         &self,
@@ -89,6 +94,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Line Control Register"]
     #[inline(always)]
     pub const fn uart_lcr_reg(
         &self,
@@ -100,6 +106,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Low Power Divisor Latch High"]
     #[inline(always)]
     pub const fn uart_lpdlh_reg(
         &self,
@@ -111,6 +118,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Low Power Divisor Latch Low"]
     #[inline(always)]
     pub const fn uart_lpdll_reg(
         &self,
@@ -122,6 +130,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Line Status Register"]
     #[inline(always)]
     pub const fn uart_lsr_reg(
         &self,
@@ -133,6 +142,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Modem Control Register"]
     #[inline(always)]
     pub const fn uart_mcr_reg(
         &self,
@@ -144,6 +154,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Modem Status Register"]
     #[inline(always)]
     pub const fn uart_msr_reg(
         &self,
@@ -155,6 +166,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Receive Buffer Register"]
     #[inline(always)]
     pub const fn uart_rbr_thr_dll_reg(
         &self,
@@ -166,6 +178,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Receive FIFO Level."]
     #[inline(always)]
     pub const fn uart_rfl_reg(
         &self,
@@ -177,6 +190,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Break Control Register"]
     #[inline(always)]
     pub const fn uart_sbcr_reg(
         &self,
@@ -188,6 +202,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Scratchpad Register"]
     #[inline(always)]
     pub const fn uart_scr_reg(
         &self,
@@ -199,6 +214,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow DMA Mode"]
     #[inline(always)]
     pub const fn uart_sdmam_reg(
         &self,
@@ -210,6 +226,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow FIFO Enable"]
     #[inline(always)]
     pub const fn uart_sfe_reg(
         &self,
@@ -221,6 +238,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr0_reg(
         &self,
@@ -232,6 +250,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr10_reg(
         &self,
@@ -243,6 +262,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr11_reg(
         &self,
@@ -254,6 +274,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr12_reg(
         &self,
@@ -265,6 +286,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr13_reg(
         &self,
@@ -276,6 +298,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr14_reg(
         &self,
@@ -287,6 +310,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr15_reg(
         &self,
@@ -298,6 +322,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr1_reg(
         &self,
@@ -309,6 +334,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr2_reg(
         &self,
@@ -320,6 +346,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr3_reg(
         &self,
@@ -331,6 +358,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr4_reg(
         &self,
@@ -342,6 +370,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr5_reg(
         &self,
@@ -353,6 +382,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr6_reg(
         &self,
@@ -364,6 +394,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr7_reg(
         &self,
@@ -375,6 +406,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr8_reg(
         &self,
@@ -386,6 +418,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Receive/Transmit Buffer Register"]
     #[inline(always)]
     pub const fn uart_srbr_sthr9_reg(
         &self,
@@ -397,6 +430,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Software Reset Register."]
     #[inline(always)]
     pub const fn uart_srr_reg(
         &self,
@@ -408,6 +442,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow Request to Send"]
     #[inline(always)]
     pub const fn uart_srts_reg(
         &self,
@@ -419,6 +454,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow RCVR Trigger"]
     #[inline(always)]
     pub const fn uart_srt_reg(
         &self,
@@ -430,6 +466,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Shadow TX Empty Trigger"]
     #[inline(always)]
     pub const fn uart_stet_reg(
         &self,
@@ -441,6 +478,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Transmit FIFO Level"]
     #[inline(always)]
     pub const fn uart_tfl_reg(
         &self,
@@ -452,6 +490,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "Component Version"]
     #[inline(always)]
     pub const fn uart_ucv_reg(
         &self,
@@ -463,6 +502,7 @@ impl super::Uart1 {
         }
     }
 
+    #[doc = "UART Status register."]
     #[inline(always)]
     pub const fn uart_usr_reg(
         &self,
@@ -481,9 +521,11 @@ impl crate::sealed::RegSpec for UartCprReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Component Parameter Register"]
 pub type UartCprReg = crate::RegValueT<UartCprReg_SPEC>;
 
 impl UartCprReg {
+    #[doc = "Component Parameter Register"]
     #[inline(always)]
     pub fn cpr(
         self,
@@ -506,9 +548,11 @@ impl crate::sealed::RegSpec for UartCtrReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Component Type Register"]
 pub type UartCtrReg = crate::RegValueT<UartCtrReg_SPEC>;
 
 impl UartCtrReg {
+    #[doc = "Component Type Register"]
     #[inline(always)]
     pub fn ctr(
         self,
@@ -531,9 +575,11 @@ impl crate::sealed::RegSpec for UartHtxReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Halt TX"]
 pub type UartHtxReg = crate::RegValueT<UartHtxReg_SPEC>;
 
 impl UartHtxReg {
+    #[doc = "This register is use to halt transmissions for testing, so that the transmit FIFO can be filled by the master when FIFOs are implemented and enabled.\n0 = Halt TX disabled\n1 = Halt TX enabled\nNote, if FIFOs are implemented and not enabled, the setting of the halt TX register has no effect on operation."]
     #[inline(always)]
     pub fn uart_halt_tx(
         self,
@@ -555,9 +601,11 @@ impl crate::sealed::RegSpec for UartIerDlhReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Interrupt Enable Register"]
 pub type UartIerDlhReg = crate::RegValueT<UartIerDlhReg_SPEC>;
 
 impl UartIerDlhReg {
+    #[doc = "Interrupt Enable Register: PTIME, Programmable THRE Interrupt Mode Enable. This is used to enable/disable the generation of THRE Interrupt. 0 = disabled 1 = enabled Divisor Latch (High): Bit\\[7\\] of the 8 bit DLH register."]
     #[inline(always)]
     pub fn ptime_dlh7(
         self,
@@ -565,6 +613,7 @@ impl UartIerDlhReg {
         crate::common::RegisterFieldBool::<7,1,0,UartIerDlhReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Interrupt Enable Register: EDSSI, Enable Modem Status Interrupt. This is used to enable/disable the generation of Modem Status Interrupt. This is the fourth highest priority interrupt. 0 = disabled 1 = enabled Divisor Latch (High): Bit\\[3\\] of the 8 bit DLH register"]
     #[inline(always)]
     pub fn edssi_dlh3(
         self,
@@ -572,6 +621,7 @@ impl UartIerDlhReg {
         crate::common::RegisterFieldBool::<3,1,0,UartIerDlhReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Interrupt Enable Register: ELSI, Enable Receiver Line Status Interrupt. This is used to enable/disable the generation of Receiver Line Status Interrupt. This is the highest priority interrupt. 0 = disabled 1 = enabled Divisor Latch (High): Bit\\[2\\] of the 8 bit DLH register."]
     #[inline(always)]
     pub fn elsi_dhl2(
         self,
@@ -579,6 +629,7 @@ impl UartIerDlhReg {
         crate::common::RegisterFieldBool::<2,1,0,UartIerDlhReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Interrupt Enable Register: ETBEI, Enable Transmit Holding Register Empty Interrupt. This is used to enable/disable the generation of Transmitter Holding Register Empty Interrupt. This is the third highest priority interrupt. 0 = disabled 1 = enabled Divisor Latch (High): Bit\\[1\\] of the 8 bit DLH register."]
     #[inline(always)]
     pub fn etbei_dlh1(
         self,
@@ -586,6 +637,7 @@ impl UartIerDlhReg {
         crate::common::RegisterFieldBool::<1,1,0,UartIerDlhReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Interrupt Enable Register: ERBFI, Enable Received Data Available Interrupt. This is used to enable/disable the generation of Received Data Available Interrupt and the Character Timeout Interrupt (if in FIFO mode and FIFO\'s enabled). These are the second highest priority interrupts. 0 = disabled 1 = enabled Divisor Latch (High): Bit\\[0\\] of the 8 bit DLH register."]
     #[inline(always)]
     pub fn erbfi_dlh0(
         self,
@@ -607,9 +659,11 @@ impl crate::sealed::RegSpec for UartIirFcrReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Interrupt Identification Register/FIFO Control Register"]
 pub type UartIirFcrReg = crate::RegValueT<UartIirFcrReg_SPEC>;
 
 impl UartIirFcrReg {
+    #[doc = "Interrupt Identification Register, reading this register; FIFO Control Register, writing to this register. Interrupt Identification Register: Bits\\[7:6\\], FIFO\'s Enabled (or FIFOSE): This is used to indicate whether the FIFO\'s are enabled or disabled. 00 = disabled. 11 = enabled. Bits\\[3:0\\], Interrupt ID (or IID): This indicates the highest priority pending interrupt which can be one of the following types: 0000 = modem status. 0001 = no interrupt pending. 0010 = THR empty. 0100 = received data available. 0110 = receiver line status. 0111 = busy detect. 1100 = character timeout. Bits\\[7:6\\], RCVR Trigger (or RT):. This is used to select the trigger level in the receiver FIFO at which the Received Data Available Interrupt will be generated. In auto flow control mode it is used to determine when the rts_n signal will be de-asserted. It also determines when the dma_rx_req_n signal will be asserted when in certain modes of operation. The following trigger levels are supported: 00 = 1 character in the FIFO 01 = FIFO 1/4 full 10 = FIFO 1/2 full 11 = FIFO 2 less than full Bits\\[5:4\\], TX Empty Trigger (or TET): This is used to select the empty threshold level at which the THRE Interrupts will be generated when the mode is active. It also determines when the dma_tx_req_n signal will be asserted when in certain modes of operation. The following trigger levels are supported: 00 = FIFO empty 01 = 2 characters in the FIFO 10 = FIFO 1/4 full 11 = FIFO 1/2 full Bit\\[3\\], DMA Mode (or DMAM): This determines the DMA signalling mode used for the dma_tx_req_n and dma_rx_req_n output signals. 0 = mode 0 1 = mode 1 Bit\\[2\\], XMIT FIFO Reset (or XFIFOR): This resets the control portion of the transmit FIFO and treats the FIFO as empty. Note that this bit is \'self-clearing\' and it is not necessary to clear this bit. Bit\\[1\\], RCVR FIFO Reset (or RFIFOR): This resets the control portion of the receive FIFO and treats the FIFO as empty. Note that this bit is \'self-clearing\' and it is not necessary to clear this bit. Bit\\[0\\], FIFO Enable (or FIFOE): This enables/disables the transmit (XMIT) and receive (RCVR) FIFO\'s. Whenever the value of this bit is changed both the XMIT and RCVR controller portion of FIFO\'s will be reset."]
     #[inline(always)]
     pub fn iir_fcr(
         self,
@@ -649,9 +703,11 @@ impl crate::sealed::RegSpec for UartLcrReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Line Control Register"]
 pub type UartLcrReg = crate::RegValueT<UartLcrReg_SPEC>;
 
 impl UartLcrReg {
+    #[doc = "Divisor Latch Access Bit.\nThis bit is used to enable reading and writing of the Divisor Latch register (DLL and DLH) to set the baud rate of the UART.\nThis bit must be cleared after initial baud rate setup in order to access other registers."]
     #[inline(always)]
     pub fn uart_dlab(
         self,
@@ -659,6 +715,7 @@ impl UartLcrReg {
         crate::common::RegisterFieldBool::<7,1,0,UartLcrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Break Control Bit.\nThis is used to cause a break condition to be transmitted to the receiving device. If set to one the serial output is forced to the spacing (logic 0) state. When not in Loopback Mode, as determined by MCR\\[4\\], the sout line is forced low until the Break bit is cleared. If active (MCR\\[6\\] set to one) the sir_out_n line is continuously pulsed. When in Loopback Mode, the break condition is internally looped back to the receiver and the sir_out_n line is forced low."]
     #[inline(always)]
     pub fn uart_bc(
         self,
@@ -666,6 +723,7 @@ impl UartLcrReg {
         crate::common::RegisterFieldBool::<6,1,0,UartLcrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Even Parity Select.\nThis is used to select between even and odd parity, when parity is enabled (PEN set to one). If set to one, an even number of logic 1s is transmitted or checked. If set to zero, an odd number of logic 1s is transmitted or checked."]
     #[inline(always)]
     pub fn uart_eps(
         self,
@@ -673,6 +731,7 @@ impl UartLcrReg {
         crate::common::RegisterFieldBool::<4,1,0,UartLcrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Parity Enable.\nThis bit is used to enable and disable parity generation and detection in transmitted and received serial character respectively.\n0 = parity disabled\n1 = parity enabled"]
     #[inline(always)]
     pub fn uart_pen(
         self,
@@ -680,6 +739,7 @@ impl UartLcrReg {
         crate::common::RegisterFieldBool::<3,1,0,UartLcrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Number of stop bits.\nThis is used to select the number of stop bits per character that the peripheral transmits and receives. If set to zero, one stop bit is transmitted in the serial data.\nIf set to one and the data bits are set to 5 (LCR\\[1:0\\] set to zero) one and a half stop bits is transmitted. Otherwise, two stop bits are transmitted. Note that regardless of the number of stop bits selected, the receiver checks only the first stop bit.\n0 = 1 stop bit\n1 = 1.5 stop bits when DLS (LCR\\[1:0\\]) is zero, else 2 stop bit"]
     #[inline(always)]
     pub fn uart_stop(
         self,
@@ -687,6 +747,7 @@ impl UartLcrReg {
         crate::common::RegisterFieldBool::<2,1,0,UartLcrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Data Length Select.\nThis is used to select the number of data bits per character that the peripheral transmits and receives. The number of bit that may be selected areas follows:\n00 = 5 bits\n01 = 6 bits\n10 = 7 bits\n11 = 8 bits"]
     #[inline(always)]
     pub fn uart_dls(
         self,
@@ -709,9 +770,11 @@ impl crate::sealed::RegSpec for UartLpdlhReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Low Power Divisor Latch High"]
 pub type UartLpdlhReg = crate::RegValueT<UartLpdlhReg_SPEC>;
 
 impl UartLpdlhReg {
+    #[doc = "This register makes up the upper 8-bits of a 16-bit, read/write, Low Power Divisor Latch register that contains the baud rate divisor for the UART, which must give a baud rate of 115.2K. This is required for SIR Low Power (minimum pulse width) detection at the receiver. This register may be accessed only when the DLAB bit (LCR\\[7\\]) is set.\nThe output low-power baud rate is equal to the serial clock (sclk) frequency divided by sixteen times the value of the baud rate divisor, as follows:\nLow power baud rate = (serial clock frequency)/(16* divisor) Therefore, a divisor must be selected to give a baud rate of 115.2K.\nNOTE: When the Low Power Divisor Latch registers (LPDLL and LPDLH) are set to 0, the low-power baud clock is disabled and no low-power pulse detection (or any pulse detection) occurs at the receiver. Also, once the LPDLH is set, at least eight clock cycles of the slowest UART Ctrl clock should be allowed to pass before transmitting or receiving data."]
     #[inline(always)]
     pub fn uart_lpdlh(
         self,
@@ -734,9 +797,11 @@ impl crate::sealed::RegSpec for UartLpdllReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Low Power Divisor Latch Low"]
 pub type UartLpdllReg = crate::RegValueT<UartLpdllReg_SPEC>;
 
 impl UartLpdllReg {
+    #[doc = "This register makes up the lower 8-bits of a 16-bit, read/write, Low Power Divisor Latch register that contains the baud rate divisor for the UART, which must give a baud rate of 115.2K. This is required for SIR Low Power (minimum pulse width) detection at the receiver. This register may be accessed only when the DLAB bit (LCR\\[7\\]) is set.\nThe output low-power baud rate is equal to the serial clock (sclk) frequency divided by sixteen times the value of the baud rate divisor, as follows:\nLow power baud rate = (serial clock frequency)/(16* divisor)\nTherefore, a divisor must be selected to give a baud rate of 115.2K.\nNOTE: When the Low Power Divisor Latch registers (LPDLL and LPDLH) are set to 0, the low-power baud clock is disabled and no low-power pulse detection (or any pulse detection) occurs at the receiver. Also, once the LPDLL is set, at least eight clock cycles of the slowest UART Ctrl clock should be allowed to pass before transmitting or receiving data."]
     #[inline(always)]
     pub fn uart_lpdll(
         self,
@@ -759,9 +824,11 @@ impl crate::sealed::RegSpec for UartLsrReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Line Status Register"]
 pub type UartLsrReg = crate::RegValueT<UartLsrReg_SPEC>;
 
 impl UartLsrReg {
+    #[doc = "Receiver FIFO Error bit.\nThis bit is only relevant when FIFOs are enabled (FCR\\[0\\] set to one). This is used to indicate if there is at least one parity error, framing error, or break indication in the FIFO.\n0 = no error in RX FIFO\n1 = error in RX FIFO\nThis bit is cleared when the LSR is read and the character with the error is at the top of the receiver FIFO and there are no subsequent errors in the FIFO."]
     #[inline(always)]
     pub fn uart_rfe(
         self,
@@ -769,6 +836,7 @@ impl UartLsrReg {
         crate::common::RegisterFieldBool::<7,1,0,UartLsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Transmitter Empty bit.\nIf FIFOs enabled (FCR\\[0\\] set to one), this bit is set whenever the Transmitter Shift Register and the FIFO are both empty. If FIFOs are disabled, this bit is set whenever the Transmitter Holding Register and the Transmitter Shift Register are both empty."]
     #[inline(always)]
     pub fn uart_temt(
         self,
@@ -776,6 +844,7 @@ impl UartLsrReg {
         crate::common::RegisterFieldBool::<6,1,0,UartLsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Transmit Holding Register Empty bit.\nIf THRE mode is disabled (IER\\[7\\] set to zero) and regardless of FIFO\'s being implemented/enabled or not, this bit indicates that the THR or TX FIFO is empty.\nThis bit is set whenever data is transferred from the THR or TX FIFO to the transmitter shift register and no new data has been written to the THR or TX FIFO. This also causes a THRE Interrupt to occur, if the THRE Interrupt is enabled. If both modes are active (IER\\[7\\] set to one and FCR\\[0\\] set to one respectively), the functionality is switched to indicate the transmitter FIFO is full, and no longer controls THRE interrupts, which are then controlled by the FCR\\[5:4\\] threshold setting."]
     #[inline(always)]
     pub fn uart_thre(
         self,
@@ -783,6 +852,7 @@ impl UartLsrReg {
         crate::common::RegisterFieldBool::<5,1,0,UartLsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Break Interrupt bit.\nThis is used to indicate the detection of a break sequence on the serial input data.\nIf in UART mode (SIR_MODE == Disabled), it is set whenever the serial input, sin, is held in a logic \'0\' state for longer than the sum of start time + data bits + parity + stop bits.\nIf in infrared mode (SIR_MODE == Enabled), it is set whenever the serial input, sir_in, is continuously pulsed to logic \'0\' for longer than the sum of start time + data bits + parity + stop bits. A break condition on serial input causes one and only one character, consisting of all zeros, to be received by the UART.\nIn the FIFO mode, the character associated with the break condition is carried through the FIFO and is revealed when the character is at the top of the FIFO.\nReading the LSR clears the BI bit. In the non-FIFO mode, the BI indication occurs immediately and persists until the LSR is read."]
     #[inline(always)]
     pub fn uart_b1(
         self,
@@ -790,6 +860,7 @@ impl UartLsrReg {
         crate::common::RegisterFieldBool::<4,1,0,UartLsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Framing Error bit.\nThis is used to indicate the occurrence of a framing error in the receiver. A framing error occurs when the receiver does not detect a valid STOP bit in the received data.\nIn the FIFO mode, since the framing error is associated with a character received, it is revealed when the character with the framing error is at the top of the FIFO.\nWhen a framing error occurs, the UART tries to resynchronize. It does this by assuming that the error was due to the start bit of the next character and then continues receiving the other bit i.e. data, and/or parity and stop. It should be noted that the Framing Error (FE) bit (LSR\\[3\\]) is set if a break interrupt has occurred, as indicated by Break Interrupt (BI) bit (LSR\\[4\\]).\n0 = no framing error\n1 = framing error\nReading the LSR clears the FE bit."]
     #[inline(always)]
     pub fn uart_fe(
         self,
@@ -797,6 +868,7 @@ impl UartLsrReg {
         crate::common::RegisterFieldBool::<3,1,0,UartLsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Parity Error bit.\nThis is used to indicate the occurrence of a parity error in the receiver if the Parity Enable (PEN) bit (LCR\\[3\\]) is set.\nIn the FIFO mode, since the parity error is associated with a character received, it is revealed when the character with the parity error arrives at the top of the FIFO.\nIt should be noted that the Parity Error (PE) bit (LSR\\[2\\]) is set if a break interrupt has occurred, as indicated by Break Interrupt (BI) bit (LSR\\[4\\]).\n0 = no parity error\n1 = parity error\nReading the LSR clears the PE bit."]
     #[inline(always)]
     pub fn uart_pe(
         self,
@@ -804,6 +876,7 @@ impl UartLsrReg {
         crate::common::RegisterFieldBool::<2,1,0,UartLsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Overrun error bit.\nThis is used to indicate the occurrence of an overrun error.\nThis occurs if a new data character was received before the previous data was read.\nIn the non-FIFO mode, the OE bit is set when a new character arrives in the receiver before the previous character was read from the RBR. When this happens, the data in the RBR is overwritten. In the FIFO mode, an overrun error occurs when the FIFO is full and a new character arrives at the receiver. The data in the FIFO is retained and the data in the receive shift register is lost.\n0 = no overrun error\n1 = overrun error\nReading the LSR clears the OE bit."]
     #[inline(always)]
     pub fn uart_oe(
         self,
@@ -811,6 +884,7 @@ impl UartLsrReg {
         crate::common::RegisterFieldBool::<1,1,0,UartLsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Data Ready bit.\nThis is used to indicate that the receiver contains at least one character in the RBR or the receiver FIFO.\n0 = no data ready\n1 = data ready\nThis bit is cleared when the RBR is read in non-FIFO mode, or when the receiver FIFO is empty, in FIFO mode."]
     #[inline(always)]
     pub fn uart_dr(
         self,
@@ -832,9 +906,11 @@ impl crate::sealed::RegSpec for UartMcrReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Modem Control Register"]
 pub type UartMcrReg = crate::RegValueT<UartMcrReg_SPEC>;
 
 impl UartMcrReg {
+    #[doc = "SIR Mode Enable.\nThis is used to enable/disable the IrDA SIR Mode features as described in \'IrDA 1.0 SIR Protocol\' on page 53.\n0 = IrDA SIR Mode disabled\n1 = IrDA SIR Mode enabled"]
     #[inline(always)]
     pub fn uart_sire(
         self,
@@ -842,6 +918,7 @@ impl UartMcrReg {
         crate::common::RegisterFieldBool::<6,1,0,UartMcrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Auto Flow Control Enable.\nWhen FIFOs are enabled and the Auto Flow Control Enable (AFCE) bit is set, hardware Auto Flow Control is enabled via CTS and RTS.\n0 = Auto Flow Control Mode disabled\n1 = Auto Flow Control Mode enabled"]
     #[inline(always)]
     pub fn uart_afce(
         self,
@@ -849,6 +926,7 @@ impl UartMcrReg {
         crate::common::RegisterFieldBool::<5,1,0,UartMcrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "LoopBack Bit.\nThis is used to put the UART into a diagnostic mode for test purposes.\nIf operating in UART mode (SIR_MODE not active, MCR\\[6\\] set to zero), data on the sout line is held high, while serial data output is looped back to the sin line, internally. In this mode all the interrupts are fully functional. Also, in loopback mode, the modem control inputs (dsr_n, cts_n, ri_n, dcd_n) are disconnected and the modem control outputs (dtr_n, rts_n, out1_n, out2_n) are looped back to the inputs, internally.\nIf operating in infrared mode (SIR_MODE active, MCR\\[6\\] set to one), data on the sir_out_n line is held low, while serial data output is inverted and looped back to the sir_in line."]
     #[inline(always)]
     pub fn uart_lb(
         self,
@@ -856,6 +934,7 @@ impl UartMcrReg {
         crate::common::RegisterFieldBool::<4,1,0,UartMcrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "OUT2.\nThis is used to directly control the user-designated Output2 (out2_n) output. The value written to this location is inverted and driven out on out2_n, that is:\n0 = out2_n de-asserted (logic 1)\n1 = out2_n asserted (logic 0)\nNote that in Loopback mode (MCR\\[4\\] set to one), the out2_n output is held inactive high while the value of this location is internally looped back to an input."]
     #[inline(always)]
     pub fn uart_out2(
         self,
@@ -863,6 +942,7 @@ impl UartMcrReg {
         crate::common::RegisterFieldBool::<3,1,0,UartMcrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "OUT1.\nThis is used to directly control the user-designated Output1 (out1_n) output. The value written to this location is inverted and driven out on out1_n, that is:\n0 = out1_n de-asserted (logic 1)\n1 = out1_n asserted (logic 0)\nNote that in Loopback mode (MCR\\[4\\] set to one), the out1_n output is held inactive high while the value of this location is internally looped back to an input."]
     #[inline(always)]
     pub fn uart_out1(
         self,
@@ -870,6 +950,7 @@ impl UartMcrReg {
         crate::common::RegisterFieldBool::<2,1,0,UartMcrReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Request to Send.\nThis is used to directly control the Request to Send (rts_n) output. The Request To Send (rts_n) output is used to inform the modem or data set that the UART is ready to exchange data.\nWhen Auto Flow Control is disabled (MCR\\[5\\] set to zero), the rts_n signal is set low by programming MCR\\[1\\] (RTS) to a high. When Auto Flow Control is enabled (MCR\\[5\\] set to one) and FIFOs are enabled (FCR\\[0\\] set to one), the rts_n output is controlled in the same way, but is also gated with the receiver FIFO threshold trigger (rts_n is inactive high when above the threshold). The rts_n signal is de-asserted when MCR\\[1\\] is set low.\nNote that in Loopback mode (MCR\\[4\\] set to one), the rts_n output is held inactive (high) while the value of this location is internally looped back to an input."]
     #[inline(always)]
     pub fn uart_rts(
         self,
@@ -891,9 +972,11 @@ impl crate::sealed::RegSpec for UartMsrReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Modem Status Register"]
 pub type UartMsrReg = crate::RegValueT<UartMsrReg_SPEC>;
 
 impl UartMsrReg {
+    #[doc = "Data Carrier Detect.\nThis is used to indicate the current state of the modem control line dcd_n. This bit is the complement of dcd_n. When the Data Carrier Detect input (dcd_n) is asserted it is an indication that the carrier has been detected by the modem or data set.\n0 = dcd_n input is de-asserted (logic 1)\n1 = dcd_n input is asserted (logic 0)\nIn Loopback Mode (MCR\\[4\\] set to one), DCD is the same as MCR\\[3\\] (Out2)."]
     #[inline(always)]
     pub fn uart_dcd(
         self,
@@ -901,6 +984,7 @@ impl UartMsrReg {
         crate::common::RegisterFieldBool::<7,1,0,UartMsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Ring Indicator.\nThis is used to indicate the current state of the modem control line ri_n. This bit is the complement of ri_n. When the Ring Indicator input (ri_n) is asserted it is an indication that a telephone ringing signal has been received by the modem or data set.\n0 = ri_n input is de-asserted (logic 1)\n1 = ri_n input is asserted (logic 0)\nIn Loopback Mode (MCR\\[4\\] set to one), RI is the same as MCR\\[2\\] (Out1)."]
     #[inline(always)]
     pub fn uart_r1(
         self,
@@ -908,6 +992,7 @@ impl UartMsrReg {
         crate::common::RegisterFieldBool::<6,1,0,UartMsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Clear to Send.\nThis is used to indicate the current state of the modem control line cts_n. This bit is the complement of cts_n. When the Clear to Send input (cts_n) is asserted it is an indication that the modem or data set is ready to exchange data with the UART Ctrl.\n0 = cts_n input is de-asserted (logic 1)\n1 = cts_n input is asserted (logic 0)\nIn Loopback Mode (MCR\\[4\\] = 1), CTS is the same as MCR\\[1\\] (RTS)."]
     #[inline(always)]
     pub fn uart_cts(
         self,
@@ -915,6 +1000,7 @@ impl UartMsrReg {
         crate::common::RegisterFieldBool::<4,1,0,UartMsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Delta Data Carrier Detect.\nThis is used to indicate that the modem control line dcd_n has changed since the last time the MSR was read.\n0 = no change on dcd_n since last read of MSR\n1 = change on dcd_n since last read of MSR\nReading the MSR clears the DDCD bit. In Loopback Mode (MCR\\[4\\] = 1), DDCD reflects changes on MCR\\[3\\] (Out2).\nNote, if the DDCD bit is not set and the dcd_n signal is asserted (low) and a reset occurs (software or otherwise), then the DDCD bit is set when the reset is removed if the dcd_n signal remains asserted."]
     #[inline(always)]
     pub fn uart_ddcd(
         self,
@@ -922,6 +1008,7 @@ impl UartMsrReg {
         crate::common::RegisterFieldBool::<3,1,0,UartMsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Trailing Edge of Ring Indicator.\nThis is used to indicate that a change on the input ri_n (from an active-low to an inactive-high state) has occurred since the last time the MSR was read.\n0 = no change on ri_n since last read of MSR\n1 = change on ri_n since last read of MSR\nReading the MSR clears the TERI bit. In Loopback Mode (MCR\\[4\\] = 1), TERI reflects when MCR\\[2\\] (Out1) has changed state from a high to a low."]
     #[inline(always)]
     pub fn uart_teri(
         self,
@@ -929,6 +1016,7 @@ impl UartMsrReg {
         crate::common::RegisterFieldBool::<2,1,0,UartMsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Delta Clear to Send.\nThis is used to indicate that the modem control line cts_n has changed since the last time the MSR was read.\n0 = no change on cts_n since last read of MSR\n1 = change on cts_n since last read of MSR\nReading the MSR clears the DCTS bit. In Loopback Mode (MCR\\[4\\] = 1), DCTS reflects changes on MCR\\[1\\] (RTS).\nNote, if the DCTS bit is not set and the cts_n signal is asserted (low) and a reset occurs (software or otherwise), then the DCTS bit is set when the reset is removed if the cts_n signal remains asserted."]
     #[inline(always)]
     pub fn uart_dcts(
         self,
@@ -950,9 +1038,11 @@ impl crate::sealed::RegSpec for UartRbrThrDllReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Receive Buffer Register"]
 pub type UartRbrThrDllReg = crate::RegValueT<UartRbrThrDllReg_SPEC>;
 
 impl UartRbrThrDllReg {
+    #[doc = "Receive Buffer Register: This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Transmit Holding Register: This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost. Divisor Latch (Low): This register makes up the lower 8-bits of a 16-bit, read/write, Divisor Latch register that contains the baud rate divisor for the UART. This register may only be accessed when the DLAB bit (LCR\\[7\\]) is set. The output baud rate is equal to the serial clock (sclk) frequency divided by sixteen times the value of the baud rate divisor, as follows: baud rate = (serial clock freq) / (16 * divisor) Note that with the Divisor Latch Registers (DLL and DLH) set to zero, the baud clock is disabled and no serial communications will occur. Also, once the DLL is set, at least 8 clock cycles of the slowest DW_apb_uart clock should be allowed to pass before transmitting or receiving data."]
     #[inline(always)]
     pub fn rbr_thr_dll(
         self,
@@ -984,9 +1074,11 @@ impl crate::sealed::RegSpec for UartRflReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Receive FIFO Level."]
 pub type UartRflReg = crate::RegValueT<UartRflReg_SPEC>;
 
 impl UartRflReg {
+    #[doc = "Receive FIFO Level.\nThis is indicates the number of data entries in the receive FIFO."]
     #[inline(always)]
     pub fn uart_receive_fifo_level(
         self,
@@ -1009,9 +1101,11 @@ impl crate::sealed::RegSpec for UartSbcrReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Break Control Register"]
 pub type UartSbcrReg = crate::RegValueT<UartSbcrReg_SPEC>;
 
 impl UartSbcrReg {
+    #[doc = "Shadow Break Control Bit.\nThis is a shadow register for the Break bit (LCR\\[6\\]), this can be used to remove the burden of having to performing a read modify write on the LCR. This is used to cause a break condition to be transmitted to the receiving device.\nIf set to one the serial output is forced to the spacing (logic 0) state. When not in Loopback Mode, as determined by MCR\\[4\\], the sout line is forced low until the Break bit is cleared.\nIf SIR_MODE active (MCR\\[6\\] = 1) the sir_out_n line is continuously pulsed. When in Loopback Mode, the break condition is internally looped back to the receiver."]
     #[inline(always)]
     pub fn uart_shadow_break_control(
         self,
@@ -1033,9 +1127,11 @@ impl crate::sealed::RegSpec for UartScrReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Scratchpad Register"]
 pub type UartScrReg = crate::RegValueT<UartScrReg_SPEC>;
 
 impl UartScrReg {
+    #[doc = "This register is for programmers to use as a temporary storage space. It has no defined purpose in the UART Ctrl."]
     #[inline(always)]
     pub fn uart_scratch_pad(
         self,
@@ -1058,9 +1154,11 @@ impl crate::sealed::RegSpec for UartSdmamReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow DMA Mode"]
 pub type UartSdmamReg = crate::RegValueT<UartSdmamReg_SPEC>;
 
 impl UartSdmamReg {
+    #[doc = "Shadow DMA Mode.\nThis is a shadow register for the DMA mode bit (FCR\\[3\\]). This can be used to remove the burden of having to store the previously written value to the FCR in memory and having to mask this value so that only the DMA Mode bit gets updated. This determines the DMA signalling mode used for the dma_tx_req_n and dma_rx_req_n output signals.\n0 = mode 0\n1 = mode 1"]
     #[inline(always)]
     pub fn uart_shadow_dma_mode(
         self,
@@ -1082,9 +1180,11 @@ impl crate::sealed::RegSpec for UartSfeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow FIFO Enable"]
 pub type UartSfeReg = crate::RegValueT<UartSfeReg_SPEC>;
 
 impl UartSfeReg {
+    #[doc = "Shadow FIFO Enable.\nThis is a shadow register for the FIFO enable bit (FCR\\[0\\]). This can be used to remove the burden of having to store the previously written value to the FCR in memory and having to mask this value so that only the FIFO enable bit gets updated.This enables/disables the transmit (XMIT) and receive (RCVR) FIFOs. If this bit is set to zero (disabled) after being enabled then both the XMIT and RCVR controller portion of FIFOs are reset."]
     #[inline(always)]
     pub fn uart_shadow_fifo_enable(
         self,
@@ -1106,9 +1206,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr0Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr0Reg = crate::RegValueT<UartSrbrSthr0Reg_SPEC>;
 
 impl UartSrbrSthr0Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1140,9 +1242,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr10Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr10Reg = crate::RegValueT<UartSrbrSthr10Reg_SPEC>;
 
 impl UartSrbrSthr10Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1182,9 +1286,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr11Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr11Reg = crate::RegValueT<UartSrbrSthr11Reg_SPEC>;
 
 impl UartSrbrSthr11Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1224,9 +1330,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr12Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr12Reg = crate::RegValueT<UartSrbrSthr12Reg_SPEC>;
 
 impl UartSrbrSthr12Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1266,9 +1374,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr13Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr13Reg = crate::RegValueT<UartSrbrSthr13Reg_SPEC>;
 
 impl UartSrbrSthr13Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1308,9 +1418,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr14Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr14Reg = crate::RegValueT<UartSrbrSthr14Reg_SPEC>;
 
 impl UartSrbrSthr14Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1350,9 +1462,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr15Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr15Reg = crate::RegValueT<UartSrbrSthr15Reg_SPEC>;
 
 impl UartSrbrSthr15Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1392,9 +1506,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr1Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr1Reg = crate::RegValueT<UartSrbrSthr1Reg_SPEC>;
 
 impl UartSrbrSthr1Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1426,9 +1542,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr2Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr2Reg = crate::RegValueT<UartSrbrSthr2Reg_SPEC>;
 
 impl UartSrbrSthr2Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1460,9 +1578,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr3Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr3Reg = crate::RegValueT<UartSrbrSthr3Reg_SPEC>;
 
 impl UartSrbrSthr3Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1494,9 +1614,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr4Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr4Reg = crate::RegValueT<UartSrbrSthr4Reg_SPEC>;
 
 impl UartSrbrSthr4Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1528,9 +1650,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr5Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr5Reg = crate::RegValueT<UartSrbrSthr5Reg_SPEC>;
 
 impl UartSrbrSthr5Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1562,9 +1686,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr6Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr6Reg = crate::RegValueT<UartSrbrSthr6Reg_SPEC>;
 
 impl UartSrbrSthr6Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1596,9 +1722,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr7Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr7Reg = crate::RegValueT<UartSrbrSthr7Reg_SPEC>;
 
 impl UartSrbrSthr7Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1630,9 +1758,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr8Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr8Reg = crate::RegValueT<UartSrbrSthr8Reg_SPEC>;
 
 impl UartSrbrSthr8Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1664,9 +1794,11 @@ impl crate::sealed::RegSpec for UartSrbrSthr9Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Receive/Transmit Buffer Register"]
 pub type UartSrbrSthr9Reg = crate::RegValueT<UartSrbrSthr9Reg_SPEC>;
 
 impl UartSrbrSthr9Reg {
+    #[doc = "Shadow Receive Buffer Register x: This is a shadow register for the RBR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains the data byte received on the serial input port (sin) in UART mode or the serial infrared input (sir_in) in infrared mode. The data in this register is valid only if the Data Ready (DR) bit in the Line status Register (LSR) is set. If FIFOs are disabled (FCR\\[0\\] set to zero), the data in the RBR must be read before the next data arrives, otherwise it will be overwritten, resulting in an overrun error. If FIFOs are enabled (FCR\\[0\\] set to one), this register accesses the head of the receive FIFO. If the receive FIFO is full and this register is not read before the next data character arrives, then the data already in the FIFO will be preserved but any incoming data will be lost. An overrun error will also occur. Shadow Transmit Holding Register 0: This is a shadow register for the THR and has been allocated sixteen 32-bit locations so as to accommodate burst accesses from the master. This register contains data to be transmitted on the serial output port (sout) in UART mode or the serial infrared output (sir_out_n) in infrared mode. Data should only be written to the THR when the THR Empty (THRE) bit (LSR\\[5\\]) is set. If FIFO\'s are disabled (FCR\\[0\\] set to zero) and THRE is set, writing a single character to the THR clears the THRE. Any additional writes to the THR before the THRE is set again causes the THR data to be overwritten. If FIFO\'s are enabled (FCR\\[0\\] set to one) and THRE is set, x number of characters of data may be written to the THR before the FIFO is full. The number x (default=16) is determined by the value of FIFO Depth that you set during configuration. Any attempt to write data when the FIFO is full results in the write data being lost."]
     #[inline(always)]
     pub fn srbr_sthrx(
         self,
@@ -1698,9 +1830,11 @@ impl crate::sealed::RegSpec for UartSrrReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Software Reset Register."]
 pub type UartSrrReg = crate::RegValueT<UartSrrReg_SPEC>;
 
 impl UartSrrReg {
+    #[doc = "XMIT FIFO Reset.\nThis is a shadow register for the XMIT FIFO Reset bit (FCR\\[2\\]). This can be used to remove the burden on software having to store previously written FCR values (which are pretty static) just to reset the transmit FIFO. This resets the control portion of the transmit FIFO and treats the FIFO as empty. Note that this bit is \'self-clearing\'. It is not necessary to clear this bit."]
     #[inline(always)]
     pub fn uart_xfr(
         self,
@@ -1708,6 +1842,7 @@ impl UartSrrReg {
         crate::common::RegisterFieldBool::<2,1,0,UartSrrReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "RCVR FIFO Reset.\nThis is a shadow register for the RCVR FIFO Reset bit (FCR\\[1\\]). This can be used to remove the burden on software having to store previously written FCR values (which are pretty static) just to reset the receive FIFO This resets the control portion of the receive FIFO and treats the FIFO as empty.\nNote that this bit is \'self-clearing\'. It is not necessary to clear this bit."]
     #[inline(always)]
     pub fn uart_rfr(
         self,
@@ -1715,6 +1850,7 @@ impl UartSrrReg {
         crate::common::RegisterFieldBool::<1,1,0,UartSrrReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "UART Reset. This asynchronously resets the UART Ctrl and synchronously removes the reset assertion. For a two clock implementation both pclk and sclk domains are reset."]
     #[inline(always)]
     pub fn uart_ur(
         self,
@@ -1736,9 +1872,11 @@ impl crate::sealed::RegSpec for UartSrtsReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow Request to Send"]
 pub type UartSrtsReg = crate::RegValueT<UartSrtsReg_SPEC>;
 
 impl UartSrtsReg {
+    #[doc = "Shadow Request to Send.\nThis is a shadow register for the RTS bit (MCR\\[1\\]), this can be used to remove the burden of having to perform a read-modify-write on the MCR. This is used to directly control the Request to Send (rts_n) output. The Request To Send (rts_n) output is used to inform the modem or data set that the UART Ctrl is ready to exchange data.\nWhen Auto Flow Control is disabled (MCR\\[5\\] = 0), the rts_n signal is set low by programming MCR\\[1\\] (RTS) to a high.\nWhen Auto Flow Control is enabled (MCR\\[5\\] = 1) and FIFOs are enabled (FCR\\[0\\] = 1), the rts_n output is controlled in the same way, but is also gated with the receiver FIFO threshold trigger (rts_n is inactive high when above the threshold).\nNote that in Loopback mode (MCR\\[4\\] = 1), the rts_n output is held inactive-high while the value of this location is internally looped back to an input."]
     #[inline(always)]
     pub fn uart_shadow_request_to_send(
         self,
@@ -1760,9 +1898,11 @@ impl crate::sealed::RegSpec for UartSrtReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow RCVR Trigger"]
 pub type UartSrtReg = crate::RegValueT<UartSrtReg_SPEC>;
 
 impl UartSrtReg {
+    #[doc = "Shadow RCVR Trigger.\nThis is a shadow register for the RCVR trigger bits (FCR\\[7:6\\]). This can be used to remove the burden of having to store the previously written value to the FCR in memory and having to mask this value so that only the RCVR trigger bit gets updated.\nThis is used to select the trigger level in the receiver FIFO at which the Received Data Available Interrupt is generated. It also determines when the dma_rx_req_n signal is asserted when DMA Mode (FCR\\[3\\]) = 1. The following trigger levels are supported:\n00 = 1 character in the FIFO\n01 = FIFO Â¼ full\n10 = FIFO Â½ full\n11 = FIFO 2 less than full"]
     #[inline(always)]
     pub fn uart_shadow_rcvr_trigger(
         self,
@@ -1785,9 +1925,11 @@ impl crate::sealed::RegSpec for UartStetReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Shadow TX Empty Trigger"]
 pub type UartStetReg = crate::RegValueT<UartStetReg_SPEC>;
 
 impl UartStetReg {
+    #[doc = "Shadow TX Empty Trigger.\nThis is a shadow register for the TX empty trigger bits (FCR\\[5:4\\]). This can be used to remove the burden of having to store the previously written value to the FCR in memory and having to mask this value so that only the TX empty trigger bit gets updated.\nThis is used to select the empty threshold level at which the THRE Interrupts are generated when the mode is active. The following trigger levels are supported:\n00 = FIFO empty\n01 = 2 characters in the FIFO\n10 = FIFO Â¼ full\n11 = FIFO Â½ full"]
     #[inline(always)]
     pub fn uart_shadow_tx_empty_trigger(
         self,
@@ -1810,9 +1952,11 @@ impl crate::sealed::RegSpec for UartTflReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Transmit FIFO Level"]
 pub type UartTflReg = crate::RegValueT<UartTflReg_SPEC>;
 
 impl UartTflReg {
+    #[doc = "Transmit FIFO Level.\nThis is indicates the number of data entries in the transmit FIFO."]
     #[inline(always)]
     pub fn uart_transmit_fifo_level(
         self,
@@ -1835,9 +1979,11 @@ impl crate::sealed::RegSpec for UartUcvReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Component Version"]
 pub type UartUcvReg = crate::RegValueT<UartUcvReg_SPEC>;
 
 impl UartUcvReg {
+    #[doc = "Component Version"]
     #[inline(always)]
     pub fn ucv(
         self,
@@ -1860,9 +2006,11 @@ impl crate::sealed::RegSpec for UartUsrReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "UART Status register."]
 pub type UartUsrReg = crate::RegValueT<UartUsrReg_SPEC>;
 
 impl UartUsrReg {
+    #[doc = "Receive FIFO Full.\nThis is used to indicate that the receive FIFO is completely full.\n0 = Receive FIFO not full\n1 = Receive FIFO Full\nThis bit is cleared when the RX FIFO is no longer full."]
     #[inline(always)]
     pub fn uart_rff(
         self,
@@ -1870,6 +2018,7 @@ impl UartUsrReg {
         crate::common::RegisterFieldBool::<4,1,0,UartUsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Receive FIFO Not Empty.\nThis is used to indicate that the receive FIFO contains one or more entries.\n0 = Receive FIFO is empty\n1 = Receive FIFO is not empty\nThis bit is cleared when the RX FIFO is empty."]
     #[inline(always)]
     pub fn uart_rfne(
         self,
@@ -1877,6 +2026,7 @@ impl UartUsrReg {
         crate::common::RegisterFieldBool::<3,1,0,UartUsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Transmit FIFO Empty.\nThis is used to indicate that the transmit FIFO is completely empty.\n0 = Transmit FIFO is not empty\n1 = Transmit FIFO is empty\nThis bit is cleared when the TX FIFO is no longer empty."]
     #[inline(always)]
     pub fn uart_tfe(
         self,
@@ -1884,6 +2034,7 @@ impl UartUsrReg {
         crate::common::RegisterFieldBool::<2,1,0,UartUsrReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Transmit FIFO Not Full.\nThis is used to indicate that the transmit FIFO in not full.\n0 = Transmit FIFO is full\n1 = Transmit FIFO is not full\nThis bit is cleared when the TX FIFO is full."]
     #[inline(always)]
     pub fn uart_tfnf(
         self,

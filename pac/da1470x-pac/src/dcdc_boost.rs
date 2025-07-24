@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:52 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -110,6 +110,7 @@ impl crate::sealed::RegSpec for BoostCtrlReg0_SPEC {
 pub type BoostCtrlReg0 = crate::RegValueT<BoostCtrlReg0_SPEC>;
 
 impl BoostCtrlReg0 {
+    #[doc = "Delay before generating next comparator clock after a timeout event on the P switch, allows inductor current to drop to zero\n0x0: Disabled\n0x1: 250 ns\n0x2: 500 ns\n0x3: 750 ns\n0x4: 1000 ns (default)\n0x5: 1250 ns\n0x6: 1500 ns\n0x7: 1750 ns\n0x8: 2000 ns\n0x9: 2250 ns\n0xA: 2500 ns\n0xB: 2750 ns\n0xC: 3000 ns\n0xD: 3250 ns\n0xE: 3500 ns\n0xF: 3750 ns"]
     #[inline(always)]
     pub fn boost_timeout_trig_delay(
         self,
@@ -118,6 +119,7 @@ impl BoostCtrlReg0 {
         crate::common::RegisterField::<17,0xf,1,0,u8,u8,BoostCtrlReg0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "P switch timeout, if switch is closed longer than this a timeout is generated and the FSM is forced to the next state\n0x0: Disabled\n0x1: 250 ns\n0x2: 500 ns\n0x3: 750 ns\n0x4: 1000 ns\n0x5: 1250 ns\n0x6: 1500 ns\n0x7: 1750 ns\n0x8: 2000 ns (default)\n0x9: 2250 ns\n0xA: 2500 ns\n0xB: 2750 ns\n0xC: 3000 ns\n0xD: 3250 ns\n0xE: 3500 ns\n0xF: 3750 ns"]
     #[inline(always)]
     pub fn boost_psw_timeout(
         self,
@@ -126,6 +128,7 @@ impl BoostCtrlReg0 {
         crate::common::RegisterField::<13,0xf,1,0,u8,u8,BoostCtrlReg0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "N switch timeout, if switch is closed longer than this a timeout is generated and the FSM is forced to the next state\n0x0: Disabled\n0x1: 125 ns\n0x2: 250 ns\n0x3: 375 ns\n0x4: 500 ns\n0x5: 625 ns\n0x6: 750 ns (default)\n0x7: 875 ns\n0x8: 1000 ns\n0x9: 1125 ns\n0xA: 1250 ns\n0xB: 1375 ns\n0xC: 1500 ns\n0xD: 1625 ns\n0xE: 1750 ns\n0xF: 1875 ms"]
     #[inline(always)]
     pub fn boost_nsw_timeout(
         self,
@@ -134,6 +137,7 @@ impl BoostCtrlReg0 {
         crate::common::RegisterField::<9,0xf,1,0,u8,u8,BoostCtrlReg0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Number of subsequent V_NOK events before BOOST_VLED_OK is reset\n0x0: 2\n0x1: 4\n0x2: 8 (default)\n0x3: 15"]
     #[inline(always)]
     pub fn boost_ok_clr_count(
         self,
@@ -142,6 +146,7 @@ impl BoostCtrlReg0 {
         crate::common::RegisterField::<7,0x3,1,0,u8,u8,BoostCtrlReg0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Determines times between comparator samples when converter is idle\n0x0 = 250 ns\n0x1 = 500 ns (default)\n0x2 = 1000 ns\n0x3 = 2000 ns"]
     #[inline(always)]
     pub fn boost_idle_clk_div(
         self,
@@ -150,6 +155,7 @@ impl BoostCtrlReg0 {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,BoostCtrlReg0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Trim setting for boost converter, sets deviation from nominal output voltage (4 V)\n0x0: -75 mV\n0x1: -50 mV\n0x2: -25 mV\n0x3: 0 mV (default)\n0x4: 25 mV\n0x5: 50 mV\n0x6: 75 mV\n0x7: 100 mV"]
     #[inline(always)]
     pub fn boost_vled_trim(
         self,
@@ -158,6 +164,7 @@ impl BoostCtrlReg0 {
         crate::common::RegisterField::<2,0x7,1,0,u8,u8,BoostCtrlReg0_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Voltage selection for boost converter, sets nominal output voltage\n0x0: 4.50V (default)\n0x1: 4.75V\n0x2: 5.00V\n0x3: 5.00V"]
     #[inline(always)]
     pub fn boost_vled_sel(
         self,
@@ -183,6 +190,7 @@ impl crate::sealed::RegSpec for BoostCtrlReg1_SPEC {
 pub type BoostCtrlReg1 = crate::RegValueT<BoostCtrlReg1_SPEC>;
 
 impl BoostCtrlReg1 {
+    #[doc = "Enable fixed current iso dynamic current in sleep mode\n0x0: Use dynamic current control\n0x1: Use fixed current as defined in BOOST_CUR_LIM_SLEEP (default)"]
     #[inline(always)]
     pub fn boost_cur_lim_sleep_fixed(
         self,
@@ -190,6 +198,7 @@ impl BoostCtrlReg1 {
         crate::common::RegisterFieldBool::<17,1,0,BoostCtrlReg1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Fixed inductor peak current limit in sleep mode\nI = 30 mA * (1 + N), default 960 mA"]
     #[inline(always)]
     pub fn boost_cur_lim_sleep(
         self,
@@ -198,6 +207,7 @@ impl BoostCtrlReg1 {
         crate::common::RegisterField::<12,0x1f,1,0,u8,u8,BoostCtrlReg1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Step size taken by automatic inductor peak current limit control\n0x0: 0 (disabled)\n0x1: 1\n0x2: 2 (default)\n0x3: 3"]
     #[inline(always)]
     pub fn boost_cur_lim_step(
         self,
@@ -206,6 +216,7 @@ impl BoostCtrlReg1 {
         crate::common::RegisterField::<10,0x3,1,0,u8,u8,BoostCtrlReg1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Maximum inductor peak current limit\nI = 30 mA * (1 + N), default 960 mA"]
     #[inline(always)]
     pub fn boost_cur_lim_max(
         self,
@@ -214,6 +225,7 @@ impl BoostCtrlReg1 {
         crate::common::RegisterField::<5,0x1f,1,0,u8,u8,BoostCtrlReg1_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Minimum inductor peak current limit\nI = 30 mA * (1 + N), default 150 mA"]
     #[inline(always)]
     pub fn boost_cur_lim_min(
         self,
@@ -239,6 +251,7 @@ impl crate::sealed::RegSpec for BoostStatusReg_SPEC {
 pub type BoostStatusReg = crate::RegValueT<BoostStatusReg_SPEC>;
 
 impl BoostStatusReg {
+    #[doc = "Actual P side comparator trim value"]
     #[inline(always)]
     pub fn boost_comp_trim(
         self,
@@ -247,6 +260,7 @@ impl BoostStatusReg {
         crate::common::RegisterField::<18,0x3f,1,0,u8,u8,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Converter idle"]
     #[inline(always)]
     pub fn boost_idle(
         self,
@@ -254,6 +268,7 @@ impl BoostStatusReg {
         crate::common::RegisterFieldBool::<17,1,0,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Actual inductor peak current limit"]
     #[inline(always)]
     pub fn boost_cur_lim(
         self,
@@ -262,6 +277,7 @@ impl BoostStatusReg {
         crate::common::RegisterField::<12,0x1f,1,0,u8,u8,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "P output of P side dynamic comparator"]
     #[inline(always)]
     pub fn boost_comp_p_dyn_p(
         self,
@@ -269,6 +285,7 @@ impl BoostStatusReg {
         crate::common::RegisterFieldBool::<11,1,0,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "N output of P side dynamic comparator"]
     #[inline(always)]
     pub fn boost_comp_p_dyn_n(
         self,
@@ -276,6 +293,7 @@ impl BoostStatusReg {
         crate::common::RegisterFieldBool::<10,1,0,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Output of P side continuous time comparator"]
     #[inline(always)]
     pub fn boost_comp_p_cont(
         self,
@@ -283,6 +301,7 @@ impl BoostStatusReg {
         crate::common::RegisterFieldBool::<9,1,0,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Output of N side continuous time comparator"]
     #[inline(always)]
     pub fn boost_comp_n_cont(
         self,
@@ -290,6 +309,7 @@ impl BoostStatusReg {
         crate::common::RegisterFieldBool::<8,1,0,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Timeout on P switch occurred"]
     #[inline(always)]
     pub fn boost_timeout_psw(
         self,
@@ -297,6 +317,7 @@ impl BoostStatusReg {
         crate::common::RegisterFieldBool::<7,1,0,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Timeout on N switch occurred"]
     #[inline(always)]
     pub fn boost_timeout_nsw(
         self,
@@ -304,6 +325,7 @@ impl BoostStatusReg {
         crate::common::RegisterFieldBool::<6,1,0,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "NOK output of output voltage comparator"]
     #[inline(always)]
     pub fn boost_vout_nok(
         self,
@@ -311,6 +333,7 @@ impl BoostStatusReg {
         crate::common::RegisterFieldBool::<5,1,0,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "OK output of output voltage comparator"]
     #[inline(always)]
     pub fn boost_vout_ok(
         self,
@@ -318,6 +341,7 @@ impl BoostStatusReg {
         crate::common::RegisterFieldBool::<4,1,0,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "State of boost converter switches\n0x0: Both off\n0x1: P switch on\n0x2: N switch on\n0x3: Undefined"]
     #[inline(always)]
     pub fn boost_sw_state(
         self,
@@ -326,6 +350,7 @@ impl BoostStatusReg {
         crate::common::RegisterField::<2,0x3,1,0,u8,u8,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Indicates if the converter is enabled and the startup counter has expired (internal biasing settled)"]
     #[inline(always)]
     pub fn boost_startup_complete(
         self,
@@ -333,6 +358,7 @@ impl BoostStatusReg {
         crate::common::RegisterFieldBool::<1,1,0,BoostStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Indicates that V_LED is above its threshold, reset after too many subsequent V_NOK events"]
     #[inline(always)]
     pub fn boost_vled_ok(
         self,
@@ -357,6 +383,7 @@ impl crate::sealed::RegSpec for BoostTestCtrlReg_SPEC {
 pub type BoostTestCtrlReg = crate::RegValueT<BoostTestCtrlReg_SPEC>;
 
 impl BoostTestCtrlReg {
+    #[doc = "Test mode control for 20mA test-mux\n0x0: All switches open (Default)\n0x1: Sink 20mA from LX for testing PMOS\n0x2: Sink 20mA from V_LED\n0x3: Source 20mA into LX for testing NMOS"]
     #[inline(always)]
     pub fn boost_iload_sel_test(
         self,
@@ -374,6 +401,7 @@ impl BoostTestCtrlReg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Trim low side supply voltage\nV = 2 V + 300 mV * N, default 2.9 V"]
     #[inline(always)]
     pub fn boost_lssup_trim(
         self,
@@ -391,6 +419,7 @@ impl BoostTestCtrlReg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Trim high side ground\nV = VBAT - (2 V + 400 mV * N), default VBAT - 3.2 V"]
     #[inline(always)]
     pub fn boost_hsgnd_trim(
         self,
@@ -425,6 +454,7 @@ impl crate::sealed::RegSpec for VledPwrCtrlReg_SPEC {
 pub type VledPwrCtrlReg = crate::RegValueT<VledPwrCtrlReg_SPEC>;
 
 impl VledPwrCtrlReg {
+    #[doc = "Manual selection of VLED supply source, requires that VLED_PWR_MANUAL = 0x1\n0x0: VLED not powered\n0x1: VLED powered by VSYS\n0x2: VLED powered by boost converter\n0x3: N.A."]
     #[inline(always)]
     pub fn vled_pwr_force(
         self,
@@ -433,6 +463,7 @@ impl VledPwrCtrlReg {
         crate::common::RegisterField::<11,0x3,1,0,u8,u8,VledPwrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0x0: VLED supply source automatically selected\n0x1: VLED supply source manually selected"]
     #[inline(always)]
     pub fn vled_pwr_manual(
         self,
@@ -440,6 +471,7 @@ impl VledPwrCtrlReg {
         crate::common::RegisterFieldBool::<10,1,0,VledPwrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Sets the condition for powering VLED from VSYS\n0x0: VLED always powered from VSYS\n0x1: VLED powered form VSYS if VSYS is near VLED, depending on vsys-comparator (Default)"]
     #[inline(always)]
     pub fn vled_pwr_use_vsys_lvl(
         self,
@@ -447,6 +479,7 @@ impl VledPwrCtrlReg {
         crate::common::RegisterFieldBool::<9,1,0,VledPwrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0x0: VLED power controller disabled\n0x1: VLED power controller enabled"]
     #[inline(always)]
     pub fn vled_pwr_enable(
         self,
@@ -454,6 +487,7 @@ impl VledPwrCtrlReg {
         crate::common::RegisterFieldBool::<8,1,0,VledPwrCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Sets debounce time on VSYS comparator in steps of 1.024 ms\nNote: actual delay can be up to one period of 1.024 ms clock shorter than programmed depending on alignment of comparator trip event and clock edge"]
     #[inline(always)]
     pub fn vsys_ok_debounce(
         self,
@@ -479,6 +513,7 @@ impl crate::sealed::RegSpec for VledPwrStatusReg_SPEC {
 pub type VledPwrStatusReg = crate::RegValueT<VledPwrStatusReg_SPEC>;
 
 impl VledPwrStatusReg {
+    #[doc = "Indicates whether boost converter is blocked or not"]
     #[inline(always)]
     pub fn vled_pwr_allow_boost(
         self,
@@ -486,6 +521,7 @@ impl VledPwrStatusReg {
         crate::common::RegisterFieldBool::<5,1,0,VledPwrStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Indicates that VSYS switch is closed"]
     #[inline(always)]
     pub fn vled_pwr_vsys_connected(
         self,
@@ -493,6 +529,7 @@ impl VledPwrStatusReg {
         crate::common::RegisterFieldBool::<4,1,0,VledPwrStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "State of the VLED power control FSM\n0x0: Disabled\n0x1: VSYS\n0x2: Boost\n0x3: N.A."]
     #[inline(always)]
     pub fn vled_pwr_switch_ctrl_state(
         self,
@@ -501,6 +538,7 @@ impl VledPwrStatusReg {
         crate::common::RegisterField::<2,0x3,1,0,u8,u8,VledPwrStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Output of VSYS OK debounce logic"]
     #[inline(always)]
     pub fn vsys_ok_debounced(
         self,
@@ -508,6 +546,7 @@ impl VledPwrStatusReg {
         crate::common::RegisterFieldBool::<1,1,0,VledPwrStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Output of VSYS OK logic"]
     #[inline(always)]
     pub fn vsys_ok(
         self,

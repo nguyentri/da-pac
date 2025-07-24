@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:02 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:10 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Quad {
         self.ptr
     }
 
+    #[doc = "Quad decoder clock divider register"]
     #[inline(always)]
     pub const fn qdec_clockdiv_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::Quad {
         }
     }
 
+    #[doc = "Quad decoder control register"]
     #[inline(always)]
     pub const fn qdec_ctrl_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::Quad {
         }
     }
 
+    #[doc = "Counter value of the X Axis"]
     #[inline(always)]
     pub const fn qdec_xcnt_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::Quad {
         }
     }
 
+    #[doc = "Counter value of the Y Axis"]
     #[inline(always)]
     pub const fn qdec_ycnt_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::Quad {
         }
     }
 
+    #[doc = "Counter value of the Z Axis"]
     #[inline(always)]
     pub const fn qdec_zcnt_reg(
         &self,
@@ -96,9 +101,11 @@ impl crate::sealed::RegSpec for QdecClockdivReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Quad decoder clock divider register"]
 pub type QdecClockdivReg = crate::RegValueT<QdecClockdivReg_SPEC>;
 
 impl QdecClockdivReg {
+    #[doc = "Contains the number of the input clock cycles minus one, that are required to generate one logic clock cycle."]
     #[inline(always)]
     pub fn clock_divider(
         self,
@@ -138,9 +145,11 @@ impl crate::sealed::RegSpec for QdecCtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Quad decoder control register"]
 pub type QdecCtrlReg = crate::RegValueT<QdecCtrlReg_SPEC>;
 
 impl QdecCtrlReg {
+    #[doc = "\'1\' : Enable channel"]
     #[inline(always)]
     pub fn chz_port_en(
         self,
@@ -148,6 +157,7 @@ impl QdecCtrlReg {
         crate::common::RegisterFieldBool::<12,1,0,QdecCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' : Enable channel"]
     #[inline(always)]
     pub fn chy_port_en(
         self,
@@ -155,6 +165,7 @@ impl QdecCtrlReg {
         crate::common::RegisterFieldBool::<11,1,0,QdecCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' : Enable channel"]
     #[inline(always)]
     pub fn chx_port_en(
         self,
@@ -162,6 +173,7 @@ impl QdecCtrlReg {
         crate::common::RegisterFieldBool::<10,1,0,QdecCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "The number of events on either counter (X or Y or Z) that need to be reached before an interrupt is generated. If 0 is written, then threshold is considered to be 1."]
     #[inline(always)]
     pub fn qd_irq_thres(
         self,
@@ -170,6 +182,7 @@ impl QdecCtrlReg {
         crate::common::RegisterField::<3,0x7f,1,0,u8,u8,QdecCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Interrupt Status. If 1 an interrupt has occured."]
     #[inline(always)]
     pub fn qd_irq_status(
         self,
@@ -177,6 +190,7 @@ impl QdecCtrlReg {
         crate::common::RegisterFieldBool::<2,1,0,QdecCtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Writing 1 to this bit clears the interrupt. This bit is autocleared"]
     #[inline(always)]
     pub fn qd_irq_clr(
         self,
@@ -184,6 +198,7 @@ impl QdecCtrlReg {
         crate::common::RegisterFieldBool::<1,1,0,QdecCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: interrupt is masked\n1: interrupt is enabled"]
     #[inline(always)]
     pub fn qd_irq_mask(
         self,
@@ -205,9 +220,11 @@ impl crate::sealed::RegSpec for QdecXcntReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Counter value of the X Axis"]
 pub type QdecXcntReg = crate::RegValueT<QdecXcntReg_SPEC>;
 
 impl QdecXcntReg {
+    #[doc = "Contains a signed value of the events. Zero when channel is disabled"]
     #[inline(always)]
     pub fn x_counter(
         self,
@@ -230,9 +247,11 @@ impl crate::sealed::RegSpec for QdecYcntReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Counter value of the Y Axis"]
 pub type QdecYcntReg = crate::RegValueT<QdecYcntReg_SPEC>;
 
 impl QdecYcntReg {
+    #[doc = "Contains a signed value of the events. Zero when channel is disabled"]
     #[inline(always)]
     pub fn y_counter(
         self,
@@ -255,9 +274,11 @@ impl crate::sealed::RegSpec for QdecZcntReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Counter value of the Z Axis"]
 pub type QdecZcntReg = crate::RegValueT<QdecZcntReg_SPEC>;
 
 impl QdecZcntReg {
+    #[doc = "Contains a signed value of the events. Zero when channel is disabled"]
     #[inline(always)]
     pub fn z_counter(
         self,

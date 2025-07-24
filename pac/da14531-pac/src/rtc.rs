@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Rtc {
         self.ptr
     }
 
+    #[doc = "RTC Alarm Enable Register"]
     #[inline(always)]
     pub const fn rtc_alarm_enable_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Calendar Alram Register"]
     #[inline(always)]
     pub const fn rtc_calendar_alarm_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Calendar Register"]
     #[inline(always)]
     pub const fn rtc_calendar_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Control Register"]
     #[inline(always)]
     pub const fn rtc_control_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Event Flags Register"]
     #[inline(always)]
     pub const fn rtc_event_flags_reg(
         &self,
@@ -89,6 +94,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Hour Mode Register"]
     #[inline(always)]
     pub const fn rtc_hour_mode_reg(
         &self,
@@ -100,6 +106,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Interrupt Disable Register"]
     #[inline(always)]
     pub const fn rtc_interrupt_disable_reg(
         &self,
@@ -111,6 +118,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Interrupt Enable Register"]
     #[inline(always)]
     pub const fn rtc_interrupt_enable_reg(
         &self,
@@ -122,6 +130,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Interrupt Mask Register"]
     #[inline(always)]
     pub const fn rtc_interrupt_mask_reg(
         &self,
@@ -133,6 +142,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Keep RTC Register"]
     #[inline(always)]
     pub const fn rtc_keep_rtc_reg(
         &self,
@@ -144,6 +154,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Status Register"]
     #[inline(always)]
     pub const fn rtc_status_reg(
         &self,
@@ -155,6 +166,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Time Alarm Register"]
     #[inline(always)]
     pub const fn rtc_time_alarm_reg(
         &self,
@@ -166,6 +178,7 @@ impl super::Rtc {
         }
     }
 
+    #[doc = "RTC Time Register"]
     #[inline(always)]
     pub const fn rtc_time_reg(
         &self,
@@ -184,9 +197,11 @@ impl crate::sealed::RegSpec for RtcAlarmEnableReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Alarm Enable Register"]
 pub type RtcAlarmEnableReg = crate::RegValueT<RtcAlarmEnableReg_SPEC>;
 
 impl RtcAlarmEnableReg {
+    #[doc = "Alarm on month enable. Enable to trigger alarm when data specified in Calendar Alarm Register (M_T and M_U) has been reached."]
     #[inline(always)]
     pub fn rtc_alarm_mnth_en(
         self,
@@ -194,6 +209,7 @@ impl RtcAlarmEnableReg {
         crate::common::RegisterFieldBool::<5,1,0,RtcAlarmEnableReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Alarm on date enable. Enable to trigger alarm when data specified in Calendar Alarm Register (D_T and D_U) has been reached."]
     #[inline(always)]
     pub fn rtc_alarm_date_en(
         self,
@@ -201,6 +217,7 @@ impl RtcAlarmEnableReg {
         crate::common::RegisterFieldBool::<4,1,0,RtcAlarmEnableReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Alarm on hour enable. Enable to trigger alarm when data specified in Time Alarm Register (PM, HR_T and HR_U) has been reached."]
     #[inline(always)]
     pub fn rtc_alarm_hour_en(
         self,
@@ -208,6 +225,7 @@ impl RtcAlarmEnableReg {
         crate::common::RegisterFieldBool::<3,1,0,RtcAlarmEnableReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Alarm on minute enable. Enable to trigger alarm when data specified in Time Alarm Register (M_T and M_U) has been reached."]
     #[inline(always)]
     pub fn rtc_alarm_min_en(
         self,
@@ -215,6 +233,7 @@ impl RtcAlarmEnableReg {
         crate::common::RegisterFieldBool::<2,1,0,RtcAlarmEnableReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Alarm on second enable. Enable to trigger alarm when data specified in Time Alarm Register (S_T and S_U) has been reached."]
     #[inline(always)]
     pub fn rtc_alarm_sec_en(
         self,
@@ -222,6 +241,7 @@ impl RtcAlarmEnableReg {
         crate::common::RegisterFieldBool::<1,1,0,RtcAlarmEnableReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Alarm on hundredths of a second enable. Enable to trigger alarm when data specified in Time Alarm Register (H_T and H_U) has been reached."]
     #[inline(always)]
     pub fn rtc_alarm_hos_en(
         self,
@@ -243,9 +263,11 @@ impl crate::sealed::RegSpec for RtcCalendarAlarmReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Calendar Alram Register"]
 pub type RtcCalendarAlarmReg = crate::RegValueT<RtcCalendarAlarmReg_SPEC>;
 
 impl RtcCalendarAlarmReg {
+    #[doc = "Date tens. Represented in BCD digit (0-3)."]
     #[inline(always)]
     pub fn rtc_cal_d_t(
         self,
@@ -271,6 +293,7 @@ impl RtcCalendarAlarmReg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Date units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_cal_d_u(
         self,
@@ -296,6 +319,7 @@ impl RtcCalendarAlarmReg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Month tens. Represented in BCD digit (0-1)."]
     #[inline(always)]
     pub fn rtc_cal_m_t(
         self,
@@ -304,6 +328,7 @@ impl RtcCalendarAlarmReg {
         crate::common::RegisterFieldBool::<7,1,0,RtcCalendarAlarmReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Month units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_cal_m_u(
         self,
@@ -343,9 +368,11 @@ impl crate::sealed::RegSpec for RtcCalendarReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Calendar Register"]
 pub type RtcCalendarReg = crate::RegValueT<RtcCalendarReg_SPEC>;
 
 impl RtcCalendarReg {
+    #[doc = "The value in this register has altered since last read. Read and clear"]
     #[inline(always)]
     pub fn rtc_cal_ch(
         self,
@@ -353,6 +380,7 @@ impl RtcCalendarReg {
         crate::common::RegisterFieldBool::<31,1,0,RtcCalendarReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Century tens. Represented in BCD digit (1-2)."]
     #[inline(always)]
     pub fn rtc_cal_c_t(
         self,
@@ -361,6 +389,7 @@ impl RtcCalendarReg {
         crate::common::RegisterField::<28,0x3,1,0,u8,u8,RtcCalendarReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Century units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_cal_c_u(
         self,
@@ -369,6 +398,7 @@ impl RtcCalendarReg {
         crate::common::RegisterField::<24,0xf,1,0,u8,u8,RtcCalendarReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Year tens. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_cal_y_t(
         self,
@@ -377,6 +407,7 @@ impl RtcCalendarReg {
         crate::common::RegisterField::<20,0xf,1,0,u8,u8,RtcCalendarReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Year units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_cal_y_u(
         self,
@@ -385,6 +416,7 @@ impl RtcCalendarReg {
         crate::common::RegisterField::<16,0xf,1,0,u8,u8,RtcCalendarReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Date tens. Represented in BCD digit (0-3)."]
     #[inline(always)]
     pub fn rtc_cal_d_t(
         self,
@@ -393,6 +425,7 @@ impl RtcCalendarReg {
         crate::common::RegisterField::<12,0x3,1,0,u8,u8,RtcCalendarReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Date units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_cal_d_u(
         self,
@@ -401,6 +434,7 @@ impl RtcCalendarReg {
         crate::common::RegisterField::<8,0xf,1,0,u8,u8,RtcCalendarReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Month tens. Represented in BCD digit (0-1)."]
     #[inline(always)]
     pub fn rtc_cal_m_t(
         self,
@@ -408,6 +442,7 @@ impl RtcCalendarReg {
         crate::common::RegisterFieldBool::<7,1,0,RtcCalendarReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Month units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_cal_m_u(
         self,
@@ -416,6 +451,7 @@ impl RtcCalendarReg {
         crate::common::RegisterField::<3,0xf,1,0,u8,u8,RtcCalendarReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Day of the week (arbitrary) units. Represented in BCD digit (0-7)."]
     #[inline(always)]
     pub fn rtc_day(
         self,
@@ -438,9 +474,11 @@ impl crate::sealed::RegSpec for RtcControlReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Control Register"]
 pub type RtcControlReg = crate::RegValueT<RtcControlReg_SPEC>;
 
 impl RtcControlReg {
+    #[doc = "When this field is set high the RTC stops incrementing the calendar value."]
     #[inline(always)]
     pub fn rtc_cal_disable(
         self,
@@ -448,6 +486,7 @@ impl RtcControlReg {
         crate::common::RegisterFieldBool::<1,1,0,RtcControlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "When this field is set high the RTC stops incrementing the time value."]
     #[inline(always)]
     pub fn rtc_time_disable(
         self,
@@ -469,9 +508,11 @@ impl crate::sealed::RegSpec for RtcEventFlagsReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Event Flags Register"]
 pub type RtcEventFlagsReg = crate::RegValueT<RtcEventFlagsReg_SPEC>;
 
 impl RtcEventFlagsReg {
+    #[doc = "Alarm event flag. Indicate that alarm event occurred since the last reset."]
     #[inline(always)]
     pub fn rtc_event_alrm(
         self,
@@ -479,6 +520,7 @@ impl RtcEventFlagsReg {
         crate::common::RegisterFieldBool::<6,1,0,RtcEventFlagsReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Month rolls over event flag. Indicate that month rolls over event occurred since the last reset."]
     #[inline(always)]
     pub fn rtc_event_mnth(
         self,
@@ -486,6 +528,7 @@ impl RtcEventFlagsReg {
         crate::common::RegisterFieldBool::<5,1,0,RtcEventFlagsReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Date rolls over event flag. Indicate that date rolls over event occurred since the last reset."]
     #[inline(always)]
     pub fn rtc_event_date(
         self,
@@ -493,6 +536,7 @@ impl RtcEventFlagsReg {
         crate::common::RegisterFieldBool::<4,1,0,RtcEventFlagsReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Hour rolls over event flag. Indicate that hour rolls over event occurred since the last reset."]
     #[inline(always)]
     pub fn rtc_event_hour(
         self,
@@ -500,6 +544,7 @@ impl RtcEventFlagsReg {
         crate::common::RegisterFieldBool::<3,1,0,RtcEventFlagsReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Minute rolls over event flag. Indicate that minute rolls over event occurred since the last reset."]
     #[inline(always)]
     pub fn rtc_event_min(
         self,
@@ -507,6 +552,7 @@ impl RtcEventFlagsReg {
         crate::common::RegisterFieldBool::<2,1,0,RtcEventFlagsReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Second rolls over event flag. Indicate that second rolls over event occurred since the last reset."]
     #[inline(always)]
     pub fn rtc_event_sec(
         self,
@@ -514,6 +560,7 @@ impl RtcEventFlagsReg {
         crate::common::RegisterFieldBool::<1,1,0,RtcEventFlagsReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Hundredths of a second event flag. Indicate that hundredths of a second rolls over event occurred since the last reset."]
     #[inline(always)]
     pub fn rtc_event_hos(
         self,
@@ -535,9 +582,11 @@ impl crate::sealed::RegSpec for RtcHourModeReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Hour Mode Register"]
 pub type RtcHourModeReg = crate::RegValueT<RtcHourModeReg_SPEC>;
 
 impl RtcHourModeReg {
+    #[doc = "When this field is set high the RTC operates in 12 hour clock mode; otherwise, times are in 24 hour clock format."]
     #[inline(always)]
     pub fn rtc_hms(
         self,
@@ -559,9 +608,11 @@ impl crate::sealed::RegSpec for RtcInterruptDisableReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Interrupt Disable Register"]
 pub type RtcInterruptDisableReg = crate::RegValueT<RtcInterruptDisableReg_SPEC>;
 
 impl RtcInterruptDisableReg {
+    #[doc = "Interrupt on alarm disable. Disable to issue the interrupt when alarm event occurred."]
     #[inline(always)]
     pub fn rtc_alrm_int_dis(
         self,
@@ -570,6 +621,7 @@ impl RtcInterruptDisableReg {
         crate::common::RegisterFieldBool::<6,1,0,RtcInterruptDisableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Interrupt on month disable. Disable to issue the interrupt when month event occurred."]
     #[inline(always)]
     pub fn rtc_mnth_int_dis(
         self,
@@ -578,6 +630,7 @@ impl RtcInterruptDisableReg {
         crate::common::RegisterFieldBool::<5,1,0,RtcInterruptDisableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Interrupt on date disable. Disable to issue the interrupt when date event occurred."]
     #[inline(always)]
     pub fn rtc_date_int_dis(
         self,
@@ -586,6 +639,7 @@ impl RtcInterruptDisableReg {
         crate::common::RegisterFieldBool::<4,1,0,RtcInterruptDisableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "IInterrupt on hour disable. Disable to issue the interrupt when hour event occurred."]
     #[inline(always)]
     pub fn rtc_hour_int_dis(
         self,
@@ -594,6 +648,7 @@ impl RtcInterruptDisableReg {
         crate::common::RegisterFieldBool::<3,1,0,RtcInterruptDisableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Interrupt on minute disable. Disable to issue the interrupt when minute event occurred."]
     #[inline(always)]
     pub fn rtc_min_int_dis(
         self,
@@ -602,6 +657,7 @@ impl RtcInterruptDisableReg {
         crate::common::RegisterFieldBool::<2,1,0,RtcInterruptDisableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Interrupt on second disable. Disable to issue the interrupt when second event occurred."]
     #[inline(always)]
     pub fn rtc_sec_int_dis(
         self,
@@ -610,6 +666,7 @@ impl RtcInterruptDisableReg {
         crate::common::RegisterFieldBool::<1,1,0,RtcInterruptDisableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Interrupt on hundredths of a second disable. Disable to issue the interrupt when hundredths of a second event occurred."]
     #[inline(always)]
     pub fn rtc_hos_int_dis(
         self,
@@ -632,9 +689,11 @@ impl crate::sealed::RegSpec for RtcInterruptEnableReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Interrupt Enable Register"]
 pub type RtcInterruptEnableReg = crate::RegValueT<RtcInterruptEnableReg_SPEC>;
 
 impl RtcInterruptEnableReg {
+    #[doc = "Interrupt on alarm enable. Enable to issue the interrupt when alarm event occurred."]
     #[inline(always)]
     pub fn rtc_alrm_int_en(
         self,
@@ -643,6 +702,7 @@ impl RtcInterruptEnableReg {
         crate::common::RegisterFieldBool::<6,1,0,RtcInterruptEnableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Interrupt on month enable. Enable to issue the interrupt when month event occurred."]
     #[inline(always)]
     pub fn rtc_mnth_int_en(
         self,
@@ -651,6 +711,7 @@ impl RtcInterruptEnableReg {
         crate::common::RegisterFieldBool::<5,1,0,RtcInterruptEnableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Interrupt on date enable. Enable to issue the interrupt when date event occurred."]
     #[inline(always)]
     pub fn rtc_date_int_en(
         self,
@@ -659,6 +720,7 @@ impl RtcInterruptEnableReg {
         crate::common::RegisterFieldBool::<4,1,0,RtcInterruptEnableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Interrupt on hour enable. Enable to issue the interrupt when hour event occurred."]
     #[inline(always)]
     pub fn rtc_hour_int_en(
         self,
@@ -667,6 +729,7 @@ impl RtcInterruptEnableReg {
         crate::common::RegisterFieldBool::<3,1,0,RtcInterruptEnableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Interrupt on minute enable. Enable to issue the interrupt when minute event occurred."]
     #[inline(always)]
     pub fn rtc_min_int_en(
         self,
@@ -675,6 +738,7 @@ impl RtcInterruptEnableReg {
         crate::common::RegisterFieldBool::<2,1,0,RtcInterruptEnableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Interrupt on second enable. Enable to issue the interrupt when second event occurred."]
     #[inline(always)]
     pub fn rtc_sec_int_en(
         self,
@@ -683,6 +747,7 @@ impl RtcInterruptEnableReg {
         crate::common::RegisterFieldBool::<1,1,0,RtcInterruptEnableReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Interrupt on hundredths of a second enable. Enable to issue the interrupt when hundredths of a second event occurred."]
     #[inline(always)]
     pub fn rtc_hos_int_en(
         self,
@@ -705,9 +770,11 @@ impl crate::sealed::RegSpec for RtcInterruptMaskReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Interrupt Mask Register"]
 pub type RtcInterruptMaskReg = crate::RegValueT<RtcInterruptMaskReg_SPEC>;
 
 impl RtcInterruptMaskReg {
+    #[doc = "Mask alarm interrupt. It can be cleared (set) by setting corresponding bit (ALRM) in Interrupt Enable Register (Interrupt Disable Register)."]
     #[inline(always)]
     pub fn rtc_alrm_int_msk(
         self,
@@ -715,6 +782,7 @@ impl RtcInterruptMaskReg {
         crate::common::RegisterFieldBool::<6,1,0,RtcInterruptMaskReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Mask month interrupt. It can be cleared (set) by setting corresponding bit (MNTH) in Interrupt Enable Register (Interrupt Disable Register)."]
     #[inline(always)]
     pub fn rtc_mnth_int_msk(
         self,
@@ -722,6 +790,7 @@ impl RtcInterruptMaskReg {
         crate::common::RegisterFieldBool::<5,1,0,RtcInterruptMaskReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Mask date interrupt. It can be cleared (set) by setting corresponding bit (DATE) in Interrupt Enable Register (Interrupt Disable Register)."]
     #[inline(always)]
     pub fn rtc_date_int_msk(
         self,
@@ -729,6 +798,7 @@ impl RtcInterruptMaskReg {
         crate::common::RegisterFieldBool::<4,1,0,RtcInterruptMaskReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Mask hour interrupt. It can be cleared (set) by setting corresponding bit (HOUR) in Interrupt Enable Register (Interrupt Disable Register)."]
     #[inline(always)]
     pub fn rtc_hour_int_msk(
         self,
@@ -736,6 +806,7 @@ impl RtcInterruptMaskReg {
         crate::common::RegisterFieldBool::<3,1,0,RtcInterruptMaskReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Mask minute interrupt. It can be cleared (set) by setting corresponding bit (MIN) in Interrupt Enable Register (Interrupt Disable Register)."]
     #[inline(always)]
     pub fn rtc_min_int_msk(
         self,
@@ -743,6 +814,7 @@ impl RtcInterruptMaskReg {
         crate::common::RegisterFieldBool::<2,1,0,RtcInterruptMaskReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Mask second interrupt. It can be cleared (set) by setting corresponding bit (SEC) in Interrupt Enable Register (Interrupt Disable Register)."]
     #[inline(always)]
     pub fn rtc_sec_int_msk(
         self,
@@ -750,6 +822,7 @@ impl RtcInterruptMaskReg {
         crate::common::RegisterFieldBool::<1,1,0,RtcInterruptMaskReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Mask hundredths of a second interrupt. It can be cleared (set) by setting corresponding bit (HOS) in Interrupt Enable Register (Interrupt Disable Register)."]
     #[inline(always)]
     pub fn rtc_hos_int_msk(
         self,
@@ -771,9 +844,11 @@ impl crate::sealed::RegSpec for RtcKeepRtcReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Keep RTC Register"]
 pub type RtcKeepRtcReg = crate::RegValueT<RtcKeepRtcReg_SPEC>;
 
 impl RtcKeepRtcReg {
+    #[doc = "Keep RTC. When high, the time and calendar registers and any other registers which directly affect or are affected by the time and calendar registers are NOT reset when software reset is applied. When low, the software reset will reset every register except the keep RTC and control registers."]
     #[inline(always)]
     pub fn rtc_keep(
         self,
@@ -795,9 +870,11 @@ impl crate::sealed::RegSpec for RtcStatusReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Status Register"]
 pub type RtcStatusReg = crate::RegValueT<RtcStatusReg_SPEC>;
 
 impl RtcStatusReg {
+    #[doc = "Valid Calendar Alarm. If cleared then indicates that invalid entry occurred when writing to Calendar Alarm Register."]
     #[inline(always)]
     pub fn rtc_valid_cal_alm(
         self,
@@ -805,6 +882,7 @@ impl RtcStatusReg {
         crate::common::RegisterFieldBool::<3,1,0,RtcStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Valid Time Alarm. If cleared then indicates that invalid entry occurred when writing to Time Alarm Register."]
     #[inline(always)]
     pub fn rtc_valid_time_alm(
         self,
@@ -812,6 +890,7 @@ impl RtcStatusReg {
         crate::common::RegisterFieldBool::<2,1,0,RtcStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Valid Calendar. If cleared then indicates that invalid entry occurred when writing to Calendar Register."]
     #[inline(always)]
     pub fn rtc_valid_cal(
         self,
@@ -819,6 +898,7 @@ impl RtcStatusReg {
         crate::common::RegisterFieldBool::<1,1,0,RtcStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Valid Time. If cleared then indicates that invalid entry occurred when writing to Time Register."]
     #[inline(always)]
     pub fn rtc_valid_time(
         self,
@@ -840,9 +920,11 @@ impl crate::sealed::RegSpec for RtcTimeAlarmReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Time Alarm Register"]
 pub type RtcTimeAlarmReg = crate::RegValueT<RtcTimeAlarmReg_SPEC>;
 
 impl RtcTimeAlarmReg {
+    #[doc = "In 12 hour clock mode, indicates PM when set."]
     #[inline(always)]
     pub fn rtc_time_pm(
         self,
@@ -850,6 +932,7 @@ impl RtcTimeAlarmReg {
         crate::common::RegisterFieldBool::<30,1,0,RtcTimeAlarmReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Hours tens. Represented in BCD digit (0-2)."]
     #[inline(always)]
     pub fn rtc_time_hr_t(
         self,
@@ -858,6 +941,7 @@ impl RtcTimeAlarmReg {
         crate::common::RegisterField::<28,0x3,1,0,u8,u8,RtcTimeAlarmReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Hours units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_hr_u(
         self,
@@ -866,6 +950,7 @@ impl RtcTimeAlarmReg {
         crate::common::RegisterField::<24,0xf,1,0,u8,u8,RtcTimeAlarmReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Minutes tens. Represented in BCD digit (0-5)."]
     #[inline(always)]
     pub fn rtc_time_m_t(
         self,
@@ -874,6 +959,7 @@ impl RtcTimeAlarmReg {
         crate::common::RegisterField::<20,0x7,1,0,u8,u8,RtcTimeAlarmReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Minutes units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_m_u(
         self,
@@ -882,6 +968,7 @@ impl RtcTimeAlarmReg {
         crate::common::RegisterField::<16,0xf,1,0,u8,u8,RtcTimeAlarmReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Seconds tens. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_s_t(
         self,
@@ -890,6 +977,7 @@ impl RtcTimeAlarmReg {
         crate::common::RegisterField::<12,0x7,1,0,u8,u8,RtcTimeAlarmReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Seconds units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_s_u(
         self,
@@ -898,6 +986,7 @@ impl RtcTimeAlarmReg {
         crate::common::RegisterField::<8,0xf,1,0,u8,u8,RtcTimeAlarmReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Hundredths of a second tens. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_h_t(
         self,
@@ -906,6 +995,7 @@ impl RtcTimeAlarmReg {
         crate::common::RegisterField::<4,0xf,1,0,u8,u8,RtcTimeAlarmReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Hundredths of a second units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_h_u(
         self,
@@ -928,9 +1018,11 @@ impl crate::sealed::RegSpec for RtcTimeReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "RTC Time Register"]
 pub type RtcTimeReg = crate::RegValueT<RtcTimeReg_SPEC>;
 
 impl RtcTimeReg {
+    #[doc = "The value in this register has altered since last read. Read and clear."]
     #[inline(always)]
     pub fn rtc_time_ch(
         self,
@@ -938,6 +1030,7 @@ impl RtcTimeReg {
         crate::common::RegisterFieldBool::<31,1,0,RtcTimeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "In 12 hour clock mode, indicates PM when set."]
     #[inline(always)]
     pub fn rtc_time_pm(
         self,
@@ -945,6 +1038,7 @@ impl RtcTimeReg {
         crate::common::RegisterFieldBool::<30,1,0,RtcTimeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Hours tens. Represented in BCD digit (0-2)."]
     #[inline(always)]
     pub fn rtc_time_hr_t(
         self,
@@ -953,6 +1047,7 @@ impl RtcTimeReg {
         crate::common::RegisterField::<28,0x3,1,0,u8,u8,RtcTimeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Hours units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_hr_u(
         self,
@@ -961,6 +1056,7 @@ impl RtcTimeReg {
         crate::common::RegisterField::<24,0xf,1,0,u8,u8,RtcTimeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Minutes tens. Represented in BCD digit (0-5)."]
     #[inline(always)]
     pub fn rtc_time_m_t(
         self,
@@ -969,6 +1065,7 @@ impl RtcTimeReg {
         crate::common::RegisterField::<20,0x7,1,0,u8,u8,RtcTimeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Minutes units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_m_u(
         self,
@@ -977,6 +1074,7 @@ impl RtcTimeReg {
         crate::common::RegisterField::<16,0xf,1,0,u8,u8,RtcTimeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Seconds tens. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_s_t(
         self,
@@ -985,6 +1083,7 @@ impl RtcTimeReg {
         crate::common::RegisterField::<12,0x7,1,0,u8,u8,RtcTimeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Seconds units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_s_u(
         self,
@@ -993,6 +1092,7 @@ impl RtcTimeReg {
         crate::common::RegisterField::<8,0xf,1,0,u8,u8,RtcTimeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Hundredths of a second tens. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_h_t(
         self,
@@ -1001,6 +1101,7 @@ impl RtcTimeReg {
         crate::common::RegisterField::<4,0xf,1,0,u8,u8,RtcTimeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Hundredths of a second units. Represented in BCD digit (0-9)."]
     #[inline(always)]
     pub fn rtc_time_h_u(
         self,

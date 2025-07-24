@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:52 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -88,6 +88,7 @@ impl crate::sealed::RegSpec for VsysGenCtrlReg_SPEC {
 pub type VsysGenCtrlReg = crate::RegValueT<VsysGenCtrlReg_SPEC>;
 
 impl VsysGenCtrlReg {
+    #[doc = "0x0,0x1: VBAT_VSYS set to ideal diode\n0x2: Forces VBAT_VSYS switch to be opened\n0x3: Forces VBAT_VSYS switch to be closed"]
     #[inline(always)]
     pub fn force_vbat_vsys_sw(
         self,
@@ -96,6 +97,7 @@ impl VsysGenCtrlReg {
         crate::common::RegisterField::<23,0x3,1,0,u8,u8,VsysGenCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0x0,0x1: LDO VSYS will be enabled when COMP_VBUS_OK & COMP_VBUS_ABOVE_VSYS.\n0x2: LDO_VSYS will be disabled regardless of VBUS state\n0x3: LDO_VSYS will be enabled regardless of VBUS state"]
     #[inline(always)]
     pub fn force_ldo_enable(
         self,
@@ -104,6 +106,7 @@ impl VsysGenCtrlReg {
         crate::common::RegisterField::<21,0x3,1,0,u8,u8,VsysGenCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0x0: LDO_VSYS is muted (disabled) when temperature is too high, when temperature is back to operating conditions ldo is unmuted\n0x1: LDO_VSYS is muted (disabled) when temperature is too high, LDO_VSYS_HIGH_TEMP_IRQ must be cleared to allow ldo to be unmuted. See VSYS_GEN_IRQ_CLEAR_REG.\n0x2: LDO_VSYS is not muted (disabled) when temperature is too high\n0x3: Force LDO_VSYS mute"]
     #[inline(always)]
     pub fn ldo_temp_protect_mode(
         self,
@@ -112,6 +115,7 @@ impl VsysGenCtrlReg {
         crate::common::RegisterField::<19,0x3,1,0,u8,u8,VsysGenCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the voltage headroom loop in the LDO_VSYS."]
     #[inline(always)]
     pub fn en_headroom(
         self,
@@ -119,6 +123,7 @@ impl VsysGenCtrlReg {
         crate::common::RegisterFieldBool::<18,1,0,VsysGenCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "For adjusting the offset of the curlim range ( +/- 78 mA)\n0x0 = maximum positive offset.\n0x10 = minimal offset ( reset value).\n0x1F = maximum negative offset."]
     #[inline(always)]
     pub fn curlim_offset_trim(
         self,
@@ -127,6 +132,7 @@ impl VsysGenCtrlReg {
         crate::common::RegisterField::<13,0x1f,1,0,u8,u8,VsysGenCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "For adjusting the gain of the curlim range ( +/- 20%)\n0x0 = maximum gain.\n0x10 = nominal gain ( reset value).\n0x1F = minimum gain."]
     #[inline(always)]
     pub fn curlim_gain_trim(
         self,
@@ -135,6 +141,7 @@ impl VsysGenCtrlReg {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,VsysGenCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Sets the level of the LDO_VSYS current limiter in 10 mA steps. It is reset when vbus is not plugged (COMP_VBUS_PLUGIN == 0).\n0x0 = 1270 mA\n0x1 = 1260 mA\n...\n0x76 = 90 mA ( reset value)"]
     #[inline(always)]
     pub fn curlim_set(
         self,
@@ -143,6 +150,7 @@ impl VsysGenCtrlReg {
         crate::common::RegisterField::<1,0x7f,1,0,u8,u8,VsysGenCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the current limiter in the LDO_VSYS"]
     #[inline(always)]
     pub fn en_curlim(
         self,
@@ -167,6 +175,7 @@ impl crate::sealed::RegSpec for VsysGenIrqClearReg_SPEC {
 pub type VsysGenIrqClearReg = crate::RegValueT<VsysGenIrqClearReg_SPEC>;
 
 impl VsysGenIrqClearReg {
+    #[doc = "Clears VBUS_LOW_DRIVE_IRQ"]
     #[inline(always)]
     pub fn vbus_low_drive_irq_clear(
         self,
@@ -174,6 +183,7 @@ impl VsysGenIrqClearReg {
         crate::common::RegisterFieldBool::<1,1,0,VsysGenIrqClearReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Clears LDO_VSYS_HIGH_TEMP_IRQ"]
     #[inline(always)]
     pub fn ldo_vsys_high_temp_irq_clear(
         self,
@@ -198,6 +208,7 @@ impl crate::sealed::RegSpec for VsysGenIrqMaskReg_SPEC {
 pub type VsysGenIrqMaskReg = crate::RegValueT<VsysGenIrqMaskReg_SPEC>;
 
 impl VsysGenIrqMaskReg {
+    #[doc = "Masks VBUS_LOW_DRIVE_IRQ interrupt. It is reset when vbus is not plugged in (COMP_VBUS_PLUGIN == 0). This is because when vbus is just plugged in, it is likely to bounce; therefore IRQ is masked to avoid false triggering. Some time after vbus plugin, software might increase ldo_vsys current limit and should set this mask to 0 (after clearing IRQ)."]
     #[inline(always)]
     pub fn vbus_low_drive_irq_mask(
         self,
@@ -205,6 +216,7 @@ impl VsysGenIrqMaskReg {
         crate::common::RegisterFieldBool::<1,1,0,VsysGenIrqMaskReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Masks LDO_VSYS_HIGH_TEMP_IRQ interrupt"]
     #[inline(always)]
     pub fn ldo_vsys_high_temp_irq_mask(
         self,
@@ -229,6 +241,7 @@ impl crate::sealed::RegSpec for VsysGenIrqStatusReg_SPEC {
 pub type VsysGenIrqStatusReg = crate::RegValueT<VsysGenIrqStatusReg_SPEC>;
 
 impl VsysGenIrqStatusReg {
+    #[doc = "Indicates vbus drive strength is not enough to keep vbus up with the set limit of ldo_vbus. Consider lowering CURLIM_SET in VSYS_GEN_CTRL_REG."]
     #[inline(always)]
     pub fn vbus_low_drive_irq_status(
         self,
@@ -237,6 +250,7 @@ impl VsysGenIrqStatusReg {
         crate::common::RegisterFieldBool::<1,1,0,VsysGenIrqStatusReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Indicates that a high temperature has been detected at ldo_vsys"]
     #[inline(always)]
     pub fn ldo_vsys_high_temp_irq_status(
         self,

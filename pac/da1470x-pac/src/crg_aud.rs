@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:52 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::CrgAud {
         self.ptr
     }
 
+    #[doc = "PCM divider and enables"]
     #[inline(always)]
     pub const fn pcm_div_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::CrgAud {
         }
     }
 
+    #[doc = "PCM fractional division register"]
     #[inline(always)]
     pub const fn pcm_fdiv_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::CrgAud {
         }
     }
 
+    #[doc = "PDM divider and enables"]
     #[inline(always)]
     pub const fn pdm_div_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::CrgAud {
         }
     }
 
+    #[doc = "SRC divider and enables"]
     #[inline(always)]
     pub const fn src_div_reg(
         &self,
@@ -85,9 +89,11 @@ impl crate::sealed::RegSpec for PcmDivReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "PCM divider and enables"]
 pub type PcmDivReg = crate::RegValueT<PcmDivReg_SPEC>;
 
 impl PcmDivReg {
+    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
     #[inline(always)]
     pub fn pcm_src_sel(
         self,
@@ -95,6 +101,7 @@ impl PcmDivReg {
         crate::common::RegisterFieldBool::<13,1,0,PcmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enable for the internally generated PCM clock\nThe PCM_DIV must be set before or together with CLK_PCM_EN."]
     #[inline(always)]
     pub fn clk_pcm_en(
         self,
@@ -102,6 +109,7 @@ impl PcmDivReg {
         crate::common::RegisterFieldBool::<12,1,0,PcmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "PCM clock divider. Minimum value is 0x2."]
     #[inline(always)]
     pub fn pcm_div(
         self,
@@ -124,9 +132,11 @@ impl crate::sealed::RegSpec for PcmFdivReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "PCM fractional division register"]
 pub type PcmFdivReg = crate::RegValueT<PcmFdivReg_SPEC>;
 
 impl PcmFdivReg {
+    #[doc = "These bits define the fractional division part of the PCM clock. The left most \'1\' defines the denominator, the number of \'1\' bits define the numerator. E.g.\n0x0110 means 2/9, with a distribution of 1.0001.0000\n0xfeee means 13/16, with a distribution of 1111.1110.1110.1110"]
     #[inline(always)]
     pub fn pcm_fdiv(
         self,
@@ -149,9 +159,11 @@ impl crate::sealed::RegSpec for PdmDivReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "PDM divider and enables"]
 pub type PdmDivReg = crate::RegValueT<PdmDivReg_SPEC>;
 
 impl PdmDivReg {
+    #[doc = "Master mode selection\n0: slave mode\n1: master mode"]
     #[inline(always)]
     pub fn pdm_master_mode(
         self,
@@ -159,6 +171,7 @@ impl PdmDivReg {
         crate::common::RegisterFieldBool::<9,1,0,PdmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enable for the internally generated PDM clock\nThe PDM_DIV must be set before or together with CLK_PDM_EN."]
     #[inline(always)]
     pub fn clk_pdm_en(
         self,
@@ -166,6 +179,7 @@ impl PdmDivReg {
         crate::common::RegisterFieldBool::<8,1,0,PdmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "PDM clock divider"]
     #[inline(always)]
     pub fn pdm_div(
         self,
@@ -188,9 +202,11 @@ impl crate::sealed::RegSpec for SrcDivReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SRC divider and enables"]
 pub type SrcDivReg = crate::RegValueT<SrcDivReg_SPEC>;
 
 impl SrcDivReg {
+    #[doc = "Enable for the internally generated SRC2 clock\nThe SRC2_DIV must be set before or together with CLK_SRC2_EN."]
     #[inline(always)]
     pub fn clk_src2_en(
         self,
@@ -198,6 +214,7 @@ impl SrcDivReg {
         crate::common::RegisterFieldBool::<17,1,0,SrcDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enable for the internally generated SRC clock\nThe SRC_DIV must be set before or together with CLK_SRC_EN."]
     #[inline(always)]
     pub fn clk_src_en(
         self,
@@ -205,6 +222,7 @@ impl SrcDivReg {
         crate::common::RegisterFieldBool::<16,1,0,SrcDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SRC2 clock divider"]
     #[inline(always)]
     pub fn src2_div(
         self,
@@ -213,6 +231,7 @@ impl SrcDivReg {
         crate::common::RegisterField::<8,0xff,1,0,u8,u8,SrcDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SRC clock divider"]
     #[inline(always)]
     pub fn src_div(
         self,

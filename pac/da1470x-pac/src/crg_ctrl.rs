@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:52 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::CrgCtrl {
         self.ptr
     }
 
+    #[doc = "Clock control settings for PD_CTRL"]
     #[inline(always)]
     pub const fn clk_pdctrl_reg(
         &self,
@@ -52,9 +53,11 @@ impl crate::sealed::RegSpec for ClkPdctrlReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Clock control settings for PD_CTRL"]
 pub type ClkPdctrlReg = crate::RegValueT<ClkPdctrlReg_SPEC>;
 
 impl ClkPdctrlReg {
+    #[doc = "Inverts the clock in the TX path"]
     #[inline(always)]
     pub fn emmc_inv_tx_clk(
         self,
@@ -62,6 +65,7 @@ impl ClkPdctrlReg {
         crate::common::RegisterFieldBool::<13,1,0,ClkPdctrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Invert the clock in the RX path, cascaded with INV_TX_CLK"]
     #[inline(always)]
     pub fn emmc_inv_rx_clk(
         self,
@@ -69,6 +73,7 @@ impl ClkPdctrlReg {
         crate::common::RegisterFieldBool::<12,1,0,ClkPdctrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock."]
     #[inline(always)]
     pub fn emmc_enable(
         self,
@@ -76,6 +81,7 @@ impl ClkPdctrlReg {
         crate::common::RegisterFieldBool::<11,1,0,ClkPdctrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "clock divider setting\n0x0 : divide by 16\n0x1 : divide by 1\n0x2 : divide by 2\n0x4 : divide by 4\n0x8 : divide by 8"]
     #[inline(always)]
     pub fn emmc_clk_div(
         self,
@@ -84,6 +90,7 @@ impl ClkPdctrlReg {
         crate::common::RegisterField::<7,0xf,1,0,u8,u8,ClkPdctrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Inverts the clock in the TX path"]
     #[inline(always)]
     pub fn sdio_inv_tx_clk(
         self,
@@ -91,6 +98,7 @@ impl ClkPdctrlReg {
         crate::common::RegisterFieldBool::<6,1,0,ClkPdctrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Invert the clock in the RX path, cascaded with INV_TX_CLK"]
     #[inline(always)]
     pub fn sdio_inv_rx_clk(
         self,
@@ -98,6 +106,7 @@ impl ClkPdctrlReg {
         crate::common::RegisterFieldBool::<5,1,0,ClkPdctrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock."]
     #[inline(always)]
     pub fn sdio_enable(
         self,
@@ -105,6 +114,7 @@ impl ClkPdctrlReg {
         crate::common::RegisterFieldBool::<4,1,0,ClkPdctrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "clock divider setting\n0x0 : divide by 16\n0x1 : divide by 1\n0x2 : divide by 2\n0x4 : divide by 4\n0x8 : divide by 8"]
     #[inline(always)]
     pub fn sdio_clk_div(
         self,

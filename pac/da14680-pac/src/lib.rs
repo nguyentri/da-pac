@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:50 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:57 +0000
 #![cfg_attr(not(feature = "tracing"), no_std)]
 #![allow(non_camel_case_types)]
 #![doc = ""]
@@ -439,155 +439,179 @@ pub use self::Interrupt as interrupt;
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
 #[cfg(feature = "rt")]
-extern "C" {
-    fn BLE_WAKEUP_LP();
-    fn BLE_GEN();
-    fn FTDF_WAKEUP();
-    fn FTDF_GEN();
-    fn RFCAL();
-    fn COEX();
-    fn CRYPTO();
-    fn MRM();
-    fn UART();
-    fn UART2();
-    fn I2C();
-    fn I2C2();
-    fn SPI();
-    fn SPI2();
-    fn ADC();
-    fn KEYBRD();
-    fn IRGEN();
-    fn WKUP_GPIO();
-    fn SWTIM0();
-    fn SWTIM1();
-    fn QUADEC();
-    fn USB();
-    fn PCM();
-    fn SRC_IN();
-    fn SRC_OUT();
-    fn VBUS();
-    fn DMA();
-    fn RF_DIAG();
-    fn TRNG();
-    fn DCDC();
-    fn XTAL16RDY();
-    fn RESERVED31();
+pub mod interrupt_handlers {
+    unsafe extern "C" {
+        pub fn BLE_WAKEUP_LP();
+        pub fn BLE_GEN();
+        pub fn FTDF_WAKEUP();
+        pub fn FTDF_GEN();
+        pub fn RFCAL();
+        pub fn COEX();
+        pub fn CRYPTO();
+        pub fn MRM();
+        pub fn UART();
+        pub fn UART2();
+        pub fn I2C();
+        pub fn I2C2();
+        pub fn SPI();
+        pub fn SPI2();
+        pub fn ADC();
+        pub fn KEYBRD();
+        pub fn IRGEN();
+        pub fn WKUP_GPIO();
+        pub fn SWTIM0();
+        pub fn SWTIM1();
+        pub fn QUADEC();
+        pub fn USB();
+        pub fn PCM();
+        pub fn SRC_IN();
+        pub fn SRC_OUT();
+        pub fn VBUS();
+        pub fn DMA();
+        pub fn RF_DIAG();
+        pub fn TRNG();
+        pub fn DCDC();
+        pub fn XTAL16RDY();
+        pub fn RESERVED31();
+    }
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-#[link_section = ".vector_table.interrupts"]
-#[no_mangle]
+#[unsafe(link_section = ".vector_table.interrupts")]
+#[unsafe(no_mangle)]
 pub static __INTERRUPTS: [Vector; 32] = [
     Vector {
-        _handler: BLE_WAKEUP_LP,
-    },
-    Vector { _handler: BLE_GEN },
-    Vector {
-        _handler: FTDF_WAKEUP,
-    },
-    Vector { _handler: FTDF_GEN },
-    Vector { _handler: RFCAL },
-    Vector { _handler: COEX },
-    Vector { _handler: CRYPTO },
-    Vector { _handler: MRM },
-    Vector { _handler: UART },
-    Vector { _handler: UART2 },
-    Vector { _handler: I2C },
-    Vector { _handler: I2C2 },
-    Vector { _handler: SPI },
-    Vector { _handler: SPI2 },
-    Vector { _handler: ADC },
-    Vector { _handler: KEYBRD },
-    Vector { _handler: IRGEN },
-    Vector {
-        _handler: WKUP_GPIO,
-    },
-    Vector { _handler: SWTIM0 },
-    Vector { _handler: SWTIM1 },
-    Vector { _handler: QUADEC },
-    Vector { _handler: USB },
-    Vector { _handler: PCM },
-    Vector { _handler: SRC_IN },
-    Vector { _handler: SRC_OUT },
-    Vector { _handler: VBUS },
-    Vector { _handler: DMA },
-    Vector { _handler: RF_DIAG },
-    Vector { _handler: TRNG },
-    Vector { _handler: DCDC },
-    Vector {
-        _handler: XTAL16RDY,
+        _handler: interrupt_handlers::BLE_WAKEUP_LP,
     },
     Vector {
-        _handler: RESERVED31,
+        _handler: interrupt_handlers::BLE_GEN,
+    },
+    Vector {
+        _handler: interrupt_handlers::FTDF_WAKEUP,
+    },
+    Vector {
+        _handler: interrupt_handlers::FTDF_GEN,
+    },
+    Vector {
+        _handler: interrupt_handlers::RFCAL,
+    },
+    Vector {
+        _handler: interrupt_handlers::COEX,
+    },
+    Vector {
+        _handler: interrupt_handlers::CRYPTO,
+    },
+    Vector {
+        _handler: interrupt_handlers::MRM,
+    },
+    Vector {
+        _handler: interrupt_handlers::UART,
+    },
+    Vector {
+        _handler: interrupt_handlers::UART2,
+    },
+    Vector {
+        _handler: interrupt_handlers::I2C,
+    },
+    Vector {
+        _handler: interrupt_handlers::I2C2,
+    },
+    Vector {
+        _handler: interrupt_handlers::SPI,
+    },
+    Vector {
+        _handler: interrupt_handlers::SPI2,
+    },
+    Vector {
+        _handler: interrupt_handlers::ADC,
+    },
+    Vector {
+        _handler: interrupt_handlers::KEYBRD,
+    },
+    Vector {
+        _handler: interrupt_handlers::IRGEN,
+    },
+    Vector {
+        _handler: interrupt_handlers::WKUP_GPIO,
+    },
+    Vector {
+        _handler: interrupt_handlers::SWTIM0,
+    },
+    Vector {
+        _handler: interrupt_handlers::SWTIM1,
+    },
+    Vector {
+        _handler: interrupt_handlers::QUADEC,
+    },
+    Vector {
+        _handler: interrupt_handlers::USB,
+    },
+    Vector {
+        _handler: interrupt_handlers::PCM,
+    },
+    Vector {
+        _handler: interrupt_handlers::SRC_IN,
+    },
+    Vector {
+        _handler: interrupt_handlers::SRC_OUT,
+    },
+    Vector {
+        _handler: interrupt_handlers::VBUS,
+    },
+    Vector {
+        _handler: interrupt_handlers::DMA,
+    },
+    Vector {
+        _handler: interrupt_handlers::RF_DIAG,
+    },
+    Vector {
+        _handler: interrupt_handlers::TRNG,
+    },
+    Vector {
+        _handler: interrupt_handlers::DCDC,
+    },
+    Vector {
+        _handler: interrupt_handlers::XTAL16RDY,
+    },
+    Vector {
+        _handler: interrupt_handlers::RESERVED31,
     },
 ];
 #[doc = "Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
-    #[doc = ""]
     BLE_WAKEUP_LP = 0,
-    #[doc = ""]
     BLE_GEN = 1,
-    #[doc = ""]
     FTDF_WAKEUP = 2,
-    #[doc = ""]
     FTDF_GEN = 3,
-    #[doc = ""]
     RFCAL = 4,
-    #[doc = ""]
     COEX = 5,
-    #[doc = ""]
     CRYPTO = 6,
-    #[doc = ""]
     MRM = 7,
-    #[doc = ""]
     UART = 8,
-    #[doc = ""]
     UART2 = 9,
-    #[doc = ""]
     I2C = 10,
-    #[doc = ""]
     I2C2 = 11,
-    #[doc = ""]
     SPI = 12,
-    #[doc = ""]
     SPI2 = 13,
-    #[doc = ""]
     ADC = 14,
-    #[doc = ""]
     KEYBRD = 15,
-    #[doc = ""]
     IRGEN = 16,
-    #[doc = ""]
     WKUP_GPIO = 17,
-    #[doc = ""]
     SWTIM0 = 18,
-    #[doc = ""]
     SWTIM1 = 19,
-    #[doc = ""]
     QUADEC = 20,
-    #[doc = ""]
     USB = 21,
-    #[doc = ""]
     PCM = 22,
-    #[doc = ""]
     SRC_IN = 23,
-    #[doc = ""]
     SRC_OUT = 24,
-    #[doc = ""]
     VBUS = 25,
-    #[doc = ""]
     DMA = 26,
-    #[doc = ""]
     RF_DIAG = 27,
-    #[doc = ""]
     TRNG = 28,
-    #[doc = ""]
     DCDC = 29,
-    #[doc = ""]
     XTAL16RDY = 30,
-    #[doc = ""]
     RESERVED31 = 31,
 }
 unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {

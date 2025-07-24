@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Gpreg {
         self.ptr
     }
 
+    #[doc = "BLE FINECNT sampled value while in deep sleep state."]
     #[inline(always)]
     pub const fn ble_timer_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::Gpreg {
         }
     }
 
+    #[doc = "Various debug information register."]
     #[inline(always)]
     pub const fn debug_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::Gpreg {
         }
     }
 
+    #[doc = "General purpose system control register."]
     #[inline(always)]
     pub const fn gp_control_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::Gpreg {
         }
     }
 
+    #[doc = "General purpose system status register."]
     #[inline(always)]
     pub const fn gp_status_reg(
         &self,
@@ -89,6 +93,7 @@ impl super::Gpreg {
         }
     }
 
+    #[doc = "Controls unfreezing of various timers/counters."]
     #[inline(always)]
     pub const fn reset_freeze_reg(
         &self,
@@ -100,6 +105,7 @@ impl super::Gpreg {
         }
     }
 
+    #[doc = "Controls freezing of various timers/counters."]
     #[inline(always)]
     pub const fn set_freeze_reg(
         &self,
@@ -118,9 +124,11 @@ impl crate::sealed::RegSpec for BleTimerReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "BLE FINECNT sampled value while in deep sleep state."]
 pub type BleTimerReg = crate::RegValueT<BleTimerReg_SPEC>;
 
 impl BleTimerReg {
+    #[doc = "Operation depends on GP_CONTROL_REG->BLE_TIMER_DATA_CTRL.\nIf BLE_TIMER_DATA_CTRL = 0 then:\nThis register is located at the Always On Power Domain and it holds the automatically sampled value of the BLE FINECNT timer\nThe HW automatically samples the value into this register during the sequence of \"BLE Sleep On\" and restores automatically the value during the BLE Wake up sequence.\nThe Software may read and modify the value while the BLE is in Sleep state. While the BLE is awake, the value of the register has no meaning, while changing the value by writing another one will have no effect in the operation of the BLE core.\nThere is a constraint when the SW performs an write-read sequence where it has to inject a one cycle delay in between (e.g. write-NOP-read) in order to read back the correct value.\nIf BLE_TIMER_DATA_CTRL is non 0 then write operations have the same effect as when BLE_TIMER_DATA_CTRL=0, while for read operations:\nBLE_TIMER_DATA_CTRL= 1: then reading BLE_TIMER_REG returns \"deepsldur\\[9:0\\]\".\nBLE_TIMER_DATA_CTRL= 2: then reading BLE_TIMER_REG returns \"deepsltime_samp\\[9:0\\]\".\nBLE_TIMER_DATA_CTRL= 3: then reading BLE_TIMER_REG returns \"{deep_sleep_stat_monitor, deepsltime_samp\\[18:10\\]}.\n."]
     #[inline(always)]
     pub fn ble_timer_data(
         self,
@@ -143,9 +151,11 @@ impl crate::sealed::RegSpec for DebugReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Various debug information register."]
 pub type DebugReg = crate::RegValueT<DebugReg_SPEC>;
 
 impl DebugReg {
+    #[doc = "Default \'1\', freezing of the on-chip timers is enabled when the Cortex-M0Plus is halted in DEBUG State.\nIf \'0\', freezing of the on-chip timers is depending on FREEZE_REG when the Cortex-M0Plus is halted in DEBUG State except the watchdog timer. The watchdog timer is always frozen when the Cortex-M0Plus is halted in DEBUG State."]
     #[inline(always)]
     pub fn debugs_freeze_en(
         self,
@@ -169,9 +179,11 @@ impl crate::sealed::RegSpec for GpControlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "General purpose system control register."]
 pub type GpControlReg = crate::RegValueT<GpControlReg_SPEC>;
 
 impl GpControlReg {
+    #[doc = "Refer to BLE_TIMER_REG."]
     #[inline(always)]
     pub fn ble_timer_data_ctrl(
         self,
@@ -180,6 +192,7 @@ impl GpControlReg {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,GpControlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Controls the CPU DMA system bus priority:\nIf \'0\', the CPU has highest priority.\nIf \'1\', the DMA has highest priority."]
     #[inline(always)]
     pub fn cpu_dma_bus_prio(
         self,
@@ -187,6 +200,7 @@ impl GpControlReg {
         crate::common::RegisterFieldBool::<4,1,0,GpControlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "The current value of the BLE_WAKEUP_LP_IRQ interrupt request."]
     #[inline(always)]
     pub fn ble_wakeup_lp_irq(
         self,
@@ -194,6 +208,7 @@ impl GpControlReg {
         crate::common::RegisterFieldBool::<2,1,0,GpControlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "If \'1\', the BLE wakes up. Must be kept high at least for 1 low power clock period. \nIf the BLE is in deep sleep state, then by setting this bit it will cause the wakeup LP IRQ to be asserted with a delay of 3 to 4 low power cycles."]
     #[inline(always)]
     pub fn ble_wakeup_req(
         self,
@@ -215,9 +230,11 @@ impl crate::sealed::RegSpec for GpStatusReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "General purpose system status register."]
 pub type GpStatusReg = crate::RegValueT<GpStatusReg_SPEC>;
 
 impl GpStatusReg {
+    #[doc = "If \'1\', it designates that the chip is in Calibration Phase i.e. the OTP has been initially programmed but no Calibration has occured."]
     #[inline(always)]
     pub fn cal_phase(
         self,
@@ -314,9 +331,11 @@ impl crate::sealed::RegSpec for ResetFreezeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Controls unfreezing of various timers/counters."]
 pub type ResetFreezeReg = crate::RegValueT<ResetFreezeReg_SPEC>;
 
 impl ResetFreezeReg {
+    #[doc = "If \'1\', the DMA continues, \'0\' is discarded."]
     #[inline(always)]
     pub fn frz_dma(
         self,
@@ -324,6 +343,7 @@ impl ResetFreezeReg {
         crate::common::RegisterFieldBool::<4,1,0,ResetFreezeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "If \'1\', the watchdog timer continues, \'0\' is discarded."]
     #[inline(always)]
     pub fn frz_wdog(
         self,
@@ -331,6 +351,7 @@ impl ResetFreezeReg {
         crate::common::RegisterFieldBool::<3,1,0,ResetFreezeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "If \'1\', the the BLE master clock continues, \'0\' is discarded."]
     #[inline(always)]
     pub fn frz_bletim(
         self,
@@ -338,6 +359,7 @@ impl ResetFreezeReg {
         crate::common::RegisterFieldBool::<2,1,0,ResetFreezeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "If \'1\', the SW Timer (TIMER0) continues, \'0\' is discarded."]
     #[inline(always)]
     pub fn frz_swtim(
         self,
@@ -345,6 +367,7 @@ impl ResetFreezeReg {
         crate::common::RegisterFieldBool::<1,1,0,ResetFreezeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "If \'1\', the Wake Up Timer continues, \'0\' is discarded."]
     #[inline(always)]
     pub fn frz_wkuptim(
         self,
@@ -366,9 +389,11 @@ impl crate::sealed::RegSpec for SetFreezeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Controls freezing of various timers/counters."]
 pub type SetFreezeReg = crate::RegValueT<SetFreezeReg_SPEC>;
 
 impl SetFreezeReg {
+    #[doc = "If \'1\', the DMA is frozen, \'0\' is discarded."]
     #[inline(always)]
     pub fn frz_dma(
         self,
@@ -376,6 +401,7 @@ impl SetFreezeReg {
         crate::common::RegisterFieldBool::<4,1,0,SetFreezeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "If \'1\', the watchdog timer is frozen, \'0\' is discarded. WATCHDOG_CTRL_REG\\[NMI_RST\\] must be \'0\' to allow the freeze function."]
     #[inline(always)]
     pub fn frz_wdog(
         self,
@@ -383,6 +409,7 @@ impl SetFreezeReg {
         crate::common::RegisterFieldBool::<3,1,0,SetFreezeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "If \'1\', the BLE master clock is frozen, \'0\' is discarded."]
     #[inline(always)]
     pub fn frz_bletim(
         self,
@@ -390,6 +417,7 @@ impl SetFreezeReg {
         crate::common::RegisterFieldBool::<2,1,0,SetFreezeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "If \'1\', the SW Timer (TIMER0) is frozen, \'0\' is discarded."]
     #[inline(always)]
     pub fn frz_swtim(
         self,
@@ -397,6 +425,7 @@ impl SetFreezeReg {
         crate::common::RegisterFieldBool::<1,1,0,SetFreezeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "If \'1\', the Wake Up Timer is frozen, \'0\' is discarded."]
     #[inline(always)]
     pub fn frz_wkuptim(
         self,

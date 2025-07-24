@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:24 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:20 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Gpio580PortsNl01 {
         self.ptr
     }
 
+    #[doc = "P00 Mode Register"]
     #[inline(always)]
     pub const fn p00_mode_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P01 Mode Register"]
     #[inline(always)]
     pub const fn p01_mode_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "Ports 0 and 1 Output Power Control Register"]
     #[inline(always)]
     pub const fn p01_padpwr_ctrl_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P02 Mode Register"]
     #[inline(always)]
     pub const fn p02_mode_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P03 Mode Register"]
     #[inline(always)]
     pub const fn p03_mode_reg(
         &self,
@@ -89,6 +94,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P04 Mode Register"]
     #[inline(always)]
     pub const fn p04_mode_reg(
         &self,
@@ -100,6 +106,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P05 Mode Register"]
     #[inline(always)]
     pub const fn p05_mode_reg(
         &self,
@@ -111,6 +118,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P06 Mode Register"]
     #[inline(always)]
     pub const fn p06_mode_reg(
         &self,
@@ -122,6 +130,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P07 Mode Register"]
     #[inline(always)]
     pub const fn p07_mode_reg(
         &self,
@@ -133,6 +142,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P0 Data input / output register"]
     #[inline(always)]
     pub const fn p0_data_reg(
         &self,
@@ -144,6 +154,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P0 Reset port pins register"]
     #[inline(always)]
     pub const fn p0_reset_data_reg(
         &self,
@@ -155,6 +166,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P0 Set port pins register"]
     #[inline(always)]
     pub const fn p0_set_data_reg(
         &self,
@@ -166,6 +178,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P10 Mode Register"]
     #[inline(always)]
     pub const fn p10_mode_reg(
         &self,
@@ -177,6 +190,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P11 Mode Register"]
     #[inline(always)]
     pub const fn p11_mode_reg(
         &self,
@@ -188,6 +202,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P12 Mode Register"]
     #[inline(always)]
     pub const fn p12_mode_reg(
         &self,
@@ -199,6 +214,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P13 Mode Register"]
     #[inline(always)]
     pub const fn p13_mode_reg(
         &self,
@@ -210,6 +226,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P14 Mode Register"]
     #[inline(always)]
     pub const fn p14_mode_reg(
         &self,
@@ -221,6 +238,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P15 Mode Register"]
     #[inline(always)]
     pub const fn p15_mode_reg(
         &self,
@@ -232,6 +250,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P1 Data input / output register"]
     #[inline(always)]
     pub const fn p1_data_reg(
         &self,
@@ -243,6 +262,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P1 Reset port pins register"]
     #[inline(always)]
     pub const fn p1_reset_data_reg(
         &self,
@@ -254,6 +274,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P1 Set port pins register"]
     #[inline(always)]
     pub const fn p1_set_data_reg(
         &self,
@@ -265,6 +286,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P20 Mode Register"]
     #[inline(always)]
     pub const fn p20_mode_reg(
         &self,
@@ -276,6 +298,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P21 Mode Register"]
     #[inline(always)]
     pub const fn p21_mode_reg(
         &self,
@@ -287,6 +310,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P22 Mode Register"]
     #[inline(always)]
     pub const fn p22_mode_reg(
         &self,
@@ -298,6 +322,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P23 Mode Register"]
     #[inline(always)]
     pub const fn p23_mode_reg(
         &self,
@@ -309,6 +334,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P24 Mode Register"]
     #[inline(always)]
     pub const fn p24_mode_reg(
         &self,
@@ -320,6 +346,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P25 Mode Register"]
     #[inline(always)]
     pub const fn p25_mode_reg(
         &self,
@@ -331,6 +358,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P26 Mode Register"]
     #[inline(always)]
     pub const fn p26_mode_reg(
         &self,
@@ -342,6 +370,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P27 Mode Register"]
     #[inline(always)]
     pub const fn p27_mode_reg(
         &self,
@@ -353,6 +382,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P28 Mode Register"]
     #[inline(always)]
     pub const fn p28_mode_reg(
         &self,
@@ -364,6 +394,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P29 Mode Register"]
     #[inline(always)]
     pub const fn p29_mode_reg(
         &self,
@@ -375,6 +406,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P2 Data input / output register"]
     #[inline(always)]
     pub const fn p2_data_reg(
         &self,
@@ -386,6 +418,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "Port 2 Output Power Control Register"]
     #[inline(always)]
     pub const fn p2_padpwr_ctrl_reg(
         &self,
@@ -397,6 +430,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P2 Reset port pins register"]
     #[inline(always)]
     pub const fn p2_reset_data_reg(
         &self,
@@ -408,6 +442,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P2 Set port pins register"]
     #[inline(always)]
     pub const fn p2_set_data_reg(
         &self,
@@ -419,6 +454,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P30 Mode Register"]
     #[inline(always)]
     pub const fn p30_mode_reg(
         &self,
@@ -430,6 +466,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P31 Mode Register"]
     #[inline(always)]
     pub const fn p31_mode_reg(
         &self,
@@ -441,6 +478,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P32 Mode Register"]
     #[inline(always)]
     pub const fn p32_mode_reg(
         &self,
@@ -452,6 +490,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P33 Mode Register"]
     #[inline(always)]
     pub const fn p33_mode_reg(
         &self,
@@ -463,6 +502,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P34 Mode Register"]
     #[inline(always)]
     pub const fn p34_mode_reg(
         &self,
@@ -474,6 +514,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P35 Mode Register"]
     #[inline(always)]
     pub const fn p35_mode_reg(
         &self,
@@ -485,6 +526,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P36 Mode Register"]
     #[inline(always)]
     pub const fn p36_mode_reg(
         &self,
@@ -496,6 +538,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P37 Mode Register"]
     #[inline(always)]
     pub const fn p37_mode_reg(
         &self,
@@ -507,6 +550,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P3 Data input / output register"]
     #[inline(always)]
     pub const fn p3_data_reg(
         &self,
@@ -518,6 +562,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "Port 3 Output Power Control Register"]
     #[inline(always)]
     pub const fn p3_padpwr_ctrl_reg(
         &self,
@@ -529,6 +574,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P3 Reset port pins register"]
     #[inline(always)]
     pub const fn p3_reset_data_reg(
         &self,
@@ -540,6 +586,7 @@ impl super::Gpio580PortsNl01 {
         }
     }
 
+    #[doc = "P3 Set port pins register"]
     #[inline(always)]
     pub const fn p3_set_data_reg(
         &self,
@@ -558,9 +605,11 @@ impl crate::sealed::RegSpec for P00ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P00 Mode Register"]
 pub type P00ModeReg = crate::RegValueT<P00ModeReg_SPEC>;
 
 impl P00ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -569,6 +618,7 @@ impl P00ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P00ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Function of port\n0 = Port function, PUPD as set above\n1 = UART1_RX\n2 = UART1_TX\n3 = UART2_RX\n4 = UART2_TX\n5 = SPI_DI\n6 = SPI_DO\n7 = SPI_CLK\n8 = SPI_EN\n9 = I2C_SCL\n10 = I2C_SDA\n11 = UART1_IRDA_RX\n12 = UART1_IRDA_TX\n13 = UART2_IRDA_RX\n14 = UART2_IRDA_TX\n15 = ADC (only for P0\\[3:0\\])\n16 = PWM0\n17 = PWM1\n18 = BLE_DIAG (only for P0\\[7:0\\])\n19 = UART1_CTSN\n20 = UART1_RTSN\n21 = UART2_CTSN\n22 = UART2_RTSN\n23 = PWM2\n24 = PWM3\n25 = PWM4\nNote: when a certain input function (like SPI_DI) is selected on more than 1 port pin, the port with the lowest index has the highest priority and P0 has higher priority than P1."]
     #[inline(always)]
     pub fn pid(
         self,
@@ -591,9 +641,11 @@ impl crate::sealed::RegSpec for P01ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P01 Mode Register"]
 pub type P01ModeReg = crate::RegValueT<P01ModeReg_SPEC>;
 
 impl P01ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -602,6 +654,7 @@ impl P01ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P01ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Function of port\n0 = Port function, PUPD as set above\n1 = UART1_RX\n2 = UART1_TX\n3 = UART2_RX\n4 = UART2_TX\n5 = SPI_DI\n6 = SPI_DO\n7 = SPI_CLK\n8 = SPI_EN\n9 = I2C_SCL\n10 = I2C_SDA\n11 = UART1_IRDA_RX\n12 = UART1_IRDA_TX\n13 = UART2_IRDA_RX\n14 = UART2_IRDA_TX\n15 = ADC (only for P0\\[3:0\\])\n16 = PWM0\n17 = PWM1\n18 = BLE_DIAG (only for P0\\[7:0\\])\n19 = UART1_CTSN\n20 = UART1_RTSN\n21 = UART2_CTSN\n22 = UART2_RTSN\n23 = PWM2\n24 = PWM3\n25 = PWM4\nNote: when a certain input function (like SPI_DI) is selected on more than 1 port pin, the port with the lowest index has the highest priority and P0 has higher priority than P1."]
     #[inline(always)]
     pub fn pid(
         self,
@@ -624,9 +677,11 @@ impl crate::sealed::RegSpec for P01PadpwrCtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Ports 0 and 1 Output Power Control Register"]
 pub type P01PadpwrCtrlReg = crate::RegValueT<P01PadpwrCtrlReg_SPEC>;
 
 impl P01PadpwrCtrlReg {
+    #[doc = "1 = P1_x port output is powered by the 1 V rail\n0 = P1_x port output is powered by the 3 V rail\nbit 8 controls the power of P1\\[0\\],\nbit 13 controls the power of P1\\[5\\]"]
     #[inline(always)]
     pub fn p1_out_ctrl(
         self,
@@ -644,6 +699,7 @@ impl P01PadpwrCtrlReg {
         >::from_register(self, 0)
     }
 
+    #[doc = "1 = P0_x port output is powered by the 1 V rail\n0 = P0_x port output is powered by the 3 V rail\nbit 0 controls the power of P0\\[0\\],\nbit 7 controls the power of P0\\[7\\]"]
     #[inline(always)]
     pub fn p0_out_ctrl(
         self,
@@ -675,9 +731,11 @@ impl crate::sealed::RegSpec for P02ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P02 Mode Register"]
 pub type P02ModeReg = crate::RegValueT<P02ModeReg_SPEC>;
 
 impl P02ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -686,6 +744,7 @@ impl P02ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P02ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Function of port\n0 = Port function, PUPD as set above\n1 = UART1_RX\n2 = UART1_TX\n3 = UART2_RX\n4 = UART2_TX\n5 = SPI_DI\n6 = SPI_DO\n7 = SPI_CLK\n8 = SPI_EN\n9 = I2C_SCL\n10 = I2C_SDA\n11 = UART1_IRDA_RX\n12 = UART1_IRDA_TX\n13 = UART2_IRDA_RX\n14 = UART2_IRDA_TX\n15 = ADC (only for P0\\[3:0\\])\n16 = PWM0\n17 = PWM1\n18 = BLE_DIAG (only for P0\\[7:0\\])\n19 = UART1_CTSN\n20 = UART1_RTSN\n21 = UART2_CTSN\n22 = UART2_RTSN\n23 = PWM2\n24 = PWM3\n25 = PWM4\nNote: when a certain input function (like SPI_DI) is selected on more than 1 port pin, the port with the lowest index has the highest priority and P0 has higher priority than P1."]
     #[inline(always)]
     pub fn pid(
         self,
@@ -708,9 +767,11 @@ impl crate::sealed::RegSpec for P03ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P03 Mode Register"]
 pub type P03ModeReg = crate::RegValueT<P03ModeReg_SPEC>;
 
 impl P03ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -719,6 +780,7 @@ impl P03ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P03ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Function of port\n0 = Port function, PUPD as set above\n1 = UART1_RX\n2 = UART1_TX\n3 = UART2_RX\n4 = UART2_TX\n5 = SPI_DI\n6 = SPI_DO\n7 = SPI_CLK\n8 = SPI_EN\n9 = I2C_SCL\n10 = I2C_SDA\n11 = UART1_IRDA_RX\n12 = UART1_IRDA_TX\n13 = UART2_IRDA_RX\n14 = UART2_IRDA_TX\n15 = ADC (only for P0\\[3:0\\])\n16 = PWM0\n17 = PWM1\n18 = BLE_DIAG (only for P0\\[7:0\\])\n19 = UART1_CTSN\n20 = UART1_RTSN\n21 = UART2_CTSN\n22 = UART2_RTSN\n23 = PWM2\n24 = PWM3\n25 = PWM4\nNote: when a certain input function (like SPI_DI) is selected on more than 1 port pin, the port with the lowest index has the highest priority and P0 has higher priority than P1."]
     #[inline(always)]
     pub fn pid(
         self,
@@ -741,9 +803,11 @@ impl crate::sealed::RegSpec for P04ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P04 Mode Register"]
 pub type P04ModeReg = crate::RegValueT<P04ModeReg_SPEC>;
 
 impl P04ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -752,6 +816,7 @@ impl P04ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P04ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Function of port\n0 = Port function, PUPD as set above\n1 = UART1_RX\n2 = UART1_TX\n3 = UART2_RX\n4 = UART2_TX\n5 = SPI_DI\n6 = SPI_DO\n7 = SPI_CLK\n8 = SPI_EN\n9 = I2C_SCL\n10 = I2C_SDA\n11 = UART1_IRDA_RX\n12 = UART1_IRDA_TX\n13 = UART2_IRDA_RX\n14 = UART2_IRDA_TX\n15 = ADC (only for P0\\[3:0\\])\n16 = PWM0\n17 = PWM1\n18 = BLE_DIAG (only for P0\\[7:0\\])\n19 = UART1_CTSN\n20 = UART1_RTSN\n21 = UART2_CTSN\n22 = UART2_RTSN\n23 = PWM2\n24 = PWM3\n25 = PWM4\nNote: when a certain input function (like SPI_DI) is selected on more than 1 port pin, the port with the lowest index has the highest priority and P0 has higher priority than P1."]
     #[inline(always)]
     pub fn pid(
         self,
@@ -774,9 +839,11 @@ impl crate::sealed::RegSpec for P05ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P05 Mode Register"]
 pub type P05ModeReg = crate::RegValueT<P05ModeReg_SPEC>;
 
 impl P05ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -785,6 +852,7 @@ impl P05ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P05ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Function of port\n0 = Port function, PUPD as set above\n1 = UART1_RX\n2 = UART1_TX\n3 = UART2_RX\n4 = UART2_TX\n5 = SPI_DI\n6 = SPI_DO\n7 = SPI_CLK\n8 = SPI_EN\n9 = I2C_SCL\n10 = I2C_SDA\n11 = UART1_IRDA_RX\n12 = UART1_IRDA_TX\n13 = UART2_IRDA_RX\n14 = UART2_IRDA_TX\n15 = ADC (only for P0\\[3:0\\])\n16 = PWM0\n17 = PWM1\n18 = BLE_DIAG (only for P0\\[7:0\\])\n19 = UART1_CTSN\n20 = UART1_RTSN\n21 = UART2_CTSN\n22 = UART2_RTSN\n23 = PWM2\n24 = PWM3\n25 = PWM4\nNote: when a certain input function (like SPI_DI) is selected on more than 1 port pin, the port with the lowest index has the highest priority and P0 has higher priority than P1."]
     #[inline(always)]
     pub fn pid(
         self,
@@ -807,9 +875,11 @@ impl crate::sealed::RegSpec for P06ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P06 Mode Register"]
 pub type P06ModeReg = crate::RegValueT<P06ModeReg_SPEC>;
 
 impl P06ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -818,6 +888,7 @@ impl P06ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P06ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Function of port\n0 = Port function, PUPD as set above\n1 = UART1_RX\n2 = UART1_TX\n3 = UART2_RX\n4 = UART2_TX\n5 = SPI_DI\n6 = SPI_DO\n7 = SPI_CLK\n8 = SPI_EN\n9 = I2C_SCL\n10 = I2C_SDA\n11 = UART1_IRDA_RX\n12 = UART1_IRDA_TX\n13 = UART2_IRDA_RX\n14 = UART2_IRDA_TX\n15 = ADC (only for P0\\[3:0\\])\n16 = PWM0\n17 = PWM1\n18 = BLE_DIAG (only for P0\\[7:0\\])\n19 = UART1_CTSN\n20 = UART1_RTSN\n21 = UART2_CTSN\n22 = UART2_RTSN\n23 = PWM2\n24 = PWM3\n25 = PWM4\nNote: when a certain input function (like SPI_DI) is selected on more than 1 port pin, the port with the lowest index has the highest priority and P0 has higher priority than P1."]
     #[inline(always)]
     pub fn pid(
         self,
@@ -840,9 +911,11 @@ impl crate::sealed::RegSpec for P07ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P07 Mode Register"]
 pub type P07ModeReg = crate::RegValueT<P07ModeReg_SPEC>;
 
 impl P07ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -851,6 +924,7 @@ impl P07ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P07ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Function of port\n0 = Port function, PUPD as set above\n1 = UART1_RX\n2 = UART1_TX\n3 = UART2_RX\n4 = UART2_TX\n5 = SPI_DI\n6 = SPI_DO\n7 = SPI_CLK\n8 = SPI_EN\n9 = I2C_SCL\n10 = I2C_SDA\n11 = UART1_IRDA_RX\n12 = UART1_IRDA_TX\n13 = UART2_IRDA_RX\n14 = UART2_IRDA_TX\n15 = ADC (only for P0\\[3:0\\])\n16 = PWM0\n17 = PWM1\n18 = BLE_DIAG (only for P0\\[7:0\\])\n19 = UART1_CTSN\n20 = UART1_RTSN\n21 = UART2_CTSN\n22 = UART2_RTSN\n23 = PWM2\n24 = PWM3\n25 = PWM4\nNote: when a certain input function (like SPI_DI) is selected on more than 1 port pin, the port with the lowest index has the highest priority and P0 has higher priority than P1."]
     #[inline(always)]
     pub fn pid(
         self,
@@ -873,9 +947,11 @@ impl crate::sealed::RegSpec for P0DataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P0 Data input / output register"]
 pub type P0DataReg = crate::RegValueT<P0DataReg_SPEC>;
 
 impl P0DataReg {
+    #[doc = "Set P0 output register when written; Returns the value of P0 port when read"]
     #[inline(always)]
     pub fn p0_data(
         self,
@@ -898,9 +974,11 @@ impl crate::sealed::RegSpec for P0ResetDataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P0 Reset port pins register"]
 pub type P0ResetDataReg = crate::RegValueT<P0ResetDataReg_SPEC>;
 
 impl P0ResetDataReg {
+    #[doc = "Writing a 1 to P0\\[y\\] sets P0\\[y\\] to 0. Writing 0 is discarded;\nReading returns 0"]
     #[inline(always)]
     pub fn p0_reset(
         self,
@@ -923,9 +1001,11 @@ impl crate::sealed::RegSpec for P0SetDataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P0 Set port pins register"]
 pub type P0SetDataReg = crate::RegValueT<P0SetDataReg_SPEC>;
 
 impl P0SetDataReg {
+    #[doc = "Writing a 1 to P0\\[y\\] sets P0\\[y\\] to 1. Writing 0 is discarded;\nReading returns 0"]
     #[inline(always)]
     pub fn p0_set(
         self,
@@ -948,9 +1028,11 @@ impl crate::sealed::RegSpec for P10ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P10 Mode Register"]
 pub type P10ModeReg = crate::RegValueT<P10ModeReg_SPEC>;
 
 impl P10ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care\nP14_MODE_REG and P15_MODE_REG reset value is 1 (i.e. pulled up)"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -959,6 +1041,7 @@ impl P10ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P10ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -981,9 +1064,11 @@ impl crate::sealed::RegSpec for P11ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P11 Mode Register"]
 pub type P11ModeReg = crate::RegValueT<P11ModeReg_SPEC>;
 
 impl P11ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care\nP14_MODE_REG and P15_MODE_REG reset value is 1 (i.e. pulled up)"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -992,6 +1077,7 @@ impl P11ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P11ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1014,9 +1100,11 @@ impl crate::sealed::RegSpec for P12ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P12 Mode Register"]
 pub type P12ModeReg = crate::RegValueT<P12ModeReg_SPEC>;
 
 impl P12ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care\nP14_MODE_REG and P15_MODE_REG reset value is 1 (i.e. pulled up)"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1025,6 +1113,7 @@ impl P12ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P12ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1047,9 +1136,11 @@ impl crate::sealed::RegSpec for P13ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P13 Mode Register"]
 pub type P13ModeReg = crate::RegValueT<P13ModeReg_SPEC>;
 
 impl P13ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care\nP14_MODE_REG and P15_MODE_REG reset value is 1 (i.e. pulled up)"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1058,6 +1149,7 @@ impl P13ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P13ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1080,9 +1172,11 @@ impl crate::sealed::RegSpec for P14ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P14 Mode Register"]
 pub type P14ModeReg = crate::RegValueT<P14ModeReg_SPEC>;
 
 impl P14ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care\nP14_MODE_REG and P15_MODE_REG reset value is 1 (i.e. pulled up)"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1091,6 +1185,7 @@ impl P14ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P14ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1113,9 +1208,11 @@ impl crate::sealed::RegSpec for P15ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P15 Mode Register"]
 pub type P15ModeReg = crate::RegValueT<P15ModeReg_SPEC>;
 
 impl P15ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care\nP14_MODE_REG and P15_MODE_REG reset value is 1 (i.e. pulled up)"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1124,6 +1221,7 @@ impl P15ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P15ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1146,9 +1244,11 @@ impl crate::sealed::RegSpec for P1DataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P1 Data input / output register"]
 pub type P1DataReg = crate::RegValueT<P1DataReg_SPEC>;
 
 impl P1DataReg {
+    #[doc = "Set P1 output register when written; Returns the value of P1 port when read"]
     #[inline(always)]
     pub fn p1_data(
         self,
@@ -1171,9 +1271,11 @@ impl crate::sealed::RegSpec for P1ResetDataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P1 Reset port pins register"]
 pub type P1ResetDataReg = crate::RegValueT<P1ResetDataReg_SPEC>;
 
 impl P1ResetDataReg {
+    #[doc = "Writing a 1 to P1\\[y\\] sets P1\\[y\\] to 0. Writing 0 is discarded;\nReading returns 0"]
     #[inline(always)]
     pub fn p1_reset(
         self,
@@ -1196,9 +1298,11 @@ impl crate::sealed::RegSpec for P1SetDataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P1 Set port pins register"]
 pub type P1SetDataReg = crate::RegValueT<P1SetDataReg_SPEC>;
 
 impl P1SetDataReg {
+    #[doc = "Writing a 1 to P1\\[y\\] sets P1\\[y\\] to 1. Writing 0 is discarded;\nReading returns 0"]
     #[inline(always)]
     pub fn p1_set(
         self,
@@ -1221,9 +1325,11 @@ impl crate::sealed::RegSpec for P20ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P20 Mode Register"]
 pub type P20ModeReg = crate::RegValueT<P20ModeReg_SPEC>;
 
 impl P20ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1232,6 +1338,7 @@ impl P20ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P20ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1254,9 +1361,11 @@ impl crate::sealed::RegSpec for P21ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P21 Mode Register"]
 pub type P21ModeReg = crate::RegValueT<P21ModeReg_SPEC>;
 
 impl P21ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1265,6 +1374,7 @@ impl P21ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P21ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1287,9 +1397,11 @@ impl crate::sealed::RegSpec for P22ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P22 Mode Register"]
 pub type P22ModeReg = crate::RegValueT<P22ModeReg_SPEC>;
 
 impl P22ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1298,6 +1410,7 @@ impl P22ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P22ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1320,9 +1433,11 @@ impl crate::sealed::RegSpec for P23ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P23 Mode Register"]
 pub type P23ModeReg = crate::RegValueT<P23ModeReg_SPEC>;
 
 impl P23ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1331,6 +1446,7 @@ impl P23ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P23ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1353,9 +1469,11 @@ impl crate::sealed::RegSpec for P24ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P24 Mode Register"]
 pub type P24ModeReg = crate::RegValueT<P24ModeReg_SPEC>;
 
 impl P24ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1364,6 +1482,7 @@ impl P24ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P24ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1386,9 +1505,11 @@ impl crate::sealed::RegSpec for P25ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P25 Mode Register"]
 pub type P25ModeReg = crate::RegValueT<P25ModeReg_SPEC>;
 
 impl P25ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1397,6 +1518,7 @@ impl P25ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P25ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1419,9 +1541,11 @@ impl crate::sealed::RegSpec for P26ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P26 Mode Register"]
 pub type P26ModeReg = crate::RegValueT<P26ModeReg_SPEC>;
 
 impl P26ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1430,6 +1554,7 @@ impl P26ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P26ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1452,9 +1577,11 @@ impl crate::sealed::RegSpec for P27ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P27 Mode Register"]
 pub type P27ModeReg = crate::RegValueT<P27ModeReg_SPEC>;
 
 impl P27ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1463,6 +1590,7 @@ impl P27ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P27ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1485,9 +1613,11 @@ impl crate::sealed::RegSpec for P28ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P28 Mode Register"]
 pub type P28ModeReg = crate::RegValueT<P28ModeReg_SPEC>;
 
 impl P28ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1496,6 +1626,7 @@ impl P28ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P28ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1518,9 +1649,11 @@ impl crate::sealed::RegSpec for P29ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P29 Mode Register"]
 pub type P29ModeReg = crate::RegValueT<P29ModeReg_SPEC>;
 
 impl P29ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn analog mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1529,6 +1662,7 @@ impl P29ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P29ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1551,9 +1685,11 @@ impl crate::sealed::RegSpec for P2DataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P2 Data input / output register"]
 pub type P2DataReg = crate::RegValueT<P2DataReg_SPEC>;
 
 impl P2DataReg {
+    #[doc = "Set P2 output register when written; Returns the value of P2 port when read"]
     #[inline(always)]
     pub fn p2_data(
         self,
@@ -1576,9 +1712,11 @@ impl crate::sealed::RegSpec for P2PadpwrCtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 2 Output Power Control Register"]
 pub type P2PadpwrCtrlReg = crate::RegValueT<P2PadpwrCtrlReg_SPEC>;
 
 impl P2PadpwrCtrlReg {
+    #[doc = "1 = P2_x port output is powered by the 1 V rail\n0 = P2_x port output is powered by the 3 V rail\nbit 0 controls the power of P2\\[0\\],\nbit 9 controls the power of P2\\[9\\],"]
     #[inline(always)]
     pub fn p2_out_ctrl(
         self,
@@ -1618,9 +1756,11 @@ impl crate::sealed::RegSpec for P2ResetDataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P2 Reset port pins register"]
 pub type P2ResetDataReg = crate::RegValueT<P2ResetDataReg_SPEC>;
 
 impl P2ResetDataReg {
+    #[doc = "Writing a 1 to P2\\[y\\] sets P2\\[y\\] to 0. Writing 0 is discarded;\nReading returns 0"]
     #[inline(always)]
     pub fn p2_reset(
         self,
@@ -1660,9 +1800,11 @@ impl crate::sealed::RegSpec for P2SetDataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P2 Set port pins register"]
 pub type P2SetDataReg = crate::RegValueT<P2SetDataReg_SPEC>;
 
 impl P2SetDataReg {
+    #[doc = "Writing a 1 to P2\\[y\\] sets P2\\[y\\] to 1. Writing 0 is discarded;\nReading returns 0"]
     #[inline(always)]
     pub fn p2_set(
         self,
@@ -1685,9 +1827,11 @@ impl crate::sealed::RegSpec for P30ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P30 Mode Register"]
 pub type P30ModeReg = crate::RegValueT<P30ModeReg_SPEC>;
 
 impl P30ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1696,6 +1840,7 @@ impl P30ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P30ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1718,9 +1863,11 @@ impl crate::sealed::RegSpec for P31ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P31 Mode Register"]
 pub type P31ModeReg = crate::RegValueT<P31ModeReg_SPEC>;
 
 impl P31ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1729,6 +1876,7 @@ impl P31ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P31ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1751,9 +1899,11 @@ impl crate::sealed::RegSpec for P32ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P32 Mode Register"]
 pub type P32ModeReg = crate::RegValueT<P32ModeReg_SPEC>;
 
 impl P32ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1762,6 +1912,7 @@ impl P32ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P32ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1784,9 +1935,11 @@ impl crate::sealed::RegSpec for P33ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P33 Mode Register"]
 pub type P33ModeReg = crate::RegValueT<P33ModeReg_SPEC>;
 
 impl P33ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1795,6 +1948,7 @@ impl P33ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P33ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1817,9 +1971,11 @@ impl crate::sealed::RegSpec for P34ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P34 Mode Register"]
 pub type P34ModeReg = crate::RegValueT<P34ModeReg_SPEC>;
 
 impl P34ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1828,6 +1984,7 @@ impl P34ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P34ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1850,9 +2007,11 @@ impl crate::sealed::RegSpec for P35ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P35 Mode Register"]
 pub type P35ModeReg = crate::RegValueT<P35ModeReg_SPEC>;
 
 impl P35ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1861,6 +2020,7 @@ impl P35ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P35ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1883,9 +2043,11 @@ impl crate::sealed::RegSpec for P36ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P36 Mode Register"]
 pub type P36ModeReg = crate::RegValueT<P36ModeReg_SPEC>;
 
 impl P36ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1894,6 +2056,7 @@ impl P36ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P36ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1916,9 +2079,11 @@ impl crate::sealed::RegSpec for P37ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P37 Mode Register"]
 pub type P37ModeReg = crate::RegValueT<P37ModeReg_SPEC>;
 
 impl P37ModeReg {
+    #[doc = "00 = Input, no resistors selected\n01 = Input, pull-up selected\n10 = Input, Pull-down selected\n11 = Output, no resistors selected\nIn ADC mode, these bits are don\'t care"]
     #[inline(always)]
     pub fn pupd(
         self,
@@ -1927,6 +2092,7 @@ impl P37ModeReg {
         crate::common::RegisterField::<8,0x3,1,0,u8,u8,P37ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "See P0x_MODE_REG\\[PID\\]"]
     #[inline(always)]
     pub fn pid(
         self,
@@ -1949,9 +2115,11 @@ impl crate::sealed::RegSpec for P3DataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P3 Data input / output register"]
 pub type P3DataReg = crate::RegValueT<P3DataReg_SPEC>;
 
 impl P3DataReg {
+    #[doc = "Set P3 output register when written; Returns the value of P3 port when read"]
     #[inline(always)]
     pub fn p3_data(
         self,
@@ -1974,9 +2142,11 @@ impl crate::sealed::RegSpec for P3PadpwrCtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Port 3 Output Power Control Register"]
 pub type P3PadpwrCtrlReg = crate::RegValueT<P3PadpwrCtrlReg_SPEC>;
 
 impl P3PadpwrCtrlReg {
+    #[doc = "1 = P3_x port output is powered by the 1 V rail\n0 = P3_x port output is powered by the 3 V rail\nbit 0 controls the power of P3\\[0\\],\nbit 7 controls the power of P3\\[7\\],"]
     #[inline(always)]
     pub fn p3_out_ctrl(
         self,
@@ -1999,9 +2169,11 @@ impl crate::sealed::RegSpec for P3ResetDataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P3 Reset port pins register"]
 pub type P3ResetDataReg = crate::RegValueT<P3ResetDataReg_SPEC>;
 
 impl P3ResetDataReg {
+    #[doc = "Writing a 1 to P0\\[y\\] sets P0\\[y\\] to 0. Writing 0 is discarded;\nReading returns 0"]
     #[inline(always)]
     pub fn p3_reset(
         self,
@@ -2024,9 +2196,11 @@ impl crate::sealed::RegSpec for P3SetDataReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "P3 Set port pins register"]
 pub type P3SetDataReg = crate::RegValueT<P3SetDataReg_SPEC>;
 
 impl P3SetDataReg {
+    #[doc = "Writing a 1 to P3\\[y\\] sets P3\\[y\\] to 1. Writing 0 is discarded; Reading returns 0"]
     #[inline(always)]
     pub fn p3_set(
         self,

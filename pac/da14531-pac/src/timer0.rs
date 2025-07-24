@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Timer0 {
         self.ptr
     }
 
+    #[doc = "Defines end Cycle for PWM2"]
     #[inline(always)]
     pub const fn pwm2_end_cycle(
         &self,
@@ -45,6 +46,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Defines start Cycle for PWM2"]
     #[inline(always)]
     pub const fn pwm2_start_cycle(
         &self,
@@ -56,6 +58,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Defines end Cycle for PWM3"]
     #[inline(always)]
     pub const fn pwm3_end_cycle(
         &self,
@@ -67,6 +70,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Defines start Cycle for PWM3"]
     #[inline(always)]
     pub const fn pwm3_start_cycle(
         &self,
@@ -78,6 +82,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Defines end Cycle for PWM4"]
     #[inline(always)]
     pub const fn pwm4_end_cycle(
         &self,
@@ -89,6 +94,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Defines start Cycle for PWM4"]
     #[inline(always)]
     pub const fn pwm4_start_cycle(
         &self,
@@ -100,6 +106,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Defines end Cycle for PWM5"]
     #[inline(always)]
     pub const fn pwm5_end_cycle(
         &self,
@@ -111,6 +118,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Defines start Cycle for PWM5"]
     #[inline(always)]
     pub const fn pwm5_start_cycle(
         &self,
@@ -122,6 +130,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Defines end Cycle for PWM6"]
     #[inline(always)]
     pub const fn pwm6_end_cycle(
         &self,
@@ -133,6 +142,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Defines start Cycle for PWM6"]
     #[inline(always)]
     pub const fn pwm6_start_cycle(
         &self,
@@ -144,6 +154,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Defines end Cycle for PWM7"]
     #[inline(always)]
     pub const fn pwm7_end_cycle(
         &self,
@@ -155,6 +166,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Defines start Cycle for PWM7"]
     #[inline(always)]
     pub const fn pwm7_start_cycle(
         &self,
@@ -166,6 +178,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Timer0 control register"]
     #[inline(always)]
     pub const fn timer0_ctrl_reg(
         &self,
@@ -177,6 +190,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Timer0 on control register"]
     #[inline(always)]
     pub const fn timer0_on_reg(
         &self,
@@ -188,6 +202,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "16 bits reload value for Timer0"]
     #[inline(always)]
     pub const fn timer0_reload_m_reg(
         &self,
@@ -199,6 +214,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "16 bits reload value for Timer0"]
     #[inline(always)]
     pub const fn timer0_reload_n_reg(
         &self,
@@ -210,6 +226,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "PWM 2,3,4,5,6,7 Control"]
     #[inline(always)]
     pub const fn triple_pwm_ctrl_reg(
         &self,
@@ -221,6 +238,7 @@ impl super::Timer0 {
         }
     }
 
+    #[doc = "Frequency for PWM 2,3,4,5,6 and 7"]
     #[inline(always)]
     pub const fn triple_pwm_frequency(
         &self,
@@ -239,9 +257,11 @@ impl crate::sealed::RegSpec for Pwm2EndCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines end Cycle for PWM2"]
 pub type Pwm2EndCycle = crate::RegValueT<Pwm2EndCycle_SPEC>;
 
 impl Pwm2EndCycle {
+    #[doc = "Defines the cycle in which the PWM becomes low. If end_cycle is larger then freq and start_cycle is not larger then freq, output is always 1"]
     #[inline(always)]
     pub fn end_cycle(
         self,
@@ -273,9 +293,11 @@ impl crate::sealed::RegSpec for Pwm2StartCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines start Cycle for PWM2"]
 pub type Pwm2StartCycle = crate::RegValueT<Pwm2StartCycle_SPEC>;
 
 impl Pwm2StartCycle {
+    #[doc = "Defines the cycle in which the PWM becomes high. if start_cycle is larger than freq or end_cycle is equal to start_cycle, pwm out is always 0"]
     #[inline(always)]
     pub fn start_cycle(
         self,
@@ -315,9 +337,11 @@ impl crate::sealed::RegSpec for Pwm3EndCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines end Cycle for PWM3"]
 pub type Pwm3EndCycle = crate::RegValueT<Pwm3EndCycle_SPEC>;
 
 impl Pwm3EndCycle {
+    #[doc = "Defines the cycle in which the PWM becomes low. If end_cycle is larger then freq and start_cycle is not larger then freq, output is always 1"]
     #[inline(always)]
     pub fn end_cycle(
         self,
@@ -349,9 +373,11 @@ impl crate::sealed::RegSpec for Pwm3StartCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines start Cycle for PWM3"]
 pub type Pwm3StartCycle = crate::RegValueT<Pwm3StartCycle_SPEC>;
 
 impl Pwm3StartCycle {
+    #[doc = "Defines the cycle in which the PWM becomes high. if start_cycle is larger than freq or end_cycle is equal to start_cycle, pwm out is always 0"]
     #[inline(always)]
     pub fn start_cycle(
         self,
@@ -391,9 +417,11 @@ impl crate::sealed::RegSpec for Pwm4EndCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines end Cycle for PWM4"]
 pub type Pwm4EndCycle = crate::RegValueT<Pwm4EndCycle_SPEC>;
 
 impl Pwm4EndCycle {
+    #[doc = "Defines the cycle in which the PWM becomes low. If end_cycle is larger then freq and start_cycle is not larger then freq, output is always 1"]
     #[inline(always)]
     pub fn end_cycle(
         self,
@@ -425,9 +453,11 @@ impl crate::sealed::RegSpec for Pwm4StartCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines start Cycle for PWM4"]
 pub type Pwm4StartCycle = crate::RegValueT<Pwm4StartCycle_SPEC>;
 
 impl Pwm4StartCycle {
+    #[doc = "Defines the cycle in which the PWM becomes high. if start_cycle is larger than freq or end_cycle is equal to start_cycle, pwm out is always 0"]
     #[inline(always)]
     pub fn start_cycle(
         self,
@@ -467,9 +497,11 @@ impl crate::sealed::RegSpec for Pwm5EndCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines end Cycle for PWM5"]
 pub type Pwm5EndCycle = crate::RegValueT<Pwm5EndCycle_SPEC>;
 
 impl Pwm5EndCycle {
+    #[doc = "Defines the cycle in which the PWM becomes low. If end_cycle is larger then freq and start_cycle is not larger then freq, output is always 1"]
     #[inline(always)]
     pub fn end_cycle(
         self,
@@ -501,9 +533,11 @@ impl crate::sealed::RegSpec for Pwm5StartCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines start Cycle for PWM5"]
 pub type Pwm5StartCycle = crate::RegValueT<Pwm5StartCycle_SPEC>;
 
 impl Pwm5StartCycle {
+    #[doc = "Defines the cycle in which the PWM becomes high. if start_cycle is larger than freq or end_cycle is equal to start_cycle, pwm out is always 0"]
     #[inline(always)]
     pub fn start_cycle(
         self,
@@ -543,9 +577,11 @@ impl crate::sealed::RegSpec for Pwm6EndCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines end Cycle for PWM6"]
 pub type Pwm6EndCycle = crate::RegValueT<Pwm6EndCycle_SPEC>;
 
 impl Pwm6EndCycle {
+    #[doc = "Defines the cycle in which the PWM becomes low. If end_cycle is larger then freq and start_cycle is not larger then freq, output is always 1"]
     #[inline(always)]
     pub fn end_cycle(
         self,
@@ -577,9 +613,11 @@ impl crate::sealed::RegSpec for Pwm6StartCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines start Cycle for PWM6"]
 pub type Pwm6StartCycle = crate::RegValueT<Pwm6StartCycle_SPEC>;
 
 impl Pwm6StartCycle {
+    #[doc = "Defines the cycle in which the PWM becomes high. if start_cycle is larger than freq or end_cycle is equal to start_cycle, pwm out is always 0"]
     #[inline(always)]
     pub fn start_cycle(
         self,
@@ -619,9 +657,11 @@ impl crate::sealed::RegSpec for Pwm7EndCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines end Cycle for PWM7"]
 pub type Pwm7EndCycle = crate::RegValueT<Pwm7EndCycle_SPEC>;
 
 impl Pwm7EndCycle {
+    #[doc = "Defines the cycle in which the PWM becomes low. If end_cycle is larger then freq and start_cycle is not larger then freq, output is always 1"]
     #[inline(always)]
     pub fn end_cycle(
         self,
@@ -653,9 +693,11 @@ impl crate::sealed::RegSpec for Pwm7StartCycle_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines start Cycle for PWM7"]
 pub type Pwm7StartCycle = crate::RegValueT<Pwm7StartCycle_SPEC>;
 
 impl Pwm7StartCycle {
+    #[doc = "Defines the cycle in which the PWM becomes high. if start_cycle is larger than freq or end_cycle is equal to start_cycle, pwm out is always 0"]
     #[inline(always)]
     pub fn start_cycle(
         self,
@@ -695,9 +737,11 @@ impl crate::sealed::RegSpec for Timer0CtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer0 control register"]
 pub type Timer0CtrlReg = crate::RegValueT<Timer0CtrlReg_SPEC>;
 
 impl Timer0CtrlReg {
+    #[doc = "0 = PWM signals are \'1\' during high time.\n1 = PWM signals send out the (fast) clock divided by 2 during high time. So it will be in the range of 1 to 8 MHz."]
     #[inline(always)]
     pub fn pwm_mode(
         self,
@@ -705,6 +749,7 @@ impl Timer0CtrlReg {
         crate::common::RegisterFieldBool::<3,1,0,Timer0CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1 = Timer0 uses selected clock frequency as is.\n0 = Timer0 uses selected clock frequency divided by 10.\nNote that this applies only to the ON-counter."]
     #[inline(always)]
     pub fn tim0_clk_div(
         self,
@@ -712,6 +757,7 @@ impl Timer0CtrlReg {
         crate::common::RegisterFieldBool::<2,1,0,Timer0CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1 = Timer0 uses 16, 8, 4 or 2 MHz (fast) clock frequency.\n0 = Timer0 uses LP clock"]
     #[inline(always)]
     pub fn tim0_clk_sel(
         self,
@@ -719,6 +765,7 @@ impl Timer0CtrlReg {
         crate::common::RegisterFieldBool::<1,1,0,Timer0CtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0 = Timer0 is off and in reset state.\n1 = Timer0 is running."]
     #[inline(always)]
     pub fn tim0_ctrl(
         self,
@@ -740,9 +787,11 @@ impl crate::sealed::RegSpec for Timer0OnReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Timer0 on control register"]
 pub type Timer0OnReg = crate::RegValueT<Timer0OnReg_SPEC>;
 
 impl Timer0OnReg {
+    #[doc = "Timer0 On reload value:\nIf read the actual ON-counter value is returned"]
     #[inline(always)]
     pub fn tim0_on(
         self,
@@ -765,9 +814,11 @@ impl crate::sealed::RegSpec for Timer0ReloadMReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "16 bits reload value for Timer0"]
 pub type Timer0ReloadMReg = crate::RegValueT<Timer0ReloadMReg_SPEC>;
 
 impl Timer0ReloadMReg {
+    #[doc = "Timer0 \'high\' reload value\nIf read the actual T0-counter value is returned"]
     #[inline(always)]
     pub fn tim0_m(
         self,
@@ -807,9 +858,11 @@ impl crate::sealed::RegSpec for Timer0ReloadNReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "16 bits reload value for Timer0"]
 pub type Timer0ReloadNReg = crate::RegValueT<Timer0ReloadNReg_SPEC>;
 
 impl Timer0ReloadNReg {
+    #[doc = "Timer0 \'low\' reload value:\nIf read the actual T0-counter value is returned"]
     #[inline(always)]
     pub fn tim0_n(
         self,
@@ -849,9 +902,11 @@ impl crate::sealed::RegSpec for TriplePwmCtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PWM 2,3,4,5,6,7 Control"]
 pub type TriplePwmCtrlReg = crate::RegValueT<TriplePwmCtrlReg_SPEC>;
 
 impl TriplePwmCtrlReg {
+    #[doc = "1 = Timer2 uses 16, 8, 4 or 2 MHz (fast) clock frequency.\n0 = Timer2 uses LP clock"]
     #[inline(always)]
     pub fn triple_pwm_clk_sel(
         self,
@@ -859,6 +914,7 @@ impl TriplePwmCtrlReg {
         crate::common::RegisterFieldBool::<3,1,0,TriplePwmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' = HW can pause PWM 2,3,4,5,6,7"]
     #[inline(always)]
     pub fn hw_pause_en(
         self,
@@ -866,6 +922,7 @@ impl TriplePwmCtrlReg {
         crate::common::RegisterFieldBool::<2,1,0,TriplePwmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' = PWM 2 3 4 5 6 7 are paused"]
     #[inline(always)]
     pub fn sw_pause_en(
         self,
@@ -873,6 +930,7 @@ impl TriplePwmCtrlReg {
         crate::common::RegisterFieldBool::<1,1,0,TriplePwmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' = enable PWM 2 3 4 5 6 7"]
     #[inline(always)]
     pub fn triple_pwm_enable(
         self,
@@ -894,9 +952,11 @@ impl crate::sealed::RegSpec for TriplePwmFrequency_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Frequency for PWM 2,3,4,5,6 and 7"]
 pub type TriplePwmFrequency = crate::RegValueT<TriplePwmFrequency_SPEC>;
 
 impl TriplePwmFrequency {
+    #[doc = "Defines the frequeancy of PWM 2,3,4,5,,6 and 7. pwm freq = module Frequency / (value+1)\nmodule frequency is the LP_CLK when TRIPLE_PWM_CLK_SEL=0 else is the sys_clk divided by TMR_DIV"]
     #[inline(always)]
     pub fn pwm_freq(
         self,

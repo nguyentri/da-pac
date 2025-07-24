@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:28 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:24 +0000
 #![cfg_attr(not(feature = "tracing"), no_std)]
 #![allow(non_camel_case_types)]
 #![doc = "Ultra-Low power Bleutooth 4.2 SoC with Optimized Boot Time from Dialog Semiconductor"]
@@ -274,61 +274,99 @@ pub use self::Interrupt as interrupt;
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
 #[cfg(feature = "rt")]
-extern "C" {
-    fn BLE_WAKEUP_LP();
-    fn BLE_GEN();
-    fn UART();
-    fn UART2();
-    fn I2C();
-    fn SPI();
-    fn ADC();
-    fn KEYBRD();
-    fn BLE_RF_DIAG();
-    fn RF_CAL();
-    fn GPIO0();
-    fn GPIO1();
-    fn GPIO2();
-    fn GPIO3();
-    fn GPIO4();
-    fn SWTIM();
-    fn WKUP_QUADEC();
-    fn PCM();
-    fn SRC_IN();
-    fn SRC_OUT();
-    fn DMA();
+pub mod interrupt_handlers {
+    unsafe extern "C" {
+        pub fn BLE_WAKEUP_LP();
+        pub fn BLE_GEN();
+        pub fn UART();
+        pub fn UART2();
+        pub fn I2C();
+        pub fn SPI();
+        pub fn ADC();
+        pub fn KEYBRD();
+        pub fn BLE_RF_DIAG();
+        pub fn RF_CAL();
+        pub fn GPIO0();
+        pub fn GPIO1();
+        pub fn GPIO2();
+        pub fn GPIO3();
+        pub fn GPIO4();
+        pub fn SWTIM();
+        pub fn WKUP_QUADEC();
+        pub fn PCM();
+        pub fn SRC_IN();
+        pub fn SRC_OUT();
+        pub fn DMA();
+    }
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-#[link_section = ".vector_table.interrupts"]
-#[no_mangle]
+#[unsafe(link_section = ".vector_table.interrupts")]
+#[unsafe(no_mangle)]
 pub static __INTERRUPTS: [Vector; 21] = [
     Vector {
-        _handler: BLE_WAKEUP_LP,
+        _handler: interrupt_handlers::BLE_WAKEUP_LP,
     },
-    Vector { _handler: BLE_GEN },
-    Vector { _handler: UART },
-    Vector { _handler: UART2 },
-    Vector { _handler: I2C },
-    Vector { _handler: SPI },
-    Vector { _handler: ADC },
-    Vector { _handler: KEYBRD },
     Vector {
-        _handler: BLE_RF_DIAG,
+        _handler: interrupt_handlers::BLE_GEN,
     },
-    Vector { _handler: RF_CAL },
-    Vector { _handler: GPIO0 },
-    Vector { _handler: GPIO1 },
-    Vector { _handler: GPIO2 },
-    Vector { _handler: GPIO3 },
-    Vector { _handler: GPIO4 },
-    Vector { _handler: SWTIM },
     Vector {
-        _handler: WKUP_QUADEC,
+        _handler: interrupt_handlers::UART,
     },
-    Vector { _handler: PCM },
-    Vector { _handler: SRC_IN },
-    Vector { _handler: SRC_OUT },
-    Vector { _handler: DMA },
+    Vector {
+        _handler: interrupt_handlers::UART2,
+    },
+    Vector {
+        _handler: interrupt_handlers::I2C,
+    },
+    Vector {
+        _handler: interrupt_handlers::SPI,
+    },
+    Vector {
+        _handler: interrupt_handlers::ADC,
+    },
+    Vector {
+        _handler: interrupt_handlers::KEYBRD,
+    },
+    Vector {
+        _handler: interrupt_handlers::BLE_RF_DIAG,
+    },
+    Vector {
+        _handler: interrupt_handlers::RF_CAL,
+    },
+    Vector {
+        _handler: interrupt_handlers::GPIO0,
+    },
+    Vector {
+        _handler: interrupt_handlers::GPIO1,
+    },
+    Vector {
+        _handler: interrupt_handlers::GPIO2,
+    },
+    Vector {
+        _handler: interrupt_handlers::GPIO3,
+    },
+    Vector {
+        _handler: interrupt_handlers::GPIO4,
+    },
+    Vector {
+        _handler: interrupt_handlers::SWTIM,
+    },
+    Vector {
+        _handler: interrupt_handlers::WKUP_QUADEC,
+    },
+    Vector {
+        _handler: interrupt_handlers::PCM,
+    },
+    Vector {
+        _handler: interrupt_handlers::SRC_IN,
+    },
+    Vector {
+        _handler: interrupt_handlers::SRC_OUT,
+    },
+    Vector {
+        _handler: interrupt_handlers::DMA,
+    },
 ];
 #[doc = "Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
@@ -336,44 +374,64 @@ pub static __INTERRUPTS: [Vector; 21] = [
 pub enum Interrupt {
     #[doc = "Wake-up from Low Power (Extended Sleep) interrupt from BLE"]
     BLE_WAKEUP_LP = 0,
+
     #[doc = "BLE Interrupt from various BLE sources."]
     BLE_GEN = 1,
+
     #[doc = "UART interrupt"]
     UART = 2,
+
     #[doc = "UART2 interrupt"]
     UART2 = 3,
+
     #[doc = "I2C interrupt"]
     I2C = 4,
+
     #[doc = "SPI interrupt"]
     SPI = 5,
+
     #[doc = "Analog-Digital Converter interrupt."]
     ADC = 6,
+
     #[doc = "Keyboard interrupt."]
     KEYBRD = 7,
+
     #[doc = "Baseband or Radio Diagnostics Interrupt"]
     BLE_RF_DIAG = 8,
+
     #[doc = "RF Calibration Interrupt"]
     RF_CAL = 9,
+
     #[doc = "GPIO0 interrupt through debounce"]
     GPIO0 = 10,
+
     #[doc = "GPIO1 interrupt through debounce"]
     GPIO1 = 11,
+
     #[doc = "GPIO2 interrupt through debounce"]
     GPIO2 = 12,
+
     #[doc = "GPIO3 interrupt through debounce"]
     GPIO3 = 13,
+
     #[doc = "GPIO4 interrupt through debounce"]
     GPIO4 = 14,
+
     #[doc = "Software Timer interrupt"]
     SWTIM = 15,
+
     #[doc = "Combines the Wake up Capture Timer interrupt, the GPIO interrupt and the QuadDecoder interrupt"]
     WKUP_QUADEC = 16,
+
     #[doc = "PCM interrupt"]
     PCM = 17,
+
     #[doc = "Sample rate converter input interrupt"]
     SRC_IN = 18,
+
     #[doc = "Sample rate converter output interrupt"]
     SRC_OUT = 19,
+
     #[doc = "DMA interrupt"]
     DMA = 20,
 }

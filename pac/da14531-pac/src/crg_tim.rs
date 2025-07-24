@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::CrgTim {
         self.ptr
     }
 
+    #[doc = "Divisor for RTC 100Hz clock"]
     #[inline(always)]
     pub const fn clk_rtcdiv_reg(
         &self,
@@ -52,9 +53,11 @@ impl crate::sealed::RegSpec for ClkRtcdivReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Divisor for RTC 100Hz clock"]
 pub type ClkRtcdivReg = crate::RegValueT<ClkRtcdivReg_SPEC>;
 
 impl ClkRtcdivReg {
+    #[doc = "Reset request for the RTC module"]
     #[inline(always)]
     pub fn rtc_reset_req(
         self,
@@ -62,6 +65,7 @@ impl ClkRtcdivReg {
         crate::common::RegisterFieldBool::<21,1,0,ClkRtcdivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enable for the 100 Hz generation for the RTC block"]
     #[inline(always)]
     pub fn rtc_div_enable(
         self,
@@ -69,6 +73,7 @@ impl ClkRtcdivReg {
         crate::common::RegisterFieldBool::<20,1,0,ClkRtcdivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Selects the denominator for the fractional division:\n0b0: 1000\n0b1: 1024"]
     #[inline(always)]
     pub fn rtc_div_denom(
         self,
@@ -76,6 +81,7 @@ impl ClkRtcdivReg {
         crate::common::RegisterFieldBool::<19,1,0,ClkRtcdivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Integer divisor part for RTC 100Hz generation"]
     #[inline(always)]
     pub fn rtc_div_int(
         self,
@@ -93,6 +99,7 @@ impl ClkRtcdivReg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Fractional divisor part for RTC 100Hz generation.\nif RTC_DIV_DENOM=1, <RTC_DIV_FRAC> out of 1024 cycles will divide by <RTC_DIV_INT+1>, the rest is <RTC_DIV_INT>\nIf RTC_DIV_DENOM=0, <RTC_DIV_FRAC> out of 1000 cycles will divide by <RTC_DIV_INT+1>, the rest is <RTC_DIV_INT>"]
     #[inline(always)]
     pub fn rtc_div_frac(
         self,

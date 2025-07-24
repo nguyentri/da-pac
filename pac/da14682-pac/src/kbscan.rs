@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:02 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:10 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Kbscan {
         self.ptr
     }
 
+    #[doc = "Keyboard scanner control 2 register"]
     #[inline(always)]
     pub const fn kbscn_ctrl2_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Keyboard scanner control register"]
     #[inline(always)]
     pub const fn kbscn_ctrl_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the debounce time for key press and release"]
     #[inline(always)]
     pub const fn kbscn_debounce_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the number of rows and columns of the matrix"]
     #[inline(always)]
     pub const fn kbscn_matrix_size_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Returns a key message from the message queue"]
     #[inline(always)]
     pub const fn kbscn_message_key_reg(
         &self,
@@ -89,6 +94,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P00"]
     #[inline(always)]
     pub const fn kbscn_p00_mode_reg(
         &self,
@@ -100,6 +106,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P01"]
     #[inline(always)]
     pub const fn kbscn_p01_mode_reg(
         &self,
@@ -111,6 +118,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P02"]
     #[inline(always)]
     pub const fn kbscn_p02_mode_reg(
         &self,
@@ -122,6 +130,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P03"]
     #[inline(always)]
     pub const fn kbscn_p03_mode_reg(
         &self,
@@ -133,6 +142,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P04"]
     #[inline(always)]
     pub const fn kbscn_p04_mode_reg(
         &self,
@@ -144,6 +154,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P05"]
     #[inline(always)]
     pub const fn kbscn_p05_mode_reg(
         &self,
@@ -155,6 +166,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P06"]
     #[inline(always)]
     pub const fn kbscn_p06_mode_reg(
         &self,
@@ -166,6 +178,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P07"]
     #[inline(always)]
     pub const fn kbscn_p07_mode_reg(
         &self,
@@ -177,6 +190,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P10"]
     #[inline(always)]
     pub const fn kbscn_p10_mode_reg(
         &self,
@@ -188,6 +202,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P11"]
     #[inline(always)]
     pub const fn kbscn_p11_mode_reg(
         &self,
@@ -199,6 +214,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P12"]
     #[inline(always)]
     pub const fn kbscn_p12_mode_reg(
         &self,
@@ -210,6 +226,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P13"]
     #[inline(always)]
     pub const fn kbscn_p13_mode_reg(
         &self,
@@ -221,6 +238,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P14"]
     #[inline(always)]
     pub const fn kbscn_p14_mode_reg(
         &self,
@@ -232,6 +250,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P15"]
     #[inline(always)]
     pub const fn kbscn_p15_mode_reg(
         &self,
@@ -243,6 +262,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P16"]
     #[inline(always)]
     pub const fn kbscn_p16_mode_reg(
         &self,
@@ -254,6 +274,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P17"]
     #[inline(always)]
     pub const fn kbscn_p17_mode_reg(
         &self,
@@ -265,6 +286,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P20"]
     #[inline(always)]
     pub const fn kbscn_p20_mode_reg(
         &self,
@@ -276,6 +298,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P21"]
     #[inline(always)]
     pub const fn kbscn_p21_mode_reg(
         &self,
@@ -287,6 +310,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P22"]
     #[inline(always)]
     pub const fn kbscn_p22_mode_reg(
         &self,
@@ -298,6 +322,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P23"]
     #[inline(always)]
     pub const fn kbscn_p23_mode_reg(
         &self,
@@ -309,6 +334,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P24"]
     #[inline(always)]
     pub const fn kbscn_p24_mode_reg(
         &self,
@@ -320,6 +346,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P30"]
     #[inline(always)]
     pub const fn kbscn_p30_mode_reg(
         &self,
@@ -331,6 +358,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P31"]
     #[inline(always)]
     pub const fn kbscn_p31_mode_reg(
         &self,
@@ -342,6 +370,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P32"]
     #[inline(always)]
     pub const fn kbscn_p32_mode_reg(
         &self,
@@ -353,6 +382,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P33"]
     #[inline(always)]
     pub const fn kbscn_p33_mode_reg(
         &self,
@@ -364,6 +394,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P34"]
     #[inline(always)]
     pub const fn kbscn_p34_mode_reg(
         &self,
@@ -375,6 +406,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P35"]
     #[inline(always)]
     pub const fn kbscn_p35_mode_reg(
         &self,
@@ -386,6 +418,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P36"]
     #[inline(always)]
     pub const fn kbscn_p36_mode_reg(
         &self,
@@ -397,6 +430,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P37"]
     #[inline(always)]
     pub const fn kbscn_p37_mode_reg(
         &self,
@@ -408,6 +442,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P40"]
     #[inline(always)]
     pub const fn kbscn_p40_mode_reg(
         &self,
@@ -419,6 +454,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P41"]
     #[inline(always)]
     pub const fn kbscn_p41_mode_reg(
         &self,
@@ -430,6 +466,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P42"]
     #[inline(always)]
     pub const fn kbscn_p42_mode_reg(
         &self,
@@ -441,6 +478,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P43"]
     #[inline(always)]
     pub const fn kbscn_p43_mode_reg(
         &self,
@@ -452,6 +490,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P44"]
     #[inline(always)]
     pub const fn kbscn_p44_mode_reg(
         &self,
@@ -463,6 +502,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P45"]
     #[inline(always)]
     pub const fn kbscn_p45_mode_reg(
         &self,
@@ -474,6 +514,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P46"]
     #[inline(always)]
     pub const fn kbscn_p46_mode_reg(
         &self,
@@ -485,6 +526,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "Defines the keyboard mode for P47"]
     #[inline(always)]
     pub const fn kbscn_p47_mode_reg(
         &self,
@@ -496,6 +538,7 @@ impl super::Kbscan {
         }
     }
 
+    #[doc = "keyboard scanner Interrupt status register"]
     #[inline(always)]
     pub const fn kbscn_status_reg(
         &self,
@@ -514,9 +557,11 @@ impl crate::sealed::RegSpec for KbscnCtrl2Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Keyboard scanner control 2 register"]
 pub type KbscnCtrl2Reg = crate::RegValueT<KbscnCtrl2Reg_SPEC>;
 
 impl KbscnCtrl2Reg {
+    #[doc = "Define the row active time in keyboard clock cycles"]
     #[inline(always)]
     pub fn kbscn_row_active_time(
         self,
@@ -556,9 +601,11 @@ impl crate::sealed::RegSpec for KbscnCtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Keyboard scanner control register"]
 pub type KbscnCtrlReg = crate::RegValueT<KbscnCtrlReg_SPEC>;
 
 impl KbscnCtrlReg {
+    #[doc = "\'1\' reset fifo, read always \'0\'"]
     #[inline(always)]
     pub fn kbscn_reset_fifo(
         self,
@@ -566,6 +613,7 @@ impl KbscnCtrlReg {
         crate::common::RegisterFieldBool::<14,1,0,KbscnCtrlReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Defines keyboard clk. \"00\" div/1, \"01\" div/4, \"10\" div/16, \"11\" div/64"]
     #[inline(always)]
     pub fn kbscn_clkdiv(
         self,
@@ -574,6 +622,7 @@ impl KbscnCtrlReg {
         crate::common::RegisterField::<12,0x3,1,0,u8,u8,KbscnCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' After inactive time the keyboard scanner stops the key maxtrix scan"]
     #[inline(always)]
     pub fn kbscn_inactive_en(
         self,
@@ -581,6 +630,7 @@ impl KbscnCtrlReg {
         crate::common::RegisterFieldBool::<11,1,0,KbscnCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the inactive time in scan cycles. Value 0 is not allowed"]
     #[inline(always)]
     pub fn kbscn_inactive_time(
         self,
@@ -589,6 +639,7 @@ impl KbscnCtrlReg {
         crate::common::RegisterField::<4,0x7f,1,0,u8,u8,KbscnCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' Enable IRQ for fifo over and under flow"]
     #[inline(always)]
     pub fn kbscn_irq_fifo_mask(
         self,
@@ -596,6 +647,7 @@ impl KbscnCtrlReg {
         crate::common::RegisterFieldBool::<3,1,0,KbscnCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' : Enable IRQ for inactive"]
     #[inline(always)]
     pub fn kbscn_irq_inactive_mask(
         self,
@@ -603,6 +655,7 @@ impl KbscnCtrlReg {
         crate::common::RegisterFieldBool::<2,1,0,KbscnCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' : Enable IRQ for message"]
     #[inline(always)]
     pub fn kbscn_irq_message_mask(
         self,
@@ -610,6 +663,7 @@ impl KbscnCtrlReg {
         crate::common::RegisterFieldBool::<1,1,0,KbscnCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' : Enable keyboard scanner, Auto clear when inactive enable and inactive case"]
     #[inline(always)]
     pub fn kbscn_en(
         self,
@@ -631,9 +685,11 @@ impl crate::sealed::RegSpec for KbscnDebounceReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the debounce time for key press and release"]
 pub type KbscnDebounceReg = crate::RegValueT<KbscnDebounceReg_SPEC>;
 
 impl KbscnDebounceReg {
+    #[doc = "Defines the press debounce time in cycles of full matrix scan. One means no debounce, zero is reserved"]
     #[inline(always)]
     pub fn kbscn_debounce_press_time(
         self,
@@ -651,6 +707,7 @@ impl KbscnDebounceReg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Defines the press debounce time in cycles of full matrix scan. One means no debounce, zero is reserved"]
     #[inline(always)]
     pub fn kbscn_debounce_release_time(
         self,
@@ -682,9 +739,11 @@ impl crate::sealed::RegSpec for KbscnMatrixSizeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the number of rows and columns of the matrix"]
 pub type KbscnMatrixSizeReg = crate::RegValueT<KbscnMatrixSizeReg_SPEC>;
 
 impl KbscnMatrixSizeReg {
+    #[doc = "Defines the number of the columns of the keyboard matrix minus 1. Zero means number of columns 1"]
     #[inline(always)]
     pub fn kbscn_matrix_column(
         self,
@@ -710,6 +769,7 @@ impl KbscnMatrixSizeReg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Defines the number of the rows of the keyboard matrix minus 1. Zero means number of rows 1"]
     #[inline(always)]
     pub fn kbscn_matrix_row(
         self,
@@ -749,9 +809,11 @@ impl crate::sealed::RegSpec for KbscnMessageKeyReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Returns a key message from the message queue"]
 pub type KbscnMessageKeyReg = crate::RegValueT<KbscnMessageKeyReg_SPEC>;
 
 impl KbscnMessageKeyReg {
+    #[doc = "\'1\' : this message is the last of the group message, else \'0\'. When \'1\' bits 9:0 are all \'1\'"]
     #[inline(always)]
     pub fn kbscn_last_entry(
         self,
@@ -759,6 +821,7 @@ impl KbscnMessageKeyReg {
         crate::common::RegisterFieldBool::<10,1,0,KbscnMessageKeyReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "\'0\' : New key state is release\n\'1\' : New key state is press"]
     #[inline(always)]
     pub fn kbscn_key_state(
         self,
@@ -766,6 +829,7 @@ impl KbscnMessageKeyReg {
         crate::common::RegisterFieldBool::<9,1,0,KbscnMessageKeyReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Defines the column id of key"]
     #[inline(always)]
     pub fn kbscn_keyid_column(
         self,
@@ -791,6 +855,7 @@ impl KbscnMessageKeyReg {
         >::from_register(self, 0)
     }
 
+    #[doc = "Defines the row id of key"]
     #[inline(always)]
     pub fn kbscn_keyid_row(
         self,
@@ -822,9 +887,11 @@ impl crate::sealed::RegSpec for KbscnP00ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P00"]
 pub type KbscnP00ModeReg = crate::RegValueT<KbscnP00ModeReg_SPEC>;
 
 impl KbscnP00ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -832,6 +899,7 @@ impl KbscnP00ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP00ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -839,6 +907,7 @@ impl KbscnP00ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP00ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -861,9 +930,11 @@ impl crate::sealed::RegSpec for KbscnP01ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P01"]
 pub type KbscnP01ModeReg = crate::RegValueT<KbscnP01ModeReg_SPEC>;
 
 impl KbscnP01ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -871,6 +942,7 @@ impl KbscnP01ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP01ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -878,6 +950,7 @@ impl KbscnP01ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP01ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -900,9 +973,11 @@ impl crate::sealed::RegSpec for KbscnP02ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P02"]
 pub type KbscnP02ModeReg = crate::RegValueT<KbscnP02ModeReg_SPEC>;
 
 impl KbscnP02ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -910,6 +985,7 @@ impl KbscnP02ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP02ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -917,6 +993,7 @@ impl KbscnP02ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP02ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -939,9 +1016,11 @@ impl crate::sealed::RegSpec for KbscnP03ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P03"]
 pub type KbscnP03ModeReg = crate::RegValueT<KbscnP03ModeReg_SPEC>;
 
 impl KbscnP03ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -949,6 +1028,7 @@ impl KbscnP03ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP03ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -956,6 +1036,7 @@ impl KbscnP03ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP03ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -978,9 +1059,11 @@ impl crate::sealed::RegSpec for KbscnP04ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P04"]
 pub type KbscnP04ModeReg = crate::RegValueT<KbscnP04ModeReg_SPEC>;
 
 impl KbscnP04ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -988,6 +1071,7 @@ impl KbscnP04ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP04ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -995,6 +1079,7 @@ impl KbscnP04ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP04ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1017,9 +1102,11 @@ impl crate::sealed::RegSpec for KbscnP05ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P05"]
 pub type KbscnP05ModeReg = crate::RegValueT<KbscnP05ModeReg_SPEC>;
 
 impl KbscnP05ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1027,6 +1114,7 @@ impl KbscnP05ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP05ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1034,6 +1122,7 @@ impl KbscnP05ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP05ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1056,9 +1145,11 @@ impl crate::sealed::RegSpec for KbscnP06ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P06"]
 pub type KbscnP06ModeReg = crate::RegValueT<KbscnP06ModeReg_SPEC>;
 
 impl KbscnP06ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1066,6 +1157,7 @@ impl KbscnP06ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP06ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1073,6 +1165,7 @@ impl KbscnP06ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP06ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1095,9 +1188,11 @@ impl crate::sealed::RegSpec for KbscnP07ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P07"]
 pub type KbscnP07ModeReg = crate::RegValueT<KbscnP07ModeReg_SPEC>;
 
 impl KbscnP07ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1105,6 +1200,7 @@ impl KbscnP07ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP07ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1112,6 +1208,7 @@ impl KbscnP07ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP07ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1134,9 +1231,11 @@ impl crate::sealed::RegSpec for KbscnP10ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P10"]
 pub type KbscnP10ModeReg = crate::RegValueT<KbscnP10ModeReg_SPEC>;
 
 impl KbscnP10ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1144,6 +1243,7 @@ impl KbscnP10ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP10ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1151,6 +1251,7 @@ impl KbscnP10ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP10ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1173,9 +1274,11 @@ impl crate::sealed::RegSpec for KbscnP11ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P11"]
 pub type KbscnP11ModeReg = crate::RegValueT<KbscnP11ModeReg_SPEC>;
 
 impl KbscnP11ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1183,6 +1286,7 @@ impl KbscnP11ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP11ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1190,6 +1294,7 @@ impl KbscnP11ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP11ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1212,9 +1317,11 @@ impl crate::sealed::RegSpec for KbscnP12ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P12"]
 pub type KbscnP12ModeReg = crate::RegValueT<KbscnP12ModeReg_SPEC>;
 
 impl KbscnP12ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1222,6 +1329,7 @@ impl KbscnP12ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP12ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1229,6 +1337,7 @@ impl KbscnP12ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP12ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1251,9 +1360,11 @@ impl crate::sealed::RegSpec for KbscnP13ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P13"]
 pub type KbscnP13ModeReg = crate::RegValueT<KbscnP13ModeReg_SPEC>;
 
 impl KbscnP13ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1261,6 +1372,7 @@ impl KbscnP13ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP13ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1268,6 +1380,7 @@ impl KbscnP13ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP13ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1290,9 +1403,11 @@ impl crate::sealed::RegSpec for KbscnP14ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P14"]
 pub type KbscnP14ModeReg = crate::RegValueT<KbscnP14ModeReg_SPEC>;
 
 impl KbscnP14ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1300,6 +1415,7 @@ impl KbscnP14ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP14ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1307,6 +1423,7 @@ impl KbscnP14ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP14ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1329,9 +1446,11 @@ impl crate::sealed::RegSpec for KbscnP15ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P15"]
 pub type KbscnP15ModeReg = crate::RegValueT<KbscnP15ModeReg_SPEC>;
 
 impl KbscnP15ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1339,6 +1458,7 @@ impl KbscnP15ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP15ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1346,6 +1466,7 @@ impl KbscnP15ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP15ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1368,9 +1489,11 @@ impl crate::sealed::RegSpec for KbscnP16ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P16"]
 pub type KbscnP16ModeReg = crate::RegValueT<KbscnP16ModeReg_SPEC>;
 
 impl KbscnP16ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1378,6 +1501,7 @@ impl KbscnP16ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP16ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1385,6 +1509,7 @@ impl KbscnP16ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP16ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1407,9 +1532,11 @@ impl crate::sealed::RegSpec for KbscnP17ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P17"]
 pub type KbscnP17ModeReg = crate::RegValueT<KbscnP17ModeReg_SPEC>;
 
 impl KbscnP17ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1417,6 +1544,7 @@ impl KbscnP17ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP17ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1424,6 +1552,7 @@ impl KbscnP17ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP17ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1446,9 +1575,11 @@ impl crate::sealed::RegSpec for KbscnP20ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P20"]
 pub type KbscnP20ModeReg = crate::RegValueT<KbscnP20ModeReg_SPEC>;
 
 impl KbscnP20ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1456,6 +1587,7 @@ impl KbscnP20ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP20ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1463,6 +1595,7 @@ impl KbscnP20ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP20ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1485,9 +1618,11 @@ impl crate::sealed::RegSpec for KbscnP21ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P21"]
 pub type KbscnP21ModeReg = crate::RegValueT<KbscnP21ModeReg_SPEC>;
 
 impl KbscnP21ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1495,6 +1630,7 @@ impl KbscnP21ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP21ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1502,6 +1638,7 @@ impl KbscnP21ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP21ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1524,9 +1661,11 @@ impl crate::sealed::RegSpec for KbscnP22ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P22"]
 pub type KbscnP22ModeReg = crate::RegValueT<KbscnP22ModeReg_SPEC>;
 
 impl KbscnP22ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1534,6 +1673,7 @@ impl KbscnP22ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP22ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1541,6 +1681,7 @@ impl KbscnP22ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP22ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1563,9 +1704,11 @@ impl crate::sealed::RegSpec for KbscnP23ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P23"]
 pub type KbscnP23ModeReg = crate::RegValueT<KbscnP23ModeReg_SPEC>;
 
 impl KbscnP23ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1573,6 +1716,7 @@ impl KbscnP23ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP23ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1580,6 +1724,7 @@ impl KbscnP23ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP23ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1602,9 +1747,11 @@ impl crate::sealed::RegSpec for KbscnP24ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P24"]
 pub type KbscnP24ModeReg = crate::RegValueT<KbscnP24ModeReg_SPEC>;
 
 impl KbscnP24ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1612,6 +1759,7 @@ impl KbscnP24ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP24ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1619,6 +1767,7 @@ impl KbscnP24ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP24ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1641,9 +1790,11 @@ impl crate::sealed::RegSpec for KbscnP30ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P30"]
 pub type KbscnP30ModeReg = crate::RegValueT<KbscnP30ModeReg_SPEC>;
 
 impl KbscnP30ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1651,6 +1802,7 @@ impl KbscnP30ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP30ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1658,6 +1810,7 @@ impl KbscnP30ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP30ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1680,9 +1833,11 @@ impl crate::sealed::RegSpec for KbscnP31ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P31"]
 pub type KbscnP31ModeReg = crate::RegValueT<KbscnP31ModeReg_SPEC>;
 
 impl KbscnP31ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1690,6 +1845,7 @@ impl KbscnP31ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP31ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1697,6 +1853,7 @@ impl KbscnP31ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP31ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1719,9 +1876,11 @@ impl crate::sealed::RegSpec for KbscnP32ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P32"]
 pub type KbscnP32ModeReg = crate::RegValueT<KbscnP32ModeReg_SPEC>;
 
 impl KbscnP32ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1729,6 +1888,7 @@ impl KbscnP32ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP32ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1736,6 +1896,7 @@ impl KbscnP32ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP32ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1758,9 +1919,11 @@ impl crate::sealed::RegSpec for KbscnP33ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P33"]
 pub type KbscnP33ModeReg = crate::RegValueT<KbscnP33ModeReg_SPEC>;
 
 impl KbscnP33ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1768,6 +1931,7 @@ impl KbscnP33ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP33ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1775,6 +1939,7 @@ impl KbscnP33ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP33ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1797,9 +1962,11 @@ impl crate::sealed::RegSpec for KbscnP34ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P34"]
 pub type KbscnP34ModeReg = crate::RegValueT<KbscnP34ModeReg_SPEC>;
 
 impl KbscnP34ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1807,6 +1974,7 @@ impl KbscnP34ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP34ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1814,6 +1982,7 @@ impl KbscnP34ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP34ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1836,9 +2005,11 @@ impl crate::sealed::RegSpec for KbscnP35ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P35"]
 pub type KbscnP35ModeReg = crate::RegValueT<KbscnP35ModeReg_SPEC>;
 
 impl KbscnP35ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1846,6 +2017,7 @@ impl KbscnP35ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP35ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1853,6 +2025,7 @@ impl KbscnP35ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP35ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1875,9 +2048,11 @@ impl crate::sealed::RegSpec for KbscnP36ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P36"]
 pub type KbscnP36ModeReg = crate::RegValueT<KbscnP36ModeReg_SPEC>;
 
 impl KbscnP36ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1885,6 +2060,7 @@ impl KbscnP36ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP36ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1892,6 +2068,7 @@ impl KbscnP36ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP36ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1914,9 +2091,11 @@ impl crate::sealed::RegSpec for KbscnP37ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P37"]
 pub type KbscnP37ModeReg = crate::RegValueT<KbscnP37ModeReg_SPEC>;
 
 impl KbscnP37ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1924,6 +2103,7 @@ impl KbscnP37ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP37ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1931,6 +2111,7 @@ impl KbscnP37ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP37ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1953,9 +2134,11 @@ impl crate::sealed::RegSpec for KbscnP40ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P40"]
 pub type KbscnP40ModeReg = crate::RegValueT<KbscnP40ModeReg_SPEC>;
 
 impl KbscnP40ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -1963,6 +2146,7 @@ impl KbscnP40ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP40ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -1970,6 +2154,7 @@ impl KbscnP40ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP40ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -1992,9 +2177,11 @@ impl crate::sealed::RegSpec for KbscnP41ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P41"]
 pub type KbscnP41ModeReg = crate::RegValueT<KbscnP41ModeReg_SPEC>;
 
 impl KbscnP41ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -2002,6 +2189,7 @@ impl KbscnP41ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP41ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -2009,6 +2197,7 @@ impl KbscnP41ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP41ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -2031,9 +2220,11 @@ impl crate::sealed::RegSpec for KbscnP42ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P42"]
 pub type KbscnP42ModeReg = crate::RegValueT<KbscnP42ModeReg_SPEC>;
 
 impl KbscnP42ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -2041,6 +2232,7 @@ impl KbscnP42ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP42ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -2048,6 +2240,7 @@ impl KbscnP42ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP42ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -2070,9 +2263,11 @@ impl crate::sealed::RegSpec for KbscnP43ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P43"]
 pub type KbscnP43ModeReg = crate::RegValueT<KbscnP43ModeReg_SPEC>;
 
 impl KbscnP43ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -2080,6 +2275,7 @@ impl KbscnP43ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP43ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -2087,6 +2283,7 @@ impl KbscnP43ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP43ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -2109,9 +2306,11 @@ impl crate::sealed::RegSpec for KbscnP44ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P44"]
 pub type KbscnP44ModeReg = crate::RegValueT<KbscnP44ModeReg_SPEC>;
 
 impl KbscnP44ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -2119,6 +2318,7 @@ impl KbscnP44ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP44ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -2126,6 +2326,7 @@ impl KbscnP44ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP44ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -2148,9 +2349,11 @@ impl crate::sealed::RegSpec for KbscnP45ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P45"]
 pub type KbscnP45ModeReg = crate::RegValueT<KbscnP45ModeReg_SPEC>;
 
 impl KbscnP45ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -2158,6 +2361,7 @@ impl KbscnP45ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP45ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -2165,6 +2369,7 @@ impl KbscnP45ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP45ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -2187,9 +2392,11 @@ impl crate::sealed::RegSpec for KbscnP46ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P46"]
 pub type KbscnP46ModeReg = crate::RegValueT<KbscnP46ModeReg_SPEC>;
 
 impl KbscnP46ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -2197,6 +2404,7 @@ impl KbscnP46ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP46ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -2204,6 +2412,7 @@ impl KbscnP46ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP46ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -2226,9 +2435,11 @@ impl crate::sealed::RegSpec for KbscnP47ModeReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Defines the keyboard mode for P47"]
 pub type KbscnP47ModeReg = crate::RegValueT<KbscnP47ModeReg_SPEC>;
 
 impl KbscnP47ModeReg {
+    #[doc = "\'1\' GPIO is enable for row or column"]
     #[inline(always)]
     pub fn kbscn_gpio_en(
         self,
@@ -2236,6 +2447,7 @@ impl KbscnP47ModeReg {
         crate::common::RegisterFieldBool::<6,1,0,KbscnP47ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "\'1\' GPIO is row, \'0\' GPIO is column"]
     #[inline(always)]
     pub fn kbscn_row(
         self,
@@ -2243,6 +2455,7 @@ impl KbscnP47ModeReg {
         crate::common::RegisterFieldBool::<5,1,0,KbscnP47ModeReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Defines the row/column index that has to be connected"]
     #[inline(always)]
     pub fn kbscn_mode(
         self,
@@ -2265,9 +2478,11 @@ impl crate::sealed::RegSpec for KbscnStatusReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "keyboard scanner Interrupt status register"]
 pub type KbscnStatusReg = crate::RegValueT<KbscnStatusReg_SPEC>;
 
 impl KbscnStatusReg {
+    #[doc = "\'1\' Fifo Underflow occurred"]
     #[inline(always)]
     pub fn kbscn_fifo_underfl(
         self,
@@ -2275,6 +2490,7 @@ impl KbscnStatusReg {
         crate::common::RegisterFieldBool::<8,1,0,KbscnStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "\'1\' Fifo Overflow occurred"]
     #[inline(always)]
     pub fn kbscn_fifo_overfl(
         self,
@@ -2282,6 +2498,7 @@ impl KbscnStatusReg {
         crate::common::RegisterFieldBool::<7,1,0,KbscnStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Defines how many messages there are in the fifo."]
     #[inline(always)]
     pub fn kbscn_num_message(
         self,
@@ -2290,6 +2507,7 @@ impl KbscnStatusReg {
         crate::common::RegisterField::<2,0x1f,1,0,u8,u8,KbscnStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "There is no keyboard activity for a predefined time"]
     #[inline(always)]
     pub fn kbscn_inactive_irq_status(
         self,
@@ -2297,6 +2515,7 @@ impl KbscnStatusReg {
         crate::common::RegisterFieldBool::<1,1,0,KbscnStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "There is at least one last message in the fifo."]
     #[inline(always)]
     pub fn kbscn_mes_irq_status(
         self,

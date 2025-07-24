@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::ChipVersion {
         self.ptr
     }
 
+    #[doc = "Chip identification register 1."]
     #[inline(always)]
     pub const fn chip_id1_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Chip identification register 2."]
     #[inline(always)]
     pub const fn chip_id2_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Chip identification register 3."]
     #[inline(always)]
     pub const fn chip_id3_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Chip identification register 4."]
     #[inline(always)]
     pub const fn chip_id4_reg(
         &self,
@@ -129,9 +133,11 @@ impl crate::sealed::RegSpec for ChipId1Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Chip identification register 1."]
 pub type ChipId1Reg = crate::RegValueT<ChipId1Reg_SPEC>;
 
 impl ChipId1Reg {
+    #[doc = "First character of device type \"2632\" in ASCII."]
     #[inline(always)]
     pub fn chip_id1(
         self,
@@ -154,9 +160,11 @@ impl crate::sealed::RegSpec for ChipId2Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Chip identification register 2."]
 pub type ChipId2Reg = crate::RegValueT<ChipId2Reg_SPEC>;
 
 impl ChipId2Reg {
+    #[doc = "Second character of device type \"2632\" in ASCII."]
     #[inline(always)]
     pub fn chip_id2(
         self,
@@ -179,9 +187,11 @@ impl crate::sealed::RegSpec for ChipId3Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Chip identification register 3."]
 pub type ChipId3Reg = crate::RegValueT<ChipId3Reg_SPEC>;
 
 impl ChipId3Reg {
+    #[doc = "Third character of device type \"2632\" in ASCII."]
     #[inline(always)]
     pub fn chip_id3(
         self,
@@ -204,9 +214,11 @@ impl crate::sealed::RegSpec for ChipId4Reg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Chip identification register 4."]
 pub type ChipId4Reg = crate::RegValueT<ChipId4Reg_SPEC>;
 
 impl ChipId4Reg {
+    #[doc = "Fourth character of device type \"2632\" in ASCII."]
     #[inline(always)]
     pub fn chip_id4(
         self,

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:52 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::CrgGpu {
         self.ptr
     }
 
+    #[doc = "Control register for clocks in PD_GPU"]
     #[inline(always)]
     pub const fn clk_gpu_reg(
         &self,
@@ -52,6 +53,7 @@ impl crate::sealed::RegSpec for ClkGpuReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Control register for clocks in PD_GPU"]
 pub type ClkGpuReg = crate::RegValueT<ClkGpuReg_SPEC>;
 
 impl ClkGpuReg {

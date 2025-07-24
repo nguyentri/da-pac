@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:50 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:57 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::CrgPer {
         self.ptr
     }
 
+    #[doc = "Peripheral divider register"]
     #[inline(always)]
     pub const fn clk_per_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::CrgPer {
         }
     }
 
+    #[doc = "PCM divider and enables"]
     #[inline(always)]
     pub const fn pcm_div_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::CrgPer {
         }
     }
 
+    #[doc = "PCM fractional division register"]
     #[inline(always)]
     pub const fn pcm_fdiv_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::CrgPer {
         }
     }
 
+    #[doc = "PDM divider and enables"]
     #[inline(always)]
     pub const fn pdm_div_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::CrgPer {
         }
     }
 
+    #[doc = "SRC divider and enables"]
     #[inline(always)]
     pub const fn src_div_reg(
         &self,
@@ -89,6 +94,7 @@ impl super::CrgPer {
         }
     }
 
+    #[doc = "USB pads control register"]
     #[inline(always)]
     pub const fn usbpad_reg(
         &self,
@@ -107,9 +113,11 @@ impl crate::sealed::RegSpec for ClkPerReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Peripheral divider register"]
 pub type ClkPerReg = crate::RegValueT<ClkPerReg_SPEC>;
 
 impl ClkPerReg {
+    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
     #[inline(always)]
     pub fn adc_clk_sel(
         self,
@@ -117,6 +125,7 @@ impl ClkPerReg {
         crate::common::RegisterFieldBool::<11,1,0,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
     #[inline(always)]
     pub fn kbscan_clk_sel(
         self,
@@ -124,6 +133,7 @@ impl ClkPerReg {
         crate::common::RegisterFieldBool::<10,1,0,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
     #[inline(always)]
     pub fn i2c_clk_sel(
         self,
@@ -131,6 +141,7 @@ impl ClkPerReg {
         crate::common::RegisterFieldBool::<9,1,0,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
     #[inline(always)]
     pub fn spi_clk_sel(
         self,
@@ -138,6 +149,7 @@ impl ClkPerReg {
         crate::common::RegisterFieldBool::<8,1,0,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn kbscan_enable(
         self,
@@ -145,6 +157,7 @@ impl ClkPerReg {
         crate::common::RegisterFieldBool::<5,1,0,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn ir_clk_enable(
         self,
@@ -152,6 +165,7 @@ impl ClkPerReg {
         crate::common::RegisterFieldBool::<4,1,0,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn quad_enable(
         self,
@@ -159,6 +173,7 @@ impl ClkPerReg {
         crate::common::RegisterFieldBool::<3,1,0,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn i2c_enable(
         self,
@@ -166,6 +181,7 @@ impl ClkPerReg {
         crate::common::RegisterFieldBool::<2,1,0,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn spi_enable(
         self,
@@ -173,6 +189,7 @@ impl ClkPerReg {
         crate::common::RegisterFieldBool::<1,1,0,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn uart_enable(
         self,
@@ -194,9 +211,11 @@ impl crate::sealed::RegSpec for PcmDivReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PCM divider and enables"]
 pub type PcmDivReg = crate::RegValueT<PcmDivReg_SPEC>;
 
 impl PcmDivReg {
+    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
     #[inline(always)]
     pub fn pcm_src_sel(
         self,
@@ -204,6 +223,7 @@ impl PcmDivReg {
         crate::common::RegisterFieldBool::<13,1,0,PcmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enable for the internally generated PCM clock\nThe PCM_DIV must be set before or together with CLK_PCM_EN."]
     #[inline(always)]
     pub fn clk_pcm_en(
         self,
@@ -211,6 +231,7 @@ impl PcmDivReg {
         crate::common::RegisterFieldBool::<12,1,0,PcmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "PCM clock divider"]
     #[inline(always)]
     pub fn pcm_div(
         self,
@@ -233,9 +254,11 @@ impl crate::sealed::RegSpec for PcmFdivReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PCM fractional division register"]
 pub type PcmFdivReg = crate::RegValueT<PcmFdivReg_SPEC>;
 
 impl PcmFdivReg {
+    #[doc = "These bits define the fractional division part of the PCM clock. The left most \'1\' defines the denominator, the number of \'1\' bits define the numerator. E.g.\n0x0110 means 2/9, with a distribution of 1.0001.0000\n0xfeee means 13/16, with a distribution of 1111.1110.1110.1110"]
     #[inline(always)]
     pub fn pcm_fdiv(
         self,
@@ -258,9 +281,11 @@ impl crate::sealed::RegSpec for PdmDivReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "PDM divider and enables"]
 pub type PdmDivReg = crate::RegValueT<PdmDivReg_SPEC>;
 
 impl PdmDivReg {
+    #[doc = "Master mode selection\n0: slave mode\n1: master mode"]
     #[inline(always)]
     pub fn pdm_master_mode(
         self,
@@ -268,6 +293,7 @@ impl PdmDivReg {
         crate::common::RegisterFieldBool::<9,1,0,PdmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enable for the internally generated PDM clock\nThe PDM_DIV must be set before or together with CLK_PDM_EN."]
     #[inline(always)]
     pub fn clk_pdm_en(
         self,
@@ -275,6 +301,7 @@ impl PdmDivReg {
         crate::common::RegisterFieldBool::<8,1,0,PdmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "PDM clock divider"]
     #[inline(always)]
     pub fn pdm_div(
         self,
@@ -297,9 +324,11 @@ impl crate::sealed::RegSpec for SrcDivReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "SRC divider and enables"]
 pub type SrcDivReg = crate::RegValueT<SrcDivReg_SPEC>;
 
 impl SrcDivReg {
+    #[doc = "Enable for the internally generated SRC clock\nThe SRC_DIV must be set before or together with CLK_SRC_EN."]
     #[inline(always)]
     pub fn clk_src_en(
         self,
@@ -307,6 +336,7 @@ impl SrcDivReg {
         crate::common::RegisterFieldBool::<8,1,0,SrcDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SRC clock divider"]
     #[inline(always)]
     pub fn src_div(
         self,
@@ -329,9 +359,11 @@ impl crate::sealed::RegSpec for UsbpadReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "USB pads control register"]
 pub type UsbpadReg = crate::RegValueT<UsbpadReg_SPEC>;
 
 impl UsbpadReg {
+    #[doc = "0: Pull up resistor SW2 is controlled by the USB controller. It is off when the USB is not enabled.\n1: Force the pull up resistor on USBP to be 2.3Kohm"]
     #[inline(always)]
     pub fn usbphy_force_sw2_on(
         self,
@@ -339,6 +371,7 @@ impl UsbpadReg {
         crate::common::RegisterFieldBool::<2,1,0,UsbpadReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: Pull up resistor SW1 is controlled by the USB controller. It is off when the USB is not enabled.\n1: Force the pull up resistor on USBP to be switched off."]
     #[inline(always)]
     pub fn usbphy_force_sw1_off(
         self,
@@ -346,6 +379,7 @@ impl UsbpadReg {
         crate::common::RegisterFieldBool::<1,1,0,UsbpadReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: The power for the USB PHY and USB pads is switched on when the USB is enabled.\n1: The power for the USB PHY and USB pads is forced on."]
     #[inline(always)]
     pub fn usbpad_en(
         self,

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:28 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:38 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Sdadc {
         self.ptr
     }
 
+    #[doc = "Sigma Delta ADC Clear Interrupt Register"]
     #[inline(always)]
     pub const fn sdadc_clear_int_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::Sdadc {
         }
     }
 
+    #[doc = "Sigma Delta ADC Control Register"]
     #[inline(always)]
     pub const fn sdadc_ctrl_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::Sdadc {
         }
     }
 
+    #[doc = "Sigma Delta ADC Gain Correction Register"]
     #[inline(always)]
     pub const fn sdadc_gain_corr_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::Sdadc {
         }
     }
 
+    #[doc = "Sigma Delta ADC Offset Correction Register"]
     #[inline(always)]
     pub const fn sdadc_offs_corr_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::Sdadc {
         }
     }
 
+    #[doc = "Sigma Delta ADC Result Register"]
     #[inline(always)]
     pub const fn sdadc_result_reg(
         &self,
@@ -96,9 +101,11 @@ impl crate::sealed::RegSpec for SdadcClearIntReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Sigma Delta ADC Clear Interrupt Register"]
 pub type SdadcClearIntReg = crate::RegValueT<SdadcClearIntReg_SPEC>;
 
 impl SdadcClearIntReg {
+    #[doc = "Writing any value to this register will clear the ADC_INT interrupt. Reading returns 0."]
     #[inline(always)]
     pub fn sdadc_clr_int(
         self,
@@ -138,9 +145,11 @@ impl crate::sealed::RegSpec for SdadcCtrlReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Sigma Delta ADC Control Register"]
 pub type SdadcCtrlReg = crate::RegValueT<SdadcCtrlReg_SPEC>;
 
 impl SdadcCtrlReg {
+    #[doc = "0: DMA functionality disabled\n1: DMA functionality enabled"]
     #[inline(always)]
     pub fn sdadc_dma_en(
         self,
@@ -148,6 +157,7 @@ impl SdadcCtrlReg {
         crate::common::RegisterFieldBool::<17,1,0,SdadcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: Disable (mask) SDADC_ADC_INT.\n1: Enable SDADC_ADC_INT to ICU."]
     #[inline(always)]
     pub fn sdadc_mint(
         self,
@@ -155,6 +165,7 @@ impl SdadcCtrlReg {
         crate::common::RegisterFieldBool::<16,1,0,SdadcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "1: AD conversion ready and has generated an interrupt. Must be cleared by writing any value to SDADC_CLEAR_INT_REG."]
     #[inline(always)]
     pub fn sdadc_int(
         self,
@@ -162,6 +173,7 @@ impl SdadcCtrlReg {
         crate::common::RegisterFieldBool::<15,1,0,SdadcCtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "1: Internal LDO is ready for use"]
     #[inline(always)]
     pub fn sdadc_ldo_ok(
         self,
@@ -169,6 +181,7 @@ impl SdadcCtrlReg {
         crate::common::RegisterFieldBool::<14,1,0,SdadcCtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "0: Internal bandgap reference.\n1: External reference."]
     #[inline(always)]
     pub fn sdadc_vref_sel(
         self,
@@ -176,6 +189,7 @@ impl SdadcCtrlReg {
         crate::common::RegisterFieldBool::<13,1,0,SdadcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: Manual ADC mode, a single result will be generated after setting the SDADC_START bit.\n1: Continuous ADC mode, new ADC results will be constantly stored in SDADC_RESULT_REG. Still SDADC_START has to be set to start the execution. Wait for SDADC_START to become zero after clearing the SDADC_CONT bit to stop the continuous mode."]
     #[inline(always)]
     pub fn sdadc_cont(
         self,
@@ -183,6 +197,7 @@ impl SdadcCtrlReg {
         crate::common::RegisterFieldBool::<12,1,0,SdadcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Oversample Rate\n0: 128x\n1: 256x\n2: 512x\n3: 1024x"]
     #[inline(always)]
     pub fn sdadc_osr(
         self,
@@ -191,6 +206,7 @@ impl SdadcCtrlReg {
         crate::common::RegisterField::<10,0x3,1,0,u8,u8,SdadcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: Differential mode\n1: Single ended mode (Input selection negative side is ignored)"]
     #[inline(always)]
     pub fn sdadc_se(
         self,
@@ -198,6 +214,7 @@ impl SdadcCtrlReg {
         crate::common::RegisterFieldBool::<9,1,0,SdadcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Input selection of negative side.\n0: ADC0 / P1\\[09\\]\n1: ADC1 / P0\\[25\\]\n2: ADC2 / P0\\[08\\]\n3: ADC3 / P0\\[09\\]\n4: ADC4 / P1\\[14\\]\n5: ADC5 / P1\\[20\\]\n6: ADC6 / P1\\[21\\]\n7: ADC7 / P1\\[22\\]"]
     #[inline(always)]
     pub fn sdadc_inn_sel(
         self,
@@ -206,6 +223,7 @@ impl SdadcCtrlReg {
         crate::common::RegisterField::<6,0x7,1,0,u8,u8,SdadcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Input selection of positive side.\n0: ADC0 / P1\\[09\\]\n1: ADC1 / P0\\[25\\]\n2: ADC2 / P0\\[08\\]\n3: ADC3 / P0\\[09\\]\n4: ADC4 / P1\\[14\\]\n5: ADC5 / P1\\[20\\]\n6: ADC6 / P1\\[21\\]\n7: ADC7 / P1\\[22\\]\n8: VBAT (via 4x attenuator, INN connected to ground)"]
     #[inline(always)]
     pub fn sdadc_inp_sel(
         self,
@@ -214,6 +232,7 @@ impl SdadcCtrlReg {
         crate::common::RegisterField::<2,0xf,1,0,u8,u8,SdadcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: ADC conversion ready.\n1: If a 1 is written, the ADC starts a conversion. After the conversion this bit will be set to 0 and the SDADC_INT bit will be set. It is not allowed to write this bit while it is not (yet) zero."]
     #[inline(always)]
     pub fn sdadc_start(
         self,
@@ -221,6 +240,7 @@ impl SdadcCtrlReg {
         crate::common::RegisterFieldBool::<1,1,0,SdadcCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: LDO is off and ADC is disabled.\n1: LDO, bias currents and modulator are enabled."]
     #[inline(always)]
     pub fn sdadc_en(
         self,
@@ -242,9 +262,11 @@ impl crate::sealed::RegSpec for SdadcGainCorrReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Sigma Delta ADC Gain Correction Register"]
 pub type SdadcGainCorrReg = crate::RegValueT<SdadcGainCorrReg_SPEC>;
 
 impl SdadcGainCorrReg {
+    #[doc = "Gain adjust"]
     #[inline(always)]
     pub fn sdadc_gain_corr(
         self,
@@ -284,9 +306,11 @@ impl crate::sealed::RegSpec for SdadcOffsCorrReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Sigma Delta ADC Offset Correction Register"]
 pub type SdadcOffsCorrReg = crate::RegValueT<SdadcOffsCorrReg_SPEC>;
 
 impl SdadcOffsCorrReg {
+    #[doc = "Offset adjust"]
     #[inline(always)]
     pub fn sdadc_offs_corr(
         self,
@@ -326,9 +350,11 @@ impl crate::sealed::RegSpec for SdadcResultReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Sigma Delta ADC Result Register"]
 pub type SdadcResultReg = crate::RegValueT<SdadcResultReg_SPEC>;
 
 impl SdadcResultReg {
+    #[doc = "Returns up to 16 bits linear value of the last AD conversion. The effective resolution depends on the OSR used."]
     #[inline(always)]
     pub fn sdadc_val(
         self,

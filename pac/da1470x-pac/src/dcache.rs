@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:41 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:52 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Dcache {
         self.ptr
     }
 
+    #[doc = "Dcache base address for cacheable region"]
     #[inline(always)]
     pub const fn dcache_base_addr_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::Dcache {
         }
     }
 
+    #[doc = "Dcache Control register"]
     #[inline(always)]
     pub const fn dcache_ctrl_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::Dcache {
         }
     }
 
+    #[doc = "Dcache MRM (Miss Rate Monitor) CONTROL register"]
     #[inline(always)]
     pub const fn dcache_mrm_ctrl_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::Dcache {
         }
     }
 
+    #[doc = "Dcache MRM (Miss Rate Monitor) EVICTS register"]
     #[inline(always)]
     pub const fn dcache_mrm_evicts_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::Dcache {
         }
     }
 
+    #[doc = "Dcache MRM (Miss Rate Monitor) EVICTS THRESHOLD register"]
     #[inline(always)]
     pub const fn dcache_mrm_evicts_thres_reg(
         &self,
@@ -89,6 +94,7 @@ impl super::Dcache {
         }
     }
 
+    #[doc = "Dcache MRM (Miss Rate Monitor) HITS register"]
     #[inline(always)]
     pub const fn dcache_mrm_hits_reg(
         &self,
@@ -100,6 +106,7 @@ impl super::Dcache {
         }
     }
 
+    #[doc = "Dcache MRM (Miss Rate Monitor) HITS THRESHOLD register"]
     #[inline(always)]
     pub const fn dcache_mrm_hits_thres_reg(
         &self,
@@ -111,6 +118,7 @@ impl super::Dcache {
         }
     }
 
+    #[doc = "Dcache MRM (Miss Rate Monitor) MISSES register"]
     #[inline(always)]
     pub const fn dcache_mrm_misses_reg(
         &self,
@@ -122,6 +130,7 @@ impl super::Dcache {
         }
     }
 
+    #[doc = "Dcache MRM (Miss Rate Monitor) THRESHOLD register"]
     #[inline(always)]
     pub const fn dcache_mrm_misses_thres_reg(
         &self,
@@ -133,6 +142,7 @@ impl super::Dcache {
         }
     }
 
+    #[doc = "Dcache MRM (Miss Rate Monitor) TIME INTERVAL register"]
     #[inline(always)]
     pub const fn dcache_mrm_tint_reg(
         &self,
@@ -151,9 +161,11 @@ impl crate::sealed::RegSpec for DcacheBaseAddrReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Dcache base address for cacheable region"]
 pub type DcacheBaseAddrReg = crate::RegValueT<DcacheBaseAddrReg_SPEC>;
 
 impl DcacheBaseAddrReg {
+    #[doc = "Base of PSRAM cacheable memory\nN*1kByte. N = 0 to 131072 (max. of 128 MByte)."]
     #[inline(always)]
     pub fn dcache_base_addr(
         self,
@@ -193,9 +205,11 @@ impl crate::sealed::RegSpec for DcacheCtrlReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Dcache Control register"]
 pub type DcacheCtrlReg = crate::RegValueT<DcacheCtrlReg_SPEC>;
 
 impl DcacheCtrlReg {
+    #[doc = "Disable the clockgating for the DCACHE\n0: Enable clockgating (default)\n1: Disable clockgating"]
     #[inline(always)]
     pub fn dcache_disable_clkgate(
         self,
@@ -203,6 +217,7 @@ impl DcacheCtrlReg {
         crate::common::RegisterFieldBool::<25,1,0,DcacheCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Write buffer flush\n0: Write buffer isn\'t flushed (default)\n1: Write buffer is flushed"]
     #[inline(always)]
     pub fn dcache_wbuffer_flush(
         self,
@@ -210,6 +225,7 @@ impl DcacheCtrlReg {
         crate::common::RegisterFieldBool::<24,1,0,DcacheCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Status of the write buffer\n0: Write buffer isn\'t empty\n1: Write buffer is empty"]
     #[inline(always)]
     pub fn dcache_wbuffer_empty(
         self,
@@ -217,6 +233,7 @@ impl DcacheCtrlReg {
         crate::common::RegisterFieldBool::<23,1,0,DcacheCtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "0: DCACHE is not write flushed yet.\n1: DCACHE is write flushed.\n\nNote 1: Setting and clearing of this (status) bit field is automatically done by the hardware.\nNote 2: The CACHE_WFLUSHED bit can also be cleared first by the software by writing a \'0\'"]
     #[inline(always)]
     pub fn dcache_wflushed(
         self,
@@ -224,6 +241,7 @@ impl DcacheCtrlReg {
         crate::common::RegisterFieldBool::<22,1,0,DcacheCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: DCACHE isn\'t initialized yet\n1: DCACHE initialization has been completed"]
     #[inline(always)]
     pub fn dcache_ready(
         self,
@@ -231,6 +249,7 @@ impl DcacheCtrlReg {
         crate::common::RegisterFieldBool::<21,1,0,DcacheCtrlReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Write a \'1\' to this field will trigger a write flush of the \'dirty\' lines. All modified data in \'dirty\' line will be written back to the PSRAM. The corresponding \'dirty\' bits will be cleared. Reading this bit will return \'0\'"]
     #[inline(always)]
     pub fn dcache_wflush(
         self,
@@ -238,6 +257,7 @@ impl DcacheCtrlReg {
         crate::common::RegisterFieldBool::<20,1,0,DcacheCtrlReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Write a \'1\' to this field will trigger an initialization of the cache (\'0\'s are written in the TAG area).. Reading from this field will always return \'0\'"]
     #[inline(always)]
     pub fn dcache_init(
         self,
@@ -245,6 +265,7 @@ impl DcacheCtrlReg {
         crate::common::RegisterFieldBool::<19,1,0,DcacheCtrlReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "Enable the dcache controller HW block:\n0: Disabled, all AHB accesses towards the QSPI are bypassing the HW block straight into the PSRAM\n1: Enabled, all AHB access towards the QSPI within the cacheable region are cached."]
     #[inline(always)]
     pub fn dcache_enable(
         self,
@@ -252,6 +273,7 @@ impl DcacheCtrlReg {
         crate::common::RegisterFieldBool::<18,1,0,DcacheCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Length of PSRAM cacheable memory\nN*1kByte. N = 0 to 131072 (max. of 128 MByte).\nSetting DCACHE_LEN=0 disables the caching."]
     #[inline(always)]
     pub fn dcache_len(
         self,
@@ -291,9 +313,11 @@ impl crate::sealed::RegSpec for DcacheMrmCtrlReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Dcache MRM (Miss Rate Monitor) CONTROL register"]
 pub type DcacheMrmCtrlReg = crate::RegValueT<DcacheMrmCtrlReg_SPEC>;
 
 impl DcacheMrmCtrlReg {
+    #[doc = "0: No interrupt is generated.\n1: Interrupt (pulse-sensitive) is generated because the number of cache evicts reached the programmed threshold (threshold != 0)."]
     #[inline(always)]
     pub fn mrm_irq_evicts_thres_status(
         self,
@@ -301,6 +325,7 @@ impl DcacheMrmCtrlReg {
         crate::common::RegisterFieldBool::<5,1,0,DcacheMrmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: No interrupt is generated.\n1: Interrupt (pulse-sensitive) is generated because the number of cache hits reached the programmed threshold (threshold != 0)."]
     #[inline(always)]
     pub fn mrm_irq_hits_thres_status(
         self,
@@ -308,6 +333,7 @@ impl DcacheMrmCtrlReg {
         crate::common::RegisterFieldBool::<4,1,0,DcacheMrmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: No interrupt is generated.\n1: Interrupt (pulse-sensitive) is generated because the number of cache misses reached the programmed threshold (threshold != 0)."]
     #[inline(always)]
     pub fn mrm_irq_misses_thres_status(
         self,
@@ -315,6 +341,7 @@ impl DcacheMrmCtrlReg {
         crate::common::RegisterFieldBool::<3,1,0,DcacheMrmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: No interrupt is generated.\n1: Interrupt (pulse-sensitive) is generated because the time interval counter reached the end (time interval != 0)."]
     #[inline(always)]
     pub fn mrm_irq_tint_status(
         self,
@@ -322,6 +349,7 @@ impl DcacheMrmCtrlReg {
         crate::common::RegisterFieldBool::<2,1,0,DcacheMrmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: Disables interrupt generation.\n1: Enables interrupt generation.\nNote: The Cache MRM generates a pulse-sensitive interrupt towards the ARM processor,"]
     #[inline(always)]
     pub fn mrm_irq_mask(
         self,
@@ -329,6 +357,7 @@ impl DcacheMrmCtrlReg {
         crate::common::RegisterFieldBool::<1,1,0,DcacheMrmCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0: Freeze the \"misses/hits\" counters and reset the time interval counter to the programmed value in CACHE_MRM_TINT_REG.\n1: Enables the counters.\nNote: In case CACHE_MRM_CTRL_REG\\[MRM_START\\] is set to \'1\' and CACHE_MRM_TINT_REG (!=0) is used for the MRM interrupt generation, the time interval counter counts down (on a fixed reference clock of 16 MHz) until it\'s \'0\'. At that time CACHE_MRM_CTRL_REG\\[MRM_START\\] will be reset automatically to \'0\' by the MRM hardware and the MRM interrupt will be generated."]
     #[inline(always)]
     pub fn mrm_start(
         self,
@@ -350,9 +379,11 @@ impl crate::sealed::RegSpec for DcacheMrmEvictsReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Dcache MRM (Miss Rate Monitor) EVICTS register"]
 pub type DcacheMrmEvictsReg = crate::RegValueT<DcacheMrmEvictsReg_SPEC>;
 
 impl DcacheMrmEvictsReg {
+    #[doc = "Contains the amount of cache evicts"]
     #[inline(always)]
     pub fn mrm_evicts(
         self,
@@ -392,9 +423,11 @@ impl crate::sealed::RegSpec for DcacheMrmEvictsThresReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Dcache MRM (Miss Rate Monitor) EVICTS THRESHOLD register"]
 pub type DcacheMrmEvictsThresReg = crate::RegValueT<DcacheMrmEvictsThresReg_SPEC>;
 
 impl DcacheMrmEvictsThresReg {
+    #[doc = "Defines the hits threshold to trigger the interrupt generation. See also the description of CACHE_MRM_CTRL_REG\\[MRM_IRQ_EVICTS_THRES_STATUS\\].\nNote: When MRM_EVICTS_THRES=0 (unrealistic value), no interrupt will be generated."]
     #[inline(always)]
     pub fn mrm_evicts_thres(
         self,
@@ -434,9 +467,11 @@ impl crate::sealed::RegSpec for DcacheMrmHitsReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Dcache MRM (Miss Rate Monitor) HITS register"]
 pub type DcacheMrmHitsReg = crate::RegValueT<DcacheMrmHitsReg_SPEC>;
 
 impl DcacheMrmHitsReg {
+    #[doc = "Contains the amount of cache hits."]
     #[inline(always)]
     pub fn mrm_hits(
         self,
@@ -476,9 +511,11 @@ impl crate::sealed::RegSpec for DcacheMrmHitsThresReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Dcache MRM (Miss Rate Monitor) HITS THRESHOLD register"]
 pub type DcacheMrmHitsThresReg = crate::RegValueT<DcacheMrmHitsThresReg_SPEC>;
 
 impl DcacheMrmHitsThresReg {
+    #[doc = "Defines the hits threshold to trigger the interrupt generation. See also the description of CACHE_MRM_CTRL_REG\\[MRM_IRQ_HITS_THRES_STATUS\\].\nNote: When MRM_HITS_THRES=0 (unrealistic value), no interrupt will be generated."]
     #[inline(always)]
     pub fn mrm_hits_thres(
         self,
@@ -518,9 +555,11 @@ impl crate::sealed::RegSpec for DcacheMrmMissesReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Dcache MRM (Miss Rate Monitor) MISSES register"]
 pub type DcacheMrmMissesReg = crate::RegValueT<DcacheMrmMissesReg_SPEC>;
 
 impl DcacheMrmMissesReg {
+    #[doc = "Contains the amount of cache misses."]
     #[inline(always)]
     pub fn mrm_misses(
         self,
@@ -560,9 +599,11 @@ impl crate::sealed::RegSpec for DcacheMrmMissesThresReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Dcache MRM (Miss Rate Monitor) THRESHOLD register"]
 pub type DcacheMrmMissesThresReg = crate::RegValueT<DcacheMrmMissesThresReg_SPEC>;
 
 impl DcacheMrmMissesThresReg {
+    #[doc = "Defines the misses threshold to trigger the interrupt generation. See also the description of CACHE_MRM_CTRL_REG\\[MRM_IRQ_MISSES_THRES_STATUS\\].\nNote: When MRM_MISSES_THRES=0 (unrealistic value), no interrupt will be generated."]
     #[inline(always)]
     pub fn mrm_misses_thres(
         self,
@@ -602,9 +643,11 @@ impl crate::sealed::RegSpec for DcacheMrmTintReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Dcache MRM (Miss Rate Monitor) TIME INTERVAL register"]
 pub type DcacheMrmTintReg = crate::RegValueT<DcacheMrmTintReg_SPEC>;
 
 impl DcacheMrmTintReg {
+    #[doc = "Defines the time interval for the monitoring in 32 MHz clock cycles. See also the description of CACHE_MRM_CTRL_REG\\[MRM_IRQ_TINT_STATUS\\].\nNote: When MRM_TINT=0 (unrealistic value), no interrupt will be generated."]
     #[inline(always)]
     pub fn mrm_tint(
         self,

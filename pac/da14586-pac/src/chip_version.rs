@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:45 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:49 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::ChipVersion {
         self.ptr
     }
 
+    #[doc = "Chip configuration register 1."]
     #[inline(always)]
     pub const fn chip_config1_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Chip configuration register 2."]
     #[inline(always)]
     pub const fn chip_config2_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Chip configuration register 3."]
     #[inline(always)]
     pub const fn chip_config3_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Chip identification register 1."]
     #[inline(always)]
     pub const fn chip_id1_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Chip identification register 2."]
     #[inline(always)]
     pub const fn chip_id2_reg(
         &self,
@@ -89,6 +94,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Chip identification register 3."]
     #[inline(always)]
     pub const fn chip_id3_reg(
         &self,
@@ -100,6 +106,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Chip revision register."]
     #[inline(always)]
     pub const fn chip_revision_reg(
         &self,
@@ -111,6 +118,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Software compatibility register."]
     #[inline(always)]
     pub const fn chip_swc_reg(
         &self,
@@ -122,6 +130,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Chip test register 1."]
     #[inline(always)]
     pub const fn chip_test1_reg(
         &self,
@@ -133,6 +142,7 @@ impl super::ChipVersion {
         }
     }
 
+    #[doc = "Chip test register 2."]
     #[inline(always)]
     pub const fn chip_test2_reg(
         &self,
@@ -151,9 +161,11 @@ impl crate::sealed::RegSpec for ChipConfig1Reg_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Chip configuration register 1."]
 pub type ChipConfig1Reg = crate::RegValueT<ChipConfig1Reg_SPEC>;
 
 impl ChipConfig1Reg {
+    #[doc = "First character of Chip Configuration \'0M2\' in ASCII."]
     #[inline(always)]
     pub fn chip_config1(
         self,
@@ -176,9 +188,11 @@ impl crate::sealed::RegSpec for ChipConfig2Reg_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Chip configuration register 2."]
 pub type ChipConfig2Reg = crate::RegValueT<ChipConfig2Reg_SPEC>;
 
 impl ChipConfig2Reg {
+    #[doc = "Second character of Chip Configuration \'0M2\' in ASCII."]
     #[inline(always)]
     pub fn chip_config2(
         self,
@@ -201,9 +215,11 @@ impl crate::sealed::RegSpec for ChipConfig3Reg_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Chip configuration register 3."]
 pub type ChipConfig3Reg = crate::RegValueT<ChipConfig3Reg_SPEC>;
 
 impl ChipConfig3Reg {
+    #[doc = "Third character of Chip Configuration \'0M2\' in ASCII."]
     #[inline(always)]
     pub fn chip_config3(
         self,
@@ -226,9 +242,11 @@ impl crate::sealed::RegSpec for ChipId1Reg_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Chip identification register 1."]
 pub type ChipId1Reg = crate::RegValueT<ChipId1Reg_SPEC>;
 
 impl ChipId1Reg {
+    #[doc = "First character of device type \'580\' in ASCII."]
     #[inline(always)]
     pub fn chip_id1(
         self,
@@ -251,9 +269,11 @@ impl crate::sealed::RegSpec for ChipId2Reg_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Chip identification register 2."]
 pub type ChipId2Reg = crate::RegValueT<ChipId2Reg_SPEC>;
 
 impl ChipId2Reg {
+    #[doc = "Second character of device type \'580\' in ASCII."]
     #[inline(always)]
     pub fn chip_id2(
         self,
@@ -276,9 +296,11 @@ impl crate::sealed::RegSpec for ChipId3Reg_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Chip identification register 3."]
 pub type ChipId3Reg = crate::RegValueT<ChipId3Reg_SPEC>;
 
 impl ChipId3Reg {
+    #[doc = "Third character of device type \'580\' in ASCII."]
     #[inline(always)]
     pub fn chip_id3(
         self,
@@ -301,9 +323,11 @@ impl crate::sealed::RegSpec for ChipRevisionReg_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Chip revision register."]
 pub type ChipRevisionReg = crate::RegValueT<ChipRevisionReg_SPEC>;
 
 impl ChipRevisionReg {
+    #[doc = "Chip version, corresponds with type number in ASCII.\n0x41 = \'A\', 0x42 = \'B\'"]
     #[inline(always)]
     pub fn revision_id(
         self,
@@ -326,9 +350,11 @@ impl crate::sealed::RegSpec for ChipSwcReg_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Software compatibility register."]
 pub type ChipSwcReg = crate::RegValueT<ChipSwcReg_SPEC>;
 
 impl ChipSwcReg {
+    #[doc = "SoftWare Compatibility code.\nInteger (default = 0) which is incremented if a silicon change has impact on the CPU Firmware.\nCan be used by software developers to write silicon revision dependent code."]
     #[inline(always)]
     pub fn chip_swc(
         self,
@@ -350,6 +376,7 @@ impl crate::sealed::RegSpec for ChipTest1Reg_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Chip test register 1."]
 pub type ChipTest1Reg = crate::RegValueT<ChipTest1Reg_SPEC>;
 
 impl NoBitfieldReg<ChipTest1Reg_SPEC> for ChipTest1Reg {}
@@ -367,6 +394,7 @@ impl crate::sealed::RegSpec for ChipTest2Reg_SPEC {
     type DataType = u8;
 }
 
+#[doc = "Chip test register 2."]
 pub type ChipTest2Reg = crate::RegValueT<ChipTest2Reg_SPEC>;
 
 impl NoBitfieldReg<ChipTest2Reg_SPEC> for ChipTest2Reg {}

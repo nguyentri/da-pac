@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:28 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:38 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::CrgPer {
         self.ptr
     }
 
+    #[doc = "Peripheral divider register"]
     #[inline(always)]
     pub const fn clk_per_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::CrgPer {
         }
     }
 
+    #[doc = "PCM divider and enables"]
     #[inline(always)]
     pub const fn pcm_div_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::CrgPer {
         }
     }
 
+    #[doc = "PCM fractional division register"]
     #[inline(always)]
     pub const fn pcm_fdiv_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::CrgPer {
         }
     }
 
+    #[doc = "PDM divider and enables"]
     #[inline(always)]
     pub const fn pdm_div_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::CrgPer {
         }
     }
 
+    #[doc = "Peripheral divider register RESET register, reads 0x0000"]
     #[inline(always)]
     pub const fn reset_clk_per_reg(
         &self,
@@ -89,6 +94,7 @@ impl super::CrgPer {
         }
     }
 
+    #[doc = "Peripheral divider register SET register, reads 0x0000"]
     #[inline(always)]
     pub const fn set_clk_per_reg(
         &self,
@@ -100,6 +106,7 @@ impl super::CrgPer {
         }
     }
 
+    #[doc = "SRC divider and enables"]
     #[inline(always)]
     pub const fn src_div_reg(
         &self,
@@ -118,9 +125,11 @@ impl crate::sealed::RegSpec for ClkPerReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral divider register"]
 pub type ClkPerReg = crate::RegValueT<ClkPerReg_SPEC>;
 
 impl ClkPerReg {
+    #[doc = "Trigger divider for the motor controller\n0x0: divide LP_CLK by 1\n0x1: divide LP_CLK by 2\n...\n0x1F: divide LP_CLK by 32"]
     #[inline(always)]
     pub fn mc_trig_div(
         self,
@@ -129,6 +138,7 @@ impl ClkPerReg {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Clock divider for the motor controller slot. The slots are clocked on (a PCLK synchronized version of) the LP clock, and can be further divided by this divider:\n0x0: divide LP clock by 1\n0x1: divide LP clock by 2\n...\n0x1F: divide LP clock by 32"]
     #[inline(always)]
     pub fn mc_clk_div(
         self,
@@ -137,6 +147,7 @@ impl ClkPerReg {
         crate::common::RegisterField::<3,0x1f,1,0,u8,u8,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn mc_clk_en(
         self,
@@ -144,6 +155,7 @@ impl ClkPerReg {
         crate::common::RegisterFieldBool::<2,1,0,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn lra_clk_en(
         self,
@@ -151,6 +163,7 @@ impl ClkPerReg {
         crate::common::RegisterFieldBool::<1,1,0,ClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock/ 2"]
     #[inline(always)]
     pub fn gpadc_clk_sel(
         self,
@@ -172,9 +185,11 @@ impl crate::sealed::RegSpec for PcmDivReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "PCM divider and enables"]
 pub type PcmDivReg = crate::RegValueT<PcmDivReg_SPEC>;
 
 impl PcmDivReg {
+    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock"]
     #[inline(always)]
     pub fn pcm_src_sel(
         self,
@@ -182,6 +197,7 @@ impl PcmDivReg {
         crate::common::RegisterFieldBool::<13,1,0,PcmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enable for the internally generated PCM clock\nThe PCM_DIV must be set before or together with CLK_PCM_EN."]
     #[inline(always)]
     pub fn clk_pcm_en(
         self,
@@ -189,6 +205,7 @@ impl PcmDivReg {
         crate::common::RegisterFieldBool::<12,1,0,PcmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "PCM clock divider. Minimum value is 0x2."]
     #[inline(always)]
     pub fn pcm_div(
         self,
@@ -211,9 +228,11 @@ impl crate::sealed::RegSpec for PcmFdivReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "PCM fractional division register"]
 pub type PcmFdivReg = crate::RegValueT<PcmFdivReg_SPEC>;
 
 impl PcmFdivReg {
+    #[doc = "These bits define the fractional division part of the PCM clock. The left most \'1\' defines the denominator, the number of \'1\' bits define the numerator. E.g.\n0x0110 means 2/9, with a distribution of 1.0001.0000\n0xfeee means 13/16, with a distribution of 1111.1110.1110.1110"]
     #[inline(always)]
     pub fn pcm_fdiv(
         self,
@@ -236,9 +255,11 @@ impl crate::sealed::RegSpec for PdmDivReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "PDM divider and enables"]
 pub type PdmDivReg = crate::RegValueT<PdmDivReg_SPEC>;
 
 impl PdmDivReg {
+    #[doc = "Master mode selection\n0: slave mode\n1: master mode"]
     #[inline(always)]
     pub fn pdm_master_mode(
         self,
@@ -246,6 +267,7 @@ impl PdmDivReg {
         crate::common::RegisterFieldBool::<9,1,0,PdmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enable for the internally generated PDM clock\nThe PDM_DIV must be set before or together with CLK_PDM_EN."]
     #[inline(always)]
     pub fn clk_pdm_en(
         self,
@@ -253,6 +275,7 @@ impl PdmDivReg {
         crate::common::RegisterFieldBool::<8,1,0,PdmDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "PDM clock divider"]
     #[inline(always)]
     pub fn pdm_div(
         self,
@@ -275,9 +298,11 @@ impl crate::sealed::RegSpec for ResetClkPerReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral divider register RESET register, reads 0x0000"]
 pub type ResetClkPerReg = crate::RegValueT<ResetClkPerReg_SPEC>;
 
 impl ResetClkPerReg {
+    #[doc = "Trigger divider for the motor controller\n0x0: divide LP_CLK by 1\n0x1: divide LP_CLK by 2\n...\n0x1F: divide LP_CLK by 32"]
     #[inline(always)]
     pub fn mc_trig_div(
         self,
@@ -286,6 +311,7 @@ impl ResetClkPerReg {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,ResetClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Clock divider for the motor controller slot. The slots are clocked on (a PCLK synchronized version of) the LP clock, and can be further divided by this divider:\n0x0: divide LP clock by 1\n0x1: divide LP clock by 2\n...\n0x1F: divide LP clock by 32"]
     #[inline(always)]
     pub fn mc_clk_div(
         self,
@@ -294,6 +320,7 @@ impl ResetClkPerReg {
         crate::common::RegisterField::<3,0x1f,1,0,u8,u8,ResetClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn mc_clk_en(
         self,
@@ -301,6 +328,7 @@ impl ResetClkPerReg {
         crate::common::RegisterFieldBool::<2,1,0,ResetClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn lra_clk_en(
         self,
@@ -308,6 +336,7 @@ impl ResetClkPerReg {
         crate::common::RegisterFieldBool::<1,1,0,ResetClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock/ 2"]
     #[inline(always)]
     pub fn gpadc_clk_sel(
         self,
@@ -329,9 +358,11 @@ impl crate::sealed::RegSpec for SetClkPerReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Peripheral divider register SET register, reads 0x0000"]
 pub type SetClkPerReg = crate::RegValueT<SetClkPerReg_SPEC>;
 
 impl SetClkPerReg {
+    #[doc = "Trigger divider for the motor controller\n0x0: divide LP_CLK by 1\n0x1: divide LP_CLK by 2\n...\n0x1F: divide LP_CLK by 32"]
     #[inline(always)]
     pub fn mc_trig_div(
         self,
@@ -340,6 +371,7 @@ impl SetClkPerReg {
         crate::common::RegisterField::<8,0x1f,1,0,u8,u8,SetClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Clock divider for the motor controller slot. The slots are clocked on (a PCLK synchronized version of) the LP clock, and can be further divided by this divider:\n0x0: divide LP clock by 1\n0x1: divide LP clock by 2\n...\n0x1F: divide LP clock by 32"]
     #[inline(always)]
     pub fn mc_clk_div(
         self,
@@ -348,6 +380,7 @@ impl SetClkPerReg {
         crate::common::RegisterField::<3,0x1f,1,0,u8,u8,SetClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn mc_clk_en(
         self,
@@ -355,6 +388,7 @@ impl SetClkPerReg {
         crate::common::RegisterFieldBool::<2,1,0,SetClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the clock"]
     #[inline(always)]
     pub fn lra_clk_en(
         self,
@@ -362,6 +396,7 @@ impl SetClkPerReg {
         crate::common::RegisterFieldBool::<1,1,0,SetClkPerReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Selects the clock source\n1 = DIV1 clock\n0 = DIVN clock/ 2"]
     #[inline(always)]
     pub fn gpadc_clk_sel(
         self,
@@ -383,9 +418,11 @@ impl crate::sealed::RegSpec for SrcDivReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "SRC divider and enables"]
 pub type SrcDivReg = crate::RegValueT<SrcDivReg_SPEC>;
 
 impl SrcDivReg {
+    #[doc = "Enable for the internally generated SRC clock\nThe SRC_DIV must be set before or together with CLK_SRC_EN."]
     #[inline(always)]
     pub fn clk_src_en(
         self,
@@ -393,6 +430,7 @@ impl SrcDivReg {
         crate::common::RegisterFieldBool::<8,1,0,SrcDivReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "SRC clock divider"]
     #[inline(always)]
     pub fn src_div(
         self,

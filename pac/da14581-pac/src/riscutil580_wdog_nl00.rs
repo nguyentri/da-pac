@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:28 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:24 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::Riscutil580WdogNl00 {
         self.ptr
     }
 
+    #[doc = "Watchdog control register."]
     #[inline(always)]
     pub const fn watchdog_ctrl_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::Riscutil580WdogNl00 {
         }
     }
 
+    #[doc = "Watchdog timer register."]
     #[inline(always)]
     pub const fn watchdog_reg(
         &self,
@@ -63,9 +65,11 @@ impl crate::sealed::RegSpec for WatchdogCtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Watchdog control register."]
 pub type WatchdogCtrlReg = crate::RegValueT<WatchdogCtrlReg_SPEC>;
 
 impl WatchdogCtrlReg {
+    #[doc = "0 = Watchdog timer generates NMI at value 0, and WDOG (SYS) reset at <=-16. Timer can be frozen /resumed using\nSET_FREEZE_REG\\[FRZ_WDOG\\]/\nRESET_FREEZE_REG\\[FRZ_WDOG\\].\n1 = Watchdog timer generates a WDOG (SYS) reset at value 0 and can not be frozen by Software.\nNote that this bit can only be set to 1 by SW and only be reset with a WDOG (SYS) reset or SW reset.\nThe watchdog is always frozen when the Cortex-M0 is halted in DEBUG State."]
     #[inline(always)]
     pub fn nmi_rst(
         self,
@@ -87,9 +91,11 @@ impl crate::sealed::RegSpec for WatchdogReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Watchdog timer register."]
 pub type WatchdogReg = crate::RegValueT<WatchdogReg_SPEC>;
 
 impl WatchdogReg {
+    #[doc = "0000.000 = Write enable for Watchdog timer\nelse Write disable. This filter prevents unintentional presetting the watchdog with a SW run-away."]
     #[inline(always)]
     pub fn wdog_wen(
         self,
@@ -98,6 +104,7 @@ impl WatchdogReg {
         crate::common::RegisterField::<9,0x7f,1,0,u8,u8,WatchdogReg_SPEC,crate::common::W>::from_register(self,0)
     }
 
+    #[doc = "0 = Watchdog timer value is positive.\n1 = Watchdog timer value is negative."]
     #[inline(always)]
     pub fn wdog_val_neg(
         self,
@@ -105,6 +112,7 @@ impl WatchdogReg {
         crate::common::RegisterFieldBool::<8,1,0,WatchdogReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Write: Watchdog timer reload value. Note that all bits 15-9 must be 0 to reload this register.\nRead: Actual Watchdog timer value. Decremented by 1 every 10.24 msec. Bit 8 indicates a negative counter value. 2, 1, 0, 1FF16, 1FE16 etc. An NMI or WDOG (SYS) reset is generated under the following conditions:\nIf WATCHDOG_CTRL_REG\\[NMI_RST\\] = 0 then\n    If WDOG_VAL = 0 -> NMI (Non Maskable Interrupt)\n    if WDOG_VAL = 1F016 -> WDOG reset -> reload FF16\nIf WATCHDOG_CTRL_REG\\[NMI_RST\\] = 1 then\n    if WDOG_VAL <= 0 -> WDOG reset -> reload FF16"]
     #[inline(always)]
     pub fn wdog_val(
         self,

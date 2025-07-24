@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:32 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:29 +0000
 
 use core::convert::From;
 use core::marker::PhantomData;
@@ -250,8 +250,10 @@ where
     T: RegSpec,
     A: Access,
 {
+    #[allow(dead_code)]
     #[inline(always)]
     #[must_use]
+    #[allow(dead_code)]
     pub(crate) const fn from_ptr(ptr: *mut u8) -> &'static Self {
         unsafe { &*(ptr as *const Self) }
     }
@@ -288,11 +290,10 @@ where
     #[inline(always)]
     #[must_use]
     pub unsafe fn read(&self) -> RegValueT<T> {
-        unsafe {
-            #[cfg(feature = "tracing")]
-            let val = {
-                let mut buf: u64 = 0x0;
-                tracing::READ_FN.with(|rf| {
+        #[cfg(feature = "tracing")]
+        let val = {
+            let mut buf: u64 = 0x0;
+            tracing::READ_FN.with(|rf| {
                 if let Some(rf) = rf.get() {
                     buf = rf(self.addr(), std::mem::size_of::<T::DataType>());
                 } else {
@@ -302,12 +303,11 @@ where
                     );
                 }
             });
-                T::DataType::cast_from(buf)
-            };
-            #[cfg(not(feature = "tracing"))]
-            let val = self.ptr().read_volatile();
-            RegValueT::<T>::new(val)
-        }
+            T::DataType::cast_from(buf)
+        };
+        #[cfg(not(feature = "tracing"))]
+        let val = self.ptr().read_volatile();
+        RegValueT::<T>::new(val)
     }
 }
 
@@ -344,25 +344,21 @@ where
     /// See also: [`Reg<T, A>::init`] which provides the default value to a closure
     #[inline(always)]
     pub unsafe fn write(&self, reg_value: RegValueT<T>) {
-        unsafe {
-            #[cfg(feature = "tracing")]
-            tracing::WRITE_FN.with(|wf| {
-                if let Some(wf) = wf.get() {
-                    wf(
-                        self.addr(),
-                        std::mem::size_of::<T::DataType>(),
-                        reg_value.data.into(),
-                    )
-                } else {
-                    #[cfg(not(feature = "tracing_dummy"))]
-                    panic!(
-                        "Please, provide an handler for read with tracing::set_read_fn(callback);"
-                    );
-                }
-            });
-            #[cfg(not(feature = "tracing"))]
-            self.ptr().write_volatile(reg_value.data);
-        }
+        #[cfg(feature = "tracing")]
+        tracing::WRITE_FN.with(|wf| {
+            if let Some(wf) = wf.get() {
+                wf(
+                    self.addr(),
+                    std::mem::size_of::<T::DataType>(),
+                    reg_value.data.into(),
+                )
+            } else {
+                #[cfg(not(feature = "tracing_dummy"))]
+                panic!("Please, provide an handler for read with tracing::set_read_fn(callback);");
+            }
+        });
+        #[cfg(not(feature = "tracing"))]
+        self.ptr().write_volatile(reg_value.data);
     }
 
     /// Write an arbitrary integer to register
@@ -388,25 +384,21 @@ where
     /// See also [`Reg<T, A>::init`] and [`Reg<T, A>::write`] both of which are the safe, preferred functions.
     #[inline(always)]
     pub unsafe fn write_raw(&self, value: T::DataType) {
-        unsafe {
-            #[cfg(feature = "tracing")]
-            tracing::WRITE_FN.with(|wf| {
-                if let Some(wf) = wf.get() {
-                    wf(
-                        self.addr(),
-                        std::mem::size_of::<T::DataType>(),
-                        value.into(),
-                    )
-                } else {
-                    #[cfg(not(feature = "tracing_dummy"))]
-                    panic!(
-                        "Please, provide an handler for read with tracing::set_read_fn(callback);"
-                    );
-                }
-            });
-            #[cfg(not(feature = "tracing"))]
-            self.ptr().write_volatile(value);
-        }
+        #[cfg(feature = "tracing")]
+        tracing::WRITE_FN.with(|wf| {
+            if let Some(wf) = wf.get() {
+                wf(
+                    self.addr(),
+                    std::mem::size_of::<T::DataType>(),
+                    value.into(),
+                )
+            } else {
+                #[cfg(not(feature = "tracing_dummy"))]
+                panic!("Please, provide an handler for read with tracing::set_read_fn(callback);");
+            }
+        });
+        #[cfg(not(feature = "tracing"))]
+        self.ptr().write_volatile(value);
     }
 }
 
@@ -436,11 +428,9 @@ where
     #[inline(always)]
     /// Write value computed by closure that receive as input the reset value of register
     pub unsafe fn init(&self, f: impl FnOnce(RegValueT<T>) -> RegValueT<T>) {
-        unsafe {
-            let val = RegValueT::<T>::default();
-            let res = f(val);
-            self.write(res);
-        }
+        let val = RegValueT::<T>::default();
+        let res = f(val);
+        self.write(res);
     }
 }
 
@@ -469,11 +459,9 @@ where
     /// ```
     #[inline(always)]
     pub unsafe fn modify(&self, f: impl FnOnce(RegValueT<T>) -> RegValueT<T>) {
-        unsafe {
-            let val = self.read();
-            let res = f(val);
-            self.write(res);
-        }
+        let val = self.read();
+        let res = f(val);
+        self.write(res);
     }
 }
 
@@ -805,12 +793,14 @@ impl<T: Sized, const DIM: usize, const DIM_INCREMENT: usize>
     /// `index` must be less than `DIM`.
     #[inline(always)]
     pub const unsafe fn get_unchecked(&self, index: usize) -> &T {
-        unsafe { &*(self.as_ptr().add(index * DIM_INCREMENT) as *const _) }
+        &*(self.as_ptr().add(index * DIM_INCREMENT) as *const _)
     }
 
+    #[allow(dead_code)]
     #[inline(always)]
-    pub(crate) const unsafe fn from_ptr(ptr: *mut u8) -> &'static Self {
-        unsafe { &*(ptr as *const Self) }
+    #[allow(dead_code)]
+      pub(crate) const unsafe fn from_ptr(ptr: *mut u8) -> &'static Self {
+        &*(ptr as *const Self)
     }
 
     #[inline(always)]

@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:16:21 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:45:31 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -34,6 +34,7 @@ impl super::AesHash {
         self.ptr
     }
 
+    #[doc = "Crypto Clear interrupt request"]
     #[inline(always)]
     pub const fn crypto_clrirq_reg(
         &self,
@@ -45,6 +46,7 @@ impl super::AesHash {
         }
     }
 
+    #[doc = "Crypto Control register"]
     #[inline(always)]
     pub const fn crypto_ctrl_reg(
         &self,
@@ -56,6 +58,7 @@ impl super::AesHash {
         }
     }
 
+    #[doc = "Crypto DMA destination memory"]
     #[inline(always)]
     pub const fn crypto_dest_addr_reg(
         &self,
@@ -67,6 +70,7 @@ impl super::AesHash {
         }
     }
 
+    #[doc = "Crypto DMA fetch register"]
     #[inline(always)]
     pub const fn crypto_fetch_addr_reg(
         &self,
@@ -78,6 +82,7 @@ impl super::AesHash {
         }
     }
 
+    #[doc = "Crypto First position of the AES keys storage memory"]
     #[inline(always)]
     pub const fn crypto_keys_start(
         &self,
@@ -89,6 +94,7 @@ impl super::AesHash {
         }
     }
 
+    #[doc = "Crypto Length of the input block in bytes"]
     #[inline(always)]
     pub const fn crypto_len_reg(
         &self,
@@ -100,6 +106,7 @@ impl super::AesHash {
         }
     }
 
+    #[doc = "Crypto Mode depended register 0"]
     #[inline(always)]
     pub const fn crypto_mreg0_reg(
         &self,
@@ -111,6 +118,7 @@ impl super::AesHash {
         }
     }
 
+    #[doc = "Crypto Mode depended register 1"]
     #[inline(always)]
     pub const fn crypto_mreg1_reg(
         &self,
@@ -122,6 +130,7 @@ impl super::AesHash {
         }
     }
 
+    #[doc = "Crypto Mode depended register 2"]
     #[inline(always)]
     pub const fn crypto_mreg2_reg(
         &self,
@@ -133,6 +142,7 @@ impl super::AesHash {
         }
     }
 
+    #[doc = "Crypto Mode depended register 3"]
     #[inline(always)]
     pub const fn crypto_mreg3_reg(
         &self,
@@ -144,6 +154,7 @@ impl super::AesHash {
         }
     }
 
+    #[doc = "Crypto Start calculation"]
     #[inline(always)]
     pub const fn crypto_start_reg(
         &self,
@@ -155,6 +166,7 @@ impl super::AesHash {
         }
     }
 
+    #[doc = "Crypto Status register"]
     #[inline(always)]
     pub const fn crypto_status_reg(
         &self,
@@ -173,9 +185,11 @@ impl crate::sealed::RegSpec for CryptoClrirqReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto Clear interrupt request"]
 pub type CryptoClrirqReg = crate::RegValueT<CryptoClrirqReg_SPEC>;
 
 impl CryptoClrirqReg {
+    #[doc = "Write 1 to clear a pending interrupt request."]
     #[inline(always)]
     pub fn crypto_clrirq(
         self,
@@ -197,9 +211,11 @@ impl crate::sealed::RegSpec for CryptoCtrlReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto Control register"]
 pub type CryptoCtrlReg = crate::RegValueT<CryptoCtrlReg_SPEC>;
 
 impl CryptoCtrlReg {
+    #[doc = "It forces (active high) the execution of the key expansion process with the starting of the AES encryption/decryption process. The bit will be cleared automatically by the hardware, after the completion of the AES key expansion process."]
     #[inline(always)]
     pub fn crypto_aes_kexp(
         self,
@@ -207,6 +223,7 @@ impl CryptoCtrlReg {
         crate::common::RegisterFieldBool::<17,1,0,CryptoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0 : Define that this is the last input block. When the current input is consumed by the crypto engine and the output data is written to the memory, the calculation ends (CRYPTO_INACTIVE goes to one).\n1 : The current input data block is not the last. More input data will follow. When the current input is consumed, the engine stops and waits for more data (CRYPTO_WAIT_FOR_IN goes to one)."]
     #[inline(always)]
     pub fn crypto_more_in(
         self,
@@ -214,6 +231,7 @@ impl CryptoCtrlReg {
         crate::common::RegisterFieldBool::<16,1,0,CryptoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "The number of bytes minus one of the hash result which will be saved at the memory by the DMA. In relation with the selected hash algorithm the accepted values are:\nMD5: 0..15 -> 1-16 bytes\nSHA-1: 0..19 -> 1-20 bytes\nSHA-256: 0..31 -> 1 - 32 bytes\nSHA-256/224: 0..27 -> 1- 28 bytes\nSHA-384: 0..47 -> 1 - 48 bytes\nSHA-512: 0..63 -> 1 - 64 bytes\nSHA-512/224: 0..27 -> 1- 28 bytes\nSHA-512/256: 0..31 -> 1 - 32 bytes"]
     #[inline(always)]
     pub fn crypto_hash_out_len(
         self,
@@ -222,6 +240,7 @@ impl CryptoCtrlReg {
         crate::common::RegisterField::<10,0x3f,1,0,u8,u8,CryptoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Selects the type of the algorithm\n0 : The encryption algorithm (AES)\n1 : A hash algorithm.\nThe exact algorithm is defined by the fileds CRYPTO_ALG and CRYPTO_ALG_MD."]
     #[inline(always)]
     pub fn crypto_hash_sel(
         self,
@@ -229,6 +248,7 @@ impl CryptoCtrlReg {
         crate::common::RegisterFieldBool::<9,1,0,CryptoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Interrupt Request Enable\n0 : The interrupt generation ability is disabled.\n1 : The interrupt generation ability is enabled. Generates an interrupt request at the end of operation."]
     #[inline(always)]
     pub fn crypto_irq_en(
         self,
@@ -236,6 +256,7 @@ impl CryptoCtrlReg {
         crate::common::RegisterFieldBool::<8,1,0,CryptoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Encryption/Decryption\n0 : Decryption\n1 : Encryption"]
     #[inline(always)]
     pub fn crypto_encdec(
         self,
@@ -243,6 +264,7 @@ impl CryptoCtrlReg {
         crate::common::RegisterFieldBool::<7,1,0,CryptoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "The size of AES Key\n0x0 : 128 bits AES Key\n0x1 : 192 bits AES Key\n0x2 : 256 bits AES Key\n0x3 : 256 bits AES Key"]
     #[inline(always)]
     pub fn crypto_aes_key_sz(
         self,
@@ -251,6 +273,7 @@ impl CryptoCtrlReg {
         crate::common::RegisterField::<5,0x3,1,0,u8,u8,CryptoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Output Mode. This field makes sense only when the AES algorithm is selected (CRYPTO_HASH_SEL =0)\n0 : Write back to memory all the resulting data\n1 : Write back to memory only the final block of the resulting data"]
     #[inline(always)]
     pub fn crypto_out_md(
         self,
@@ -258,6 +281,7 @@ impl CryptoCtrlReg {
         crate::common::RegisterFieldBool::<4,1,0,CryptoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "It defines the mode of operation of the AES algorithm when the controller is configured for an encryption/decryption processing (CRYPTO_HASH_SEL = 0).\n0x0 : ECB\n0x1 : ECB\n0x2 : CTR\n0x3 : CBC\n\nWhen the controller is configured to applies a HASH function, this field selects the desired HASH algorithm with the help of the CRYPTO_ALG.\n\n0x0 : HASH algorithms that are based on 32 bits operations\n0x1 : HASH algorithms that are based on 64 bits operations\n0x2 : Reserved\n0x3 : Reserved\n\nSee also the CRYPTO_ALG field."]
     #[inline(always)]
     pub fn crypto_alg_md(
         self,
@@ -266,6 +290,7 @@ impl CryptoCtrlReg {
         crate::common::RegisterField::<2,0x3,1,0,u8,u8,CryptoCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Algorithm selection. When CRYPTO_HASH_SEL = 0 the only available choice is the AES algorithm.\n0x0 : AES\n0x1 : Reserved\n0x2 : Reserved\n0x3 : Reserved\n\nWhen CRYPTO_HASH_SEL = 1, this field selects the desired hash algorithm, with the help of the CRYPTO_ALG_MD field.\n\nIf CRYPTO_ALG_MD = 0x0\n0x0 : MD5\n0x1 : SHA-1\n0x2 : SHA-256/224\n0x3 : SHA-256\n\nIf CRYPTO_ALG_MD = 0x1\n0x0 : SHA-384\n0x1 : SHA-512\n0x2 : SHA-512/224\n0x3 : SHA-512/256"]
     #[inline(always)]
     pub fn crypto_alg(
         self,
@@ -288,9 +313,11 @@ impl crate::sealed::RegSpec for CryptoDestAddrReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto DMA destination memory"]
 pub type CryptoDestAddrReg = crate::RegValueT<CryptoDestAddrReg_SPEC>;
 
 impl CryptoDestAddrReg {
+    #[doc = "Destination address at where the result of the processing is stored. The value of this register is updated as the calculation proceeds and the output data are written to the memory."]
     #[inline(always)]
     pub fn crypto_dest_addr(
         self,
@@ -330,9 +357,11 @@ impl crate::sealed::RegSpec for CryptoFetchAddrReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto DMA fetch register"]
 pub type CryptoFetchAddrReg = crate::RegValueT<CryptoFetchAddrReg_SPEC>;
 
 impl CryptoFetchAddrReg {
+    #[doc = "The memory address from where will be retrieved the data that will be processed. The value of this register is updated as the calculation proceeds and the output data are written to the memory."]
     #[inline(always)]
     pub fn crypto_fetch_addr(
         self,
@@ -372,9 +401,11 @@ impl crate::sealed::RegSpec for CryptoKeysStart_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto First position of the AES keys storage memory"]
 pub type CryptoKeysStart = crate::RegValueT<CryptoKeysStart_SPEC>;
 
 impl CryptoKeysStart {
+    #[doc = "CRYPTO_KEY_(0-63)\nThis is the AES keys storage memory. This memory is accessible via AHB slave interface, only when the CRYPTO is inactive (CRYPTO_INACTIVE = 1)."]
     #[inline(always)]
     pub fn crypto_key_x(
         self,
@@ -414,9 +445,11 @@ impl crate::sealed::RegSpec for CryptoLenReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto Length of the input block in bytes"]
 pub type CryptoLenReg = crate::RegValueT<CryptoLenReg_SPEC>;
 
 impl CryptoLenReg {
+    #[doc = "It contains the number of bytes of input data. If this number is not a multiple of a block size, the data is automatically extended with zeros. The value of this register is updated as the calculation proceeds and the output data are written to the memory."]
     #[inline(always)]
     pub fn crypto_len(
         self,
@@ -456,9 +489,11 @@ impl crate::sealed::RegSpec for CryptoMreg0Reg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto Mode depended register 0"]
 pub type CryptoMreg0Reg = crate::RegValueT<CryptoMreg0Reg_SPEC>;
 
 impl CryptoMreg0Reg {
+    #[doc = "It contains information that are depended by the mode of operation, when is used the AES algorithm:\nCBC - IV\\[31:0\\]\nCTR - CTRBLK\\[31:0\\]. It is the initial value of the 32 bits counter.\nAt any other mode, the contents of this register has no meaning."]
     #[inline(always)]
     pub fn crypto_mreg0(
         self,
@@ -498,9 +533,11 @@ impl crate::sealed::RegSpec for CryptoMreg1Reg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto Mode depended register 1"]
 pub type CryptoMreg1Reg = crate::RegValueT<CryptoMreg1Reg_SPEC>;
 
 impl CryptoMreg1Reg {
+    #[doc = "It contains information that are depended by the mode of operation, when is used the AES algorithm:\nCBC - IV\\[63:32\\]\nCTR - CTRBLK\\[63:32\\]\nAt any other mode, the contents of this register has no meaning."]
     #[inline(always)]
     pub fn crypto_mreg1(
         self,
@@ -540,9 +577,11 @@ impl crate::sealed::RegSpec for CryptoMreg2Reg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto Mode depended register 2"]
 pub type CryptoMreg2Reg = crate::RegValueT<CryptoMreg2Reg_SPEC>;
 
 impl CryptoMreg2Reg {
+    #[doc = "It contains information that are depended by the mode of operation, when is used the AES algorithm:\nCBC - IV\\[95:64\\]\nCTR - CTRBLK\\[95:64\\]\nAt any other mode, the contents of this register has no meaning."]
     #[inline(always)]
     pub fn crypto_mreg2(
         self,
@@ -582,9 +621,11 @@ impl crate::sealed::RegSpec for CryptoMreg3Reg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto Mode depended register 3"]
 pub type CryptoMreg3Reg = crate::RegValueT<CryptoMreg3Reg_SPEC>;
 
 impl CryptoMreg3Reg {
+    #[doc = "It contains information that are depended by the mode of operation, when is used the AES algorithm:\nCBC - IV\\[127:96\\]\nCTR - CTRBLK\\[127:96\\]\nAt any other mode, the contents of this register has no meaning."]
     #[inline(always)]
     pub fn crypto_mreg3(
         self,
@@ -624,9 +665,11 @@ impl crate::sealed::RegSpec for CryptoStartReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto Start calculation"]
 pub type CryptoStartReg = crate::RegValueT<CryptoStartReg_SPEC>;
 
 impl CryptoStartReg {
+    #[doc = "Write 1 to initiate the processing of the input data. This register is auto-cleared."]
     #[inline(always)]
     pub fn crypto_start(
         self,
@@ -648,9 +691,11 @@ impl crate::sealed::RegSpec for CryptoStatusReg_SPEC {
     type DataType = u32;
 }
 
+#[doc = "Crypto Status register"]
 pub type CryptoStatusReg = crate::RegValueT<CryptoStatusReg_SPEC>;
 
 impl CryptoStatusReg {
+    #[doc = "The status of the interrupt request line of the CRYPTO block.\n0 : There is no active interrupt request.\n1 : An interrupt request is pending."]
     #[inline(always)]
     pub fn crypto_irq_st(
         self,
@@ -658,6 +703,7 @@ impl CryptoStatusReg {
         crate::common::RegisterFieldBool::<2,1,0,CryptoStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "Indicates the situation where the engine waits for more input data. This is applicable when the CRYPTO_MORE_IN= 1, so the input data are fragmented in the memory.\n0 : The crypto is not waiting for more input data.\n1 : The crypto waits for more input data.\nThe CRYPTO_INACTIVE flag remains to zero to indicate that the calculation is not finished. The supervisor of the CRYPTO must program to the CRYPTO_FETCH_ADDR and CRYPTO_LEN a new input data fragment. The calculation will be continued as soon as the CRYPTO_START register will be written with 1. This action will clear the CRYPTO_WAIT_FOR_IN flag."]
     #[inline(always)]
     pub fn crypto_wait_for_in(
         self,
@@ -665,6 +711,7 @@ impl CryptoStatusReg {
         crate::common::RegisterFieldBool::<1,1,0,CryptoStatusReg_SPEC,crate::common::R>::from_register(self,0)
     }
 
+    #[doc = "0 : The CRYPTO is active. The processing is in progress.\n1 : The CRYPTO is inactive. The processing has finished."]
     #[inline(always)]
     pub fn crypto_inactive(
         self,

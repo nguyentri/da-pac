@@ -15,7 +15,7 @@ following link:
 http://www.renesas.com/disclaimer
 
 */
-// Generated from SVD 1.2, with svd2pac 0.5.0 on Mon, 14 Apr 2025 11:15:19 +0000
+// Generated from SVD 1.2, with svd2pac 0.6.0 on Thu, 24 Jul 2025 04:44:12 +0000
 
 #![allow(clippy::identity_op)]
 #![allow(clippy::module_inception)]
@@ -45,6 +45,7 @@ impl super::CrgAon {
         }
     }
 
+    #[doc = "Hibernation control register"]
     #[inline(always)]
     pub const fn hibern_ctrl_reg(
         &self,
@@ -56,6 +57,7 @@ impl super::CrgAon {
         }
     }
 
+    #[doc = "Hardware Reset control register"]
     #[inline(always)]
     pub const fn hwr_ctrl_reg(
         &self,
@@ -67,6 +69,7 @@ impl super::CrgAon {
         }
     }
 
+    #[doc = "Control the state retention of the GPIO ports"]
     #[inline(always)]
     pub const fn pad_latch_reg(
         &self,
@@ -100,6 +103,7 @@ impl super::CrgAon {
         }
     }
 
+    #[doc = "Reset status register"]
     #[inline(always)]
     pub const fn reset_stat_reg(
         &self,
@@ -167,9 +171,11 @@ impl crate::sealed::RegSpec for HibernCtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Hibernation control register"]
 pub type HibernCtrlReg = crate::RegValueT<HibernCtrlReg_SPEC>;
 
 impl HibernCtrlReg {
+    #[doc = "Selects which pin to wakeup from"]
     #[inline(always)]
     pub fn hibern_wkup_mask(
         self,
@@ -178,6 +184,7 @@ impl HibernCtrlReg {
         crate::common::RegisterField::<2,0x1f,1,0,u8,u8,HibernCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Selects the polarity of the wakeup source. The polarity must be chosen such that the ANA_STATUS_REG\\[CLKLESS_WAKEUP_STAT\\] is \'1\'. Any change on the selected GPIOs will make the CLKLESS_WAKEUP_STAT go to \'0\', and wakeup the system from hibernation."]
     #[inline(always)]
     pub fn hibern_wkup_polarity(
         self,
@@ -185,6 +192,7 @@ impl HibernCtrlReg {
         crate::common::RegisterFieldBool::<1,1,0,HibernCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Enables the hibernation mode when sleeping\n0: deep sleep mode, PD_SLP remains on\n1: hibernation mode, PD_SLP goes off. REMAP_ADR0 needs to be set to the correct source to boot from before going to sleep."]
     #[inline(always)]
     pub fn hibernation_enable(
         self,
@@ -206,9 +214,11 @@ impl crate::sealed::RegSpec for HwrCtrlReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Hardware Reset control register"]
 pub type HwrCtrlReg = crate::RegValueT<HwrCtrlReg_SPEC>;
 
 impl HwrCtrlReg {
+    #[doc = "Disables the RST functionality on P00"]
     #[inline(always)]
     pub fn disable_hwr(
         self,
@@ -230,9 +240,11 @@ impl crate::sealed::RegSpec for PadLatchReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Control the state retention of the GPIO ports"]
 pub type PadLatchReg = crate::RegValueT<PadLatchReg_SPEC>;
 
 impl PadLatchReg {
+    #[doc = "Controls the state retention of the pads.\n0: latches are closed, pads retain their state.\n1: latches are open, new control values have immediate effect"]
     #[inline(always)]
     pub fn pad_latch_en(
         self,
@@ -264,6 +276,7 @@ impl PowerAonCtrlReg {
         crate::common::RegisterFieldBool::<14,1,0,PowerAonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "VDD clamp level setting for hibernation mode"]
     #[inline(always)]
     pub fn ldo_ret_trim(
         self,
@@ -272,6 +285,7 @@ impl PowerAonCtrlReg {
         crate::common::RegisterField::<10,0xf,1,0,u8,u8,PowerAonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Disable vcont comparator in SLP"]
     #[inline(always)]
     pub fn cmp_vcont_slp_disable(
         self,
@@ -279,6 +293,7 @@ impl PowerAonCtrlReg {
         crate::common::RegisterFieldBool::<9,1,0,PowerAonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "0x:automatic selection of boost mode\n11: force boost mode\n10: force buck mode"]
     #[inline(always)]
     pub fn boost_mode_force(
         self,
@@ -287,6 +302,7 @@ impl PowerAonCtrlReg {
         crate::common::RegisterField::<7,0x3,1,0,u8,u8,PowerAonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Do not charge vbat high in boost mode"]
     #[inline(always)]
     pub fn charge_vbat_disable(
         self,
@@ -308,6 +324,7 @@ impl PowerAonCtrlReg {
         crate::common::RegisterFieldBool::<4,1,0,PowerAonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Mask rst from por_vbat_high"]
     #[inline(always)]
     pub fn por_vbat_high_rst_mask(
         self,
@@ -315,6 +332,7 @@ impl PowerAonCtrlReg {
         crate::common::RegisterFieldBool::<3,1,0,PowerAonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Mask rst from por_vbat_low"]
     #[inline(always)]
     pub fn por_vbat_low_rst_mask(
         self,
@@ -322,6 +340,7 @@ impl PowerAonCtrlReg {
         crate::common::RegisterFieldBool::<2,1,0,PowerAonCtrlReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "00: OFF\n01: Forced ON\n10: Active: automatic control, Sleep: forced ON\n11: Automatic control"]
     #[inline(always)]
     pub fn vbat_hl_connect_res_ctrl(
         self,
@@ -347,6 +366,7 @@ impl crate::sealed::RegSpec for RamLpmxReg_SPEC {
 pub type RamLpmxReg = crate::RegValueT<RamLpmxReg_SPEC>;
 
 impl RamLpmxReg {
+    #[doc = "RAM\\[3:1\\] Transparent Light Sleep (TLS) Core Enable for System RAMs. Assert low to enable the TLS core feature, which will result in lower leakage current.\nIn case VDD is below 0.81V, it is necessary to hold this pin high to maintain data retention."]
     #[inline(always)]
     pub fn ramx_lpmx(
         self,
@@ -369,9 +389,11 @@ impl crate::sealed::RegSpec for ResetStatReg_SPEC {
     type DataType = u16;
 }
 
+#[doc = "Reset status register"]
 pub type ResetStatReg = crate::RegValueT<ResetStatReg_SPEC>;
 
 impl ResetStatReg {
+    #[doc = "Indicates that a Watchdog has happened.\nThis bit is also set with a PowerOn Reset"]
     #[inline(always)]
     pub fn wdogreset_stat(
         self,
@@ -379,6 +401,7 @@ impl ResetStatReg {
         crate::common::RegisterFieldBool::<3,1,0,ResetStatReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Indicates that a SW Reset has been requested.\nThe SW reset is requested by SYS_CTRL_REG\\[SW_RESET\\] or SCB->AIRCR inside the ARM.\nThis bit is also set with a PowerOn Reset"]
     #[inline(always)]
     pub fn swreset_stat(
         self,
@@ -386,6 +409,7 @@ impl ResetStatReg {
         crate::common::RegisterFieldBool::<2,1,0,ResetStatReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Indicates that a HW Reset has happened\nThis bit is also set with a PowerOn Reset"]
     #[inline(always)]
     pub fn hwreset_stat(
         self,
@@ -393,6 +417,7 @@ impl ResetStatReg {
         crate::common::RegisterFieldBool::<1,1,0,ResetStatReg_SPEC,crate::common::RW>::from_register(self,0)
     }
 
+    #[doc = "Indicates that a PowerOn Reset has happened"]
     #[inline(always)]
     pub fn poreset_stat(
         self,
